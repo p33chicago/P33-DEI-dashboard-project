@@ -1,0 +1,100 @@
+---
+title: "DEI data cleannig"
+author: "Mark"
+date: '2022-07-26'
+output: beamer_presentation
+---
+
+```{r readin, include=FALSE}
+library("tidyverse")
+library("dplyr")
+library("tidyr")
+library('ggfortify')
+library('stargazer')
+library('pscl')
+```
+
+#1 Read in datasets
+
+```{r data, include=FALSE}
+getwd()
+setwd('E:/p33/DEI_CSV')
+
+df_DEI_demo <- read.csv('df_demo.CSV')
+df_DEI_parametric <- read.csv('df_parametrics.csv')
+
+```
+
+#2 Clean Datas
+
+## 2.1 df_DEI_parametric
+
+```{r scrubber}
+colnames(df_DEI_parametric)
+glimpse(df_DEI_parametric)
+
+# lower cases in demo col
+df_DEI_parametric_lower <- df_DEI_parametric %>%
+  mutate(Demographic = tolower(Demographic))
+
+unique(df_DEI_parametric_lower$Demographic)
+
+# create cols of variables: var_x
+
+df_DEI_parametric_demographic_mutated24dim <- df_DEI_parametric_lower %>%
+  
+  ## create var_dim 
+  mutate(var_dim = case_when(
+    ### proficiency
+    str_detect(Demographic,"proficient") ~ "proficiency",
+    str_detect(Demographic,"persistent") ~ "proficiency",
+    str_detect(Demographic,"conferral") ~ "proficiency",
+    str_detect(Demographic,"benchmark") ~ "proficiency",
+    str_detect(Demographic,"meets and exceeds") ~ "proficiency",
+    str_detect(Demographic,"employee demographics") ~ "proficiency",
+    ### access
+    str_detect(Demographic,"enrollment") ~ "access",
+    str_detect(Demographic,"enroll") ~ "access",
+    ### excellence
+    str_detect(Demographic,"advanced") ~ "excellence",
+    str_detect(Demographic,"pass") ~ "excellence",
+    str_detect(Demographic,"top three") ~ "excellence",
+    str_detect(Demographic,"top") ~ "excellence", 
+    str_detect(Demographic,"high") ~ "excellence",
+    str_detect(Demographic,"exceeds") ~ "excellence",
+    ### access
+    str_detect(Demographic,"19-24") ~ "access",
+    str_detect(Demographic,"19-24") ~ "access"
+    )
+  ) %>%
+  mutate(var_dim = case_when(
+    ## revision: three top school enrollment to excellence
+    str_detect(Demographic,"mit") ~ "excellence",
+    str_detect(Demographic,"stanford") ~ "excellence",
+    str_detect(Demographic,"carnegie") ~ "excellence",
+    TRUE ~ var_dim
+    )
+  ) %>%
+  
+  ## Create scope var.
+  mutate(var_scope = case_when(
+    str_detect(Demographic,"mit ") | 
+      str_detect(Demographic,"stanford") | 
+        str_detect(Demographic,"carnegie ") ~ "college",
+    
+    str_detect(Demographic,"msa") ~ "region_chi_msa",
+    
+    str_detect(Demographic,"cps") | 
+      str_detect(Demographic,"in math") ~ "city_chi",
+    
+    str_detect(Demographic,"illinois") |
+      str_detect(Demographic,"ibhe")~ "state_il",
+    
+    str_detect(Demographic,"usa") ~ "usa"
+    )
+  )
+
+unique(df_DEI_parametric_demographic_mutated24dim$Demographic)
+
+
+```

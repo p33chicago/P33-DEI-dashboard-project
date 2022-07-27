@@ -1,0 +1,58 @@
+﻿Demographic,All,Black,Hispanic,White,Asian,estimated
+4th grade proficient in Math (NAEP),5563,1324,2598,1125,434,YES
+4th grade Advanced in Math (NAEP),1113,166,416,500,347,YES
+8th grade  proficient in Math (NAEP),5093,1219,2625,872,348,YES
+8th grade Advanced in math (NAEP),1783,188,750,565,379,YES
+K-8 STEM Magnet School Enrollment (CPS School Directory),20717,10133,7539,1325,1354,No
+Illinois AP CS enrollment (P33 Excel),7667,369,1463,3674,2161,No
+Illinois AP CS Pass (P33 Excel),5720,179,908,2868,1765,No
+CPS SAT Meets and Exceeds in Math (ISBE report card),5334,888,2170,1449,574,No
+CPS SAT Exceeds in Math (ISBE report card),1108,55,206,508,256,No
+CPS STEM Magnet HS Enrollment (CPS School directory),15513,3282,10070,1318,843,No
+Illinois HS Graduates (ISBE),133178,20880,34946,69614,7738,No
+CS/Computing enrollment (IBHE),11759,1066,2134,5264,3295,No
+CS/Computing conferral (IBHE),2953,193,449,1439,872,No
+3 year CS/Computing conferral (EMSI),8490,539,1227,4478,2246,Yes
+Employee Demographics (EMSI),123681,8621,9226,72374,33460,No
+19-24 year olds in tech workforce (EMSI),5518,385,412,3228,1493,Yes
+USA 4th grade math Proficient and above (NAEP),1517000,120000,308000,936000,140000,No
+USA 4th grade math advanced (NAEP),333000,12000,33000,216000,58000,No
+USA 8th grade math proficient and above (NAEP),1207800,72800,209000,774000,128000,No
+USA 8th grade math advanced (NAEP),366000,11200,33000,234000,66000,No
+USA CS/Computing Conferral (EMSI),107967,8779,12080,53788,19466,Yes
+Illinois CS/Computing Conferral (EMSI),2769,223,423,1583,540,"Yes, but this data was not used see Row 14"
+USA-Illinois CS/Computing Conferral(EMSI),105198,8556,11657,52205,18926,NA
+USA Employment Demographics for 11 top tech jobs (EMSI),5049583,401798,401158,3117300,1129327,No
+USA Employment - Illinois Employment for 11 top tech jobs (EMSI),4925902,393177,391932,3044926,1095867,NA
+USA SAT Math benchmark and above (College Board),658332,38744,105868,374937,138783,Yes
+USA SAT Benchmark - CPS SAT Benchmark,653251,37856,103698,373488,138209,NA
+CPS SAT Benchmark (ISBE),5081,888,2170,1449,574,No
+4th grade Below Basic in Math (NAEP),6231,3227,2702,175,65,No
+4th grade Basic in Math (NAEP),9123,3558,4676,700,238,No
+8th grade below basic in Math (NAEP),9677,4407,4625,359,123,No
+8th grade basic in math (NAEP),8913,3563,4500,770,174,No
+USA SAT Exceeds (College Board),234000,8423,24703,101678,78588,Yes
+USA AP CS Enroll (P33 Excel),179188,10163,28208,76508,46600,No
+USA AP CS Pass (P33 Excel),114024,5050,16497,54718,37759,No
+Top Three Illinois universities CS 2022 Enrollment (ISBE),3204,97,283,983,1841,No
+Top Three Illinois universities CS 2021 Conferral (ISBE),721,19,65,261,376,No
+Top Three Illinois Universities 2022 Enrollment (ISBE),40403,3059,7078,19643,10623,No
+Top Three Illinois Universities 2021 Conferral (ISBE),9763,677,1444,5293,2349,No
+Top 3 Highest Paying CS Jobs Chicago MSA (EMSI),21858,1457,1659,14664,4078,No
+Top 3 highest Paying CS Jobs USA (EMSI),678685,48317,50868,451767,127733,No
+USA Degree Conferral (NCES),2039431,197444,302615,1183959,157062,No
+Top Three USA Universities CS Enrollment (Collected individually from School's website),2555,136,345,823,1251,Yes
+Top Three USA Universities CS conferral (EMSI),1031,41,128,486,376,Yes
+Top Three USA Universities Enrollment (IPEDS),14933,1126,2689,5154,5964,Yes
+Top Three USA Universities Conferral (IPEDS),3487,231,561,1541,1154,No
+USA Universities CS Enrollment (EMSI Estimate),700000,57000,78000,350000,215000,Yes
+USA Universities Enrollment (IPEDS),13934822,1901153,3220694,7751815,1061160,No
+USA High paying Tech Jobs Demographics (EMSI),678685,48317,50868,451767,127733,No
+USA 19-24 Employee Demographics (EMSI),176364,12939,12629,106699,44097,Yes
+Stanford CS Enrollment Demographcis (Stanford Student Project),698,43,66,265,324,Yes
+Carnegie Mellon CS Enrollment Demographcis (College Factual),600,18,53,168,361,Yes
+MIT CS Enrollment (EECS MIT Report),1257,75,226,390,566,Yes
+USA 3 year CS degree Conferral (EMSI),307073,37558,41827,180234,47454,Yes
+MIT Enrollment (MIT website),4156,336,702,1582,1536,No
+Stanford Enrollment (Stanford Website),5963,535,1376,1911,2141,No
+Carnegie Mellon Enrollment (College Website),4814,255,611,1661,2287,No
