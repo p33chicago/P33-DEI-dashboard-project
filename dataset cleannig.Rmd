@@ -18,7 +18,7 @@ library('pscl')
 
 ```{r data, include=FALSE}
 getwd()
-setwd('E:/p33/DEI_CSV')
+setwd('E:/p33/P33-DEI-dashboard-project/DEI_CSV')
 
 df_DEI_demo <- read.csv('df_demo.CSV')
 df_DEI_parametric <- read.csv('df_parametrics.csv')
@@ -29,9 +29,7 @@ df_DEI_parametric <- read.csv('df_parametrics.csv')
 
 ## 2.1 df_DEI_parametric
 
-```{r scrubber}
-colnames(df_DEI_parametric)
-glimpse(df_DEI_parametric)
+```{r var. mutate}
 
 # lower cases in demo col
 df_DEI_parametric_lower <- df_DEI_parametric %>%
