@@ -1,0 +1,58 @@
+"All","Black_Hispanic","White_Asian","Black","Hispanic","White","Asian","Demographic","estimated","var_dim","var_scope","var_key","var_stage","var_source","var_yr_obs"
+5481,3922,1559,1324,2598,1125,434,"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021
+1429,582,847,166,416,500,347,"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021
+5064,3844,1220,1219,2625,872,348,"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021
+1882,938,944,188,750,565,379,"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021
+20717,17672,2679,10133,7539,1325,1354,"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021
+7667,1832,5835,369,1463,3674,2161,"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021
+5720,1087,4633,179,908,2868,1765,"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021
+5081,3058,2023,888,2170,1449,574,"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021
+1025,261,764,55,206,508,256,"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021
+15513,13352,2161,3282,10070,1318,843,"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021
+133178,55826,77352,20880,34946,69614,7738,"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021
+11759,3200,8559,1066,2134,5264,3295,"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021
+2953,642,2311,193,449,1439,872,"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021
+8490,1766,6724,539,1227,4478,2246,"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021
+123681,17847,105834,8621,9226,72374,33460,"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021
+5518,797,4721,385,412,3228,1493,"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021
+1504000,428000,1076000,120000,308000,936000,140000,"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021
+319000,45000,274000,12000,33000,216000,58000,"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021
+1183800,281800,902000,72800,209000,774000,128000,"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021
+344200,44200,300000,11200,33000,234000,66000,"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021
+107967,20859,73254,8779,12080,53788,19466,"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021
+2769,646,2123,223,423,1583,540,"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021
+105198,20213,71131,8556,11657,52205,18926,"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021
+5049583,802956,4246627,401798,401158,3117300,1129327,"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021
+4925902,785109,4140793,393177,391932,3044926,1095867,"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021
+658332,144612,513720,38744,105868,374937,138783,"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021
+653251,141554,511697,37856,103698,373488,138209,"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021
+5081,3058,2023,888,2170,1449,574,"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021
+6169,5929,240,3227,2702,175,65,"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021
+9172,8234,938,3558,4676,700,238,"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021
+9514,9032,482,4407,4625,359,123,"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021
+9007,8063,944,3563,4500,770,174,"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021
+234000,33126,180266,8423,24703,101678,78588,"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021
+179188,38371,123108,10163,28208,76508,46600,"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021
+114024,21547,92477,5050,16497,54718,37759,"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021
+3204,380,2824,97,283,983,1841,"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021
+721,84,637,19,65,261,376,"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021
+40403,10137,30266,3059,7078,19643,10623,"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021
+9763,2121,7642,677,1444,5293,2349,"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021
+21858,3116,18742,1457,1659,14664,4078,"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021
+678685,99185,579500,48317,50868,451767,127733,"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021
+2039431,500059,1341021,197444,302615,1183959,157062,"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021
+2555,481,2074,136,345,823,1251,"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021
+1031,169,862,41,128,486,376,"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021
+14933,3815,11118,1126,2689,5154,5964,"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021
+3487,792,2695,231,561,1541,1154,"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021
+700000,135000,565000,57000,78000,350000,215000,"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021
+13934822,5121847,8812975,1901153,3220694,7751815,1061160,"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021
+678685,99185,579500,48317,50868,451767,127733,"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021
+176364,25568,150796,12939,12629,106699,44097,"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021
+698,109,589,43,66,265,324,"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021
+600,71,529,18,53,168,361,"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021
+1257,301,956,75,226,390,566,"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021
+307073,79385,227688,37558,41827,180234,47454,"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021
+4156,1038,3118,336,702,1582,1536,"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021
+5963,1911,4052,535,1376,1911,2141,"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021
+4814,866,3948,255,611,1661,2287,"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021
