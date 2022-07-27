@@ -1,13 +1,13 @@
 ﻿Demographic,All,Black,Hispanic,White,Asian,estimated
-4th grade proficient in Math (NAEP),5563,1324,2598,1125,434,YES
-4th grade Advanced in Math (NAEP),1113,166,416,500,347,YES
-8th grade  proficient in Math (NAEP),5093,1219,2625,872,348,YES
-8th grade Advanced in math (NAEP),1783,188,750,565,379,YES
+4th grade proficient in Math (NAEP),5481,1324,2598,1125,434,YES
+4th grade Advanced in Math (NAEP),1429,166,416,500,347,YES
+8th grade  proficient in Math (NAEP),5064,1219,2625,872,348,YES
+8th grade Advanced in math (NAEP),1882,188,750,565,379,YES
 K-8 STEM Magnet School Enrollment (CPS School Directory),20717,10133,7539,1325,1354,No
-Illinois AP CS enrollment (P33 Excel),7667,369,1463,3674,2161,No
-Illinois AP CS Pass (P33 Excel),5720,179,908,2868,1765,No
-CPS SAT Meets and Exceeds in Math (ISBE report card),5334,888,2170,1449,574,No
-CPS SAT Exceeds in Math (ISBE report card),1108,55,206,508,256,No
+AP CS enrollment (P33 Excel),7667,369,1463,3674,2161,No
+AP CS Pass (P33 Excel),5720,179,908,2868,1765,No
+CPS SAT Meets and Exceeds in Math (ISBE report card),5081,888,2170,1449,574,No
+CPS SAT Exceeds in Math (ISBE report card),1025,55,206,508,256,No
 CPS STEM Magnet HS Enrollment (CPS School directory),15513,3282,10070,1318,843,No
 Illinois HS Graduates (ISBE),133178,20880,34946,69614,7738,No
 CS/Computing enrollment (IBHE),11759,1066,2134,5264,3295,No
@@ -15,22 +15,22 @@ CS/Computing conferral (IBHE),2953,193,449,1439,872,No
 3 year CS/Computing conferral (EMSI),8490,539,1227,4478,2246,Yes
 Employee Demographics (EMSI),123681,8621,9226,72374,33460,No
 19-24 year olds in tech workforce (EMSI),5518,385,412,3228,1493,Yes
-USA 4th grade math Proficient and above (NAEP),1517000,120000,308000,936000,140000,No
-USA 4th grade math advanced (NAEP),333000,12000,33000,216000,58000,No
-USA 8th grade math proficient and above (NAEP),1207800,72800,209000,774000,128000,No
-USA 8th grade math advanced (NAEP),366000,11200,33000,234000,66000,No
+USA 4th grade math Proficient and above (NAEP),1504000,120000,308000,936000,140000,No
+USA 4th grade math advanced (NAEP),319000,12000,33000,216000,58000,No
+USA 8th grade math proficient and above (NAEP),1183800,72800,209000,774000,128000,No
+USA 8th grade math advanced (NAEP),344200,11200,33000,234000,66000,No
 USA CS/Computing Conferral (EMSI),107967,8779,12080,53788,19466,Yes
 Illinois CS/Computing Conferral (EMSI),2769,223,423,1583,540,"Yes, but this data was not used see Row 14"
 USA-Illinois CS/Computing Conferral(EMSI),105198,8556,11657,52205,18926,NA
 USA Employment Demographics for 11 top tech jobs (EMSI),5049583,401798,401158,3117300,1129327,No
 USA Employment - Illinois Employment for 11 top tech jobs (EMSI),4925902,393177,391932,3044926,1095867,NA
-USA SAT Math benchmark and above (College Board),658332,38744,105868,374937,138783,Yes
+USA SAT Math bench mark and above (College Board),658332,38744,105868,374937,138783,Yes
 USA SAT Benchmark - CPS SAT Benchmark,653251,37856,103698,373488,138209,NA
 CPS SAT Benchmark (ISBE),5081,888,2170,1449,574,No
-4th grade Below Basic in Math (NAEP),6231,3227,2702,175,65,No
-4th grade Basic in Math (NAEP),9123,3558,4676,700,238,No
-8th grade below basic in Math (NAEP),9677,4407,4625,359,123,No
-8th grade basic in math (NAEP),8913,3563,4500,770,174,No
+4th grade Below Basic in Math (NAEP),6169,3227,2702,175,65,No
+4th grade Basic in Math (NAEP),9172,3558,4676,700,238,No
+8th grade below basic in Math (NAEP),9514,4407,4625,359,123,No
+8th grade basic in math (NAEP),9007,3563,4500,770,174,No
 USA SAT Exceeds (College Board),234000,8423,24703,101678,78588,Yes
 USA AP CS Enroll (P33 Excel),179188,10163,28208,76508,46600,No
 USA AP CS Pass (P33 Excel),114024,5050,16497,54718,37759,No
