@@ -23,23 +23,20 @@ setwd('E:/p33/P33-DEI-dashboard-project/DEI_CSV')
 df_DEI_demo <- read.csv('df_demo.CSV')
 df_DEI_parametric <- read.csv('df_parametrics.csv')
 
+# lower cases in demo col
+df_DEI_parametric_lower <- df_DEI_parametric %>%
+  mutate(Demographic = tolower(Demographic))
 ```
 
 #2 Clean Datas
 
 ## 2.1 df_DEI_parametric
 
-```{r var. mutate}
-
-# lower cases in demo col
-df_DEI_parametric_lower <- df_DEI_parametric %>%
-  mutate(Demographic = tolower(Demographic))
-
-unique(df_DEI_parametric_lower$Demographic)
+```{r new variables}
 
 # create cols of variables: var_x
 
-df_DEI_parametric_demographic_mutated24dim <- df_DEI_parametric_lower %>%
+df_DEI_parametric_mutated <- df_DEI_parametric_lower %>%
   
   ## create var_dim 
   mutate(var_dim = case_when(
@@ -76,9 +73,9 @@ df_DEI_parametric_demographic_mutated24dim <- df_DEI_parametric_lower %>%
   
   ## Create scope var.
   mutate(var_scope = case_when(
-    str_detect(Demographic,"mit ") | 
+    str_detect(Demographic,"mit") | 
       str_detect(Demographic,"stanford") | 
-        str_detect(Demographic,"carnegie ") ~ "college",
+        str_detect(Demographic,"carnegie") ~ "college",
     
     str_detect(Demographic,"msa") ~ "region_chi_msa",
     
@@ -90,9 +87,73 @@ df_DEI_parametric_demographic_mutated24dim <- df_DEI_parametric_lower %>%
     
     str_detect(Demographic,"usa") ~ "usa"
     )
-  )
+  ) %>%
+  
+  ## create var_key.
+  mutate(var_key = case_when(
+    str_detect(Demographic,"math") ~ "math",
+    
+    str_detect(Demographic,"cs") ~ "cs",
+    
+    str_detect(Demographic,"stem") ~ "stem",
+    
+    str_detect(Demographic,"tech") |
+      str_detect(Demographic,"jobs")~ "jobs",
+    
+    str_detect(Demographic,"sat") ~ "sat",
+    
+    str_detect(Demographic,"enrollment") | 
+      str_detect(Demographic,"enroll") ~ "enrollment",
+    
+    str_detect(Demographic,"conferral") ~ "conferral"
+    )
+  ) %>%
+    
+  ## create var_key.
+  mutate(var_stage = case_when(
+    str_detect(Demographic,"4th") |
+      str_detect(Demographic,"8th") |
+        str_detect(Demographic,"k-8") ~ "k8",
+    
+    str_detect(Demographic,"sat") |
+      str_detect(Demographic,"ap") |
+        str_detect(Demographic,"hs") ~ "hs",
+     
+    str_detect(Demographic,"college") |
+      str_detect(Demographic,"universities") |
+        str_detect(Demographic,"degree") |
+          str_detect(Demographic,"mit") | 
+            str_detect(Demographic,"stanford") | 
+              str_detect(Demographic,"computing") ~ "col",
+    
+    str_detect(Demographic,"employee") |
+      str_detect(Demographic,"jobs") |
+        str_detect(Demographic,"tech") ~ "emp")
+  ) %>%
+  
+  ## create var_source
+  mutate(var_source = str_extract(Demographic,"(?<=\\().+?(?=\\))")
+          ) %>%
+  
+  ## create new var for ethnic groups (!!!!!!!!!!! minus others occured)
+  mutate(Black_Hispanic = Black + Hispanic,
+         White_Asian = White + Asian,
+         others = All - Black - Hispanic - White - Asian) %>%
+  
+  select(All,Black_Hispanic,White_Asian,Black,Hispanic,White,Asian,others,everything())
 
-unique(df_DEI_parametric_demographic_mutated24dim$Demographic)
+
+colnames(df_DEI_parametric_mutated)
+
+
+```
+
+
+``` {r wide to long df}
+
+df_DEI_parametric_mutated_long <- df_DEI_parametric_mutated %>%
+  pivot_longer(1:8,names_to = "var_ethinc",values_to = "var_popul")
+
 
 
 ```
