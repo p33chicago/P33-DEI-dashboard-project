@@ -1,0 +1,400 @@
+"Demographic","estimated","var_dim","var_scope","var_key","var_stage","var_source","var_yr_obs","var_ethinc","var_popul"
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"all",5481
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black_hispanic",3922
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white_asian",1559
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black",1324
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"hispanic",2598
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white",1125
+"4th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"asian",434
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"all",1429
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"black_hispanic",582
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"white_asian",847
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"black",166
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"hispanic",416
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"white",500
+"4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"asian",347
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"all",5064
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black_hispanic",3844
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white_asian",1220
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black",1219
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"hispanic",2625
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white",872
+"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"asian",348
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"all",1882
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"black_hispanic",938
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"white_asian",944
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"black",188
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"hispanic",750
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"white",565
+"8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"asian",379
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"all",20717
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"black_hispanic",17672
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"white_asian",2679
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"black",10133
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"hispanic",7539
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"white",1325
+"k-8 stem magnet school enrollment (cps school directory)","No","access","city_chi","stem","k8","cps school directory",2021,"asian",1354
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"all",7667
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"black_hispanic",1832
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"white_asian",5835
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"black",369
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"hispanic",1463
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"white",3674
+"ap cs enrollment (p33 excel)","No","access",NA,"cs","hs","p33 excel",2021,"asian",2161
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"all",5720
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"black_hispanic",1087
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"white_asian",4633
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"black",179
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"hispanic",908
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"white",2868
+"ap cs pass (p33 excel)","No","excellence",NA,"cs","hs","p33 excel",2021,"asian",1765
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"all",5081
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"black_hispanic",3058
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"white_asian",2023
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"black",888
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"hispanic",2170
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"white",1449
+"cps sat meets and exceeds in math (isbe report card)","No","proficiency","city_chi","math","hs","isbe report card",2021,"asian",574
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"all",1025
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"black_hispanic",261
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"white_asian",764
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"black",55
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"hispanic",206
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"white",508
+"cps sat exceeds in math (isbe report card)","No","excellence","city_chi","math","hs","isbe report card",2021,"asian",256
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"all",15513
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"black_hispanic",13352
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"white_asian",2161
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"black",3282
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"hispanic",10070
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"white",1318
+"cps stem magnet hs enrollment (cps school directory)","No","access","city_chi","stem","hs","cps school directory",2021,"asian",843
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"all",133178
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"black_hispanic",55826
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"white_asian",77352
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"black",20880
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"hispanic",34946
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"white",69614
+"illinois hs graduates (isbe)","No",NA,"state_il",NA,"hs","isbe",2021,"asian",7738
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"all",11759
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"black_hispanic",3200
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"white_asian",8559
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"black",1066
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"hispanic",2134
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"white",5264
+"cs/computing enrollment (ibhe)","No","access","state_il","cs","col","ibhe",2021,"asian",3295
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"all",2953
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"black_hispanic",642
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"white_asian",2311
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"black",193
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"hispanic",449
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"white",1439
+"cs/computing conferral (ibhe)","No","proficiency","state_il","cs","col","ibhe",2021,"asian",872
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"all",8490
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"black_hispanic",1766
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"white_asian",6724
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"black",539
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"hispanic",1227
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"white",4478
+"3 year cs/computing conferral (emsi)","Yes","proficiency",NA,"cs","col","emsi",2021,"asian",2246
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"all",123681
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"black_hispanic",17847
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"white_asian",105834
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"black",8621
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"hispanic",9226
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"white",72374
+"employee demographics (emsi)","No","proficiency",NA,"cs","hs","emsi",2021,"asian",33460
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"all",5518
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"black_hispanic",797
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"white_asian",4721
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"black",385
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"hispanic",412
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"white",3228
+"19-24 year olds in tech workforce (emsi)","Yes","access",NA,"jobs","emp","emsi",2021,"asian",1493
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"all",1504000
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"black_hispanic",428000
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"white_asian",1076000
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"black",120000
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"hispanic",308000
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"white",936000
+"usa 4th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"asian",140000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"all",319000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"black_hispanic",45000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white_asian",274000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"black",12000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"hispanic",33000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white",216000
+"usa 4th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"asian",58000
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"all",1183800
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"black_hispanic",281800
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"white_asian",902000
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"black",72800
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"hispanic",209000
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"white",774000
+"usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"asian",128000
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"all",344200
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"black_hispanic",44200
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white_asian",300000
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"black",11200
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"hispanic",33000
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white",234000
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"asian",66000
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"all",107967
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"black_hispanic",20859
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"white_asian",73254
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"black",8779
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"hispanic",12080
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"white",53788
+"usa cs/computing conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"asian",19466
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"all",2769
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"black_hispanic",646
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"white_asian",2123
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"black",223
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"hispanic",423
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"white",1583
+"illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"asian",540
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"all",105198
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"black_hispanic",20213
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"white_asian",71131
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"black",8556
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"hispanic",11657
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"white",52205
+"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"asian",18926
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"all",5049583
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"black_hispanic",802956
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"white_asian",4246627
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"black",401798
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"hispanic",401158
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"white",3117300
+"usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"asian",1129327
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"all",4925902
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"black_hispanic",785109
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"white_asian",4140793
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"black",393177
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"hispanic",391932
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"white",3044926
+"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"asian",1095867
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"all",658332
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"black_hispanic",144612
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"white_asian",513720
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"black",38744
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"hispanic",105868
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"white",374937
+"usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"asian",138783
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"all",653251
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"black_hispanic",141554
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"white_asian",511697
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"black",37856
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"hispanic",103698
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"white",373488
+"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"asian",138209
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"all",5081
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"black_hispanic",3058
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"white_asian",2023
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"black",888
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"hispanic",2170
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"white",1449
+"cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"asian",574
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"all",6169
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black_hispanic",5929
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white_asian",240
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black",3227
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"hispanic",2702
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white",175
+"4th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"asian",65
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"all",9172
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black_hispanic",8234
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white_asian",938
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black",3558
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"hispanic",4676
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white",700
+"4th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"asian",238
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"all",9514
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black_hispanic",9032
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white_asian",482
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black",4407
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"hispanic",4625
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white",359
+"8th grade below basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"asian",123
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"all",9007
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black_hispanic",8063
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white_asian",944
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"black",3563
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"hispanic",4500
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"white",770
+"8th grade basic in math (naep)","No",NA,"city_chi","math","k8","naep",2021,"asian",174
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"all",234000
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"black_hispanic",33126
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"white_asian",180266
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"black",8423
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"hispanic",24703
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"white",101678
+"usa sat exceeds (college board)","Yes","excellence","usa","sat","hs","college board",2021,"asian",78588
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"all",179188
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"black_hispanic",38371
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"white_asian",123108
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"black",10163
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"hispanic",28208
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"white",76508
+"usa ap cs enroll (p33 excel)","No","access","usa","cs","hs","p33 excel",2021,"asian",46600
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"all",114024
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"black_hispanic",21547
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"white_asian",92477
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"black",5050
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"hispanic",16497
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"white",54718
+"usa ap cs pass (p33 excel)","No","excellence","usa","cs","hs","p33 excel",2021,"asian",37759
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"all",3204
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"black_hispanic",380
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"white_asian",2824
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"black",97
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"hispanic",283
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"white",983
+"top three illinois universities cs 2022 enrollment (isbe)","No","access","state_il","cs","col","isbe",2021,"asian",1841
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"all",721
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"black_hispanic",84
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"white_asian",637
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"black",19
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"hispanic",65
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"white",261
+"top three illinois universities cs 2021 conferral (isbe)","No","proficiency","state_il","cs","col","isbe",2021,"asian",376
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"all",40403
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"black_hispanic",10137
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"white_asian",30266
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"black",3059
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"hispanic",7078
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"white",19643
+"top three illinois universities 2022 enrollment (isbe)","No","access","state_il","enrollment","col","isbe",2021,"asian",10623
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"all",9763
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"black_hispanic",2121
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"white_asian",7642
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"black",677
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"hispanic",1444
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"white",5293
+"top three illinois universities 2021 conferral (isbe)","No","proficiency","state_il","conferral","col","isbe",2021,"asian",2349
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"all",21858
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"black_hispanic",3116
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"white_asian",18742
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"black",1457
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"hispanic",1659
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"white",14664
+"top 3 highest paying cs jobs chicago msa (emsi)","No","excellence","region_chi_msa","cs","emp","emsi",2021,"asian",4078
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"all",678685
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"black_hispanic",99185
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"white_asian",579500
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"black",48317
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"hispanic",50868
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"white",451767
+"top 3 highest paying cs jobs usa (emsi)","No","excellence","usa","cs","emp","emsi",2021,"asian",127733
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"all",2039431
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"black_hispanic",500059
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"white_asian",1341021
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"black",197444
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"hispanic",302615
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"white",1183959
+"usa degree conferral (nces)","No","proficiency","usa","conferral","col","nces",2021,"asian",157062
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"all",2555
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"black_hispanic",481
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"white_asian",2074
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"black",136
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"hispanic",345
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"white",823
+"top three usa universities cs enrollment (collected individually from school's website)","Yes","access","usa","cs","col","collected individually from school's website",2021,"asian",1251
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"all",1031
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"black_hispanic",169
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"white_asian",862
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"black",41
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"hispanic",128
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"white",486
+"top three usa universities cs conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"asian",376
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"all",14933
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"black_hispanic",3815
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"white_asian",11118
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"black",1126
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"hispanic",2689
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"white",5154
+"top three usa universities enrollment (ipeds)","Yes","access","usa","enrollment","col","ipeds",2021,"asian",5964
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"all",3487
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"black_hispanic",792
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"white_asian",2695
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"black",231
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"hispanic",561
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"white",1541
+"top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"asian",1154
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"all",700000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"black_hispanic",135000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"white_asian",565000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"black",57000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"hispanic",78000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"white",350000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"asian",215000
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"all",13934822
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"black_hispanic",5121847
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"white_asian",8812975
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"black",1901153
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"hispanic",3220694
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"white",7751815
+"usa universities enrollment (ipeds)","No","access","usa","enrollment","col","ipeds",2021,"asian",1061160
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"all",678685
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"black_hispanic",99185
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"white_asian",579500
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"black",48317
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"hispanic",50868
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"white",451767
+"usa high paying tech jobs demographics (emsi)","No","excellence","usa","cs","hs","emsi",2021,"asian",127733
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"all",176364
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"black_hispanic",25568
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"white_asian",150796
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"black",12939
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"hispanic",12629
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"white",106699
+"usa 19-24 employee demographics (emsi)","Yes","proficiency","usa","cs","hs","emsi",2021,"asian",44097
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"all",698
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"black_hispanic",109
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"white_asian",589
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"black",43
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"hispanic",66
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"white",265
+"stanford cs enrollment demographcis (stanford student project)","Yes","excellence","college","cs","hs","stanford student project",2021,"asian",324
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"all",600
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"black_hispanic",71
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"white_asian",529
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"black",18
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"hispanic",53
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"white",168
+"carnegie mellon cs enrollment demographcis (college factual)","Yes","excellence","college","cs","hs","college factual",2021,"asian",361
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"all",1257
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"black_hispanic",301
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"white_asian",956
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"black",75
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"hispanic",226
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"white",390
+"mit cs enrollment (eecs mit report)","Yes","excellence","college","cs","col","eecs mit report",2021,"asian",566
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"all",307073
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"black_hispanic",79385
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"white_asian",227688
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"black",37558
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"hispanic",41827
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"white",180234
+"usa 3 year cs degree conferral (emsi)","Yes","proficiency","usa","cs","col","emsi",2021,"asian",47454
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"all",4156
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"black_hispanic",1038
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"white_asian",3118
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"black",336
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"hispanic",702
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"white",1582
+"mit enrollment (mit website)","No","excellence","college","enrollment","col","mit website",2021,"asian",1536
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"all",5963
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"black_hispanic",1911
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"white_asian",4052
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"black",535
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"hispanic",1376
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"white",1911
+"stanford enrollment (stanford website)","No","excellence","college","enrollment","col","stanford website",2021,"asian",2141
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"all",4814
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"black_hispanic",866
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"white_asian",3948
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"black",255
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"hispanic",611
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"white",1661
+"carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"asian",2287
