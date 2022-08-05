@@ -13,13 +13,13 @@
 "4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"hispanic",416
 "4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"white",500
 "4th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"asian",347
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"all",5064
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black_hispanic",3844
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white_asian",1220
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black",1219
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"hispanic",2625
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white",872
-"8th grade  proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"asian",348
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"all",5064
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black_hispanic",3844
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white_asian",1220
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"black",1219
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"hispanic",2625
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"white",872
+"8th grade proficient in math (naep)","YES","proficiency","city_chi","math","k8","naep",2021,"asian",348
 "8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"all",1882
 "8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"black_hispanic",938
 "8th grade advanced in math (naep)","YES","excellence","city_chi","math","k8","naep",2021,"white_asian",944
@@ -134,7 +134,7 @@
 "usa 8th grade math proficient and above (naep)","No","proficiency","usa","math","k8","naep",2021,"asian",128000
 "usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"all",344200
 "usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"black_hispanic",44200
-"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white_asian",300000
+"usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white_asian",3e+05
 "usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"black",11200
 "usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"hispanic",33000
 "usa 8th grade math advanced (naep)","No","excellence","usa","math","k8","naep",2021,"white",234000
@@ -153,13 +153,6 @@
 "illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"hispanic",423
 "illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"white",1583
 "illinois cs/computing conferral (emsi)","Yes, but this data was not used see Row 14","proficiency","state_il","cs","col","emsi",2021,"asian",540
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"all",105198
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"black_hispanic",20213
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"white_asian",71131
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"black",8556
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"hispanic",11657
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"white",52205
-"usa-illinois cs/computing conferral(emsi)",NA,"proficiency","state_il","cs","col","emsi",2021,"asian",18926
 "usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"all",5049583
 "usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"black_hispanic",802956
 "usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"white_asian",4246627
@@ -167,13 +160,6 @@
 "usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"hispanic",401158
 "usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"white",3117300
 "usa employment demographics for 11 top tech jobs (emsi)","No","excellence","usa","cs","hs","emsi",2021,"asian",1129327
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"all",4925902
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"black_hispanic",785109
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"white_asian",4140793
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"black",393177
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"hispanic",391932
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"white",3044926
-"usa employment - illinois employment for 11 top tech jobs (emsi)",NA,"excellence","state_il","jobs","emp","emsi",2021,"asian",1095867
 "usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"all",658332
 "usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"black_hispanic",144612
 "usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"white_asian",513720
@@ -181,13 +167,6 @@
 "usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"hispanic",105868
 "usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"white",374937
 "usa sat math bench mark and above (college board)","Yes",NA,"usa","math","hs","college board",2021,"asian",138783
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"all",653251
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"black_hispanic",141554
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"white_asian",511697
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"black",37856
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"hispanic",103698
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"white",373488
-"usa sat benchmark - cps sat benchmark",NA,"proficiency","city_chi","sat","hs",NA,2021,"asian",138209
 "cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"all",5081
 "cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"black_hispanic",3058
 "cps sat benchmark (isbe)","No","proficiency","city_chi","sat","hs","isbe",2021,"white_asian",2023
@@ -321,7 +300,7 @@
 "top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"hispanic",561
 "top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"white",1541
 "top three usa universities conferral (ipeds)","No","proficiency","usa","conferral","col","ipeds",2021,"asian",1154
-"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"all",700000
+"usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"all",7e+05
 "usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"black_hispanic",135000
 "usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"white_asian",565000
 "usa universities cs enrollment (emsi estimate)","Yes","access","usa","cs","col","emsi estimate",2021,"black",57000
@@ -398,3 +377,59 @@
 "carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"hispanic",611
 "carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"white",1661
 "carnegie mellon enrollment (college website)","No","excellence","college","enrollment","col","college website",2021,"asian",2287
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"all",88387
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"black_hispanic",18541
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"white_asian",69846
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"black",4491
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"hispanic",14050
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"white",43220
+"usa ap cs scored 5  (p33 excel)","No",NA,"usa","cs","hs","p33 excel",2021,"asian",26626
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"all",25637
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"black_hispanic",3006
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"white_asian",22631
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"black",559
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"hispanic",2447
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"white",11498
+"usa ap cs scored 3 or 4  (p33 excel)","NO",NA,"usa","cs","hs","p33 excel",2021,"asian",11133
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"all",0.38
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"black_hispanic",0.61
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"white_asian",0.79
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"black",0.26
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"hispanic",0.35
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"white",0.36
+"4th graders with elementary schools offering cs usa (amazon survey)","No",NA,"usa","cs","k8","amazon survey",2021,"asian",0.43
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"all",0.04
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"black_hispanic",0.15
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"white_asian",0.04
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"black",0.08
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"hispanic",0.07
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"white",0.03
+"usa lack of internet access (nces)","No",NA,"usa",NA,NA,"nces",2021,"asian",0.01
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"all",0.69
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"black_hispanic",1.35
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"white_asian",1.49
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"black",0.67
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"hispanic",0.68
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"white",0.7
+"usa interest in cs 9th-12th grade (amazon survey)","Yes",NA,"usa","cs",NA,"amazon survey",2021,"asian",0.79
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"all",0.53
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"black_hispanic",1.03
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"white_asian",1.15
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"black",0.51
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"hispanic",0.52
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"white",0.54
+"usa interest in cs 5th-8th grade (amazon survey)","Yes",NA,"usa","cs","k8","amazon survey",2021,"asian",0.61
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"all",0.78
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"black_hispanic",1.49
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"white_asian",1.68
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"black",0.73
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"hispanic",0.76
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"white",0.79
+"usa hs offering  cs (amazon survey)","No",NA,"usa","cs","hs","amazon survey",2021,"asian",0.89
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"all",2288743
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"black_hispanic",1423107
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"white_asian",865636
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"black",517275
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"hispanic",905832
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"white",830272
+"number of students without internet access (nces)","NO",NA,NA,NA,NA,"nces",2021,"asian",35364
