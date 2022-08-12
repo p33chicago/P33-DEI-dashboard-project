@@ -6,6 +6,8 @@ For now, this is a [SvelteKit](https://kit.svelte.dev/) starter app with one min
 
 Run both the [ingestion](../ingest.ipynb) and the [transform](../transform.ipynb) notebooks. This should result in a [../data/figure.json](../data/figure.json) and [../data/figure.svelte](../data/figure.svelte) file. The JSON file is curently used, but you can uncomment some code in routes/index.svelte to see how the figure.svelte might be used.
 
+You'll also need to install nodejs (from wherever) and run `npm install`.
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
