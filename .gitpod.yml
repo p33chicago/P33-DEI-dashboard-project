@@ -1,0 +1,34 @@
+image: jupyter/r-notebook:latest
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
+ports:
+  - name: Jupyter Lab
+    description: see output for token
+    port: 8888
+    visibility: public
+tasks:
+  - name: set groups
+    init: |
+      sudo usermod -a -G gitpod jovyan
+      sudo usermod -a -G users gitpod
+  - name: launch jupyter lab
+    command: jupyter lab --ServerApp.custom_display_url=$(gp url 8888)
+  - name: open jupyter lab
+    command: |
+      gp ports await 8888
+      lab_url=$(gp url 8888)/?token=$(jupyter lab list | tail -n 1 | grep -Po '(?<=token=)([a-z0-9]+)')
+      echo "Opening $lab_url"
+      echo "Check your browser for blocked popups!"
+      gp open docs/gitpod.md
+      gp preview --external "$lab_url"
+  - name: change ownership of R
+    command: |
+      # Do this after launching Jupyter Lab, so dev doesn't have to wait
+      # Caveat: installing R packages might not work if the developer is fast
+
+      R_PATH=/opt/conda/lib/R
+      echo "Changing ownership of $R_PATH - this might take a while"
+      sudo chown -R gitpod $R_PATH
+      echo "Done"
