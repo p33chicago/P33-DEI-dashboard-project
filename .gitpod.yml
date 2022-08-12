@@ -3,6 +3,7 @@ vscode:
   extensions:
     - ms-python.python
     - ms-toolsai.jupyter
+    - svelte.svelte-vscode
 ports:
   - name: Jupyter Lab
     description: see output for token
