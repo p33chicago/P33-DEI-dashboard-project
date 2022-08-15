@@ -5,7 +5,8 @@ date: '2022-07-26'
 output: beamer_presentation
 ---
 
-```{r readin, include=FALSE}
+
+```{r reading, include=FALSE}
 library("tidyverse")
 library("dplyr")
 library("tidyr")
@@ -20,11 +21,10 @@ library('pscl')
 getwd()
 setwd('E:/p33/P33-DEI-dashboard-project/DEI_CSV')
 
-df_DEI_demo <- read.csv('df_demo_08102022.csv')
-df_DEI_parametric <- read.csv('df_parametrics_08082022.csv')
+df_DEI_demo <- read.csv('df_demo_08152022.csv')
+df_DEI_parametric <- read.csv('df_parametrics_08152022.csv')
 
 ```
-
 
 #2 Clean raw Dataset
 
@@ -40,14 +40,11 @@ df_DEI_parametric_lower <- df_DEI_parametric %>%
 # label variables and education stage 
 colnames(df_DEI_parametric_lower)
 
-df_DEI_parametric_label <- df_DEI_parametric_lower %>%
+df_DEI_parametric_mutated <- df_DEI_parametric_lower %>%
   mutate(var_key = case_when(
 
     # uni and top uni   
-    str_detect(Demographic,"usa degree conferra") ~ "total_confer",
-    str_detect(Demographic,"universities enrollment") ~ "total_enrol",
-    str_detect(Demographic,"universities 2022 enrollment") ~ "total_enrol",
-    str_detect(Demographic,"universities conferral") ~ "total_confer",
+     
     str_detect(Demographic,"mit enrollment") ~ "t3_mit_total_enrol",  
     str_detect(Demographic,"mit cs enrollment") ~ "t3_mit_cs_enrol",   
     str_detect(Demographic,"mellon enrollment") ~ "t3_mellon_total_enrol",  
@@ -55,22 +52,38 @@ df_DEI_parametric_label <- df_DEI_parametric_lower %>%
     str_detect(Demographic,"stanford enrollment") ~ "t3_stanford_total_enrol",
     str_detect(Demographic,"stanford cs enrollment") ~ "t3_stanford_cs_enrol",
     str_detect(Demographic,"top three illinois universities cs 2021 conferral") ~ "t3_cs_confer",
+    str_detect(Demographic,"top three illinois universities cs 2022 conferral") ~ "t3_cs_confer",
     str_detect(Demographic,"top three usa universities cs conferral") ~ "t3_cs_confer",
-    str_detect(Demographic,"top three usa universities cs conferral") ~ "t3_cs_confer", 
+    str_detect(Demographic,"top three usa universities cs enrollment") ~ "t3_cs_enrol", 
+    str_detect(Demographic,"top three illinois universities cs 2021 enrollment") ~ "t3_cs_enrol", 
     str_detect(Demographic,"top three illinois universities cs 2022 enrollment") ~ "t3_cs_enrol", 
+    str_detect(Demographic,"top three illinois universities 2021 conferral") ~ "t3_confer", 
+    str_detect(Demographic,"top three illinois universities 2022 conferral") ~ "t3_confer", 
+    str_detect(Demographic,"top three illinois universities 2021 enrollment") ~ "t3_enrol",  
+    str_detect(Demographic,"top three illinois universities 2022 enrollment") ~ "t3_enrol", 
+    str_detect(Demographic,"top three usa universities enrollment") ~ "t3_enrol",   
+    str_detect(Demographic,"top three usa universities conferral") ~ "t3_confer", 
+    
+    str_detect(Demographic,"usa degree conferra") ~ "total_confer",
+    str_detect(Demographic,"universities enrollment") ~ "total_enrol",
+    str_detect(Demographic,"universities 2022 enrollment") ~ "total_enrol",
+    str_detect(Demographic,"universities conferral") ~ "total_confer",
     
     # ap cs 
     str_detect(Demographic,"ap cs pass") ~ "apcs_pass",
     str_detect(Demographic,"ap cs enrollment") ~ "apcs_enrol",
     str_detect(Demographic,"ap cs enroll") ~ "apcs_enrol",
-    str_detect(Demographic,"ap cs scored 3 or 4 ") ~ "apcs_score34",
+    str_detect(Demographic,"ap cs scored 3 or 4 ") ~ "apcs_score3/4",
     str_detect(Demographic,"ap cs scored 5") ~ "apcs_score5", 
+    
     # cs  
     str_detect(Demographic,"offering cs") ~ "cs_classOffered",
     str_detect(Demographic,"interest in cs") ~ "cs_interested",
     str_detect(Demographic,"cs enrollment") ~ "cs_enrol",
     str_detect(Demographic,"cs/computing enrollment") ~ "cs_enrol",
     str_detect(Demographic,"cs 2022 enrollment") ~ "cs_enrol",
+    str_detect(Demographic,"3 year cs degree conferral") ~ "cs3year_confer", 
+    str_detect(Demographic,"3 year cs/computing conferral") ~ "cs3year_confer",
     str_detect(Demographic,"cs 2021 conferral") ~ "cs_confer",
     str_detect(Demographic,"cs degree conferral") ~ "cs_confer",
     str_detect(Demographic,"cs conferral") ~ "cs_confer",
@@ -99,17 +112,20 @@ df_DEI_parametric_label <- df_DEI_parametric_lower %>%
     str_detect(Demographic,"basic in math") ~ "math_basic",
 
     # employment
+    
+    str_detect(Demographic,"19-24 year olds in tech") ~ "csjob_t11_age19to24",
+    str_detect(Demographic,"usa 19-24 employee") ~ "csjob_t11_age19to24",
     str_detect(Demographic,"top 3 highest paying cs jobs") ~ "csjob_t3",
     str_detect(Demographic,"employee demographics") ~ "csjob_t11",
     str_detect(Demographic,"11 top tech jobs") ~ "csjob_t11",
-    str_detect(Demographic,"19-24 year olds in tech") ~ "csjob_t11_age19to24",
+    
     # internet
     str_detect(Demographic,"aged 5-17 number of students without internet access") ~ "NOinternet_age5to17"
     )
   ) %>%
   
   # create educational stage
-  mutate(var_stage = case_when(str_detect(Demographic,"4th") ~ "k8_4th",
+  mutate(var_grade = case_when(str_detect(Demographic,"4th") ~ "k8_4th",
                                str_detect(Demographic,"5th-8th") ~ "k8_5to8th",
                                str_detect(Demographic,"8th") ~ "k8_8th",
                                str_detect(Demographic,"k-8") |
@@ -123,26 +139,29 @@ df_DEI_parametric_label <- df_DEI_parametric_lower %>%
               str_detect(Demographic,"stanford") | 
                 str_detect(Demographic,"computing") ~ "col",
     
+     str_detect(Demographic,"employment") |
+       str_detect(Demographic,"employee") | 
+         str_detect(Demographic,"jobs") |
+           str_detect(Demographic,"tech") ~ "emp",  
+    
     str_detect(Demographic,"sat") |
       str_detect(Demographic,"ap") |
         str_detect(Demographic,"9th-12th") |
-          str_detect(Demographic,"hs") ~ "hs",
-    
-    str_detect(Demographic,"employment") |
-       str_detect(Demographic,"employee") | 
-         str_detect(Demographic,"jobs") |
-           str_detect(Demographic,"tech") ~ "emp")
-    
-  ) %>%  
+          str_detect(Demographic,"hs") ~ "hs"
+    )
+  ) %>%
   
   ## Create scope var.
   mutate(var_scope = case_when(
+    
+    str_detect(Demographic,"usa") |
+        str_detect(Demographic,"number of students") ~ "usa",    
+    
     str_detect(Demographic,"mit") | 
       str_detect(Demographic,"stanford") | 
         str_detect(Demographic,"carnegie") ~ "college",
     
     str_detect(Demographic,"msa") |
-      str_detect(Demographic,"employee") |
         str_detect(Demographic,"19-24 year olds in tech workforce") ~ "region_chi_msa",
     
     str_detect(Demographic,"cps") | 
@@ -151,22 +170,21 @@ df_DEI_parametric_label <- df_DEI_parametric_lower %>%
     str_detect(Demographic,"illinois") |
         str_detect(Demographic,"ap cs") |
           str_detect(Demographic,"ibhe") |
-          str_detect(Demographic,"3 year cs/computing") ~ "state_il", 
-    
-    str_detect(Demographic,"usa") |
-        str_detect(Demographic,"number of students") ~ "usa"
+          str_detect(Demographic,"3 year cs/computing") ~ "state_il"
     )
   ) %>%
   
-  select(Demographic,var_yr,var_scope,var_stage,var_key,everything())
-
-colnames(df_DEI_parametric_label)
-
-# write.csv(df_DEI_parametric_label,"E:/p33/P33-DEI-dashboard-project/df_DEI_parametric_label_forreview.csv", row.names = FALSE)
-
-# create cols of variables: var_x
-
-df_DEI_parametric_mutated <- df_DEI_parametric_label %>%
+  mutate(var_schoolType = case_when(
+    str_detect(Demographic,"cps") |
+      (str_detect(var_grade,"hs") & str_detect(var_scope,"city_chi")) |
+      (str_detect(var_grade,"4th") & str_detect(var_scope,"city_chi"))|
+      (str_detect(var_grade,"8th") & str_detect(var_scope,"city_chi"))|
+      (str_detect(var_grade,"5th-8th") & str_detect(var_scope,"city_chi"))|
+      (str_detect(var_grade,"k-8") & str_detect(var_scope,"city_chi"))|
+      (str_detect(var_grade,"5-17") & str_detect(var_scope,"city_chi")) ~ "cps",
+    TRUE ~ "allSchools"
+    )
+  )  %>%
   
   ## create var_dim 
   mutate(var_dim = case_when(
@@ -225,37 +243,44 @@ df_DEI_parametric_mutated <- df_DEI_parametric_label %>%
 
 colnames(df_DEI_parametric_mutated)
 
+# check 
+df_DEI_parametric_mutated %>%
+  select(Demographic,var_grade,var_key,var_scope,var_schoolType) %>%
+  view()
+
 ```
 
-``` {r parametric df wide to long}
 
-df_DEI_parametric_mutated_long <- df_DEI_parametric_mutated %>%
-  pivot_longer(1:7,names_to = "var_ethinc",values_to = "var_value") %>%
-  mutate(var_ethinc = tolower(var_ethinc))
+```{r parametric df wide to long}
 
-df_DEI_parametric_tidy <- df_DEI_parametric_mutated_long
+
+df_DEI_parametric_tidy <- df_DEI_parametric_mutated %>%
+  pivot_longer(1:7,names_to = "var_ethnic",values_to = "population") %>%
+  mutate(var_ethnic = tolower(var_ethnic)) %>%
+  select(var_yr,var_scope,var_grade,var_key,var_ethnic,var_type,var_schoolType,population,everything())
+
+colnames(df_DEI_parametric_tidy)
 
 # write.csv(df_DEI_parametric_mutated_long,"E:/p33/P33-DEI-dashboard-project/df_DEI_parametric_tidy.csv", row.names = FALSE)
 
 ```
 
-
-
 ## 2.2 df_DEI_demo
 
-``` {R demographic df wide to long}
+```{R demographic df wide to long}
 
 df_DEI_demo_long <- df_DEI_demo %>%
   mutate(Demographics = tolower(Demographics)) %>%
   select(-estimated) %>%
   pivot_longer(2:6,
                names_to = "var_ethnic",
-               values_to = "population") 
+               values_to = "population") %>%
+  mutate(var_ethnic = tolower(var_ethnic)) 
 
 ```
 
 
-``` {r parametric df mutate}
+```{r parametric df mutate}
 
 # create cols of variables: var_x
 
@@ -308,7 +333,7 @@ df_DEI_demo_mutated_long <- df_DEI_demo_long %>%
           ) %>%
   
   ## create variable of years
-  mutate(var_yr_ob = case_when(
+  mutate(var_yr = case_when(
     str_detect(Demographics,"2022") ~ 2022,
     str_detect(Demographics,"2021-2022") ~ 2021,
     str_detect(Demographics,"2020") ~ 2020,
@@ -318,8 +343,8 @@ df_DEI_demo_mutated_long <- df_DEI_demo_long %>%
   ## create variable of school types
   mutate(var_schoolType = case_when(
     str_detect(Demographics,"cps") ~ "cps",
-    str_detect(Demographics,"all") ~ 'all',
-    TRUE ~ 'tbc')
+    str_detect(Demographics,"all") ~ 'allSchools',
+    TRUE ~ 'allSchools')
     ) %>%
   
   ## create variable of grades
@@ -355,73 +380,83 @@ colnames(df_DEI_demo_mutated_long)
 
 ```
 
-``` {r demo df tidy}
+```{r demo df tidy}
 
 df_DEI_demo_tidy <- df_DEI_demo_mutated_long %>%
   rename(note = Demographics,
-         demographics = x) %>%
-  filter(note != 'all college students - all cs/computing degree enrollment') %>%
-  select(demographics,var_schoolType,var_scope,var_ethnic,population,var_yr_ob,note,var_sample,var_source)
+         var_grade = x) %>%
+  mutate(population = format(population,scientific = FALSE)) %>%
+  select(var_yr,var_scope,var_grade,var_schoolType,var_ethnic,population,note,var_sample,var_source)
 
 # write.csv(df_DEI_demo_mutated_long,"E:/p33/P33-DEI-dashboard-project/df_DEI_demo_tidy_for_review 07281007.csv", row.names = FALSE)
 
 ```
 
-
 # 3 Merge into one dataset (TBF)
 
-
-``` {r}
-
-# preparing demo data for merging
-
-
-colnames(df_DEI_demo_tidy)
-
-df_DEI_demo_tidy_formerge <- df_DEI_demo_tidy %>%
-  select(1:6)
-
-df_DEI_demo_tidy_formerge$X <- paste('demo',
-                                     df_DEI_demo_tidy_formerge$var_yr_ob,
-                                     df_DEI_demo_tidy_formerge$demographics,
-                                     df_DEI_demo_tidy_formerge$var_schoolType, 
-                                     df_DEI_demo_tidy_formerge$var_scope,
-                                     df_DEI_demo_tidy_formerge$var_ethnic,
-                                     sep = ":") 
-
-df_DEI_demo_tidy_formerge <- df_DEI_demo_tidy_formerge %>%
-  select(X,population) %>%
-  pivot_wider(names_from = X,
-              values_from = population)
-
-colnames(df_DEI_demo_tidy_formerge)
-
-```
-
+## 3,1 rbind
 
 ```{r}
 
-# preparing parametric data set for merging
-
 colnames(df_DEI_parametric_tidy)
+colnames(df_DEI_demo_tidy)
 
-df_DEI_parametric_tidy_formerge <- df_DEI_parametric_tidy %>%
-  filter(!is.na(var_dim)) %>%
-  select(var_yr,var_dim,var_stage,var_scope,Demographic,var_type,var_value)
+# prepare parametric data for rbind
 
-df_DEI_parametric_tidy_formerge$X <- paste('para',
-                                     df_DEI_parametric_tidy_formerge$var_yr,
-                                     df_DEI_parametric_tidy_formerge$var_dim,
-                                     df_DEI_parametric_tidy_formerge$var_stage,
-                                     df_DEI_parametric_tidy_formerge$var_scope,
-                                     df_DEI_parametric_tidy_formerge$Demographic,
-                                     df_DEI_parametric_tidy_formerge$var_type,
-                                     sep = ":") 
+df_DEI_parametric_rbind <- df_DEI_parametric_tidy %>%
+  select(1:8) %>%
+   select(var_yr,var_scope,var_grade,var_key,var_schoolType,var_ethnic,population,var_type)
 
+df_DEI_parametric_rbind$metrics_new <- paste(df_DEI_parametric_rbind$var_yr,
+                                             df_DEI_parametric_rbind$var_scope,
+                                             df_DEI_parametric_rbind$var_grade,
+                                             df_DEI_parametric_rbind$var_key,
+                                             df_DEI_parametric_rbind$var_schoolType,
+                                             df_DEI_parametric_rbind$var_ethnic,
+                                             sep = "___") 
 
+# prepare demo data for rbind
 
-colnames(df_DEI_parametric_tidy_formerge)
+df_DEI_demo_rbind <- df_DEI_demo_tidy %>%
+  select(1:6) %>%
+  mutate(var_key = "popul",
+         var_type = "count") %>%
+  select(var_yr,var_scope,var_grade,var_key,var_schoolType,var_ethnic,population,var_type)
+
+df_DEI_demo_rbind$metrics_new <- paste(df_DEI_demo_rbind$var_yr,
+                                       df_DEI_demo_rbind$var_scope,
+                                       df_DEI_demo_rbind$var_grade,
+                                       df_DEI_demo_rbind$var_key,
+                                       df_DEI_demo_rbind$var_schoolType,
+                                       df_DEI_demo_rbind$var_ethnic,
+                                       sep = "___") 
+
+colnames(df_DEI_parametric_rbind)
+colnames(df_DEI_demo_rbind)
+
+# rbind two datasets and create DEI tidy
+df_DEI_tidy <- rbind(df_DEI_parametric_rbind,df_DEI_demo_rbind)
+
 ```
+## 3,2 Merge into one dataset for plotting and caculating
 
-testing
+```{r}
+
+# preparing demo data for merging
+
+df_DEI_tidy_formerge <- df_DEI_tidy %>%
+  select(metrics_new,population) %>%
+  pivot_wider(names_from = metrics_new,
+              values_from = population) %>%
+  mutate(rows = row_number())
+
+df_DEI_tidy <- df_DEI_tidy %>%
+  mutate(rows = row_number())
+
+df_DEI_tidy_merged <- merge(df_DEI_tidy,df_DEI_tidy_formerge,by ="rows",all=TRUE) %>%
+  fill(colnames(df_DEI_tidy_merged)[11:ncol(df_DEI_tidy_merged)])
+
+write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/df_DEI_tidy_merged.csv", row.names = FALSE)
+
+```
 
