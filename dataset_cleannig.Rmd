@@ -79,6 +79,7 @@ df_DEI_parametric_mutated <- df_DEI_parametric_lower %>%
     # cs  
     str_detect(Demographic,"offering cs") ~ "cs_classOffered",
     str_detect(Demographic,"interest in cs") ~ "cs_interested",
+    str_detect(Demographic,"interested in computer science") ~ "cs_interested",
     str_detect(Demographic,"cs enrollment") ~ "cs_enrol",
     str_detect(Demographic,"cs/computing enrollment") ~ "cs_enrol",
     str_detect(Demographic,"cs 2022 enrollment") ~ "cs_enrol",
@@ -95,6 +96,7 @@ df_DEI_parametric_mutated <- df_DEI_parametric_lower %>%
     # hs
     str_detect(Demographic,"magnet hs enrollment") ~ "mag_enrol", 
     str_detect(Demographic,"hs graduates") ~ "total_grad", 
+    str_detect(Demographic,"dual credit") ~ "dualCredit", 
     
     # sat   
     str_detect(Demographic,"sat exceeds") ~ "sat_math_exceeds",
@@ -104,7 +106,10 @@ df_DEI_parametric_mutated <- df_DEI_parametric_lower %>%
     str_detect(Demographic,"sat meets and exceeds") ~ "sat_math_meet&exceeds", 
     
     # math   
+    str_detect(Demographic,"failing algebra") ~ "math_algebra_fail",
+    str_detect(Demographic,"enrolled in algebra") ~ "math_algebra_enrol",
     str_detect(Demographic,"advanced in math") ~ "math_advc",
+    str_detect(Demographic,"advanced math") ~ "math_advc",
     str_detect(Demographic,"math advanced") ~ "math_advc",
     str_detect(Demographic,"proficient in math") ~ "math_prof",
     str_detect(Demographic,"math proficient and above") ~ "math_prof&abov",
@@ -112,7 +117,6 @@ df_DEI_parametric_mutated <- df_DEI_parametric_lower %>%
     str_detect(Demographic,"basic in math") ~ "math_basic",
 
     # employment
-    
     str_detect(Demographic,"19-24 year olds in tech") ~ "csjob_t11_age19to24",
     str_detect(Demographic,"usa 19-24 employee") ~ "csjob_t11_age19to24",
     str_detect(Demographic,"top 3 highest paying cs jobs") ~ "csjob_t3",
@@ -245,14 +249,13 @@ colnames(df_DEI_parametric_mutated)
 
 # check 
 df_DEI_parametric_mutated %>%
-  select(Demographic,var_grade,var_key,var_scope,var_schoolType) %>%
+  select(var_yr,Demographic,var_grade,var_key,var_scope,var_schoolType) %>%
   view()
 
 ```
 
 
 ```{r parametric df wide to long}
-
 
 df_DEI_parametric_tidy <- df_DEI_parametric_mutated %>%
   pivot_longer(1:7,names_to = "var_ethnic",values_to = "population") %>%
@@ -292,7 +295,7 @@ df_DEI_demo_mutated_long <- df_DEI_demo_long %>%
     
     str_detect(Demographics,"cps") |
       str_detect(Demographics,"chicago") |
-        str_detect(Demographics,"all people in chicago")~ "city_chi",
+        str_detect(Demographics,"all people in chicago") ~ "city_chi",
     
     str_detect(Demographics,"illinois") ~ "state_il",
     
@@ -335,9 +338,10 @@ df_DEI_demo_mutated_long <- df_DEI_demo_long %>%
   ## create variable of years
   mutate(var_yr = case_when(
     str_detect(Demographics,"2022") ~ 2022,
-    str_detect(Demographics,"2021-2022") ~ 2021,
+    str_detect(Demographics,"2021 - 2022") ~ 2021,
     str_detect(Demographics,"2020") ~ 2020,
     str_detect(Demographics,"2019") ~ 2019,
+    str_detect(Demographics,"2017") ~ 2017,
     TRUE ~ 2021)) %>%
   
   ## create variable of school types
@@ -356,15 +360,19 @@ df_DEI_demo_mutated_long <- df_DEI_demo_long %>%
     str_detect(Demographics,"cps 9th grade") ~ "hs_9th",
     str_detect(Demographics,"cps 10th grade") ~ "hs_10th",
     str_detect(Demographics,"cps 11th grade") ~ "hs_11th",
+   
     str_detect(Demographics,"cps 12th grade") |
       str_detect(Demographics,"hs seniors") ~ "hs_12th",
+    
     str_detect(Demographics,"hs graduates") |
       str_detect(Demographics,"us highschool graduates") ~ "hs_grads",
+    
     str_detect(Demographics,"cps hs") |
       str_detect(Demographics,"all highschool")|
-        str_detect(Demographics,"us highschool population") ~ "hs_total",
-    str_detect(Demographics,"sat takers") ~ "hs_SATtaker",
+        str_detect(Demographics,"highschool") |
+            str_detect(Demographics,"us highschool population") ~ "hs_total",
     
+    str_detect(Demographics,"sat takers") ~ "hs_SATtaker",
     str_detect(Demographics,"all college students") ~ "col_total",
     str_detect(Demographics,"all degrees conferred") ~ "col_conferred",
     
@@ -435,6 +443,7 @@ colnames(df_DEI_parametric_rbind)
 colnames(df_DEI_demo_rbind)
 
 # rbind two datasets and create DEI tidy
+
 df_DEI_tidy <- rbind(df_DEI_parametric_rbind,df_DEI_demo_rbind)
 
 ```
@@ -456,7 +465,7 @@ df_DEI_tidy <- df_DEI_tidy %>%
 df_DEI_tidy_merged <- merge(df_DEI_tidy,df_DEI_tidy_formerge,by ="rows",all=TRUE) %>%
   fill(colnames(df_DEI_tidy_merged)[11:ncol(df_DEI_tidy_merged)])
 
-write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/df_DEI_tidy_merged.csv", row.names = FALSE)
+write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy_merged.csv", row.names = FALSE)
 
 ```
 
