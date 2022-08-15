@@ -1,0 +1,81 @@
+---
+title: "DEI data cleannig"
+author: "Mark"
+date: '2022-08-15'
+output: beamer_presentation
+---
+
+
+```{r reading, include=FALSE}
+library("tidyverse")
+library("dplyr")
+library("tidyr")
+library('ggfortify')
+library('stargazer')
+library('pscl')
+```
+
+#1 Read in datasets
+
+```{r data, include=FALSE}
+getwd()
+setwd('E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged')
+
+df_DEI_demo_merged <- read.csv('df_DEI_tidy_merged.csv')
+```
+
+#2 Defining measurement and scales function
+
+#2.1 DMPK - Disparity measurement by Pearcy and Keppel 2002 
+
+```{r}
+# two ethnic groups with geometric mean
+
+DMPK_2_geo_scale = function(n1,n2){
+  n_avg = sqrt(n1*n2)
+  inequality_index = (abs(n1 - n_avg) + abs(n2 - n_avg))/(2*n_avg)
+  
+  inequality_index_n1 = abs(n1 - n_avg)
+  
+  scaling = inequality_index
+}
+
+DMPK_2_geo_scale(5,10)
+
+# four ethnic groups with geometric mean
+# DMPK_4_geo_scale
+
+# two ethnic groups with arithmetic mean mean
+# DMPK_2_ari_scale
+
+# four ethnic groups with arithmetic mean mean
+# DMPK_4_ari_scale
+
+```
+
+
+#3 Defining derivatives
+## 2.1 k-8
+```{r}
+# access : CPS K-8 STEM Magnet School Enrollment B/H vs CPS K-8 STEM magnet School W/A
+
+k8_access_cps_SMag_enrol_bh_Vs_WA = function(n1,n2){
+  if(x %% 2 == 0)
+    return("even")
+  else
+    return("odd")
+}
+
+# Excellence 1: CPS 4th grade math advanced B/H vs CPS 4th grade math advanced W/A
+
+# Excellence 2: CPS 8th grade math advanced B/H vs CPS 8th grade math advanced W/A
+
+# proficiency 1: CPS 4th grade math Proficiency and above B/H vs CPS 4th grade math Proficiency and above W/A
+
+# proficiency 2: CPS 8th grade math Proficiency and above B/H vs CPS  8th grade math Proficiency and above W/A
+
+
+
+
+
+```
