@@ -446,6 +446,9 @@ colnames(df_DEI_demo_rbind)
 
 df_DEI_tidy <- rbind(df_DEI_parametric_rbind,df_DEI_demo_rbind)
 
+# write.csv(df_DEI_tidy,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy.csv", row.names = FALSE)
+
+
 ```
 ## 3,2 Merge into one dataset for plotting and caculating
 
@@ -467,7 +470,7 @@ df_DEI_tidy_merged <- merge(df_DEI_tidy,df_DEI_tidy_formerge,by ="rows",all=TRUE
   select(-rows) %>%
   select(metrics_new,everything())
 
-write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy_merged.csv", row.names = FALSE)
+# write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy_merged.csv", row.names = FALSE)
 
 ```
 
