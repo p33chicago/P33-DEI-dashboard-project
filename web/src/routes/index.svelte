@@ -10,19 +10,11 @@
 
 	const load = async () => {
 		window.global = window;
-		window.Plotly = await import('plotly.js/lib/core.js');
-
-		// via JSON
+		window.Plotly = await import('plotly.js/dist/plotly-with-meta.js');
 		const {data, layout} = (await import('../../../data/figure.json')).default;
 		const node = document.querySelector('#figure');
-		// console.log(data);
-		// console.log(Plotly.validate(data));
-		// console.log(layout);
-		// console.log(Plotly.validate(json));
-		const plot = Plotly.newPlot(node, data, layout);
-
-		// via HTML
-		// Figure = (await import('../../../data/figure.svelte')).default;
+		const plot = await Plotly.newPlot(node, data, layout);
+		console.log(Plotly.validate(data, layout));
 	}
 
 	if (browser) {
