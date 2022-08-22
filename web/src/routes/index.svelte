@@ -3,14 +3,13 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
 	import { browser } from '$app/env';
 	
 	// let Figure;
 
 	const load = async () => {
 		window.global = window;
-		window.Plotly = await import('plotly.js/dist/plotly-with-meta.js');
+		window.Plotly = await import('plotly.js/dist/plotly-basic.min.js');
 		const {data, layout} = (await import('../../../data/figure.json')).default;
 		const node = document.querySelector('#figure');
 		const plot = await Plotly.newPlot(node, data, layout);
@@ -24,14 +23,10 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="P33" />
 </svelte:head>
 
 <section>
-	Figure:
-	<!-- {#if browser && typeof Figure !== 'undefined'}
-	<svelte:component this={Figure}/>
-	{/if} -->
 	<div id="figure" />
 </section>
 
