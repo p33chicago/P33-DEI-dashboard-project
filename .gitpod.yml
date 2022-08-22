@@ -4,6 +4,8 @@ vscode:
     - ms-python.python
     - ms-toolsai.jupyter
     - svelte.svelte-vscode
+    - ms-toolsai.jupyter-keymap
+    - ms-toolsai.jupyter-renderers
 ports:
   - name: Jupyter Lab
     description: see output for token
