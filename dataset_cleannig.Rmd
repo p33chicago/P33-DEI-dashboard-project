@@ -446,7 +446,7 @@ colnames(df_DEI_demo_rbind)
 
 df_DEI_tidy <- rbind(df_DEI_parametric_rbind,df_DEI_demo_rbind)
 
-# write.csv(df_DEI_tidy,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy.csv", row.names = FALSE)
+write.csv(df_DEI_tidy,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy.csv", row.names = FALSE)
 
 
 ```
@@ -465,12 +465,14 @@ df_DEI_tidy_formerge <- df_DEI_tidy %>%
 df_DEI_tidy <- df_DEI_tidy %>%
   mutate(rows = row_number())
 
-df_DEI_tidy_merged <- merge(df_DEI_tidy,df_DEI_tidy_formerge,by ="rows",all=TRUE) %>%
+df_DEI_tidy_merged <- merge(df_DEI_tidy,df_DEI_tidy_formerge,by ="rows",all=TRUE) 
+
+df_DEI_tidy_merged <- df_DEI_tidy_merged %>%
   fill(colnames(df_DEI_tidy_merged)[10:ncol(df_DEI_tidy_merged)]) %>%
   select(-rows) %>%
   select(metrics_new,everything())
 
-# write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy_merged.csv", row.names = FALSE)
+write.csv(df_DEI_tidy_merged,"E:/p33/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy_merged.csv", row.names = FALSE)
 
 ```
 
