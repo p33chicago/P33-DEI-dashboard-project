@@ -12,10 +12,35 @@ jobs:
           use-public-rspm: true
       - name: Generate data (Parquet)
         run: Rscript ingest.r
+      - name: Save ingested data (Parquet)
+        uses: actions/upload-artifact@v3
+        with:
+          name: parametric.parquet
+          path: data/parametric.parquet
       - name: Setup Python
         uses: actions/setup-python@v3
       - name: Install Python packages
         run: pip install pandas numpy pyarrow plotly
       - name: Generate figure JSON
         run: python create_figure_json.py
+      - name: Save figure JSON
+        uses: actions/upload-artifact@v3
+        with:
+          name: figure.json
+          path: data/figure.json
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - name: Install web dependencies
+        run: npm install
+        working-directory: web
+      - name: Build website
+        run: npm run build
+        working-directory: web
+      - name: Save static website
+        uses: actions/upload-artifact@v3
+        with:
+          name: website
+          path: web/build/
         
