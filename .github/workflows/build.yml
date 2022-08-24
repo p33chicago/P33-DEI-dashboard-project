@@ -6,14 +6,16 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v3
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
       - name: Generate data (Parquet)
         run: Rscript ingest.r
+      - name: Setup Python
+        uses: actions/setup-python@v3
+      - name: Install Python packages
+        run: pip install pandas numpy pyarrow plotly
       - name: Generate figure JSON
         run: python create_figure_json.py
         
