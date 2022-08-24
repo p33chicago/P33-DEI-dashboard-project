@@ -10,6 +10,8 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.10"
-      - name: Run Python notebook
-        run: python -c 'print("Hello Worldzz")'  
+      - name: Generate data (Parquet)
+        run: Rscript ingest.r
+      - name: Generate figure JSON
+        run: python create_figure_json.py
         
