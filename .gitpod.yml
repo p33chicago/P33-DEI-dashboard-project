@@ -16,7 +16,7 @@ ports:
     visibility: public
 tasks:
   - name: enable git hooks
-    init: git config core.hooksPath /workspace/P33-DEI-dashboard-project/githooks/pre-commit
+    init: git config core.hooksPath /workspace/P33-DEI-dashboard-project/githooks/
   - name: set groups
     init: |
       sudo usermod -a -G gitpod jovyan
