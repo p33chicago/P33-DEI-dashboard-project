@@ -6,10 +6,10 @@ Reach to Mark Zhang : mark.zhang@p33chicago.com if need help
 
 To launch the development workspace in your browser, including Jupyter Lab UI, visit: [gitpod](https://gitpod.io/#https://github.com/zhengzhangharris/P33-DEI-dashboard-project). See [docs/gitpod.md](./docs/gitpod.md) for more info.
 
-## Development: container (local workspace)
+## Autoreload
 
-To run Jupyter Lab on a local machine (this is mostly untested - consider Gitpod instead!):
+When working with a Jupyter notebook that imports an external Python module, the notebook does not incorporate changes made to external modules. You can:
 
-```shell
-docker run -it -p 8888:8888 -v "$PWD":"/home/jovyan/work:Z" jupyter/r-notebook:latest
-```
+* Use [%autoreload magic](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html) (see [caveats](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html#caveats))
+* Restart the notebook
+* Use Python's [importlib.reload function](https://docs.python.org/3/library/importlib.html#importlib.reload)
