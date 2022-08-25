@@ -16,11 +16,13 @@ ports:
     visibility: public
 tasks:
   - name: enable git hooks
-    init: git config core.hooksPath /workspace/P33-DEI-dashboard-project/githooks/
+    init: git config core.hooksPath githooks/
   - name: set groups
     init: |
       sudo usermod -a -G gitpod jovyan
       sudo usermod -a -G users gitpod
+  - name: install npm packages
+    init: (cd web && npm install)
   - name: launch jupyter lab
     command: jupyter lab --ServerApp.custom_display_url=$(gp url 8888)
   - name: open jupyter lab
@@ -31,6 +33,8 @@ tasks:
       echo "Check your browser for blocked popups!"
       gp open docs/gitpod.md
       gp preview --external "$lab_url"
+  - name: start web dev server
+    command: (cd web && npm run dev)
   - name: change ownership of R
     command: |
       # Do this after launching Jupyter Lab, so dev doesn't have to wait
