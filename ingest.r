@@ -10,6 +10,7 @@ list.of.packages <- c(
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
+# Apache Arrow installation ionstructions from https://arrow.apache.org/docs/r/articles/install.html
 options(
   HTTPUserAgent =
     sprintf(
@@ -18,22 +19,13 @@ options(
       paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])
     )
 )
-
 if(!("arrow" %in% installed.packages()[,"Package"])) install.packages("arrow", repos = "https://packagemanager.rstudio.com/all/__linux__/focal/latest")
-
 append(list.of.packages, "arrow")
 
 lapply(list.of.packages, library, character.only = TRUE)
 library("arrow")
 
 write_parquet
-
-# library("tidyverse")
-# library("dplyr")
-# library("tidyr")
-# library('ggfortify')
-# library('stargazer')
-# library('pscl')
 
 df_DEI_demo <- read.csv('DEI_CSV/df_demo_08152022.csv')
 df_DEI_parametric <- read.csv('DEI_CSV/df_parametrics_08152022.csv')
