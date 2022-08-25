@@ -36,6 +36,10 @@ tasks:
       cd $GITPOD_REPO_ROOT/web
       npm install
       npm run dev
+  - name: open web server
+    command: |
+      gp ports await 5173
+      gp preview $(gp url 5173)
   - name: change ownership of R
     command: |
       # Do this after launching Jupyter Lab, so dev doesn't have to wait
