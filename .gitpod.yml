@@ -21,8 +21,6 @@ tasks:
     init: |
       sudo usermod -a -G gitpod jovyan
       sudo usermod -a -G users gitpod
-  - name: install npm packages
-    init: (cd web && npm install)
   - name: launch jupyter lab
     command: jupyter lab --ServerApp.custom_display_url=$(gp url 8888)
   - name: open jupyter lab
@@ -31,10 +29,13 @@ tasks:
       lab_url=$(gp url 8888)/?token=$(jupyter lab list | tail -n 1 | grep -Po '(?<=token=)([a-z0-9]+)')
       echo "Opening $lab_url"
       echo "Check your browser for blocked popups!"
-      gp open docs/gitpod.md
+      gp open $GITPOD_REPO_ROOT/docs/gitpod.md
       gp preview --external "$lab_url"
   - name: start web dev server
-    command: (cd web && npm run dev)
+    command: |
+      cd $GITPOD_REPO_ROOT/web
+      npm install
+      npm run dev
   - name: change ownership of R
     command: |
       # Do this after launching Jupyter Lab, so dev doesn't have to wait
