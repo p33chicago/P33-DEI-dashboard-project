@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Clear notebook outputs
+jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb
+
+git add .
