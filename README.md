@@ -1,6 +1,8 @@
-# P33-DEI-dashboard-project
-This repository is created by Applied Data Fellow Mark on July.27 2022 for P33 DEI dashboard team members to share and collaborate their codings and datasets.
-Reach to Mark Zhang : mark.zhang@p33chicago.com if need help
+# P33 Chicago equity dashboard
+
+This project helps evaluate the equality that exists among underrepresented communities in the tech sector. Technically, this is implemented by generating visualizations and compiling these visualizations into a website:
+
+> Jupyter notebooks ≫ Plotly figure JSON ≫ Web framework ≫ Static HTML, JS, and CSS
 
 ## Making changes via cloud workspace (Gitpod)
 
