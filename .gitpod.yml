@@ -21,6 +21,10 @@ tasks:
     init: |
       sudo usermod -a -G gitpod jovyan
       sudo usermod -a -G users gitpod
+  - name: setup Jupyter
+    init: |
+      sudo chown -R gitpod:gitpod /opt/conda/share
+      jupyter labextension install jupyterlab-plotly
   - name: launch jupyter lab
     command: jupyter lab --ServerApp.custom_display_url=$(gp url 8888)
   - name: open jupyter lab
