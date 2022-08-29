@@ -4,13 +4,13 @@
 
 <header>
 	<div class="corner">
-		<a href="https://p33.invalid">
-			[logo]
+		<a href="/">
+			P33
 		</a>
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
@@ -18,7 +18,16 @@
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+		</svg> -->
+
+		<ul>
+			<li><a href="/">The Data</a></li>
+			<li><a href="/methodology">Methodology</a></li>
+			<li><a href="/resources">Resources</a></li>
+			<li><a href="/about">About Us</a></li>
+			<li><a href="/partners">Our Partners</a></li>
+			<li><a href="/contact">Contact Us</a></li>
+		</ul>
 	</nav>
 
 	<div class="corner">
@@ -29,7 +38,9 @@
 <style>
 	header {
 		display: flex;
-		justify-content: space-between;
+		/* justify-content: space-between; */
+		background: #fafafa;
+		border-bottom: 2px solid #0db196;;
 	}
 
 	.corner {
@@ -43,29 +54,31 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		color: #0db196;
+		text-decoration: none;
 	}
 
-	.corner img {
+	/* .corner img {
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
-	}
+	} */
 
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		/* --background: rgba(255, 255, 255, 0.7); */
 	}
 
-	svg {
+	/* svg {
 		width: 2em;
 		height: 3em;
 		display: block;
-	}
+	} */
 
-	path {
+	/* path {
 		fill: var(--background);
-	}
+	} */
 
 	ul {
 		position: relative;
@@ -84,7 +97,7 @@
 		position: relative;
 		height: 100%;
 	}
-
+/* 
 	li.active::before {
 		--size: 6px;
 		content: '';
@@ -95,17 +108,18 @@
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--accent-color);
-	}
+	} */
 
 	nav a {
 		display: flex;
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		color: var(--heading-color);
+		/* color: var(--heading-color); */
+		color: #0db196;
 		font-weight: 700;
 		font-size: 0.8rem;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
