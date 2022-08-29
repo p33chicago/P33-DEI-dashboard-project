@@ -1,34 +1,24 @@
+# Install packages
+options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/all/latest"))
 list.of.packages <- c(
     'tidyverse',
     'dplyr',
     'tidyr',
     'ggfortify',
     'stargazer',
-    'pscl'
-    # 'arrow'
+    'pscl',
+    'arrow'
 )
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-# Apache Arrow installation ionstructions from https://arrow.apache.org/docs/r/articles/install.html
-options(
-  HTTPUserAgent =
-    sprintf(
-      "R/%s R (%s)",
-      getRversion(),
-      paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])
-    )
-)
-if(!("arrow" %in% installed.packages()[,"Package"])) install.packages("arrow", repos = "https://packagemanager.rstudio.com/all/__linux__/focal/latest")
-append(list.of.packages, "arrow")
-
+# Import packages
 lapply(list.of.packages, library, character.only = TRUE)
-library("arrow")
 
-write_parquet
-
-df_DEI_demo <- read.csv('DEI_CSV/df_demo_08152022.csv')
+# Load raw data
+df <- read.csv('/workspace/P33-DEI-dashboard-project/DEI_CSV_merged/df_DEI_tidy_manuallrevised_0829.csv')
 df_DEI_parametric <- read.csv('DEI_CSV/df_parametrics_08152022.csv')
+
 
 #2 Clean raw Dataset
 
