@@ -10,7 +10,6 @@
 Visualizations present a few problems for vision impaired folks:
 
 * Titles are rarely descriptive enough for people using screen readers
-https://www.betterment.com/design/accessible-data-visualization
 * No summary, so useless for people using screan readers
 * SVG text doesn't help people using screen readers, including title, axis labels, trace labels, and legends
 * Data hidden in tooltips is often not read by screen readers
