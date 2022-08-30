@@ -15,6 +15,8 @@ ports:
     port: 5173
     visibility: public
 tasks:
+  - name: add project root to PYTHONPATH
+    init: gp env PYTHONPATH=$GITPOD_REPO_ROOT
   - name: enable git hooks
     init: git config core.hooksPath githooks/
   - name: set groups
