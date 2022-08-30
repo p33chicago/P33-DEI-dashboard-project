@@ -4,9 +4,7 @@
 
 <header>
 	<div class="corner">
-		<a href="/">
-			P33
-		</a>
+		<a href="/">P33</a>
 	</div>
 
 	<nav>
@@ -39,8 +37,8 @@
 	header {
 		display: flex;
 		/* justify-content: space-between; */
-		background: #fafafa;
-		border-bottom: 2px solid #0db196;;
+		background: theme('colors.white');	
+		border-bottom: 1px solid theme('colors.brand-primary-green');	
 	}
 
 	.corner {
@@ -54,8 +52,12 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-		color: #0db196;
+		color: theme('colors.brand-primary-green');
 		text-decoration: none;
+	}
+
+	.corner a:hover {
+		border: none;
 	}
 
 	/* .corner img {
@@ -97,8 +99,8 @@
 		position: relative;
 		height: 100%;
 	}
-/* 
-	li.active::before {
+
+	/* li.active::before {
 		--size: 6px;
 		content: '';
 		width: 0;
@@ -115,9 +117,8 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		/* color: var(--heading-color); */
-		color: #0db196;
-		font-weight: 700;
+		color: theme('colors.brand-primary-green');
+		font-weight: 400;
 		font-size: 0.8rem;
 		text-transform: capitalize;
 		letter-spacing: 0.1em;
@@ -126,6 +127,7 @@
 	}
 
 	a:hover {
-		color: var(--accent-color);
+		font-weight: 600;
+		border-bottom: 1px solid theme('colors.brand-primary-green');
 	}
 </style>

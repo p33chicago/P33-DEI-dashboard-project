@@ -17,10 +17,10 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
+		padding: 1rem 0;
 		width: 100%;
 		max-width: 1024px;
-		margin: 0 auto;
+		margin: 0 50px;
 		box-sizing: border-box;
 		min-height: 100vh;
 	}
