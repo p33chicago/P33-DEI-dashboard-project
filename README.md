@@ -1,3 +1,5 @@
+[![Build](https://github.com/p33chicago/P33-DEI-dashboard-project/actions/workflows/build.yml/badge.svg)](https://github.com/p33chicago/P33-DEI-dashboard-project/actions/workflows/build.yml)
+
 # P33 Chicago equity dashboard
 
 This project helps evaluate the equality that exists among underrepresented communities in the tech sector. This is implemented by generating visualizations and compiling these visualizations into a website:
