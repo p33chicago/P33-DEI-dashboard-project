@@ -1,24 +1,5 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
-<script lang="ts">
-	import { browser } from '$app/env';
-	
-	// let Figure;
-
-	const load = async () => {
-		window.global = window;
-		window.Plotly = await import('plotly.js/dist/plotly-basic.min.js');
-		const {data, layout} = (await import('../../../data/figure.json')).default;
-		const node = document.querySelector('#figure');
-		const plot = await Plotly.newPlot(node, data, layout);
-		console.log(Plotly.validate(data, layout));
-	}
-
-	if (browser) {
-		load();
-	}
+<script>
+	import Figure from '$lib/figure/Figure.svelte';
 </script>
 
 <svelte:head>
@@ -27,7 +8,8 @@
 </svelte:head>
 
 <section>
-	<div id="figure" />
+	<Figure id="figure" />
+	<Figure id="figure" />
 </section>
 
 <style>
