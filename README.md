@@ -24,11 +24,11 @@ See [Design guidelines](./docs/design%20guidelines.md).
 * web/ - website
 * docs/ - files for humans alone (no 💻🤖 allowed); technical documentation, slide decks, design guidelines, mockups, etc.
 * notebooks/ - data science notebooks for experimentation and visualization work; none of the code here is used in the pipeline or makes it way to the site; however, it does import things from the python module, p33 (see next folder below).
-* p33/ - Python [package](https://docs.python.org/3/tutorial/modules.html#packages) for all of our novel code; import via `import p33`
-  * \_\_init__.py - enables `from p33 import transformation`
-  * ingest/ - mostly unused for now
-  * transform/ - transform.r (from ingest.r); John to convert to Python?; if multiple output files, should have one file per output?
-  * viz/ - visualization modules
+* p33py/ - Python [package](https://docs.python.org/3/tutorial/modules.html#packages) for all of our novel code; import via `import p33py`
+  * \_\_init__.py - enables `from p33py import transformation`
+  * 🚧 _coming soon_ 🚧 ingest/ - mostly unused for now
+  * 🚧 _coming soon_ 🚧 transform/ - transform.r (from ingest.r); John to convert to Python?; if multiple output files, should have one file per output?
+  * 🚧 _coming soon_ 🚧 viz/ - visualization modules
     * figures.py - API for finding figures
     * figures/ - one file per figure; John to create example starting from create_figure_json.py
 

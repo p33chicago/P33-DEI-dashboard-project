@@ -1,20 +1,13 @@
-import pandas
-import plotly.express as px
-import plotly
-from os.path import normpath,dirname
+from viz import set_default_theme
+from figures import *
+import plotly.io as pio
+import os
 
-data_dir = normpath(f'{dirname(__file__)}/../data/')
-parquet_path = f'{data_dir}/parametric.parquet'
+data_dir=os.path.normpath(f'{os.path.dirname(__file__)}/../data/')
 json_path = f'{data_dir}/figure.json'
 
-def create_figure():
-    df = pandas.read_parquet(parquet_path)
-    uni = df.loc[df['Demographic'] == 'usa universities enrollment (ipeds)']
-    fig = px.bar(uni.filter(items=['var_yr', 'var_value'], axis=1))
-    plotly.io.write_json(fig, json_path)
-    print(f'wrote {json_path}')
-    return fig
-
-
-if __name__ == "__main__":
-    create_figure()
+set_default_theme()
+fig = apcs_score5.figure()
+# display(fig)
+pio.write_json(fig, json_path)
+print(f'Wrote {json_path}')
