@@ -8,13 +8,13 @@
         flex-direction: column;
 		justify-content: center;
         align-items: center;
-        border-top: 2px solid #b1b3b4;
+        /* border-top: 2px solid #b1b3b4; */
         padding: 30px;
-        background: #ececec;
+        background: theme('colors.brand-primary-green');
     }
 
     footer p {
-        color: #777a7d;
+        color: theme('colors.white');
     }
 
     @media (min-width: 480px) {

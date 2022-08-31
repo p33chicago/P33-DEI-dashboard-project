@@ -33,7 +33,7 @@ module.exports = {
     
     },
     fontWeight: {
-      'default-regular': 400,
+      'default-regular': 100,
       'default-bold': 600
     },
     extend: {}
