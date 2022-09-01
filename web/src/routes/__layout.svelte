@@ -4,24 +4,26 @@
 	import '../app.css';
 </script>
 
-<Header />
+<div class="min-h-full flex flex-col">
+	<Header />
 
-<main>
-	<slot />
-</main>
+	<main class="m-8 align-top">
+		<div class="max-w-7xl m-auto justify-left">
+			<slot />
+		</div>
+	</main>
 
-<Footer />
+	<!-- <Footer /> -->
+</div>
 
 <style>
-	main {
+	/* main {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
 		padding: 1rem 0;
 		width: 100%;
-		/* max-width: 1024px; */
-		/* margin: 0 50px; */
 		box-sizing: border-box;
 		min-height: 100vh;
-	}
+	} */
 </style>

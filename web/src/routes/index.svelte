@@ -7,10 +7,11 @@
 	<meta name="description" content="P33" />
 </svelte:head>
 
-<section class="sm:grid-col-1 lg:grid-col-4">
+<!-- <section class="sm:grid-col-1 lg:grid-col-4"> -->
+	lipsum
 	<Figure id="figure" />
 	<Figure id="figure" />
-</section>
+<!-- </section> -->
 
 <style>
 	section {

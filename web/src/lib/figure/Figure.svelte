@@ -14,7 +14,7 @@
             return; // server-side
         }
         const { data, layout } = await (await fetch(`/data/${id}.json`)).json();
-        await Plotly.newPlot(canvas, data, layout);
+        await Plotly.newPlot(canvas, data, layout, {responsive: true});
         console.log(Plotly.validate(data, layout));
 	};
 
