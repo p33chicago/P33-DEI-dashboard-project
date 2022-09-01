@@ -3,7 +3,7 @@
 	// import Nav from './Nav.svelte'
 </script>
 
-<header class="w-full items-center border-b border-brand-primary-green">
+<header class="w-full items-center border-b border-brand-primary-green z-10">
 	<div class="flex justify-between lg:justify-start mx-auto max-w-7xl">
 		<input type="checkbox" id="open-mobile-menu" class="hidden" />
 		<label for="open-mobile-menu" class="lg:hidden toggle-mobile-menu flex items-center justify-center p-2" aria-controls="mobile-menu" aria-expanded="false">
