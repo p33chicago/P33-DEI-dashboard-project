@@ -10,11 +10,11 @@
         align-items: center;
         /* border-top: 2px solid #b1b3b4; */
         padding: 30px;
-        background: theme('colors.brand-primary-green');
+        background: theme('colors.brand-primary-really-light-green');
     }
 
     footer p {
-        color: theme('colors.white');
+        color: theme('colors.brand-primary-green');
     }
 
     @media (min-width: 480px) {

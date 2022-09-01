@@ -28,7 +28,7 @@
 <style>
 	header {
 		display: flex;
-		background: theme('colors.brand-primary-light-green');	
+		background: theme('colors.brand-primary-really-light-green');	
 	}
 
 	.corner {
@@ -42,7 +42,7 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-		color: theme('colors.white');
+		color: theme('colors.brand-primary-green');
 		text-decoration: none;
 	}
 
@@ -83,7 +83,7 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		color: theme('colors.white');
+		color: theme('colors.brand-primary-green');
 		font-weight: theme('fontWeight.default-regular');
 		font-size: 0.8rem;
 		text-transform: capitalize;
@@ -94,6 +94,6 @@
 
 	a:hover {
 		font-weight: theme('fontWeight.default-bold');
-		border-bottom: 1px solid theme('colors.white');
+		border-bottom: 1px solid theme('colors.brand-primary-green');
 	}
 </style>

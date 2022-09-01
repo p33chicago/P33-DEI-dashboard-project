@@ -7,6 +7,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: theme('colors.brand-primary-light-green');
+    background-color: theme('colors.brand-primary-really-light-green');
     font-family: theme('fontFamily.mono');
 }
