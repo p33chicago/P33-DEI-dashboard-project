@@ -38,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
+		"@khanacademy/tota11y": "^0.2.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.39",
 		"cookie": "^0.4.1",
 		"plotly.js": "^2.14.0"

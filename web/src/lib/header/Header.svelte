@@ -3,10 +3,10 @@
 	// import Nav from './Nav.svelte'
 </script>
 
-<header class="w-full items-center lg:border-b border-brand-primary-green z-10">
-	<div class="flex justify-between lg:justify-start mx-auto max-w-7xl">
+<header class="w-full items-center fullnav:border-b border-brand-primary-green z-10">
+	<div class="flex justify-between fullnav:justify-start mx-auto max-w-7xl">
 		<input type="checkbox" id="open-mobile-menu" class="hidden" />
-		<label for="open-mobile-menu" class="lg:hidden toggle-mobile-menu flex items-center justify-center p-2" aria-controls="mobile-menu" aria-expanded="false">
+		<label for="open-mobile-menu" class="fullnav:hidden toggle-mobile-menu flex items-center justify-center p-2" aria-controls="mobile-menu" aria-expanded="false">
 			<span class="sr-only">Open main menu</span>
 			<svg class="hamburger block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -21,10 +21,10 @@
 			</a>
 		</div>
 		
-		<div class="flex lg:hidden h-10 w-10"><div> </div></div>
+		<div class="flex fullnav:hidden h-10 w-10"><div> </div></div>
 
-		<nav class="hidden lg:flex w-full lg:w-auto absolute lg:static top-12 left-0 right-0 bottom-0 bg-brand-primary-really-light-green p-4 lg:p-0 leading-10 border-t lg:border-0 border-brand-primary-green">
-			<ul class="lg:flex">
+		<nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-brand-primary-really-light-green p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
+			<ul class="fullnav:flex">
 				<li><a href="/">The Data</a></li>
 				<li><a href="/methodology">Methodology</a></li>
 				<li><a href="/resources">Resources</a></li>
