@@ -8,12 +8,16 @@
 <div class="min-h-full flex flex-col">
 	<Header />
 
-	<main class="m-8 align-top">
-		<div class="max-w-7xl m-auto justify-left">
-			<slot />
-		</div>
+	<main class="align-top justify-left p-2 max-w-[100vw]">
+		<slot />
 	</main>
 
 	<!-- <Footer /> -->
 	<Tota11y />
 </div>
+
+<style>
+	main > :global(*) {
+		max-width: 80rem; /* 2xl */
+	}
+</style>

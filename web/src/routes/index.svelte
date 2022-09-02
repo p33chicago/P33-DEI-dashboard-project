@@ -7,15 +7,32 @@
 	<meta name="description" content="P33" />
 </svelte:head>
 
-
-	<Figure id="figure" />
+<div class="container flex space-x-4 overflow-scroll snap-x snap-proximity">
+	<div>
+		<p>Some stuff</p>
+		<Figure id="figure" />
+	</div>
+	<div>
+		<p>Other stuff</p>
+		<Figure id="figure" />
+	</div>
+	<div>
+		<p>More stupid stuff</p>
+		<Figure id="figure" />
+	</div>
+	<div>
+		<p>More stupid stuff</p>
+		<Figure id="figure" />
+	</div>
+</div>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		/* align-items: center; */
-		flex: 1;
+	.container > * {
+		background-color: white;
+		min-width: calc(320px - 1rem);
+		scroll-snap-align: center;
+	}
+	.container > * > :global(*) {
+		margin: 1rem;
 	}
 </style>

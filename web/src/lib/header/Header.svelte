@@ -6,7 +6,7 @@
 <header class="w-full items-center fullnav:border-b border-brand-primary-green z-10">
 	<div class="flex justify-between fullnav:justify-start mx-auto max-w-7xl">
 		<input type="checkbox" id="open-mobile-menu" class="hidden" />
-		<label for="open-mobile-menu" class="fullnav:hidden toggle-mobile-menu flex items-center justify-center p-2" aria-controls="mobile-menu" aria-expanded="false">
+		<label for="open-mobile-menu" class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2" aria-controls="mobile-menu" aria-expanded="false">
 			<span class="sr-only">Open main menu</span>
 			<svg class="hamburger block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -37,7 +37,7 @@
 </header>
 
 <style>
-	.logo img { filter: invert() brightness(57.5%) sepia(100%) hue-rotate(120deg); }
+	.logo img { filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg); }
 	:checked ~ .toggle-mobile-menu .hamburger { display: none; }
 	:checked ~ .toggle-mobile-menu .cross { display: flex; }
 	:checked ~ nav { display: block; }

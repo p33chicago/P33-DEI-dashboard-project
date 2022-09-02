@@ -7,7 +7,7 @@ def set_default_theme():
         layout=dict(
             title=None,
             showlegend=False,
-            colorway=['#0db296', '#1d59b8', '#981717', '#ff7213', '#ffa913'],
+            colorway=['#00715e', '#1d59b8', '#981717', '#ff7213', '#ffa913'],
             bargroupgap=0.025,
             # bar_textinfo=['label', 'value']
         )
