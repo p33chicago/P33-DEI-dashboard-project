@@ -34,8 +34,11 @@ module.exports = {
     
     },
     fontWeight: {
-      'default-regular': 100,
-      'default-bold': 600
+      'regular': 100,
+      'bold': 600
+    },
+    dropShadow: {
+      'card': '0 4px 4px rgb(0 0 0 / 0.25)'
     },
     extend: {}
   },
