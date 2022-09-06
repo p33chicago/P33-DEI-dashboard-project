@@ -9,6 +9,7 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      'fullnav': '810px',
     },
     colors: {
       'black': '#04352d',
@@ -17,10 +18,10 @@ module.exports = {
       'medium-gray': '#88b6b6',
       'light-gray': '#d9d9d9',
       'really-light-gray': '#e0e5ec',
-      'brand-primary-dark-green': '#00715e',
-      'brand-primary-green': '#0db296',
+      'brand-primary-dark-green': 'var(--brand-primary-dark-green)',
+      'brand-primary-green': 'var(--brand-primary-green)',
       'brand-primary-light-green': '#56cbb8',
-      'brand-primary-really-light-green': '#dee9e8',
+      'brand-primary-really-light-green': 'var(--brand-primary-really-light-green)',
       'blue': '#1d59b8',
       'fail-red': '#981717',
       'warn-orange': '#ff7213',
@@ -33,8 +34,11 @@ module.exports = {
     
     },
     fontWeight: {
-      'default-regular': 100,
-      'default-bold': 600
+      'regular': 100,
+      'bold': 600
+    },
+    dropShadow: {
+      'card': '0 4px 4px rgb(0 0 0 / 0.25)'
     },
     extend: {}
   },

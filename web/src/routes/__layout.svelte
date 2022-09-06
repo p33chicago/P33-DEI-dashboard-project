@@ -1,27 +1,23 @@
 <script lang="ts">
-	import Footer from '$lib/footer/Footer.svelte';
 	import Header from '$lib/header/Header.svelte';
+	// import Footer from '$lib/footer/Footer.svelte';
+	import Tota11y from '$lib/Tota11y.svelte';
 	import '../app.css';
 </script>
 
-<Header />
+<div class="min-h-full flex flex-col">
+	<Header />
 
-<main>
-	<slot />
-</main>
+	<main class="align-top justify-left p-2 max-w-[100vw]">
+		<slot />
+	</main>
 
-<Footer />
+	<!-- <Footer /> -->
+	<Tota11y />
+</div>
 
 <style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem 0;
-		width: 100%;
-		/* max-width: 1024px; */
-		/* margin: 0 50px; */
-		box-sizing: border-box;
-		min-height: 100vh;
+	main > :global(*) {
+		max-width: 80rem; /* 2xl */
 	}
 </style>
