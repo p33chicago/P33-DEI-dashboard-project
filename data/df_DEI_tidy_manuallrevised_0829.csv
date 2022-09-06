@@ -405,6 +405,10 @@ var_yr,var_scope,var_grade,var_key,var_schoolType,var_ethnic,population,var_type
 2021,usa,col,total_enrol,allSchools,hispanic,3220694,count,2021___usa___col___total_enrol___allSchools___hispanic
 2021,usa,col,total_enrol,allSchools,white,7751815,count,2021___usa___col___total_enrol___allSchools___white
 2021,usa,col,total_enrol,allSchools,asian,1061160,count,2021___usa___col___total_enrol___allSchools___asian
+2021,usa,col,total_enrol,allSchools,black,0.575,prob,2021___usa___col___total_enrol___allSchools___black
+2021,usa,col,total_enrol,allSchools,hispanic,0.562,prob,2021___usa___col___total_enrol___allSchools___hispanic
+2021,usa,col,total_enrol,allSchools,white,0.65,prob,2021___usa___col___total_enrol___allSchools___white
+2021,usa,col,total_enrol,allSchools,asian,0.827,prob,2021___usa___col___total_enrol___allSchools___asian
 2021,city_chi,hs,cs_interested,cps,all,9792,count,2021___city_chi___hs___cs_interested___cps___all
 2021,city_chi,hs,cs_interested,cps,black_hispanic,6806,count,2021___city_chi___hs___cs_interested___cps___black_hispanic
 2021,city_chi,hs,cs_interested,cps,white_asian,2986,count,2021___city_chi___hs___cs_interested___cps___white_asian
