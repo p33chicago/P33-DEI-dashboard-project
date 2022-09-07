@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	// import Nav from './Nav.svelte'
+	let innerWidth: number;
+	const tw_fullnav = 810;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <header class="w-full items-center fullnav:border-b border-brand-primary-green z-10">
 	<div class="flex justify-between fullnav:justify-start mx-auto max-w-7xl">
@@ -25,12 +29,12 @@
 
 		<nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-brand-primary-really-light-green p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
 			<ul class="fullnav:flex">
-				<li><a href="/">The Data</a></li>
-				<li><a href="/methodology">Methodology</a></li>
-				<li><a href="/resources">Resources</a></li>
-				<li><a href="/about">About Us</a></li>
-				<li><a href="/partners">Our Partners</a></li>
-				<li><a href="/contact">Contact Us</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/"}><a href="/">The Data</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/methodology"}><a href="/methodology">Methodology</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/resources"}><a href="/resources">Resources</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/about"}><a href="/about">About Us</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/partners"}><a href="/partners">Our Partners</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/contact"}><a href="/contact">Contact Us</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -42,4 +46,5 @@
 	:checked ~ .toggle-mobile-menu .cross { display: flex; }
 	:checked ~ nav { display: block; }
 	nav li { padding: 0.25rem 1rem; }
+	.active { border-bottom: 2px solid theme('colors.brand-primary-dark-green'); font-weight: theme('fontWeight.bold'); }
 </style>
