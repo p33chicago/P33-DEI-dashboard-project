@@ -1,7 +1,7 @@
 name: Build
 on: [push]
 jobs:
-  compile-visualizations-and-website:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
