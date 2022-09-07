@@ -23,6 +23,8 @@ tasks:
     init: |
       sudo usermod -a -G gitpod jovyan
       sudo usermod -a -G users gitpod
+  - name: install Python dependencies
+    init: pip install -r requirements.txt
   - name: setup Jupyter
     init: |
       sudo chown -R gitpod:gitpod /opt/conda/share

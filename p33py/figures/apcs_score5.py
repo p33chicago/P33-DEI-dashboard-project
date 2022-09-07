@@ -6,7 +6,7 @@ import numpy as np
 def figure():
     data_dir=os.path.normpath(f'{os.path.dirname(__file__)}/../../data/')
     # data_dir=os.path.normpath(f'{os.getcwd()}/../data/')
-    df = pd.read_csv(f'{data_dir}/df_DEI_tidy_manuallrevised_0829.csv')
+    df = pd.read_csv(f'{data_dir}/df_DEI_tidy_final.csv')
     df['var_ethnic'] = df.var_ethnic.str.lower()
     df = df[df.var_ethnic.isin(['hispanic', 'black', 'asian', 'white'])]
     df = df[df.var_yr == 2021]

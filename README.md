@@ -1,3 +1,4 @@
+[![Open in Gitpod](https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project)
 [![Build](https://github.com/p33chicago/P33-DEI-dashboard-project/actions/workflows/build.yml/badge.svg)](https://github.com/p33chicago/P33-DEI-dashboard-project/actions/workflows/build.yml)
 
 # P33 Chicago equity dashboard
