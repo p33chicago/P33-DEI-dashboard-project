@@ -9,7 +9,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3
       - name: Install Python packages
-        run: pip install pandas numpy pyarrow plotly
+        run: pip install -r requirements.txt
       - name: Generate figure JSON
         run: python p33py/create_figure_json.py
       - name: Save figure JSON
