@@ -1,5 +1,5 @@
 <script type="ts">
-import { browser, dev } from '$app/env';
+import { browser, dev } from '$app/environment';
 
 if (browser && dev) {
     console.log('Importing tota11y')

@@ -3,6 +3,9 @@
 	// import Footer from '$lib/footer/Footer.svelte';
 	import Tota11y from '$lib/Tota11y.svelte';
 	import '../app.css';
+
+	export const csr = false;
+	export const prerender = true;
 </script>
 
 <div class="min-h-full flex flex-col">
