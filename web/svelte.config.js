@@ -17,11 +17,6 @@ const config = {
 		prerender: {
 			default: true
 		},
-
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		}
 	}
 };
 
