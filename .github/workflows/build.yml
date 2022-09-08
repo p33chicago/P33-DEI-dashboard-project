@@ -1,7 +1,7 @@
 name: Build
 on: [push]
 jobs:
-  compile-visualizations-and-website:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -9,7 +9,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3
       - name: Install Python packages
-        run: pip install pandas numpy pyarrow plotly
+        run: pip install -r requirements.txt
       - name: Generate figure JSON
         run: python p33py/create_figure_json.py
       - name: Save figure JSON
@@ -32,4 +32,18 @@ jobs:
         with:
           name: website
           path: web/build/
-        
+  deploy:
+    needs: build
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
+      with:
+        artifact_name: website
