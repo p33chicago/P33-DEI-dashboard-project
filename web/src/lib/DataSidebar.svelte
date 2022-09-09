@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex-col hidden sm:flex">
     <div>
         <slot name="title" />
     </div>
