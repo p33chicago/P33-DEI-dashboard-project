@@ -1,5 +1,11 @@
 <script lang="ts">
+    import Card from './cards/Card.svelte'
     export let title: string;
+    let subtitle: string = "Chicago Public Schools";
 </script>
 
-<div>{title}</div>
+<Card>
+    <h1 class="capitalize">{title}</h1>
+    <p>{subtitle}</p>
+</Card>
+			
