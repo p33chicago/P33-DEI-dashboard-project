@@ -3,8 +3,9 @@ import os
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
+import plotly.express as px
 import plotly.figure_factory as ff
-from plotly.offline import plot
+
 
 #%% Importing csv files
 
@@ -159,10 +160,10 @@ def metric_DEI_twoScopes(df,metricOne,metricTwo,populOne,PopulTwo):
     ''' drop redundant variables in merged dataframe '''
     df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value']] 
 
-    print(df_metric)
+    return(df_metric)
 
 # test the function
-metric_DEI_twoScopes(df_clean_fourGroups,
+test1 = metric_DEI_twoScopes(df_clean_fourGroups,
            '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
            '2021___usa___k8_4th___math_prof&abov', # numerators for US
            '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago 
@@ -170,7 +171,7 @@ metric_DEI_twoScopes(df_clean_fourGroups,
 
 
 
-#%% Define the metrics function (one scopes)
+#%% Define the metrics function (one scope)
 # This metric function generates a new dataset contained the value of metricOne/PopulaitonOne 
 # for different ethnic groups at one geographical scope.
 
@@ -190,14 +191,69 @@ def metric_DEI_oneScope(df,metricOne,populOne):
     ''' drop redundant variables in merged dataframe '''
     df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value']] 
 
-    print(df_metric)
+    return(df_metric)
 
 # test the function
-metric_DEI_oneScope(df_clean_fourGroups,
+test2 = metric_DEI_oneScope(df_clean_fourGroups,
                     '2021___city_chi___k8_4th___math_prof&abov___cps', # numerators for city of chicago
                     '2022___city_chi___k8_4th___popul___cps') # denominators for city of chicago 
+test1.head()
 
-#%% define the visualization function
 
- 
- 
+
+#%% define the visualization function for deep diving plots (DDP)
+
+# In Spyder, Plotly fails to select the default renderer unless explicitly specified.
+# Hence in below, I specified a renderer that I wish to use.
+import plotly.io as io
+io.renderers.default='svg'
+
+# define viz function
+def figure_DDP(metric):
+    # extract texts and annotations
+
+    # display(df)
+    fig = px.bar(metric, 
+                 x=metric.var_scope, 
+                 y=metric.metric_value, 
+                 color=metric.var_ethnic, 
+                 barmode='group')
+    fig.update_traces(texttemplate='%{y}')
+    fig.update_yaxes(title='proportion')
+    
+    return plot(fig)
+
+ # test the figure function
+
+figure_DDP(test1)
+
+#%% define the visualization function for deep diving tables (DDT)
+
+# define viz function
+def figure_DDT(metric):
+    # create a dataframe
+    ''' drop national metrics '''
+    metric_regional = metric[(metric['var_scope'] != "usa").drop(['metrics_new_x'], axis = 1)
+
+    # display
+    fig = go.Figure(data=[go.Table(
+        header=dict(values=list(df.columns),
+                    fill_color='paleturquoise',
+                    align='left'),
+        cells=dict(values=[df.Rank, df.State, df.Postal, df.Population],
+                   fill_color='lavender',
+                   align='left'))
+    ])
+    
+    return plot(fig)
+
+
+test2.head()
+
+test3=test1[(test1['var_scope'] != "usa")]
+test4=test3.drop(['metrics_new_x','var_scope'], axis = 1)
+#caculate the target by using the avg. proportion of white and asian groups
+prop_target = test4[(test4['var_ethnic'] == "white") | (test4['var_ethnic'] == "asian")]['metric_value'].mean()
+''' add a variable of target proportion to dataset'''
+test4['prop_target'] = prop_target
+test4['popul_target'] = test4['prop_target']*
