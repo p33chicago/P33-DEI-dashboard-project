@@ -5,7 +5,13 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.figure_factory as ff
+from viz import set_default_theme
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot
+from plotly.graph_objs import *
+import plotly.io as io
+io.renderers.default='svg'
 
+set_default_theme()
 
 #%% Importing csv files
 
@@ -205,8 +211,7 @@ test1.head()
 
 # In Spyder, Plotly fails to select the default renderer unless explicitly specified.
 # Hence in below, I specified a renderer that I wish to use.
-import plotly.io as io
-io.renderers.default='svg'
+
 
 # define viz function
 def figure_DDP(metric):
@@ -227,33 +232,18 @@ def figure_DDP(metric):
 
 figure_DDP(test1)
 
-#%% define the visualization function for deep diving tables (DDT)
+test1.head()
+#%% define the visualization function for deep diving tables (DDT) ???????
 
 # define viz function
 def figure_DDT(metric):
-    # create a dataframe
-    ''' drop national metrics '''
-    metric_regional = metric[(metric['var_scope'] != "usa").drop(['metrics_new_x'], axis = 1)
+    metric2=metric[(metric['var_scope'] != "usa")]
+    metric3=metric2.drop(['metrics_new_x','var_scope'], axis = 1)
+    prop_target = metric3[(metric3['var_ethnic'] == "white") | (metric3['var_ethnic'] == "asian")]['metric_value'].mean()
+    metric3['popul_target'] = metric3['population']*prop_target
+    metric3['gap'] = metric3['popul_target']-metric3['subset_popul']
+    return metric3
 
-    # display
-    fig = go.Figure(data=[go.Table(
-        header=dict(values=list(df.columns),
-                    fill_color='paleturquoise',
-                    align='left'),
-        cells=dict(values=[df.Rank, df.State, df.Postal, df.Population],
-                   fill_color='lavender',
-                   align='left'))
-    ])
-    
-    return plot(fig)
+figure_DDT(test1)
 
 
-test2.head()
-
-test3=test1[(test1['var_scope'] != "usa")]
-test4=test3.drop(['metrics_new_x','var_scope'], axis = 1)
-#caculate the target by using the avg. proportion of white and asian groups
-prop_target = test4[(test4['var_ethnic'] == "white") | (test4['var_ethnic'] == "asian")]['metric_value'].mean()
-''' add a variable of target proportion to dataset'''
-test4['prop_target'] = prop_target
-test4['popul_target'] = test4['prop_target']*
