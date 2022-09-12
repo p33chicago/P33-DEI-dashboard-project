@@ -1,17 +1,14 @@
+#%% set directory
+
 
 import os
-import numpy as np
 import pandas as pd
-import plotly.graph_objects as go
 import plotly.express as px
-import plotly.figure_factory as ff
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot
-from plotly.graph_objs import *
+from plotly.offline import plot
 import plotly.io as io
 io.renderers.default='svg'
-# not working, need to check again
-# from viz import set_default_theme
-# set_default_theme()
+from viz import set_default_theme
+set_default_theme()
 
 #%% Importing csv files
 
@@ -20,10 +17,9 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 ## Import DEI_CSV file
+df = pd.read_csv('E:/p33/P33-DEI-dashboard-project/data/df_DEI_tidy_final.csv')
 os.getcwd()
-os.chdir('E:/p33/P33-DEI-dashboard-project/data/')
-df = pd.read_csv('df_DEI_tidy_final.csv')
-df.head()
+os.chdir('E:/p33/P33-DEI-dashboard-project/p33py/')
 
 
 #%% select variables that are used 
