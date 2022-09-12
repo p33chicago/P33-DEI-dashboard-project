@@ -5,13 +5,13 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.figure_factory as ff
-from viz import set_default_theme
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot
 from plotly.graph_objs import *
 import plotly.io as io
 io.renderers.default='svg'
-
-set_default_theme()
+# not working, need to check again
+# from viz import set_default_theme
+# set_default_theme()
 
 #%% Importing csv files
 
@@ -217,9 +217,9 @@ test2 = metric_DEI_oneScope(df_clean_fourGroups,
 #%% create a dataframe of metric values for city of Chicago, Illinois and MSA
 
 df_metircs_CHI = pd.concat([test1, test2])
-df_metircs_CHI2 = df_metircs_CHI[(test1['var_scope'] != "usa")]
-df_metircs_CHI3 = df_metircs_CHI2.drop(['subset_popul','population','var_scope'], axis = 1)
-df_metircs_CHI3_wide = pd.pivot(df_metircs_CHI3, index=['metrics_new','weight'], columns='var_ethnic', values='metric_value')
+df_metircs_CHI = df_metircs_CHI[(test1['var_scope'] != "usa")]
+df_metircs_CHI = df_metircs_CHI.drop(['subset_popul','population','var_scope'], axis = 1)
+df_metircs_CHI_wide = pd.pivot(df_metircs_CHI, index=['metrics_new','weight'], columns='var_ethnic', values='metric_value')
 
 
 #%% define the visualization function for deep diving plots (DDP)
@@ -255,7 +255,7 @@ def figure_DDT(metric):
     # create a dataframe
     ''' drop national metrics '''
     metric_regional=metric[(metric['var_scope'] != "usa")]
-    metric_clean=metric_regional.drop(['metrics_new_x','var_scope'], axis = 1)
+    metric_clean=metric_regional.drop(['metrics_new','var_scope'], axis = 1)
     ''' caculate the target proportion by using the avg. proportion of white and asian groups ''' 
     prop_target = metric_clean[(metric_clean['var_ethnic'] == "white") |
                                (metric_clean['var_ethnic'] == "asian")]['metric_value'].mean()
@@ -299,7 +299,7 @@ def EI_metric_FourG_geomean(df_metircs_selected):
     
     return df_metircs_selected
 
-testEI = EI_metric_FourG_geomean(df_metircs_CHI3_wide)
+testEI = EI_metric_FourG_geomean(df_metircs_CHI_wide)
 
 # Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
 
