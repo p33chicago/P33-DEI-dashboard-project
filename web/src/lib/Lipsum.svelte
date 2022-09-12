@@ -9,9 +9,9 @@ In Craven omni memoria patriae zombieland clairvius narcisse religionis sunt dir
 
 Whyt zomby Ut fames after death cerebro virus enim carnis grusome, viscera et organa viventium. Sicut spargit virus ad impetum, qui supersumus flesh eating. Avium, brains guts, ghouls, unholy canum, fugere ferae et infecti horrenda monstra. Videmus twenty-eight deformis pale, horrenda daemonum. Panduntur brains portae rotting inferi. Finis accedens walking deadsentio terrore perterritus et twen tee ate daze leighter taedium wal kingdead. The horror, monstra epidemic significant finem. Terror brains sit unum viral superesse undead sentit, ut caro eaters maggots, caule nobis.`
 
-    export let words = text.split(' ').length;
+    export let words = String(text.split(' ').length);
 
-    const lipsum = text.split(' ').slice(0, words).join(' ')
+    const lipsum = text.split(' ').slice(0, Number(words)).join(' ')
 </script>
 
 { lipsum }
