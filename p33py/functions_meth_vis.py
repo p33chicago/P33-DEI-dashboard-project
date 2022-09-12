@@ -1,6 +1,7 @@
-#%% set directory
-
-
+#%%
+#                         Environment settings
+#
+#%%
 import os
 import pandas as pd
 import plotly.express as px
@@ -9,6 +10,7 @@ import plotly.io as io
 io.renderers.default='svg'
 from viz import set_default_theme
 set_default_theme()
+
 
 #%% Importing csv files
 
@@ -22,6 +24,128 @@ os.getcwd()
 os.chdir('E:/p33/P33-DEI-dashboard-project/p33py/')
 
 
+#%%
+#                              FUNCTIONS
+#
+#%% Define the metrics function (two scopes)
+# This metric function generates a new dataset contained the value of metricOne/PopulaitonOne
+# and the value of metricTwo/PopulaitonTwo for different ethnic groups at two geographical scopes.
+
+# define the metric funtion
+def metric_DEI_twoScopes(df,weight,metricOne,metricTwo,populOne,PopulTwo):
+    
+    ''' extract numerators '''
+    df_subset = df[(df["metrics_new"] == metricOne) | (df["metrics_new"] == metricTwo) ]   
+    ''' rename the value in subset dataset to subset_popul '''
+    df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
+    ''' extract denominators '''
+    df_popul = df[(df["metrics_new"] == populOne) | (df["metrics_new"] == PopulTwo) ]
+    ''' merge two extracted datasets '''
+    df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
+    ''' define the methodology '''
+    df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
+    ''' assign the weight to this metirc '''
+    df_merge['weight'] = weight
+    ''' drop redundant variables in merged dataframe '''
+    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
+    df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
+
+    return(df_metric)
+
+#%% Define the metrics function (one scope)
+# This metric function generates a new dataset contained the value of metricOne/PopulaitonOne 
+# for different ethnic groups at one geographical scope.
+
+# define the metric funtion
+def metric_DEI_oneScope(df,weight,metricOne,populOne):
+    
+    ''' extract numerators '''
+    df_subset = df[(df["metrics_new"] == metricOne)]   
+    ''' rename the value in subset dataset to subset_popul '''
+    df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
+    ''' extract denominators '''
+    df_popul = df[(df["metrics_new"] == populOne)]
+    ''' merge two extracted datasets '''
+    df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
+    ''' define the methodology '''
+    df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
+    ''' assign the weight to this metirc '''
+    df_merge['weight'] = weight
+    ''' drop redundant variables in merged dataframe '''
+    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
+    df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
+
+    return(df_metric)
+
+#%% define the visualization function for deep diving plots (DDP)
+
+# In Spyder, Plotly fails to select the default renderer unless explicitly specified.
+# Hence in below, I specified a renderer that I wish to use.
+
+
+# define viz function
+def figure_DDP(metric):
+    # extract texts and annotations
+
+    # display(df)
+    fig = px.bar(metric, 
+                 x=metric.var_scope, 
+                 y=metric.metric_value, 
+                 color=metric.var_ethnic, 
+                 barmode='group')
+    fig.update_traces(texttemplate='%{y}')
+    fig.update_yaxes(title='proportion')
+    
+    return plot(fig)
+
+#%% define the visualization function for deep diving tables (DDT)
+
+# define viz function
+def figure_DDT(metric):
+    # create a dataframe
+    ''' drop national metrics '''
+    metric_regional=metric[(metric['var_scope'] != "usa")]
+    metric_clean=metric_regional.drop(['metrics_new','var_scope'], axis = 1)
+    ''' caculate the target proportion by using the avg. proportion of white and asian groups ''' 
+    prop_target = metric_clean[(metric_clean['var_ethnic'] == "white") |
+                               (metric_clean['var_ethnic'] == "asian")]['metric_value'].mean()
+    ''' add interested variables  to dataset'''
+    metric_clean['popul_target'] = metric_clean['population']*prop_target
+    metric_clean['gap'] = metric_clean['popul_target'] - metric_clean['subset_popul']
+    ''' rearrange data for table display'''
+    metric_display = metric_clean[['var_ethnic', 'population', 'subset_popul', 'popul_target', 'gap']]
+    
+    return metric_display
+
+
+#%% define the function caculates Equality index (EI)
+
+# Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
+
+def EI_metric_FourG_geomean(df_metircs_selected):
+    # caculate geometric mean of proportions of 4 ethnic groups
+    df_metircs_selected['avg'] = ((df_metircs_selected['black']*df_metircs_selected['hispanic']*df_metircs_selected['white']*df_metircs_selected['asian'])**(0.25))
+    # caculate the Inequality Index
+    ''' II '''
+    df_metircs_selected['II'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
+                                  abs(df_metircs_selected['hispanic']-df_metircs_selected['avg'])+
+                                  abs(df_metircs_selected['white']-df_metircs_selected['avg'])+
+                                  abs(df_metircs_selected['asian']-df_metircs_selected['avg']))/
+                                 (4*df_metircs_selected['avg'])
+                                 )
+    ''' II sqrt'''
+    df_metircs_selected['II_SQRT'] = df_metircs_selected['II']**0.5
+    # scaling
+    ''' find the most inequal metrics and use its II_SQRT as benchmark'''
+    df_metircs_selected['II_MAX']=df_metircs_selected['II_SQRT'].max()
+    ''' Transform II_SQURT to EI, the equality index'''
+    df_metircs_selected['EI']=(100-((df_metircs_selected['II_SQRT']/df_metircs_selected['II_MAX'])*100))
+    
+    return df_metircs_selected
+
+#%%
+#                              Metrics and Variables
+#
 #%% select variables that are used 
 
 var = df.metrics_new.unique()
@@ -88,6 +212,7 @@ var_selected = [
                 '2021___city_chi___hs_apcs___popul___cps',
                 '2021___usa___hs_apcs___popul',
                 '2022___city_chi___hs_total___popul___cps',
+                '2020___usa___hs_total___popul',
 
 # College -----------------
 ## CS confer
@@ -104,7 +229,12 @@ var_selected = [
                 '2021___usa___col___t3_cs_confer',
 ## hs grads population              
                 '2021___state_il___hs___total_grad',
-                '2022___usa___hs_grads___popul',        
+                '2022___usa___hs_grads___popul',  
+
+## immediate enrol
+                '2021___state_il___col___immediate_enrol',
+                '2021___usa___col___immediate_enrol',
+                
 ## population             
                 '2022___state_il___col___total_enrol',
                 '2021___usa___col___total_enrol',
@@ -115,26 +245,28 @@ var_selected = [
                 '2021___usa___col___t3_enrol',                  
                 '2021___state_il___col___t3_confer',
                 '2021___usa___col___t3_confer',
+                '2020___state_il___hs_grads___popul',
+                '2022___usa___hs_grads___popul',
                 
                 
 # employement --------------
 ## tech job
                 '2021___region_chi_msa___emp___csjob_t11_age19to24',
                 '2021___usa___emp___csjob_t11_age19to24',
-                '2021___region_chi_msa___emp___total_degree_holder',
-                '2021___usa___emp___total_degree_holder',
+                '2022___region_chi_msa___emp___total_degree_holder',
+                '2022___usa___emp___total_degree_holder',
 ## top3 tech jobs
                 '2021___region_chi_msa___emp___csjob_t3',
                 '2021___usa___emp___csjob_t3'
 ]
 
-
-
 #%% Prepare a extracted dataset 
 # pick interested ethnic groups
-
 ## create a new dataset contained metrics presented in the last section  
 df_clean = df[df.metrics_new.isin(var_selected)]
+## consider metrics with counting numbers only. no proportion
+df_clean = df_clean[(df_clean['var_type'] == 'count')]
+
 
 ## focus on black, hispanic, white and asian ethnic individual groups 
 df_clean_fourGroups = df_clean[(df_clean['var_ethnic'] != "all") &
@@ -142,160 +274,221 @@ df_clean_fourGroups = df_clean[(df_clean['var_ethnic'] != "all") &
    (df_clean['var_ethnic'] != "white_asian")
    ]
 
+#%% create interested metrics datasets using metric functons above
 
-#%% Define the metrics function (two scopes)
-# This metric function generates a new dataset contained the value of metricOne/PopulaitonOne
-# and the value of metricTwo/PopulaitonTwo for different ethnic groups at two geographical scopes.
+# K-8 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+## Proficiency
+metric_k4_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.33,
+                                                   '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
+                                                   '2021___usa___k8_4th___math_prof&abov', # numerators for US
+                                                   '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago
+                                                   '2020___usa___k8_4th___popul') # denominators for US 
 
-# define the metric funtion
-def metric_DEI_twoScopes(df,weight,metricOne,metricTwo,populOne,PopulTwo):
-    
-    ''' extract numerators '''
-    df_subset = df[(df["metrics_new"] == metricOne) | (df["metrics_new"] == metricTwo) ]   
-    ''' rename the value in subset dataset to subset_popul '''
-    df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
-    ''' extract denominators '''
-    df_popul = df[(df["metrics_new"] == populOne) | (df["metrics_new"] == PopulTwo) ]
-    ''' merge two extracted datasets '''
-    df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
-    ''' define the methodology '''
-    df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
-    ''' assign the weight to this metirc '''
-    df_merge['weight'] = weight
-    ''' drop redundant variables in merged dataframe '''
-    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
-    df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
+metric_k8_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                  0.33,
+                                                  '2021___city_chi___k8_8th___math_prof&abov___cps',
+                                                  '2021___usa___k8_8th___math_prof&abov',
+                                                  '2022___city_chi___k8_8th___popul___cps',
+                                                  '2020___usa___k8_8th___popul') 
 
-    return(df_metric)
+metric_k8_algebra_pass = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                  0.33,
+                                                  '2021___city_chi___k8_8th___math_algebra_pass___cps',
+                                                  '2021___usa___k8_8th___math_algebra_pass',
+                                                  '2017___city_chi___k8_8th___math_algebra_enrol___cps',
+                                                  '2017___usa___k8_8th___math_algebra_enrol') 
+
+## Excellence
+metric_k4_math_adv = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___city_chi___k8_4th___math_advc___cps',  # numerators for city of chicago
+                                                   '2021___usa___k8_4th___math_advc', # numerators for US
+                                                   '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago
+                                                   '2020___usa___k8_4th___popul') # denominators for US 
+
+metric_k8_math_adv = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___city_chi___k8_8th___math_advc___cps',  # numerators for city of chicago
+                                                   '2021___usa___k8_8th___math_advc', # numerators for US
+                                                   '2022___city_chi___k8_8th___popul___cps', # denominators for city of chicago
+                                                   '2020___usa___k8_8th___popul') # denominators for US 
+
+## Access
+metric_k8_magnet_enrol = metric_DEI_oneScope(df_clean_fourGroups,
+                                             0.33, 
+                                             '2021___city_chi___k8_total___mag_stem_enrol___cps',
+                                             '2022___city_chi___k8_total___popul___cps')
+
+metric_k8_algebra_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.33,
+                                                   '2017___city_chi___k8_8th___math_algebra_enrol___cps',  # numerators for city of chicago
+                                                   '2017___usa___k8_8th___math_algebra_enrol',
+                                                   '2022___city_chi___k8_8th___popul___cps', # denominators for city of chicago
+                                                   '2020___usa___k8_8th___popul') # denominators for US 
+
+metric_k8_noInt = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.33,
+                                                   '2019___city_chi___k8_total___NOinternet_age5to17___cps',  # numerators for city of chicago
+                                                   '2019___usa___k8_total___NOinternet_age5to17', # numerators for US
+                                                   '2022___city_chi___age_5to17__popul___cps', # denominators for city of chicago
+                                                   '2022___usa___age_5to17__popul') # denominators for US 
+
+# High School >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+## Proficiency
+metric_hs_sat_meetAndExceeds = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___city_chi___hs___sat_math_meet&exceeds___cps',
+                                                   '2021___usa___col___sat_math_meet&exceeds',
+                                                   '2021___city_chi___hs_SATtaker___popul___cps',
+                                                   '2021___usa___hs_SATtaker___popul')
+
+metric_hs_apcs_aboveThree = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___city_chi___hs___apcs_score3/4',
+                                                   '2021___usa___hs___apcs_score3/4',
+                                                   '2021___city_chi___hs_apcs___popul___cps',
+                                                   '2021___usa___hs_apcs___popul')
 
 
-#%% Define the metrics function (one scope)
-# This metric function generates a new dataset contained the value of metricOne/PopulaitonOne 
-# for different ethnic groups at one geographical scope.
 
-# define the metric funtion
-def metric_DEI_oneScope(df,weight,metricOne,populOne):
-    
-    ''' extract numerators '''
-    df_subset = df[(df["metrics_new"] == metricOne)]   
-    ''' rename the value in subset dataset to subset_popul '''
-    df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
-    ''' extract denominators '''
-    df_popul = df[(df["metrics_new"] == populOne)]
-    ''' merge two extracted datasets '''
-    df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
-    ''' define the methodology '''
-    df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
-    ''' assign the weight to this metirc '''
-    df_merge['weight'] = weight
-    ''' drop redundant variables in merged dataframe '''
-    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
-    df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
+test1_sub = df_clean_fourGroups[(df_clean_fourGroups["metrics_new"] == '2019___city_chi___k8_total___NOinternet_age5to17___cps') | (df_clean_fourGroups["metrics_new"] == '2019___usa___k8_total___NOinternet_age5to17') ]   
+test1_sub.rename(columns = {'population':'subset_popul'}, inplace = True)
+test1_popul = df_clean_fourGroups[(df_clean_fourGroups["metrics_new"] == '2022___city_chi___age_5to17__popul___cps') | (df["metrics_new"] == '2022___usa___age_5to17__popul') ]
+test1_merge = pd.merge(test1_sub, test1_popul, on=['var_scope','var_ethnic'])
 
-    return(df_metric)
 
-#%% define interested metrics using metric functons above
+## Excellence
+metric_hs_sat_exceeds = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___city_chi___hs___sat_math_exceeds___cps',
+                                                   '2021___usa___col___sat_math_exceeds',
+                                                   '2021___city_chi___hs_SATtaker___popul___cps',
+                                                   '2021___usa___hs_SATtaker___popul')
 
-# example 
-test1 = metric_DEI_twoScopes(df_clean_fourGroups,
-                             0.33,
-                             '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
-                             '2021___usa___k8_4th___math_prof&abov', # numerators for US
-                             '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago
-                             '2020___usa___k8_4th___popul') # denominators for US 
+metric_hs_apcs_five = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___city_chi___hs___apcs_score5___cps',
+                                                   '2021___usa___hs___apcs_score5',
+                                                   '2021___city_chi___hs_apcs___popul___cps',
+                                                   '2021___usa___hs_apcs___popul')
 
-test2 = metric_DEI_oneScope(df_clean_fourGroups,
-                            0.33,
-                            '2021___city_chi___k8_8th___math_prof&abov___cps', # numerators for city of chicago
-                            '2022___city_chi___k8_8th___popul___cps') # denominators for city of chicago 
+
+## Access
+metric_hs_apcs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.25,
+                                                   '2021___city_chi___hs_apcs___popul___cps',
+                                                   '2021___usa___hs_apcs___popul',
+                                                   '2022___city_chi___hs_total___popul___cps',
+                                                   '2020___usa___hs_total___popul')
+
+metric_hs_magnet_enrol = metric_DEI_oneScope(df_clean_fourGroups,
+                                             0.25,
+                                             '2021___city_chi___hs___mag_enrol___cps',
+                                             '2022___city_chi___hs_total___popul___cps')
+
+metric_hs_CSInterested = metric_DEI_oneScope(df_clean_fourGroups,
+                                             0.25,
+                                             '2021___city_chi___hs___cs_interested___cps',
+                                             '2022___city_chi___hs_total___popul___cps')
+#?????????????????????????
+metric_hs_advMath_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.25,
+                                                   '2017___city_chi___hs___math_advc___cps',
+                                                   '2017___usa___hs___math_advc_enroll',
+                                                   '2022___city_chi___hs_total___popul___cps',
+                                                   '2020___usa___hs_total___popul')
+
+# College >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+## Proficiency
+metric_col_cs_persist = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___state_il___col___cs_confer',
+                                                   '2021___usa___col___cs_confer',
+                                                   '2021___state_il___col___cs_enrol',
+                                                   '2021___usa___col___cs_enrol')
+
+metric_col_cs_confer = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___state_il___col___cs_confer',
+                                                   '2021___usa___col___cs_confer',
+                                                   '2020___state_il___col___total_confer',
+                                                   '2021___usa___col___total_confer')
+
+## Excellence
+metric_col_topThree_cs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.33,
+                                                   '2021___state_il___col___t3_cs_enrol',
+                                                   '2021___usa___col___t3_cs_enrol',
+                                                   '2021___state_il___col___t3_enrol',
+                                                   '2021___usa___col___t3_enrol')
+
+metric_col_topThree_cs_persist = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.33,
+                                                   '2021___state_il___col___t3_cs_confer',
+                                                   '2021___usa___col___t3_cs_confer',
+                                                   '2021___state_il___col___t3_cs_enrol',
+                                                   '2021___usa___col___t3_cs_enrol')
+
+metric_col_topThree_cs_confer = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.33,
+                                                   '2021___state_il___col___t3_cs_confer',
+                                                   '2021___usa___col___t3_cs_confer',
+                                                   '2021___state_il___col___t3_confer',
+                                                   '2021___usa___col___t3_confer')
+
+## Access
+metric_col_cs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___state_il___col___cs_enrol',
+                                                   '2021___usa___col___cs_enrol',
+                                                   '2022___state_il___col___total_enrol',
+                                                   '2021___usa___col___total_enrol')
+
+metric_col_imdEnrol = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___state_il___col___immediate_enrol',
+                                                   '2021___usa___col___immediate_enrol',
+                                                   '2020___state_il___hs_grads___popul',
+                                                   '2022___usa___hs_grads___popul')
+                
+# Employment >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+## Proficiency
+metric_emp_techJob = metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___region_chi_msa___emp___csjob_t11_age19to24',
+                                                   '2021___usa___emp___csjob_t11_age19to24',
+                                                   '2022___region_chi_msa___emp___total_degree_holder',
+                                                   '2022___usa___emp___total_degree_holder')
+
+## Excellence
+metric_emp_techJob_topThree =  metric_DEI_twoScopes(df_clean_fourGroups,
+                                                   0.5,
+                                                   '2021___region_chi_msa___emp___csjob_t3',
+                                                   '2021___usa___emp___csjob_t3',
+                                                   '2021___region_chi_msa___emp___csjob_t11_age19to24',
+                                                   '2021___usa___emp___csjob_t11_age19to24')
+
+
+## testing 
+
+# df_subset = df[(df["metrics_new"] == '2021___region_chi_msa___emp___csjob_t11_age19to24')]
+
+# df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
+
+# df_popul = df[(df["metrics_new"] == '2022___region_chi_msa___emp___total_degree_holder') | (df["metrics_new"] == '2022___usa___emp___total_degree_holder')]
+
+# df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
+
+# df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
+
 
 
 #%% create a dataframe of metric values for city of Chicago, Illinois and MSA
 
-df_metircs_CHI = pd.concat([test1, test2])
-df_metircs_CHI = df_metircs_CHI[(test1['var_scope'] != "usa")]
+df_metircs_CHI = pd.concat([metric_hs_sat_exceeds, metric_hs_apcs_aboveThree])
+df_metircs_CHI = df_metircs_CHI[(df_metircs_CHI['var_scope'] != "usa")]
 df_metircs_CHI = df_metircs_CHI.drop(['subset_popul','population','var_scope'], axis = 1)
 df_metircs_CHI_wide = pd.pivot(df_metircs_CHI, index=['metrics_new','weight'], columns='var_ethnic', values='metric_value')
-
-
-#%% define the visualization function for deep diving plots (DDP)
-
-# In Spyder, Plotly fails to select the default renderer unless explicitly specified.
-# Hence in below, I specified a renderer that I wish to use.
-
-
-# define viz function
-def figure_DDP(metric):
-    # extract texts and annotations
-
-    # display(df)
-    fig = px.bar(metric, 
-                 x=metric.var_scope, 
-                 y=metric.metric_value, 
-                 color=metric.var_ethnic, 
-                 barmode='group')
-    fig.update_traces(texttemplate='%{y}')
-    fig.update_yaxes(title='proportion')
-    
-    return plot(fig)
-
- # test the figure function
-
-figure_DDP(test1)
-
-
-#%% define the visualization function for deep diving tables (DDT)
-
-# define viz function
-def figure_DDT(metric):
-    # create a dataframe
-    ''' drop national metrics '''
-    metric_regional=metric[(metric['var_scope'] != "usa")]
-    metric_clean=metric_regional.drop(['metrics_new','var_scope'], axis = 1)
-    ''' caculate the target proportion by using the avg. proportion of white and asian groups ''' 
-    prop_target = metric_clean[(metric_clean['var_ethnic'] == "white") |
-                               (metric_clean['var_ethnic'] == "asian")]['metric_value'].mean()
-    ''' add interested variables  to dataset'''
-    metric_clean['popul_target'] = metric_clean['population']*prop_target
-    metric_clean['gap'] = metric_clean['popul_target'] - metric_clean['subset_popul']
-    ''' rearrange data for table display'''
-    metric_display = metric_clean[['var_ethnic', 'population', 'subset_popul', 'popul_target', 'gap']]
-    
-    return metric_display
-
-
-# test the function
-figure_DDT(test1)
-
-print(test1)
-
-
-#%% define the function caculates Equality index (EI)
-
-# Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
-
-def EI_metric_FourG_geomean(df_metircs_selected):
-    # caculate geometric mean of proportions of 4 ethnic groups
-    df_metircs_selected['avg'] = ((df_metircs_selected['black']*df_metircs_selected['hispanic']*df_metircs_selected['white']*df_metircs_selected['asian'])**(0.25))
-    # caculate the Inequality Index
-    ''' II '''
-    df_metircs_selected['II'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
-                                  abs(df_metircs_selected['hispanic']-df_metircs_selected['avg'])+
-                                  abs(df_metircs_selected['white']-df_metircs_selected['avg'])+
-                                  abs(df_metircs_selected['asian']-df_metircs_selected['avg']))/
-                                 (4*df_metircs_selected['avg'])
-                                 )
-    ''' II sqrt'''
-    df_metircs_selected['II_SQRT'] = df_metircs_selected['II']**0.5
-    # scaling
-    ''' find the most inequal metrics and use its II_SQRT as benchmark'''
-    df_metircs_selected['II_MAX']=df_metircs_selected['II_SQRT'].max()
-    ''' Transform II_SQURT to EI, the equality index'''
-    df_metircs_selected['EI']=(100-((df_metircs_selected['II_SQRT']/df_metircs_selected['II_MAX'])*100))
-    
-    return df_metircs_selected
-
-testEI = EI_metric_FourG_geomean(df_metircs_CHI_wide)
-
-# Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
-
