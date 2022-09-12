@@ -26,7 +26,7 @@ df = pd.read_csv('df_DEI_tidy_final.csv')
 df.head()
 
 
-#%% select metrics that are used 
+#%% select variables that are used 
 
 var = df.metrics_new.unique()
 print(var)
@@ -133,8 +133,9 @@ var_selected = [
 ]
 
 
+
 #%% Prepare a extracted dataset 
-# pick ethnic groups
+# pick interested ethnic groups
 
 ## create a new dataset contained metrics presented in the last section  
 df_clean = df[df.metrics_new.isin(var_selected)]
@@ -165,16 +166,9 @@ def metric_DEI_twoScopes(df,metricOne,metricTwo,populOne,PopulTwo):
     df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
     ''' drop redundant variables in merged dataframe '''
     df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value']] 
+    df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
 
     return(df_metric)
-
-# test the function
-test1 = metric_DEI_twoScopes(df_clean_fourGroups,
-           '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
-           '2021___usa___k8_4th___math_prof&abov', # numerators for US
-           '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago 
-           '2020___usa___k8_4th___popul') # denominators for US 
-
 
 
 #%% Define the metrics function (one scope)
@@ -196,14 +190,22 @@ def metric_DEI_oneScope(df,metricOne,populOne):
     df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
     ''' drop redundant variables in merged dataframe '''
     df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value']] 
+    df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
 
     return(df_metric)
 
-# test the function
+#%% define interested metrics using metric functons above
+
+# example 
+test1 = metric_DEI_twoScopes(df_clean_fourGroups,
+           '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
+           '2021___usa___k8_4th___math_prof&abov', # numerators for US
+           '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago 
+           '2020___usa___k8_4th___popul') # denominators for US 
+
 test2 = metric_DEI_oneScope(df_clean_fourGroups,
-                    '2021___city_chi___k8_4th___math_prof&abov___cps', # numerators for city of chicago
-                    '2022___city_chi___k8_4th___popul___cps') # denominators for city of chicago 
-test1.head()
+                    '2021___city_chi___k8_8th___math_prof&abov___cps', # numerators for city of chicago
+                    '2022___city_chi___k8_8th___popul___cps') # denominators for city of chicago 
 
 
 
@@ -232,18 +234,58 @@ def figure_DDP(metric):
 
 figure_DDP(test1)
 
-test1.head()
-#%% define the visualization function for deep diving tables (DDT) ???????
+
+#%% define the visualization function for deep diving tables (DDT)
 
 # define viz function
 def figure_DDT(metric):
-    metric2=metric[(metric['var_scope'] != "usa")]
-    metric3=metric2.drop(['metrics_new_x','var_scope'], axis = 1)
-    prop_target = metric3[(metric3['var_ethnic'] == "white") | (metric3['var_ethnic'] == "asian")]['metric_value'].mean()
-    metric3['popul_target'] = metric3['population']*prop_target
-    metric3['gap'] = metric3['popul_target']-metric3['subset_popul']
-    return metric3
+    # create a dataframe
+    ''' drop national metrics '''
+    metric_regional=metric[(metric['var_scope'] != "usa")]
+    metric_clean=metric_regional.drop(['metrics_new_x','var_scope'], axis = 1)
+    ''' caculate the target proportion by using the avg. proportion of white and asian groups ''' 
+    prop_target = metric_clean[(metric_clean['var_ethnic'] == "white") |
+                               (metric_clean['var_ethnic'] == "asian")]['metric_value'].mean()
+    ''' add interested variables  to dataset'''
+    metric_clean['popul_target'] = metric_clean['population']*prop_target
+    metric_clean['gap'] = metric_clean['popul_target'] - metric_clean['subset_popul']
+    ''' rearrange data for table display'''
+    metric_display = metric_clean[['var_ethnic', 'population', 'subset_popul', 'popul_target', 'gap']]
+    
+    return metric_display
 
+
+# test the function
 figure_DDT(test1)
+
+print(test1)
+
+
+#%% define the function caculates inequality index (II)
+
+# Define a function that caculates II of specific metrics when there are 4 ethnic groups using geometric means
+
+def II_metric_FourG_geomean(df_metircs_selected):
+    # caculate geometric mean of proportions of 4 ethnic groups
+    df_metircs_selected['avg'] = ((df_metircs_selected['black']*df_metircs_selected['hispanic']*df_metircs_selected['white']*df_metircs_selected['asian'])**(0.25))
+    # caculate the ID
+    df_metircs_selected['ID'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
+                                  abs(df_metircs_selected['hispanic']-df_metircs_selected['avg'])+
+                                  abs(df_metircs_selected['white']-df_metircs_selected['avg'])+
+                                  abs(df_metircs_selected['asian']-df_metircs_selected['avg']))/
+                                 (4*df_metircs_selected['avg'])
+                                 )
+    return df_metircs_selected
+
+# create a dataframe of metric values for city of Chicago, Illinois and MSA
+
+df_metircs_CHI = pd.concat([test1, test2])
+df_metircs_CHI2 = df_metircs_CHI[(test1['var_scope'] != "usa")]
+df_metircs_CHI3 = df_metircs_CHI2.drop(['subset_popul','population','var_scope'], axis = 1)
+df_metircs_CHI3_wide = pd.pivot(df_metircs_CHI3, index='metrics_new', columns='var_ethnic', values='metric_value')
+
+testII = II_metric_FourG_geomean(df_metircs_CHI3_wide)
+
+
 
 
