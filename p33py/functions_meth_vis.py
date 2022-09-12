@@ -351,13 +351,6 @@ metric_hs_apcs_aboveThree = metric_DEI_twoScopes(df_clean_fourGroups,
                                                    '2021___usa___hs_apcs___popul')
 
 
-
-test1_sub = df_clean_fourGroups[(df_clean_fourGroups["metrics_new"] == '2019___city_chi___k8_total___NOinternet_age5to17___cps') | (df_clean_fourGroups["metrics_new"] == '2019___usa___k8_total___NOinternet_age5to17') ]   
-test1_sub.rename(columns = {'population':'subset_popul'}, inplace = True)
-test1_popul = df_clean_fourGroups[(df_clean_fourGroups["metrics_new"] == '2022___city_chi___age_5to17__popul___cps') | (df["metrics_new"] == '2022___usa___age_5to17__popul') ]
-test1_merge = pd.merge(test1_sub, test1_popul, on=['var_scope','var_ethnic'])
-
-
 ## Excellence
 metric_hs_sat_exceeds = metric_DEI_twoScopes(df_clean_fourGroups,
                                                    0.5,
@@ -372,7 +365,6 @@ metric_hs_apcs_five = metric_DEI_twoScopes(df_clean_fourGroups,
                                                    '2021___usa___hs___apcs_score5',
                                                    '2021___city_chi___hs_apcs___popul___cps',
                                                    '2021___usa___hs_apcs___popul')
-
 
 ## Access
 metric_hs_apcs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
@@ -488,7 +480,8 @@ metric_emp_techJob_topThree =  metric_DEI_twoScopes(df_clean_fourGroups,
 
 #%% create a dataframe of metric values for city of Chicago, Illinois and MSA
 
-df_metircs_CHI = pd.concat([metric_hs_sat_exceeds, metric_hs_apcs_aboveThree])
+df_metircs_CHI = pd.concat([metric_k4_math_profAndAbove, metric_hs_apcs_aboveThree])
+
 df_metircs_CHI = df_metircs_CHI[(df_metircs_CHI['var_scope'] != "usa")]
 df_metircs_CHI = df_metircs_CHI.drop(['subset_popul','population','var_scope'], axis = 1)
 df_metircs_CHI_wide = pd.pivot(df_metircs_CHI, index=['metrics_new','weight'], columns='var_ethnic', values='metric_value')
