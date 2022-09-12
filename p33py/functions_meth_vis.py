@@ -152,7 +152,7 @@ df_clean_fourGroups = df_clean[(df_clean['var_ethnic'] != "all") &
 # and the value of metricTwo/PopulaitonTwo for different ethnic groups at two geographical scopes.
 
 # define the metric funtion
-def metric_DEI_twoScopes(df,metricOne,metricTwo,populOne,PopulTwo):
+def metric_DEI_twoScopes(df,weight,metricOne,metricTwo,populOne,PopulTwo):
     
     ''' extract numerators '''
     df_subset = df[(df["metrics_new"] == metricOne) | (df["metrics_new"] == metricTwo) ]   
@@ -164,8 +164,10 @@ def metric_DEI_twoScopes(df,metricOne,metricTwo,populOne,PopulTwo):
     df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
     ''' define the methodology '''
     df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
+    ''' assign the weight to this metirc '''
+    df_merge['weight'] = weight
     ''' drop redundant variables in merged dataframe '''
-    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value']] 
+    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
     df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
 
     return(df_metric)
@@ -176,7 +178,7 @@ def metric_DEI_twoScopes(df,metricOne,metricTwo,populOne,PopulTwo):
 # for different ethnic groups at one geographical scope.
 
 # define the metric funtion
-def metric_DEI_oneScope(df,metricOne,populOne):
+def metric_DEI_oneScope(df,weight,metricOne,populOne):
     
     ''' extract numerators '''
     df_subset = df[(df["metrics_new"] == metricOne)]   
@@ -188,8 +190,10 @@ def metric_DEI_oneScope(df,metricOne,populOne):
     df_merge = pd.merge(df_subset, df_popul,  how = 'left', left_on=['var_scope','var_ethnic'], right_on = ['var_scope','var_ethnic'])
     ''' define the methodology '''
     df_merge['metric_value'] = (df_merge['subset_popul'] / df_merge['population'])
+    ''' assign the weight to this metirc '''
+    df_merge['weight'] = weight
     ''' drop redundant variables in merged dataframe '''
-    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value']] 
+    df_metric = df_merge.loc[:,['metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
     df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
 
     return(df_metric)
@@ -198,15 +202,24 @@ def metric_DEI_oneScope(df,metricOne,populOne):
 
 # example 
 test1 = metric_DEI_twoScopes(df_clean_fourGroups,
-           '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
-           '2021___usa___k8_4th___math_prof&abov', # numerators for US
-           '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago 
-           '2020___usa___k8_4th___popul') # denominators for US 
+                             0.33,
+                             '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
+                             '2021___usa___k8_4th___math_prof&abov', # numerators for US
+                             '2022___city_chi___k8_4th___popul___cps', # denominators for city of chicago
+                             '2020___usa___k8_4th___popul') # denominators for US 
 
 test2 = metric_DEI_oneScope(df_clean_fourGroups,
-                    '2021___city_chi___k8_8th___math_prof&abov___cps', # numerators for city of chicago
-                    '2022___city_chi___k8_8th___popul___cps') # denominators for city of chicago 
+                            0.33,
+                            '2021___city_chi___k8_8th___math_prof&abov___cps', # numerators for city of chicago
+                            '2022___city_chi___k8_8th___popul___cps') # denominators for city of chicago 
 
+
+#%% create a dataframe of metric values for city of Chicago, Illinois and MSA
+
+df_metircs_CHI = pd.concat([test1, test2])
+df_metircs_CHI2 = df_metircs_CHI[(test1['var_scope'] != "usa")]
+df_metircs_CHI3 = df_metircs_CHI2.drop(['subset_popul','population','var_scope'], axis = 1)
+df_metircs_CHI3_wide = pd.pivot(df_metircs_CHI3, index=['metrics_new','weight'], columns='var_ethnic', values='metric_value')
 
 
 #%% define the visualization function for deep diving plots (DDP)
@@ -261,31 +274,32 @@ figure_DDT(test1)
 print(test1)
 
 
-#%% define the function caculates inequality index (II)
+#%% define the function caculates Equality index (EI)
 
-# Define a function that caculates II of specific metrics when there are 4 ethnic groups using geometric means
+# Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
 
-def II_metric_FourG_geomean(df_metircs_selected):
+def EI_metric_FourG_geomean(df_metircs_selected):
     # caculate geometric mean of proportions of 4 ethnic groups
     df_metircs_selected['avg'] = ((df_metircs_selected['black']*df_metircs_selected['hispanic']*df_metircs_selected['white']*df_metircs_selected['asian'])**(0.25))
-    # caculate the ID
-    df_metircs_selected['ID'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
+    # caculate the Inequality Index
+    ''' II '''
+    df_metircs_selected['II'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
                                   abs(df_metircs_selected['hispanic']-df_metircs_selected['avg'])+
                                   abs(df_metircs_selected['white']-df_metircs_selected['avg'])+
                                   abs(df_metircs_selected['asian']-df_metircs_selected['avg']))/
                                  (4*df_metircs_selected['avg'])
                                  )
+    ''' II sqrt'''
+    df_metircs_selected['II_SQRT'] = df_metircs_selected['II']**0.5
+    # scaling
+    ''' find the most inequal metrics and use its II_SQRT as benchmark'''
+    df_metircs_selected['II_MAX']=df_metircs_selected['II_SQRT'].max()
+    ''' Transform II_SQURT to EI, the equality index'''
+    df_metircs_selected['EI']=(100-((df_metircs_selected['II_SQRT']/df_metircs_selected['II_MAX'])*100))
+    
     return df_metircs_selected
 
-# create a dataframe of metric values for city of Chicago, Illinois and MSA
+testEI = EI_metric_FourG_geomean(df_metircs_CHI3_wide)
 
-df_metircs_CHI = pd.concat([test1, test2])
-df_metircs_CHI2 = df_metircs_CHI[(test1['var_scope'] != "usa")]
-df_metircs_CHI3 = df_metircs_CHI2.drop(['subset_popul','population','var_scope'], axis = 1)
-df_metircs_CHI3_wide = pd.pivot(df_metircs_CHI3, index='metrics_new', columns='var_ethnic', values='metric_value')
-
-testII = II_metric_FourG_geomean(df_metircs_CHI3_wide)
-
-
-
+# Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
 
