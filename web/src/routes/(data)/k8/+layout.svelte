@@ -3,9 +3,6 @@
     import LifestageTitleCard from "$lib/LifestageTitleCard.svelte";
     import LifestageIndexCard from "$lib/LifestageIndexCard.svelte";
     import LifestageIndicatorsCard from "$lib/LifestageIndicatorsCard.svelte";
-import DataMain from "$lib/DataMain.svelte";
-import SummaryCard from "$lib/SummaryCard.svelte";
-import Card from "$lib/cards/Card.svelte";
 </script>
 
 <DataSidebar>

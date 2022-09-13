@@ -11,7 +11,7 @@
 <div class="min-h-full flex flex-col">
 	<Header />
 
-	<main class="flex flex-wrap align-top justify-left gap-x-8 p-4 md:p-8 max-w-[100vw]">
+	<main class="flex flex-wrap align-top justify-left gap-x-8 p-4 md:p-8 max-w-7xl mx-auto">
 		<slot />
 	</main>
 
