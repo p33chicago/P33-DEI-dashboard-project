@@ -492,8 +492,8 @@ metric_emp_techJob_topThree =  metric_DEI_twoScopes(df_clean_fourGroups,
                                                     0.5,
                                                     '2021___region_chi_msa___emp___csjob_t3',
                                                     '2021___usa___emp___csjob_t3',
-                                                    '2021___region_chi_msa___emp___csjob_t11_age19to24',
-                                                    '2021___usa___emp___csjob_t11_age19to24')
+                                                    '2022___region_chi_msa___emp___total_degree_holder',
+                                                    '2022___usa___emp___total_degree_holder')
 
 
 ## testing 
