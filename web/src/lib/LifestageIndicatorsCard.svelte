@@ -6,8 +6,8 @@
 </script>
 
 <Card>
-    <p>access: {access}</p>
-    <p>proficiency: {proficiency}</p>
-    <p>excellence: {excellence}</p>
+    <p>Access <span class="text-3xl">{access}</span></p>
+    <p>Proficiency <span class="text-3xl">{proficiency}</span></p>
+    <p>Excellence <span class="text-3xl">{excellence}</span></p>
 </Card>
 			

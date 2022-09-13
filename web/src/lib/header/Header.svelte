@@ -27,7 +27,7 @@
 		
 		<div class="flex fullnav:hidden h-10 w-10"><div> </div></div>
 
-		<nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-brand-primary-really-light-green p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
+		<nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
 			<ul class="fullnav:flex">
 				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/"}><a href="/">The Data</a></li>
 				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === "/methodology"}><a href="/methodology">Methodology</a></li>

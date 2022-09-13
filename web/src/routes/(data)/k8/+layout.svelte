@@ -10,6 +10,6 @@
     <LifestageIndexCard slot="index" chicago="40" us="70" />
     <LifestageIndicatorsCard slot="indicators" access="10" excellence="1" proficiency="2" />
 </DataSidebar>
-<div class="flex flex-1 flex-col">
+<div class="col-span-4 md:col-span-3 space-y-6">
     <slot />
 </div>

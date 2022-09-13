@@ -11,7 +11,7 @@
 <div class="min-h-full flex flex-col">
 	<Header />
 
-	<main class="flex flex-wrap align-top justify-left gap-x-8 p-4 md:p-8 max-w-7xl mx-auto">
+	<main class="grid grid-cols-4 align-top justify-left px-4 md:px-8 py-1.5 md:py-3.5 gap-x-8 gap-y-2 md:gap-y-3.5 mx-auto">
 		<slot />
 	</main>
 

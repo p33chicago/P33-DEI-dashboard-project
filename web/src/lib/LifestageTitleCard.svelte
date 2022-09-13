@@ -5,7 +5,7 @@
 </script>
 
 <Card>
-    <h1 class="capitalize">{title}</h1>
-    <p>{subtitle}</p>
+    <h1 class="capitalize text-6xl text-center">{title}</h1>
+    <p class="text-center">{subtitle}</p>
 </Card>
 			

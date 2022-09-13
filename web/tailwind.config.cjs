@@ -11,22 +11,6 @@ module.exports = {
       '2xl': '1536px',
       'fullnav': '815px',
     },
-    colors: {
-      'black': '#04352d',
-      'white': '#f4f4f4',
-      'dark-gray': '#e0e5ec',
-      'medium-gray': '#88b6b6',
-      'light-gray': '#d9d9d9',
-      'really-light-gray': '#e0e5ec',
-      'brand-primary-dark-green': 'var(--brand-primary-dark-green)',
-      'brand-primary-green': 'var(--brand-primary-green)',
-      'brand-primary-light-green': '#56cbb8',
-      'brand-primary-really-light-green': 'var(--brand-primary-really-light-green)',
-      'blue': '#1d59b8',
-      'fail-red': '#981717',
-      'warn-orange': '#ff7213',
-      'heads-up-yellow': '#ffa913',
-    },
     fontFamily: {
       mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
       sans: ['Graphik', 'sans-serif'],
@@ -40,7 +24,27 @@ module.exports = {
     dropShadow: {
       'card': '0 4px 4px rgb(0 0 0 / 0.25)'
     },
-    extend: {}
+    borderColor: {
+      DEFAULT: 'var(--brand-primary-dark-green)'
+    },
+    extend: {
+      colors: {
+        'black': 'var(--black)',
+        'white': 'var(--white)',
+        'dark-gray': 'var(--dark-gray)',
+        'medium-gray': 'var(--medium-gray)',
+        'light-gray': 'var(--light-gray)',
+        'really-light-gray': 'var(--really-light-gray)',
+        'brand-primary-dark-green': 'var(--brand-primary-dark-green)',
+        'brand-primary-green': 'var(--brand-primary-green)',
+        'brand-primary-light-green': 'var(--brand-primary-light-green)',
+        'brand-primary-really-light-green': 'var(--brand-primary-really-light-green)',
+        'blue': 'var(--blue)',
+        'fail-red': 'var(--fail-red)',
+        'warn-orange': 'var(--warn-orange)',
+        'heads-up-yellow': 'var(--heads-up-yellow)',
+      }
+    }
   },
   plugins: []
 };
