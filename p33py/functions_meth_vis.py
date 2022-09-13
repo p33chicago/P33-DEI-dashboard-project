@@ -297,7 +297,7 @@ metric_k8_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
                                                    '2021___usa___k8_8th___math_prof&abov',
                                                    '2022___city_chi___k8_8th___popul___cps',
                                                    '2020___usa___k8_8th___popul') 
-
+# ??????
 metric_k8_algebra_pass = metric_DEI_twoScopes(df_clean_fourGroups,
                                               'metric_k8_algebra_pass',
                                               0.33,
@@ -330,6 +330,7 @@ metric_k8_magnet_enrol = metric_DEI_oneScope(df_clean_fourGroups,
                                              '2021___city_chi___k8_total___mag_stem_enrol___cps',
                                              '2022___city_chi___k8_total___popul___cps')
 
+#????????????
 metric_k8_algebra_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                                'metric_k8_algebra_enrol',
                                                0.33,
@@ -338,6 +339,7 @@ metric_k8_algebra_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                                '2022___city_chi___k8_8th___popul___cps',
                                                '2020___usa___k8_8th___popul') 
 
+#????????????
 metric_k8_noInt = metric_DEI_twoScopes(df_clean_fourGroups,
                                        'metric_k8_noInt',
                                        0.33,
@@ -402,7 +404,8 @@ metric_hs_CSInterested = metric_DEI_oneScope(df_clean_fourGroups,
                                              0.25,
                                              '2021___city_chi___hs___cs_interested___cps',
                                              '2022___city_chi___hs_total___popul___cps')
-#?????????????????????????
+
+#????????????
 metric_hs_advMath_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                                'metric_hs_advMath_enrol',
                                                0.25,
