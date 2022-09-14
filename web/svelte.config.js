@@ -12,6 +12,9 @@ const config = {
 		}),
 	],
 	kit: {
+		paths: {
+			base: '/P33-DEI-dashboard-project'
+		},
 		adapter: adapter()
 	}
 };
