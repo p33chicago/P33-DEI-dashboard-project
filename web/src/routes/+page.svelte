@@ -1,5 +1,6 @@
 <script>
 	import Figure from '$lib/figure/Figure.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -10,7 +11,7 @@
 <div class="container flex space-x-4 overflow-scroll snap-x snap-mandatory">
 	<div class="space-y-4 text-center">
 		<div class="drop-shadow-card">
-			<h1 class="capitalize"><a href="/k8/access">K-8</a></h1>
+			<h1 class="capitalize"><a href={`${base}/k8/access`}>K-8</a></h1>
 			<p>City of Chicago</p>
 		</div>
 		<div class="drop-shadow-card">
@@ -19,7 +20,7 @@
 	</div>
 	<div class="space-y-4 text-center">
 		<div class="drop-shadow-card">
-			<h1 class="capitalize"><a href="/hs/access">High school</a></h1>
+			<h1 class="capitalize"><a href={`${base}/hs/access`}>High school</a></h1>
 			<p>City of Chicago</p>
 		</div>
 		<div class="drop-shadow-card">
@@ -28,7 +29,7 @@
 	</div>
 	<div class="space-y-4 text-center">
 		<div class="drop-shadow-card">
-			<h1 class="capitalize"><a href="/college/access">College</a></h1>
+			<h1 class="capitalize"><a href={`${base}/college/access`}>College</a></h1>
 			<p>City of Chicago</p>
 		</div>
 		<div class="drop-shadow-card">
@@ -37,7 +38,7 @@
 	</div>
 	<div class="space-y-4 text-center">
 		<div class="drop-shadow-card">
-			<h1 class="capitalize"><a href="/career/access">Career</a></h1>
+			<h1 class="capitalize"><a href={`${base}/career/access`}>Career</a></h1>
 			<p>City of Chicago</p>
 		</div>
 		<div class="drop-shadow-card">
