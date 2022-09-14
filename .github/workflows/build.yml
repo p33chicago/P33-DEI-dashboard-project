@@ -43,8 +43,6 @@ jobs:
     steps:
     - name: Setup Pages
       uses: actions/configure-pages@v2
-      with:
-        static_site_generator: sveltekit
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
