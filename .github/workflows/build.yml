@@ -30,7 +30,7 @@ jobs:
       - name: Save static website
         uses: actions/upload-artifact@v3
         with:
-          name: website
+          name: github-pages
           path: web/build/
   deploy:
     needs: build
@@ -45,5 +45,3 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
-      with:
-        artifact_name: website
