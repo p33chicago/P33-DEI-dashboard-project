@@ -32,7 +32,7 @@ os.chdir('E:/p33/P33-DEI-dashboard-project/p33py/')
 # and the value of metricTwo/PopulaitonTwo for different ethnic groups at two geographical scopes.
 
 # define the metric funtion
-def metric_DEI_twoScopes(df,metricname,weight,metricOne,metricTwo,populOne,PopulTwo):
+def metric_DEI_twoScopes(df,metricname,dimension,stage,weight,metricOne,metricTwo,populOne,PopulTwo):
     
     ''' extract numerators '''
     df_subset = df[(df["metrics_new"] == metricOne) | (df["metrics_new"] == metricTwo) ]   
@@ -48,8 +48,12 @@ def metric_DEI_twoScopes(df,metricname,weight,metricOne,metricTwo,populOne,Popul
     df_merge['weight'] = weight
     ''' assign the metricname to this metirc '''
     df_merge['metric_name'] = metricname
+    ''' assign the dimension to this metirc '''
+    df_merge['dimension'] = dimension
+    ''' assign the stage to this metirc '''
+    df_merge['stage'] = stage
     ''' drop redundant variables in merged dataframe '''
-    df_metric = df_merge.loc[:,['metric_name','metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
+    df_metric = df_merge.loc[:,['metric_name','stage','dimension','metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
     df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
 
     return(df_metric)
@@ -59,7 +63,7 @@ def metric_DEI_twoScopes(df,metricname,weight,metricOne,metricTwo,populOne,Popul
 # for different ethnic groups at one geographical scope.
 
 # define the metric funtion
-def metric_DEI_oneScope(df,metricname,weight,metricOne,populOne):
+def metric_DEI_oneScope(df,metricname,dimension,stage,weight,metricOne,populOne):
     
     ''' extract numerators '''
     df_subset = df[(df["metrics_new"] == metricOne)]   
@@ -75,8 +79,12 @@ def metric_DEI_oneScope(df,metricname,weight,metricOne,populOne):
     df_merge['weight'] = weight
     ''' assign the metricname to this metirc '''
     df_merge['metric_name'] = metricname
+    ''' assign the dimension to this metirc '''
+    df_merge['dimension'] = dimension
+    ''' assign the stage to this metirc '''
+    df_merge['stage'] = stage
     ''' drop redundant variables in merged dataframe '''
-    df_metric = df_merge.loc[:,['metric_name','metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
+    df_metric = df_merge.loc[:,['metric_name','stage','dimension','metrics_new_x','var_scope','var_ethnic','subset_popul','population','metric_value','weight']] 
     df_metric.rename(columns = {'metrics_new_x':'metrics_new'}, inplace = True)
 
     return(df_metric)
@@ -131,21 +139,77 @@ def EI_metric_FourG_geomean(df_metircs_selected):
     df_metircs_selected['avg'] = ((df_metircs_selected['black']*df_metircs_selected['hispanic']*df_metircs_selected['white']*df_metircs_selected['asian'])**(0.25))
     # caculate the Inequality Index
     ''' II '''
-    df_metircs_selected['II'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
+    df_metircs_selected['II_metric'] = ((abs(df_metircs_selected['black']-df_metircs_selected['avg'])+
                                   abs(df_metircs_selected['hispanic']-df_metircs_selected['avg'])+
                                   abs(df_metircs_selected['white']-df_metircs_selected['avg'])+
                                   abs(df_metircs_selected['asian']-df_metircs_selected['avg']))/
                                  (4*df_metircs_selected['avg'])
                                  )
     ''' II sqrt'''
-    df_metircs_selected['II_SQRT'] = df_metircs_selected['II']**0.5
+    df_metircs_selected['II_metric_SQRT'] = df_metircs_selected['II_metric']**0.5
     # scaling
     ''' find the most inequal metrics and use its II_SQRT as benchmark'''
-    df_metircs_selected['II_MAX']=df_metircs_selected['II_SQRT'].max()
+    df_metircs_selected['II_metric_MAX']=df_metircs_selected['II_metric_SQRT'].max()
     ''' Transform II_SQURT to EI, the equality index'''
-    df_metircs_selected['EI']=(100-((df_metircs_selected['II_SQRT']/df_metircs_selected['II_MAX'])*100))
+    df_metircs_selected['EI_metric']=(100-((df_metircs_selected['II_metric_SQRT']/df_metircs_selected['II_metric_MAX'])*100))
+    ''' Caculate the weighted EI'''
+    df_metircs_selected['EI_metric_weighted']=df_metircs_selected['EI_metric']*df_metircs_selected['weight']
     
     return df_metircs_selected
+
+# Define a function that caculates Equality Index using geometric means when there are 4 ethnic groups 
+
+def EI_dimensions_FourG_geomean(df_metircs_selected):
+    ''' Caculate the weighted EI for each metrics'''
+    df_dimension = EI_metric_FourG_geomean(df_metircs_selected)
+    df_dimension_EI = df_dimension.groupby(by=['var_scope','stage','dimension']).sum('EI_metric_weighted').drop(['weight'], axis = 1)
+    return df_dimension_EI
+
+# test
+test = EI_dimensions_FourG_geomean(df_metircs_CHI_wide)
+
+#%% define the function that assign weights to dimensions of different educational stages
+
+def assign_dim_weight (df):
+    def assign_weight(df):
+        # k8
+        if (df['stage'] == 'k8') & (df['dimension'] == 'access'):
+            return 0.2
+        elif (df['stage'] == 'k8') & (df['dimension'] == 'proficiency'):
+            return 0.4
+        elif (df['stage'] == 'k8') & (df['dimension'] == 'excellence'):
+            return 0.4
+        # hs
+        elif (df['stage'] == 'hs') & (df['dimension'] == 'access'):
+            return 0.2
+        elif (df['stage'] == 'hs') & (df['dimension'] == 'proficiency'):
+            return 0.4
+        elif (df['stage'] == 'hs') & (df['dimension'] == 'excellence'):
+            return 0.4
+        # col
+        elif (df['stage'] == 'col') & (df['dimension'] == 'access'):
+            return 0.2
+        elif (df['stage'] == 'col') & (df['dimension'] == 'proficiency'):
+            return 0.4
+        elif (df['stage'] == 'col') & (df['dimension'] == 'excellence'):
+            return 0.4
+        # emp
+        elif (df['stage'] == 'emp') & (df['dimension'] == 'access'):
+            return 0.5
+        elif (df['stage'] == 'emp') & (df['dimension'] == 'proficiency'):
+            return 0.5
+        elif (df['stage'] == 'emp') & (df['dimension'] == 'excellence'):
+            return 0.5
+        
+    df['weight_dim'] = df.apply(assign_weight, axis = 1)
+    df['weighted_EI_dim'] = df['EI_weighted']*df['weight_dim']
+    
+    return df
+
+
+#%% define 
+
+
 
 #%%
 #                              Metrics and Variables
@@ -284,6 +348,8 @@ df_clean_fourGroups = df_clean[(df_clean['var_ethnic'] != "all") &
 ## Proficiency
 metric_k4_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
                                                    'metric_k4_math_profAndAbove',
+                                                   'proficiency',
+                                                   'k8',
                                                    0.33,
                                                    '2021___city_chi___k8_4th___math_prof&abov___cps',  # numerators for city of chicago
                                                    '2021___usa___k8_4th___math_prof&abov', # numerators for US
@@ -292,6 +358,8 @@ metric_k4_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_k8_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
                                                    'metric_k8_math_profAndAbove',
+                                                   'proficiency',
+                                                   'k8',
                                                    0.33,
                                                    '2021___city_chi___k8_8th___math_prof&abov___cps',
                                                    '2021___usa___k8_8th___math_prof&abov',
@@ -300,6 +368,8 @@ metric_k8_math_profAndAbove = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_k8_algebra_pass = metric_DEI_twoScopes(df_clean_fourGroups,
                                               'metric_k8_algebra_pass',
+                                              'proficiency',
+                                              'k8',
                                               0.33,
                                               '2021___city_chi___k8_8th___math_algebra_pass___cps',
                                               '2021___usa___k8_8th___math_algebra_pass',
@@ -309,6 +379,8 @@ metric_k8_algebra_pass = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Excellence
 metric_k4_math_adv = metric_DEI_twoScopes(df_clean_fourGroups,
                                           'metric_k4_math_adv',
+                                          'excellence',
+                                          'k8',
                                           0.5,
                                           '2021___city_chi___k8_4th___math_advc___cps', 
                                           '2021___usa___k8_4th___math_advc',
@@ -317,6 +389,8 @@ metric_k4_math_adv = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_k8_math_adv = metric_DEI_twoScopes(df_clean_fourGroups,
                                           'metric_k8_math_adv',
+                                          'excellence',
+                                          'k8',
                                           0.5,
                                           '2021___city_chi___k8_8th___math_advc___cps',
                                           '2021___usa___k8_8th___math_advc',
@@ -326,20 +400,28 @@ metric_k8_math_adv = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Access
 metric_k8_magnet_enrol = metric_DEI_oneScope(df_clean_fourGroups,
                                              'metric_k8_magnet_enrol',
+                                             'access',
+                                             'k8',
                                              0.33, 
                                              '2021___city_chi___k8_total___mag_stem_enrol___cps',
                                              '2022___city_chi___k8_total___popul___cps')
 
+#????????????
 metric_k8_algebra_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                                'metric_k8_algebra_enrol',
+                                               'access',
+                                               'k8',
                                                0.33,
                                                '2017___city_chi___k8_8th___math_algebra_enrol___cps',
                                                '2017___usa___k8_8th___math_algebra_enrol',
                                                '2022___city_chi___k8_8th___popul___cps',
                                                '2020___usa___k8_8th___popul') 
 
+#????????????
 metric_k8_noInt = metric_DEI_twoScopes(df_clean_fourGroups,
                                        'metric_k8_noInt',
+                                       'access',
+                                       'k8',
                                        0.33,
                                        '2019___city_chi___k8_total___NOinternet_age5to17___cps',
                                        '2019___usa___k8_total___NOinternet_age5to17',
@@ -350,6 +432,8 @@ metric_k8_noInt = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Proficiency
 metric_hs_sat_meetAndExceeds = metric_DEI_twoScopes(df_clean_fourGroups,
                                                     'metric_hs_sat_meetAndExceeds',
+                                                    'proficiency',
+                                                    'hs',
                                                     0.5,
                                                     '2021___city_chi___hs___sat_math_meet&exceeds___cps',
                                                     '2021___usa___col___sat_math_meet&exceeds',
@@ -358,6 +442,8 @@ metric_hs_sat_meetAndExceeds = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_hs_apcs_aboveThree = metric_DEI_twoScopes(df_clean_fourGroups,
                                                  'metric_hs_apcs_aboveThree',
+                                                 'proficiency',
+                                                 'hs',
                                                  0.5,
                                                  '2021___city_chi___hs___apcs_score3/4',
                                                  '2021___usa___hs___apcs_score3/4',
@@ -368,6 +454,8 @@ metric_hs_apcs_aboveThree = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Excellence
 metric_hs_sat_exceeds = metric_DEI_twoScopes(df_clean_fourGroups,
                                              'metric_hs_sat_exceeds',
+                                             'excellence',
+                                             'hs',
                                              0.5,
                                              '2021___city_chi___hs___sat_math_exceeds___cps',
                                              '2021___usa___col___sat_math_exceeds',
@@ -376,6 +464,8 @@ metric_hs_sat_exceeds = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_hs_apcs_five = metric_DEI_twoScopes(df_clean_fourGroups,
                                            'metric_hs_apcs_five',
+                                           'excellence',
+                                           'hs',
                                            0.5,
                                            '2021___city_chi___hs___apcs_score5___cps',
                                            '2021___usa___hs___apcs_score5',
@@ -385,6 +475,8 @@ metric_hs_apcs_five = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Access
 metric_hs_apcs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                             'metric_hs_apcs_enrol',
+                                            'access',
+                                            'hs',
                                             0.25,
                                             '2021___city_chi___hs_apcs___popul___cps',
                                             '2021___usa___hs_apcs___popul',
@@ -393,18 +485,25 @@ metric_hs_apcs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_hs_magnet_enrol = metric_DEI_oneScope(df_clean_fourGroups,
                                              'metric_hs_magnet_enrol',
+                                             'access',
+                                             'hs',
                                              0.25,
                                              '2021___city_chi___hs___mag_enrol___cps',
                                              '2022___city_chi___hs_total___popul___cps')
 
 metric_hs_CSInterested = metric_DEI_oneScope(df_clean_fourGroups,
                                              'metric_hs_CSInterested',
+                                             'access',
+                                             'hs',
                                              0.25,
                                              '2021___city_chi___hs___cs_interested___cps',
                                              '2022___city_chi___hs_total___popul___cps')
-#?????????????????????????
+
+#????????????
 metric_hs_advMath_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                                'metric_hs_advMath_enrol',
+                                               'access',
+                                               'hs',
                                                0.25,
                                                '2017___city_chi___hs___math_advc___cps',
                                                '2017___usa___hs___math_advc_enroll',
@@ -416,6 +515,8 @@ metric_hs_advMath_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Proficiency
 metric_col_cs_persist = metric_DEI_twoScopes(df_clean_fourGroups,
                                              'metric_col_cs_persist',
+                                             'proficiency',
+                                             'col',
                                              0.5,
                                              '2021___state_il___col___cs_confer',
                                              '2021___usa___col___cs_confer',
@@ -424,6 +525,8 @@ metric_col_cs_persist = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_col_cs_confer = metric_DEI_twoScopes(df_clean_fourGroups,
                                             'metric_col_cs_confer',
+                                            'proficiency',
+                                            'col',
                                             0.5,
                                             '2021___state_il___col___cs_confer',
                                             '2021___usa___col___cs_confer',
@@ -433,6 +536,8 @@ metric_col_cs_confer = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Excellence
 metric_col_topThree_cs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                                     'metric_col_topThree_cs_enrol',
+                                                    'excellence',
+                                                    'col',
                                                     0.33,
                                                     '2021___state_il___col___t3_cs_enrol',
                                                     '2021___usa___col___t3_cs_enrol',
@@ -441,6 +546,8 @@ metric_col_topThree_cs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_col_topThree_cs_persist = metric_DEI_twoScopes(df_clean_fourGroups,
                                                       'metric_col_topThree_cs_persist',
+                                                      'excellence',
+                                                      'col',
                                                       0.33,
                                                       '2021___state_il___col___t3_cs_confer',
                                                       '2021___usa___col___t3_cs_confer',
@@ -449,6 +556,8 @@ metric_col_topThree_cs_persist = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_col_topThree_cs_confer = metric_DEI_twoScopes(df_clean_fourGroups,
                                                      'metric_col_topThree_cs_confer',
+                                                     'excellence',
+                                                     'col',
                                                      0.33,
                                                      '2021___state_il___col___t3_cs_confer', 
                                                      '2021___usa___col___t3_cs_confer',
@@ -458,6 +567,8 @@ metric_col_topThree_cs_confer = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Access
 metric_col_cs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                            'metric_col_cs_enrol',
+                                           'access',
+                                           'col',
                                            0.5,
                                            '2021___state_il___col___cs_enrol',
                                            '2021___usa___col___cs_enrol',
@@ -466,6 +577,8 @@ metric_col_cs_enrol = metric_DEI_twoScopes(df_clean_fourGroups,
 
 metric_col_imdEnrol = metric_DEI_twoScopes(df_clean_fourGroups,
                                            'metric_col_imdEnrol',
+                                           'access',
+                                           'col',
                                            0.5,
                                            '2021___state_il___col___immediate_enrol',
                                            '2021___usa___col___immediate_enrol',
@@ -477,6 +590,8 @@ metric_col_imdEnrol = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Proficiency
 metric_emp_techJob = metric_DEI_twoScopes(df_clean_fourGroups,
                                           'metric_emp_techJob',
+                                          'proficiency',
+                                          'emp',
                                           0.5,
                                           '2021___region_chi_msa___emp___csjob_t11_age19to24',
                                           '2021___usa___emp___csjob_t11_age19to24',
@@ -486,11 +601,13 @@ metric_emp_techJob = metric_DEI_twoScopes(df_clean_fourGroups,
 ## Excellence
 metric_emp_techJob_topThree =  metric_DEI_twoScopes(df_clean_fourGroups,
                                                     'metric_emp_techJob_topThree',
+                                                    'excellence',
+                                                    'emp',
                                                     0.5,
                                                     '2021___region_chi_msa___emp___csjob_t3',
                                                     '2021___usa___emp___csjob_t3',
-                                                    '2021___region_chi_msa___emp___csjob_t11_age19to24',
-                                                    '2021___usa___emp___csjob_t11_age19to24')
+                                                    '2022___region_chi_msa___emp___total_degree_holder',
+                                                    '2022___usa___emp___total_degree_holder')
 
 
 ## testing 
@@ -510,6 +627,7 @@ metric_emp_techJob_topThree =  metric_DEI_twoScopes(df_clean_fourGroups,
 #%% create a dataframe of metric values for city of Chicago, Illinois and MSA
 
 df_metircs = pd.concat([metric_k4_math_profAndAbove,
+                        metric_k8_math_profAndAbove,
                             metric_k8_algebra_pass,
                             metric_k4_math_adv,
                             metric_k8_math_adv,
@@ -536,8 +654,23 @@ df_metircs = pd.concat([metric_k4_math_profAndAbove,
 # select data from one geo
 df_metircs_CHI = df_metircs[(df_metircs['var_scope']!='usa')]
 df_metircs_CHI_slim = df_metircs_CHI.drop(['metrics_new','subset_popul','population'], axis = 1)
-df_metircs_CHI_wide = pd.pivot(df_metircs_CHI_slim, index=['metric_name','var_scope'], columns='var_ethnic', values='metric_value')
+df_metircs_CHI_wide = pd.pivot(df_metircs_CHI_slim, index=['metric_name','var_scope','weight','dimension','stage'], columns='var_ethnic', values='metric_value')
+df_metircs_CHI_wide.reset_index(inplace=True)
+
 
 #%% caculate EI of each metrics
-
 df_metircs_CHI_EI = EI_metric_FourG_geomean(df_metircs_CHI_wide)
+df_metircs_CHI_EI.columns
+#%% caculate EI of each dimensions at educational stages
+test = df_metircs_CHI_EI.groupby(by=['var_scope','stage','dimension']).sum('EI_metric_weighted').drop(['weight'], axis = 1)
+test.reset_index(inplace=True)
+
+#%% caculate EI of each educational stages
+
+# assigning weights to each dimensions
+test2 = assign_dim_weight(test)
+test2 = test.groupby(by=['stage']).sum('EI_weighted').drop(['weight'], axis = 1)
+
+
+
+
