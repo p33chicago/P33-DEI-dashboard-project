@@ -1,5 +1,5 @@
 #%%
-#                        1. Environment settings
+#                         Environment settings
 #
 #%%
 import os
@@ -10,6 +10,7 @@ import plotly.io as io
 io.renderers.default='svg'
 from viz import set_default_theme
 set_default_theme()
+
 
 #%% Importing csv files
 
@@ -23,24 +24,14 @@ os.getcwd()
 os.chdir('E:/p33/P33-DEI-dashboard-project/p33py/')
 
 
-
-
-
-
-
-
-
-
-
-
-
 #%%
-#     2. Define Functions for generating plots and tables in deep diving pages
+#                              FUNCTIONS for deep diving pages
 #
-#%% 2.1 Define the metrics function (two scopes)
+#%% Define the metrics function (two scopes)
 # This metric function generates a new dataset contained the value of metricOne/PopulaitonOne
 # and the value of metricTwo/PopulaitonTwo for different ethnic groups at two geographical scopes.
 
+# define the metric funtion
 def metric_DEI_FourG_twoScopes(df,metricname,dimension,stage,weight,metricOne,metricTwo,populOne,PopulTwo):
 
     # CLEAN UP DATA
@@ -77,7 +68,7 @@ def metric_DEI_FourG_twoScopes(df,metricname,dimension,stage,weight,metricOne,me
 
     return(df_metric)
 
-#%% 2.2 Define the metrics function (one scope)
+#%% Define the metrics function (one scope)
 # This metric function generates a new dataset contained the value of metricOne/PopulaitonOne 
 # for different ethnic groups at one geographical scope.
 
@@ -116,7 +107,7 @@ def metric_DEI_FourG_oneScope(df,metricname,dimension,stage,weight,metricOne,pop
 
     return(df_metric)
 
-#%% 2.3 Define the visualization function for deep diving plots (DDP)
+#%% define the visualization function for deep diving plots (DDP)
 
 # define viz function
 def figure_DDP(metric):
@@ -133,7 +124,7 @@ def figure_DDP(metric):
     
     return plot(fig)
 
-#%% 2.4 Define the visualization function for deep diving tables (DDT)
+#%% define the visualization function for deep diving tables (DDT)
 
 # define viz function
 def figure_DDT(metric):
@@ -153,20 +144,10 @@ def figure_DDT(metric):
     return metric_display
 
 
-
-
-
-
-
-
-
-
-
-
 #%%
-#       3. Define Functions for caculating Equality Indexes in landing pages
+#                              FUNCTIONS for caculating Equality Indexes
 #
-#%%3.1 create a function that combine all the individual metrics and create a dataframe contained metric value from sigular geograhpic scope
+#%% create a function that combine all the individual metrics and create a dataframe contained metric value from sigular geograhpic scope
 
 def combiner_CHIAndIL (*df_metric):
     df_metrics_combined = pd.concat(df_metric)
@@ -182,7 +163,7 @@ def combiner_CHIAndIL (*df_metric):
     
     return df_metrics_CHI_wide
 
-#%%3.2 define the function caculates Equality index (EI) of each metrics using geometric means when there are 4 ethnic groups 
+#%% define the function caculates Equality index (EI) of each metrics using geometric means when there are 4 ethnic groups 
 
 def EI_metric_FourG_geomean(df_metircs_selected):
     # caculate geometric mean of proportions of 4 ethnic groups
@@ -207,7 +188,7 @@ def EI_metric_FourG_geomean(df_metircs_selected):
     
     return df_metircs_selected
 
-#%%3.3 Define a function that caculates Equality Index of dimensions using geometric means when there are 4 ethnic groups 
+#%% Define a function that caculates Equality Index of dimensions using geometric means when there are 4 ethnic groups 
 
 def EI_dimensions_FourG_geomean(df_metircs_selected):
     ''' Caculate the weighted EI for each metrics'''
@@ -224,7 +205,7 @@ def EI_dimensions_FourG_geomean(df_metircs_selected):
     return df_dimension_EI
 
 
-#%%3.4 Define a function that caculates Equality Index of educational stages using geometric means when there are 4 ethnic groups 
+#%% Define a function that caculates Equality Index of educational stages using geometric means when there are 4 ethnic groups 
 
 def EI_stages_FourG_geomean(df_metircs_selected):
     
@@ -289,19 +270,126 @@ def EI_stages_FourG_geomean(df_metircs_selected):
     return df_stage_EI
     
 
-
-
-
-
-
-
-
-
-
 #%%
-#    4. Define Interested Metrics and create dataframes for plotly and EI generation
+#                              Metrics and Variables
 #
-#%% 4.1 create interested metrics datasets using metric functons above
+#%% select variables that are used 
+
+var = df.metrics_new.unique()
+print(var)
+
+var_selected = [
+    
+# k-8 ---------------------
+## math prof
+                '2021___city_chi___k8_4th___math_prof&abov___cps',
+                '2021___usa___k8_4th___math_prof&abov',
+                '2021___city_chi___k8_8th___math_prof&abov___cps',
+                '2021___usa___k8_8th___math_prof&abov',
+## math adv               
+                '2021___city_chi___k8_4th___math_advc___cps',
+                '2021___usa___k8_4th___math_advc',
+                '2021___city_chi___k8_8th___math_advc___cps',
+                '2021___usa___k8_8th___math_advc',
+## math algebra 
+                '2017___city_chi___k8_8th___math_algebra_enrol___cps',
+                '2017___usa___k8_8th___math_algebra_enrol',               
+                '2021___city_chi___k8_8th___math_algebra_pass___cps',
+                '2021___usa___k8_8th___math_algebra_pass',
+            
+## magnet enroll                
+                '2021___city_chi___k8_total___mag_stem_enrol___cps',
+## internet access
+                '2019___city_chi___k8_total___NOinternet_age5to17___cps',                
+                '2019___usa___k8_total___NOinternet_age5to17',
+## population                  
+                '2022___city_chi___k8_4th___popul___cps',
+                '2020___usa___k8_4th___popul',
+                '2022___city_chi___k8_8th___popul___cps',
+                '2020___usa___k8_8th___popul',
+                '2022___city_chi___k8_total___popul___cps',
+                '2022___usa___age_5to17__popul',
+                '2022___city_chi___age_5to17__popul___cps',            
+          
+            
+# high school   -----------            
+## sat math exceeds
+                '2021___city_chi___hs___sat_math_exceeds___cps',
+                '2021___usa___col___sat_math_exceeds',
+## sat math meet and exceeds
+                '2021___city_chi___hs___sat_math_meet&exceeds___cps',
+                '2021___usa___col___sat_math_meet&exceeds',
+## ap cs               
+                '2021___city_chi___hs___apcs_score3/4',
+                '2021___usa___hs___apcs_score3/4',
+                '2021___city_chi___hs___apcs_score5___cps',
+                '2021___usa___hs___apcs_score5',
+                '2021___state_il___hs___apcs_enrol',
+                '2021___usa___hs___apcs_enrol',
+## magnet enrol
+                '2021___city_chi___hs___mag_enrol___cps',
+## cs interest
+                '2021___city_chi___hs___cs_interested___cps',
+## adv math ?????? TBC
+                '2017___city_chi___hs___math_advc___cps',
+                '2017___usa___hs___math_advc_enroll',
+## population
+                '2021___city_chi___hs_SATtaker___popul___cps',
+                '2021___usa___hs_SATtaker___popul',
+                '2021___city_chi___hs_apcs___popul___cps',
+                '2021___usa___hs_apcs___popul',
+                '2022___city_chi___hs_total___popul___cps',
+                '2020___usa___hs_total___popul',
+
+# College -----------------
+## CS confer
+                '2021___state_il___col___cs_confer',
+                '2021___usa___col___cs_confer',
+## CS enrol                
+                '2021___state_il___col___cs_enrol',
+                '2021___usa___col___cs_enrol',              
+## T3 cs enrol
+                '2021___state_il___col___t3_cs_enrol',
+                '2021___usa___col___t3_cs_enrol',                
+## T3 cs confer
+                '2021___state_il___col___t3_cs_confer',
+                '2021___usa___col___t3_cs_confer',
+## hs grads population              
+                '2021___state_il___hs___total_grad',
+                '2022___usa___hs_grads___popul',  
+
+## immediate enrol
+                '2021___state_il___col___immediate_enrol',
+                '2021___usa___col___immediate_enrol',
+                
+## population             
+                '2022___state_il___col___total_enrol',
+                '2021___usa___col___total_enrol',
+                '2020___state_il___col___total_confer',
+                '2021___usa___col___total_confer', 
+## t3 population
+                '2021___state_il___col___t3_enrol',
+                '2021___usa___col___t3_enrol',                  
+                '2021___state_il___col___t3_confer',
+                '2021___usa___col___t3_confer',
+                '2020___state_il___hs_grads___popul',
+                '2022___usa___hs_grads___popul',
+                
+                
+# employement --------------
+## tech job
+                '2021___region_chi_msa___emp___csjob_t11_age19to24',
+                '2021___usa___emp___csjob_t11_age19to24',
+                '2022___region_chi_msa___emp___total_degree_holder',
+                '2022___usa___emp___total_degree_holder',
+## top3 tech jobs
+                '2021___region_chi_msa___emp___csjob_t3',
+                '2021___usa___emp___csjob_t3'
+]
+
+
+
+#%% create interested metrics datasets using metric functons above
 
 # K-8 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ## Proficiency
@@ -569,9 +657,10 @@ metric_emp_techJob_topThree =  metric_DEI_FourG_twoScopes(df,
                                                     '2022___usa___emp___total_degree_holder')
 
 
-#%% 4.2 create a dataframe contained interested metric value from sigular geograhpic scope
+#%% create a function that combine all the individual metrics and create a dataframe contained metric value from sigular geograhpic scope
 
-df_metrics_CHI = combiner_CHIAndIL(metric_k4_math_profAndAbove,
+
+df_metrics_CHI_wide = combiner_CHIAndIL(metric_k4_math_profAndAbove,
                          metric_k8_math_profAndAbove,
                          metric_k8_algebra_pass,
                          metric_k4_math_adv,
@@ -597,72 +686,13 @@ df_metrics_CHI = combiner_CHIAndIL(metric_k4_math_profAndAbove,
                          metric_emp_techJob,
                          metric_emp_techJob_topThree)
 
+#%% caculate EI of each metrics
+df_EI_metric_CHI = EI_metric_FourG_geomean(df_metrics_CHI_wide)
 
+#%% caculate EI of each dimensions at educational stages
 
+df_EI_dimensions_CHI = EI_dimensions_FourG_geomean(df_metrics_CHI_wide)
 
+#%% caculate EI of each educational stages
 
-
-
-#%%
-#    5. Generates Plotly for deep diving pages and Generates EI for landing pages 
-#
-#%% 5.1 EI index for Landing pages
-
-# caculate EI of each metrics
-df_EI_metric_CHI = EI_metric_FourG_geomean(df_metrics_CHI)
-
-# caculate EI of each dimensions at educational stages
-df_EI_dimensions_CHI = EI_dimensions_FourG_geomean(df_metrics_CHI)
-
-# caculate EI of each educational stages
-df_EI_stages_CHI = EI_stages_FourG_geomean(df_metrics_CHI)
-
-#%% 5.2 plots and tables for Deep diving pages
-
-# k8      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-## proficiency
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-# HS      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-## proficiency
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
+df_EI_stages_CHI = EI_stages_FourG_geomean(df_metrics_CHI_wide)
