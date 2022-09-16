@@ -623,46 +623,107 @@ df_EI_stages_CHI = EI_stages_FourG_geomean(df_metrics_CHI)
 
 ## proficiency
 
-### 1.Math proficiency and above
+### 4th grade Math proficiency and above
 figure_DDP(metric_k4_math_profAndAbove)
+figure_DDT(metric_k4_math_profAndAbove)
+### 8th grade Math proficiency and above
+figure_DDP(metric_k8_math_profAndAbove)
 figure_DDT(metric_k8_math_profAndAbove)
+### 8th grade passing algebra
+figure_DDP(metric_k8_algebra_pass)
+figure_DDT(metric_k8_algebra_pass)
 
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
+## excellence
+### 4th Math advanced
+figure_DDP(metric_k4_math_adv)
+figure_DDT(metric_k4_math_adv)
+### 8th Math advanced
+figure_DDP(metric_k8_math_adv)
+figure_DDT(metric_k8_math_adv)
 
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
+## access
+### Lack of Household Internet Access
+figure_DDP(metric_k8_noInt)
+figure_DDT(metric_k8_noInt)
+### STEM Magnet School Enrollment 
+figure_DDP(metric_k8_magnet_enrol)
+figure_DDT(metric_k8_magnet_enrol)
+### 8th grade algebra 1 enrollment
+figure_DDP(metric_k8_algebra_enrol)
+figure_DDT(metric_k8_algebra_enrol)
 
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
-
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
 
 # HS      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 ## proficiency
 
-### 1.Math proficiency and above
-figure_DDP(metric_k4_math_profAndAbove)
-figure_DDT(metric_k8_math_profAndAbove)
+### HS SAT Math Proficiency and Above 
+figure_DDP(metric_hs_sat_meetAndExceeds)
+figure_DDT(metric_hs_sat_meetAndExceeds)
+### AP CS scoring 3 or higher
+figure_DDP(metric_hs_apcs_aboveThree)
+figure_DDT(metric_hs_apcs_aboveThree)
+
+## excellence
+### HS SAT Math Advanced
+figure_DDP(metric_hs_sat_exceeds)
+figure_DDT(metric_hs_sat_exceeds)
+### HS CPS AP CS scored 5
+figure_DDP(metric_hs_apcs_five)
+figure_DDT(metric_hs_apcs_five)
+
+## access
+### AP CS Enrollment
+figure_DDP(metric_hs_apcs_enrol)
+figure_DDT(metric_hs_apcs_enrol)
+### CPS HS STEM Magnet School Enrollment
+figure_DDP(metric_hs_magnet_enrol)
+figure_DDT(metric_hs_magnet_enrol)
+### CS Interest
+figure_DDP(metric_hs_CSInterested)
+figure_DDT(metric_hs_CSInterested)
+### Advanced Math Enrollment
+figure_DDP(metric_hs_advMath_enrol)
+figure_DDT(metric_hs_advMath_enrol)
+
+
+# col      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+## proficiency
+### Illinois CS/Computing Degree Persistence
+figure_DDP(metric_col_cs_persist)
+figure_DDT(metric_col_cs_persist)
+### Illinois CS/Computing Degree Persistence
+figure_DDP(metric_col_topThree_cs_confer)
+figure_DDT(metric_col_topThree_cs_confer)
+
+## excellence
+### Illinois CS/Computing Degree Enrollment for Top 3 
+figure_DDP(metric_col_topThree_cs_enrol)
+figure_DDT(metric_col_topThree_cs_enrol)
+### Illinois CS/Computing Degree Persistence for Top 3 
+figure_DDP(metric_col_topThree_cs_persist)
+figure_DDT(metric_col_topThree_cs_persist)
+### Illinois CS/Computing Degree Conferral for Top 3 
+figure_DDP(metric_col_topThree_cs_confer)
+figure_DDT(metric_col_topThree_cs_confer)
+
+## access
+### Illinois CS/Computing Degree Enrollment 
+figure_DDP(metric_col_cs_enrol)
+figure_DDT(metric_col_cs_enrol)
+### Illinois Immediate College Enrollment Rates 
+figure_DDP(metric_col_imdEnrol)
+figure_DDT(metric_col_imdEnrol)
+
+# emp      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+## proficiency
+### Chicago MSA tech employee demographics
+figure_DDP(metric_emp_techJob)
+figure_DDT(metric_emp_techJob)
+
+## excellence
+### Chicago MSA tech employee demographics
+figure_DDP(metric_emp_techJob_topThree)
+figure_DDT(metric_emp_techJob_topThree)
