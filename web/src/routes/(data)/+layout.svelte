@@ -6,7 +6,7 @@
     import LifestageIndexCard from "$lib/LifestageIndexCard.svelte";
     import LifestageIndicatorsCard from "$lib/LifestageIndicatorsCard.svelte";
     import {base} from '$app/paths';
-
+    import { page } from '$app/stores';
     export let data;
 
     const {lifestage, indicator} = data;
@@ -26,10 +26,9 @@
 <div class="hidden md:block col-span-3 2xl:w-screen">
     {#each indicators as indicator}
         <a
-                class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
-                class:bg-brand-primary-dark-green={is_active(indicator)}
-                class:text-white={is_active(indicator)}
-                href={`${base}/${lifestage.route}/${indicator.route}`}
+            class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
+            class:active={$page.url.pathname.includes(indicator.route)}
+            href={`${base}/${lifestage.route}/${indicator.route}`}               
         >{indicator.name}</a>
     {/each}
 </div>
@@ -42,3 +41,7 @@
 <div class="col-span-4 md:col-span-3 space-y-6">
     <slot/>
 </div>
+
+<style>
+    .active { background-color: theme('colors.brand-primary-dark-green'); color: theme('colors.white'); }
+</style>
