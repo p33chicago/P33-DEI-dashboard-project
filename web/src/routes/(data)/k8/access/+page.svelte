@@ -1,11 +1,8 @@
 <script type="ts">
     import IndicatorCard from "$lib/cards/IndicatorCard.svelte";
-    import Lipsum from "$lib/Lipsum.svelte";
     import AccessSnippet from "$lib/indicator-snippets/AccessSnippet.svelte";
     import ProficiencySnippet from "$lib/indicator-snippets/ProficiencySnippet.svelte";
     import ExcellenceSnippet from "$lib/indicator-snippets/ExcellenceSnippet.svelte";
-
-    export let title: string;
 </script>
 
 <IndicatorCard>
