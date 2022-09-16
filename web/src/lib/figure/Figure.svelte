@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
 	import { load } from './init.js';
+    import { dev } from '$app/environment';
 	load();
 </script>
 
@@ -16,10 +17,10 @@
 		}
 		const { data, layout } = await (await fetch(`/data/${id}.json`)).json();
 		await Plotly.newPlot(canvas, data, layout, config);
-		console.log(Plotly.validate(data, layout));
+        if (dev) {
+            console.log(Plotly.validate(data, layout));
+        }
 	};
-
-	console.log('Rendering');
 	render();
 </script>
 

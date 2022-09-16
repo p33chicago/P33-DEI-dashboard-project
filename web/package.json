@@ -2,7 +2,7 @@
 	"name": "web",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "ENVIRONMENT=dev vite dev",
 		"build": "cp ../data/figure.json ./static/data/ && vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
@@ -41,6 +41,7 @@
 		"@khanacademy/tota11y": "^0.2.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.39",
 		"cookie": "^0.4.1",
+		"katex": "^0.16.2",
 		"plotly.js": "^2.14.0"
 	}
 }

@@ -2,6 +2,9 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
+const { ENVIRONMENT } = process.env;
+const dev = ENVIRONMENT === 'dev';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -13,7 +16,7 @@ const config = {
 	],
 	kit: {
 		paths: {
-			base: '/P33-DEI-dashboard-project'
+			base: dev ? '' : '/P33-DEI-dashboard-project'
 		},
 		adapter: adapter()
 	}
