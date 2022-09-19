@@ -37,6 +37,7 @@ export type {
 
 export {
     lifestages,
+    k8 as default_lifestage,
     k8,
     highSchool,
     college,

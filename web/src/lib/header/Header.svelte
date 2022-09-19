@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { assets, base } from '$app/paths'
-	// import Nav from './Nav.svelte'
+	import {default_scorecard_path, pathname_pattern} from "$lib/pathnames.js";
+
 	let innerWidth: number;
 	const tw_fullnav = 810;
 </script>
@@ -30,12 +31,12 @@
 
 		<nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
 			<ul class="fullnav:flex">
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/`}><a href={`${base}/`}>The Data</a></li>
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/methodology`}><a href={`${base}/methodology`}>Methodology</a></li>
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/resources`}><a href={`${base}/resources`}>Resources</a></li>
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/about`}><a href={`${base}/about`}>About Us</a></li>
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/partners`}><a href={`${base}/partners`}>Our Partners</a></li>
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/contact`}><a href={`${base}/contact`}>Contact Us</a></li>
+				<li class:active={pathname_pattern.test($page.url.pathname)}><a href={`${base}/${default_scorecard_path}`}>Scorecard</a></li>
+				<li class:active={$page.url.pathname === `${base}/methodology`}><a href={`${base}/methodology`}>Methodology</a></li>
+				<li class:active={$page.url.pathname === `${base}/resources`}><a href={`${base}/resources`}>Resources</a></li>
+				<li class:active={$page.url.pathname === `${base}/about`}><a href={`${base}/about`}>About Us</a></li>
+				<li class:active={$page.url.pathname === `${base}/partners`}><a href={`${base}/partners`}>Our Partners</a></li>
+				<li class:active={$page.url.pathname === `${base}/contact`}><a href={`${base}/contact`}>Contact Us</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -47,5 +48,12 @@
 	:checked ~ .toggle-mobile-menu .cross { display: flex; }
 	:checked ~ nav { display: block; }
 	nav li { padding: 0.25rem 1rem; }
-	.active { border-bottom: 2px solid theme('colors.brand-primary-dark-green'); font-weight: theme('fontWeight.bold'); }
+
+	@media screen(md) {
+		.active {
+			border-bottom: 2px solid theme('colors.brand-primary-dark-green');
+			font-weight: theme('fontWeight.bold');
+		}
+	}
+
 </style>

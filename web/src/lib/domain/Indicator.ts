@@ -34,6 +34,7 @@ export type {
 
 export {
     indicators,
+    access as default_indicator,
     access,
     proficiency,
     excellence
