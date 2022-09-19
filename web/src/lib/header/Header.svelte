@@ -30,7 +30,7 @@
 
 		<nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
 			<ul class="fullnav:flex">
-				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === base}><a href={`${base}/`}>The Data</a></li>
+				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/`}><a href={`${base}/`}>The Data</a></li>
 				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/methodology`}><a href={`${base}/methodology`}>Methodology</a></li>
 				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/resources`}><a href={`${base}/resources`}>Resources</a></li>
 				<li class:active={innerWidth > tw_fullnav && $page.url.pathname === `${base}/about`}><a href={`${base}/about`}>About Us</a></li>

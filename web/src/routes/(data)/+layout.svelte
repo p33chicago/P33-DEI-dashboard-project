@@ -1,5 +1,4 @@
 <script type="ts">
-    import type {Indicator} from '$lib/domain/Indicator.ts';
     import {indicators} from '$lib/domain/Indicator.ts';
     import DataSidebar from "$lib/DataSidebar.svelte";
     import LifestageTitleCard from "$lib/LifestageTitleCard.svelte";
