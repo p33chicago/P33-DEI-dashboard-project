@@ -41,7 +41,7 @@
     <LifestageIndexCard slot="index" chicago="40" us="70"/>
     <LifestageIndicatorsCard slot="indicators" access="10" excellence="1" proficiency="2"/>
 </DataSidebar>
-<div class="col-span-4 md:col-span-3 space-y-6">
+<div class="grid auto-rows-min col-span-4 md:col-span-3 gap-y-4">
     <IndicatorContent active_indicator={indicator}>
         <slot/>
     </IndicatorContent>
