@@ -1,6 +1,6 @@
 <script type="ts">
-    import Lipsum from "$lib/Lipsum.svelte";
-    import {proficiency} from "$lib/domain/Indicator.ts";
+    import Lipsum from "../../Lipsum.svelte";
+    import {proficiency} from "../../domain/Indicator.ts";
 
     export let score: string;
 </script>

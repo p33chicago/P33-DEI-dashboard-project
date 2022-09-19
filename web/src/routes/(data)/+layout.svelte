@@ -5,17 +5,20 @@
     import LifestageTitleCard from "$lib/LifestageTitleCard.svelte";
     import LifestageIndexCard from "$lib/LifestageIndexCard.svelte";
     import LifestageIndicatorsCard from "$lib/LifestageIndicatorsCard.svelte";
+    import IndicatorContent from "$lib/indicators/IndicatorContent.svelte";
     import {base} from '$app/paths';
 
     export let data;
 
-    const {lifestage, indicator} = data;
-    let title = lifestage.name;
-    if (indicator) {
-        title += `: ${indicator.name}`;
+    let lifestage, indicator, title;
+    $: {
+        lifestage = data.lifestage;
+        indicator = data.indicator;
+        title = lifestage.name;
+        if (indicator) {
+            title += `: ${indicator.name}`;
+        }
     }
-
-    const is_active = (candidate_indicator: Indicator) => candidate_indicator.route === indicator.route;
 </script>
 
 <svelte:head>
@@ -24,13 +27,13 @@
 
 <a href={`${base}/`} class="leading-8 hidden md:grid col-span-1">&larr; Back</a>
 <div class="hidden md:block col-span-3 2xl:w-screen">
-    {#each indicators as indicator}
+    {#each indicators as _indicator}
         <a
                 class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
-                class:bg-brand-primary-dark-green={is_active(indicator)}
-                class:text-white={is_active(indicator)}
-                href={`${base}/${lifestage.route}/${indicator.route}`}
-        >{indicator.name}</a>
+                class:bg-brand-primary-dark-green={_indicator.route === indicator.route}
+                class:text-white={_indicator.route === indicator.route}
+                href={`${base}/${lifestage.route}/${_indicator.route}`}
+        >{_indicator.name}</a>
     {/each}
 </div>
 
@@ -40,5 +43,7 @@
     <LifestageIndicatorsCard slot="indicators" access="10" excellence="1" proficiency="2"/>
 </DataSidebar>
 <div class="col-span-4 md:col-span-3 space-y-6">
-    <slot/>
+    <IndicatorContent active_indicator={indicator}>
+        <slot/>
+    </IndicatorContent>
 </div>
