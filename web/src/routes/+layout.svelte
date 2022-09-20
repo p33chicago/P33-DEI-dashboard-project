@@ -8,7 +8,13 @@
     export const prerender = true;
 </script>
 
-<div class="min-h-full flex flex-col">
+<svelte:head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</svelte:head>
+
+<div class="font-sans min-h-full flex flex-col">
     <Header/>
     <MainContent>
         <slot/>

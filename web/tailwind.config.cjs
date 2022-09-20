@@ -12,10 +12,9 @@ module.exports = {
       'fullnav': '815px',
     },
     fontFamily: {
-      mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    
+      mono: ['Roboto Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      sans: ['Roboto', 'sans-serif'],
+      'sans-alternate': ['Fjalla One', 'sans-serif']
     },
     fontWeight: {
       'regular': 100,
@@ -37,12 +36,16 @@ module.exports = {
         'really-light-gray': '#e0e5ec',
         'brand-primary-green': '#0db296',
         'brand-primary-dark-green': '#00715e',
+        'brand-primary-dark-green-banner-background': '#00483e',
         'brand-primary-light-green': '#56cbb8',
         'brand-primary-really-light-green': '#dee9e8',
         'blue': '#1d59b8',
         'fail-red': '#981717',
         'warn-orange': '#ff7213',
         'heads-up-yellow': '#ffa913'
+      },
+      backgroundImage: {
+        'chicago': "url('/chicago.svg')",
       }
     }
   },

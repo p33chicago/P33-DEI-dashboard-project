@@ -9,7 +9,7 @@
 
 <svelte:window bind:innerWidth />
 
-<header class="w-full items-center fullnav:border-b border-brand-primary-green z-10">
+<header class="font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10">
 	<div class="flex justify-between fullnav:justify-start mx-auto max-w-7xl">
 		<input type="checkbox" id="open-mobile-menu" class="hidden" />
 		<label for="open-mobile-menu" class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2" aria-controls="mobile-menu" aria-expanded="false">
