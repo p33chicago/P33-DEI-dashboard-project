@@ -47,7 +47,7 @@
         </div>
     {/if}
 
-    <div class="grid auto-rows-min col-span-4 md:col-span-3 gap-y-4">
+    <div class="grid auto-rows-min row-span-2 col-span-4 md:col-span-3 gap-y-4">
         {#if indicator}
             <IndicatorContent active_indicator={indicator}>
                 <slot/>
