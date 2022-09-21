@@ -2,12 +2,7 @@
 	import { page } from '$app/stores';
 	import { assets, base } from '$app/paths'
 	import {default_scorecard_path, pathname_pattern} from "$lib/pathnames.js";
-
-	let innerWidth: number;
-	const tw_fullnav = 810;
 </script>
-
-<svelte:window bind:innerWidth />
 
 <header class="font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10">
 	<div class="flex justify-between fullnav:justify-start mx-auto max-w-7xl">
