@@ -32,6 +32,8 @@
 </div>
 
 <BodyContentContainer>
+    <DataSidebar {lifestage} />
+
     <!-- <a href={`${base}/`} class="leading-8 hidden md:grid col-span-1">&larr; Back</a> -->
     <div class="hidden md:block col-start-2 col-span-3 2xl:w-screen">
         {#each indicators as _indicator}
@@ -44,7 +46,6 @@
         {/each}
     </div>
 
-    <DataSidebar />
     <div class="grid auto-rows-min col-span-4 md:col-span-3 gap-y-4">
         <IndicatorContent active_indicator={indicator}>
             <slot/>

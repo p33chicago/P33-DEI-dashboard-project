@@ -3,20 +3,7 @@
     import { base } from '$app/paths'
 </script>
 
-<!-- <div class="hidden md:grid col-span-1 text-xl">
-    <div class="space-y-8">
-        <div>
-            <slot name="title"/>
-        </div>
-        <div>
-            <slot name="index"/>
-        </div>
-        <div>
-            <slot name="indicators"/>
-        </div>
-    </div>
-</div> -->
-<div class="hidden md:grid col-span-1 text-xl auto-rows-min gap-4">   
+<div class="hidden md:grid col-span-1 row-span-2 text-xl auto-rows-min gap-4">
     <Card>
         <ul>
             <li class="uppercase py-1"><a href={`${base}/k8/access`}>k-8</a></li>
