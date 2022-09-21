@@ -23,7 +23,7 @@
             <li class="uppercase py-1"><a href={`${base}/hs/access`}>highschool</a></li>
             <li class="uppercase py-1"><a href={`${base}/college/access`}>college</a></li>
             <li class="uppercase py-1"><a href={`${base}/career/access`}>career</a></li>
-            <li class="uppercase py-1"><a href="/">scorecard</a></li>
+            <li class="uppercase py-1"><a href={base}>scorecard</a></li>
         </ul>
     </Card>
     <div class="bg-brand-primary-dark-green-banner-background text-white px-6 py-6">
