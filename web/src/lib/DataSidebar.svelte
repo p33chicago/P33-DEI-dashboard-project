@@ -1,16 +1,28 @@
 <script>
     import Card from './cards/Card.svelte'
-    import { base } from '$app/paths'
+    import {base} from '$app/paths'
+    import {lifestages} from "$lib/domain/Lifestage.ts";
+
+    export let lifestage;
 </script>
 
 <div class="hidden md:grid col-span-1 row-span-2 text-xl auto-rows-min gap-4">
     <Card>
-        <ul>
-            <li class="uppercase py-1"><a href={`${base}/k8/access`}>k-8</a></li>
-            <li class="uppercase py-1"><a href={`${base}/hs/access`}>highschool</a></li>
-            <li class="uppercase py-1"><a href={`${base}/college/access`}>college</a></li>
-            <li class="uppercase py-1"><a href={`${base}/career/access`}>career</a></li>
-            <li class="uppercase py-1"><a href={base}>scorecard</a></li>
+        <ul class="uppercase font-mono whitespace-nowrap">
+            {#each lifestages as _lifestage}
+                {#if lifestage === _lifestage}
+                    <li class="font-bold leading-8">{_lifestage.name}</li>
+                {:else}
+                    <li class="indent-2">
+                        <a href={`${base}/${_lifestage.route}/access`}>{_lifestage.name}</a>
+                    </li>
+                {/if}
+            {/each}
+            {#if !lifestage}
+                <li class="font-bold leading-8">scorecard</li>
+            {:else}
+                <li class="indent-2"><a href={`${base}/scorecard`}>scorecard</a></li>
+            {/if}
         </ul>
     </Card>
     <div class="bg-brand-primary-dark-green-banner-background text-white px-6 py-6">

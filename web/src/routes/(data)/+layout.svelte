@@ -11,7 +11,7 @@
     $: {
         lifestage = data.lifestage;
         indicator = data.indicator;
-        title = lifestage.name;
+        title = lifestage ? lifestage.name : 'Scorecard';
         if (indicator) {
             title += `: ${indicator.name}`;
         }
@@ -32,23 +32,28 @@
 </div>
 
 <BodyContentContainer>
-    <DataSidebar {lifestage} />
+    <DataSidebar {lifestage}/>
 
-    <!-- <a href={`${base}/`} class="leading-8 hidden md:grid col-span-1">&larr; Back</a> -->
-    <div class="hidden md:block col-start-2 col-span-3 2xl:w-screen">
-        {#each indicators as _indicator}
-            <a
-                    class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
-                    class:bg-brand-primary-dark-green={_indicator.route === indicator.route}
-                    class:text-white={_indicator.route === indicator.route}
-                    href={`${base}/${lifestage.route}/${_indicator.route}`}
-            >{_indicator.name}</a>
-        {/each}
-    </div>
+    {#if lifestage}
+        <div class="hidden md:block col-start-2 col-span-3 2xl:w-screen">
+            {#each indicators as _indicator}
+                <a
+                        class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
+                        class:bg-brand-primary-dark-green={_indicator.route === indicator.route}
+                        class:text-white={_indicator.route === indicator.route}
+                        href={`${base}/${lifestage.route}/${_indicator.route}`}
+                >{_indicator.name}</a>
+            {/each}
+        </div>
+    {/if}
 
     <div class="grid auto-rows-min col-span-4 md:col-span-3 gap-y-4">
-        <IndicatorContent active_indicator={indicator}>
+        {#if indicator}
+            <IndicatorContent active_indicator={indicator}>
+                <slot/>
+            </IndicatorContent>
+        {:else}
             <slot/>
-        </IndicatorContent>
+        {/if}
     </div>
 </BodyContentContainer>

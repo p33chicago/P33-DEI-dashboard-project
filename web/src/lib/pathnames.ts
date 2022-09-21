@@ -4,10 +4,9 @@ import type {Lifestage} from "$lib/domain/Lifestage.ts";
 import {default_lifestage, lifestages} from "$lib/domain/Lifestage.ts";
 
 interface Data {
-    lifestage: Lifestage;
+    lifestage?: Lifestage;
     indicator?: Indicator;
 }
-
 
 const default_scorecard_path = `${default_lifestage.route}/${default_indicator.route}`;
 
@@ -18,7 +17,7 @@ const pathname_pattern = new RegExp(`(${lifestage_pattern})(/(${indicator_patter
 const data_from_pathname = (pathname: string): Data => {
     const matches = pathname_pattern.exec(pathname);
     if (matches === null) {
-        throw Error('No lifestage found');
+        return { lifestage: null, indicator: null };
     }
     const lifestage_path = matches[1];
     const indicator_path = matches[3];
