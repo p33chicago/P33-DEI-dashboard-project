@@ -44,7 +44,7 @@
 	:checked ~ nav { display: block; }
 	nav li { padding: 0.25rem 1rem; }
 
-	@media screen(md) {
+	@media screen(lg) {
 		.active {
 			border-bottom: 2px solid theme('colors.brand-primary-dark-green');
 			font-weight: theme('fontWeight.bold');
