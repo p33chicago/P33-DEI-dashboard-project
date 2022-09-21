@@ -1,9 +1,6 @@
 <script type="ts">
     import {indicators} from '$lib/domain/Indicator.ts';
     import DataSidebar from "$lib/DataSidebar.svelte";
-    import LifestageTitleCard from "$lib/LifestageTitleCard.svelte";
-    import LifestageIndexCard from "$lib/LifestageIndexCard.svelte";
-    import LifestageIndicatorsCard from "$lib/LifestageIndicatorsCard.svelte";
     import IndicatorContent from "$lib/indicators/IndicatorContent.svelte";
     import {base} from '$app/paths';
     import BodyContentContainer from "$lib/BodyContentContainer.svelte";
@@ -35,8 +32,8 @@
 </div>
 
 <BodyContentContainer>
-    <a href={`${base}/`} class="leading-8 hidden md:grid col-span-1">&larr; Back</a>
-    <div class="hidden md:block col-span-3 2xl:w-screen">
+    <!-- <a href={`${base}/`} class="leading-8 hidden md:grid col-span-1">&larr; Back</a> -->
+    <div class="hidden md:block col-start-2 col-span-3 2xl:w-screen">
         {#each indicators as _indicator}
             <a
                     class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
@@ -47,11 +44,7 @@
         {/each}
     </div>
 
-    <DataSidebar>
-        <LifestageTitleCard slot="title" title={lifestage.name}/>
-        <LifestageIndexCard slot="index" chicago="40" us="70"/>
-        <LifestageIndicatorsCard slot="indicators" access="10" excellence="1" proficiency="2"/>
-    </DataSidebar>
+    <DataSidebar />
     <div class="grid auto-rows-min col-span-4 md:col-span-3 gap-y-4">
         <IndicatorContent active_indicator={indicator}>
             <slot/>
