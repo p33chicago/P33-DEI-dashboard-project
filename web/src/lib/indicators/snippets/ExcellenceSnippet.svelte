@@ -6,6 +6,6 @@
 </script>
 
 <h1>{score} {excellence.name}</h1>
-<p>
+<!-- <p>
     <Lipsum words="10" />
-</p>
+</p> -->

@@ -6,6 +6,6 @@
 </script>
 
 <h1>{score} {access.name}</h1>
-<p>
+<!-- <p>
     <Lipsum words="10" />
-</p>
+</p> -->
