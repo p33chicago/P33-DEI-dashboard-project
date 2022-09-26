@@ -6,7 +6,7 @@
 		"predev": "npm run copy-data",
 		"dev": "ENVIRONMENT=dev vite dev",
 		"prebuild": "npm run copy-data",
-		"build": "c && vite build",
+		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"test": "playwright test",
