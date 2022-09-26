@@ -22,7 +22,7 @@
     <title>{title}</title>
 </svelte:head>
 
-<div class="font-sans-alternate bg-chicago bg-brand-primary-dark-green-banner-background bg-blend-screen">
+<div class="font-sans-alternate bg-chicago bg-brand-primary-dark-green-banner-background bg-blend-screen bg-repeat">
     <BodyContentContainer>
         <div class="col-span-4">
             <h1 class="text-white">Kindergarten-8th, High School, College, Career</h1>

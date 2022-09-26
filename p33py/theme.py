@@ -1,5 +1,5 @@
-import plotly.graph_objects as go
-import plotly.io as pio
+from plotly import io as pio, graph_objects as go
+
 
 def set_default_theme():
     # print(str(pio.templates['plotly']))
@@ -8,8 +8,6 @@ def set_default_theme():
             title=None,
             showlegend=False,
             colorway=['#00715e', '#1d59b8', '#981717', '#ff7213', '#ffa913'],
-            bargroupgap=0.025,
-            # bar_textinfo=['label', 'value']
         )
     )
 
@@ -29,4 +27,5 @@ def set_default_theme():
             )
         ]
     )
-    pio.templates.default = "p33+draft"
+    pio.templates.default = "p33"
+    # pio.templates.default = "p33+draft"

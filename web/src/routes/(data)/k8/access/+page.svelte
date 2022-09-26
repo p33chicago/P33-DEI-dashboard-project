@@ -1,8 +1,12 @@
+<script>
+    import Figure from "$lib/figure/Figure.svelte";
+</script>
+
 <div class="py-6">
     <h2>CPS K-8 STEM Magnet School Enrollment</h2>
     <p>The proportion of CPS K-8 students...</p>
 </div>
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div>
         <h3>What does the data tell?</h3>
         <p>Undead malus De horrifying poenae caro zombie,
@@ -12,7 +16,7 @@
             fascinati iam darkness burial agite shaun kingdead ferae monstra comedat.
         </p>
     </div>
-    <div class="box-border h-96 w-128 p-4 border-4">GRAPH?</div>
+    <Figure lifestage="k8" name="magnet_enrol"/>
 </div>
 <div class="py-6">
     <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">help fix

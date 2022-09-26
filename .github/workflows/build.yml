@@ -11,12 +11,12 @@ jobs:
       - name: Install Python packages
         run: pip install -r requirements.txt
       - name: Generate figure JSON
-        run: python p33py/create_figure_json.py
+        run: python build.py
       - name: Save figure JSON
         uses: actions/upload-artifact@v3
         with:
-          name: figure.json
-          path: data/figure.json
+          name: figures-and-tables
+          path: output/
       - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
