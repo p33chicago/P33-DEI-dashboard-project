@@ -8,7 +8,7 @@
 </script>
 
 <header class="font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10">
-    <div class="flex justify-between fullnav:justify-start mx-auto max-w-7xl">
+    <div class="px-1 md:px-3 lg:px-8 flex justify-between fullnav:justify-start mx-auto max-w-6xl">
         <input type="checkbox" id="open-mobile-menu" class="hidden" bind:this={nav_checkbox}/>
         <label for="open-mobile-menu" class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2"
                aria-controls="mobile-menu" aria-expanded="false">
