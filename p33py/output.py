@@ -45,7 +45,7 @@ def figures(format: Format = 'json'):
         elif format == 'html':
             pio.write_html(fig, path, include_plotlyjs=False, full_html=False)
         elif format in ['svg', 'png', 'jpg']:
-            pio.write_image(fig, path, width=250, height=250)
+            pio.write_image(fig, path)
         print(f'Wrote {path}')
         # import sys
         # sys.exit()
