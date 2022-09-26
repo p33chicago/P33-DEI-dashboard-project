@@ -13,11 +13,11 @@
     {#if active_indicator.name === indicator.name}
         <IndicatorCard>
             {#if indicator === access}
-                <AccessSnippet score="20.1"/>
+                <AccessSnippet/>
             {:else if indicator === proficiency}
-                <ProficiencySnippet score="20.1"/>
+                <ProficiencySnippet/>
             {:else}
-                <ExcellenceSnippet score="20.1"/>
+                <ExcellenceSnippet/>
             {/if}
 
             <slot/>
@@ -26,11 +26,11 @@
         <a href={indicator.route} class="md:hidden">
             <IndicatorCard>
                 {#if indicator === access}
-                    <AccessSnippet score="20.1"/>
+                    <AccessSnippet/>
                 {:else if indicator === proficiency}
-                    <ProficiencySnippet score="20.1"/>
+                    <ProficiencySnippet/>
                 {:else}
-                    <ExcellenceSnippet score="20.1"/>
+                    <ExcellenceSnippet/>
                 {/if}
             </IndicatorCard>
         </a>
