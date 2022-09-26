@@ -29,7 +29,7 @@
             higher than the national average
         </p>
     </svelte:fragment>
-    <Figure lifestage={k8.route} name="magnet_enrol" slot="figure"/>
+    <Figure lifestage={k8.route} name="noInt" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -47,6 +47,7 @@
             The proportion of Black students enrolled in K-8 STEM Magnet schools is twice that of Hispanic students.
         </p>
     </svelte:fragment>
+    <Figure lifestage={k8.route} name="magnet_enrol" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -70,4 +71,5 @@
             while black students are.
         </p>
     </svelte:fragment>
+    <Figure lifestage={k8.route} name="algebra_enrol" slot="figure"/>
 </DataDive>
