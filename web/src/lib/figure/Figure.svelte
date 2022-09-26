@@ -23,9 +23,7 @@
             await Plotly.newPlot(canvas, data, layout, config);
         } else {
             svg = fs.readFileSync(`static/figures/${lifestage}/${name}.svg`, 'utf-8');
-            console.log(svg)
         }
-        // console.log(htmlContent)
     };
     render();
 </script>
@@ -39,7 +37,6 @@
 <style>
     div, svg {
         width: 100%;
-        /*height: 100%;*/
         aspect-ratio: 1/1;
     }
 </style>
