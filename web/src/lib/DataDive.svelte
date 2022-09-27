@@ -17,7 +17,7 @@
         <h5 class="pt-4 underline">Takeaways</h5>
         <slot name="takeaways"/>
     </div>
-    <div class="col-span-2 sm:col-span-1">
+    <div class="-order-1 sm:order-none col-span-2 sm:col-span-1">
         <slot name="figure"/>
     </div>
 </div>

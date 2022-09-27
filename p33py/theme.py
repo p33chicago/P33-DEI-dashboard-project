@@ -11,7 +11,7 @@ def set_default_theme():
             margin=dict(
                 autoexpand=False,
                 t=0,
-                l=24,
+                l=0,
                 r=44,
                 b=44,
                 pad=8
