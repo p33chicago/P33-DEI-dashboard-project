@@ -13,7 +13,7 @@
 </script>
 
 <script lang="ts">
-    import type {Lifestage} from "../domain/Lifestage.ts";
+    import type {Lifestage} from "$lib/Lifestage.ts";
     import {assets} from '$app/paths';
 
     export let lifestage: Lifestage['name'];

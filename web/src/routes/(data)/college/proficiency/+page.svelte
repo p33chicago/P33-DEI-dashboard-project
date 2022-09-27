@@ -6,7 +6,7 @@
 
 <DataDive
         header="Illinois CS/Computing Degree Persistence"
-        subheader="The proportion of Illinois college students that enrolled and obtained a CS/Computing degree by race/ethnicity"
+        subheader="Percent of Illinois college students that enrolled and obtained a CS/Computing degree by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -30,7 +30,7 @@
 
 <DataDive
         header="Illinois CS/Computing Degree Conferral"
-        subheader="The proportion of Illinois degrees conferred that are CS/Computing degrees by race/ethnicity"
+        subheader="Percent of Illinois degrees conferred that are CS/Computing degrees by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>

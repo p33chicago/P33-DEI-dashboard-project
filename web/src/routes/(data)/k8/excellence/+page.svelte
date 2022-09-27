@@ -6,7 +6,7 @@
 
 <DataDive
         header="4th grade Math Advanced"
-        subheader="The proportion of CPS 4th graders advanced in math by race/ethnicity"
+        subheader="Percent of CPS 4th graders advanced in math by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -28,7 +28,7 @@
 
 <DataDive
         header="8th grade Math Advanced"
-        subheader="The proportion of CPS 8th graders advanced in math by race/ethnicity"
+        subheader="Percent of CPS 8th graders advanced in math by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>

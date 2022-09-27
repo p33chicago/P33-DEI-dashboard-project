@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type {Lifestage} from "../domain/Lifestage.ts";
+    import type {Lifestage} from "$lib/Lifestage.ts";
     import fs from 'fs';
 
     export let lifestage: Lifestage['name'];

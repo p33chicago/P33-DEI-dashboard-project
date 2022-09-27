@@ -6,7 +6,7 @@
 
 <DataDive
         header="AP CS Enrollment"
-        subheader="The proportion of CPS HS students enrolled in AP CS"
+        subheader="Percent of CPS HS students enrolled in AP CS"
 >
     <svelte:fragment slot="story">
         <p>
@@ -31,7 +31,7 @@
 
 <DataDive
         header="CPS HS STEM Magnet School Enrollment"
-        subheader="The proportion of CPS HS students enrolled in a STEM magnet school by race/ethnicity"
+        subheader="Percent of CPS HS students enrolled in a STEM magnet school by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -54,7 +54,7 @@
 
 <DataDive
         header="CS Interest"
-        subheader="The proportion of CPS HS students indicating interest in an CS/IT career"
+        subheader="Percent of CPS HS students indicating interest in an CS/IT career"
 >
     <svelte:fragment slot="takeaways">
         <p>
@@ -69,7 +69,7 @@
 
 <DataDive
         header="Advanced Math Enrollment"
-        subheader="The proportion of CPS SAT takers exceeding standards by race/ethnicity"
+        subheader="Percent of CPS SAT takers exceeding standards by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>

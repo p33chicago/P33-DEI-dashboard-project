@@ -6,7 +6,7 @@
 
 <DataDive
         header="Illinois CS/Computing Degree Enrollment"
-        subheader="The proportion of Illinois college students enrolled into a CS/Computing degree by race/ethnicity"
+        subheader="Percent of Illinois college students enrolled into a CS/Computing degree by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -25,7 +25,7 @@
 
 <DataDive
         header="Illinois Immediate College Enrollment Rates"
-        subheader="The proportion of Illinois High School graduates that immediately enroll in college by race/ethnicity"
+        subheader="Percent of Illinois High School graduates that immediately enroll in college by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p></p>

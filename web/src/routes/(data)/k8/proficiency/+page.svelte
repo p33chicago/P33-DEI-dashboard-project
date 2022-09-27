@@ -6,7 +6,7 @@
 
 <DataDive
         header="4th grade math Proficiency and above"
-        subheader="The proportion of CPS 4th graders at or above math proficiency by race/ethnicity"
+        subheader="Percent of CPS 4th graders at or above math proficiency by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -29,7 +29,7 @@
 
 <DataDive
         header="8th grade math Proficiency and above"
-        subheader="The proportion of CPS 8th graders at or above math proficiency by race/ethnicity"
+        subheader="Percent of CPS 8th graders at or above math proficiency by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -52,7 +52,7 @@
 
 <DataDive
         header="8th grade passing algebra"
-        subheader="The proportion of CPS 8th graders enrolled in algebra classes passing algebra by race/ethnicity"
+        subheader="Percent of CPS 8th graders enrolled in algebra classes passing algebra by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>

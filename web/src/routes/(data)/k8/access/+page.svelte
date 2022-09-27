@@ -6,7 +6,7 @@
 
 <DataDive
         header="Lack of Household Internet Access"
-        subheader="The proportion of young residents lacking household internet access by race/ethnicity"
+        subheader="Percent of young residents lacking household internet access by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -34,7 +34,7 @@
 
 <DataDive
         header="CPS K-8 STEM Magnet School Enrollment "
-        subheader="The proportion of CPS K-8 students enrolled in a STEM magnet school by race/ethnicity"
+        subheader="Percent of CPS K-8 students enrolled in a STEM magnet school by race/ethnicity"
 >
     <svelte:fragment slot="summary">
         <p>
@@ -52,7 +52,7 @@
 
 <DataDive
         header="8th grade algebra 1 enrollment"
-        subheader="The proportion of CPS 8th graders enrolled into algebra 1 by race/ethnicity"
+        subheader="Percent of CPS 8th graders enrolled into algebra 1 by race/ethnicity"
 >
     <svelte:fragment slot="summary">
         <p>

@@ -6,7 +6,7 @@
 
 <DataDive
         header="Illinois CS/Computing Degree Enrollment for Top 3"
-        subheader="The proportion of college students enrolled into a CS/Computing degree at a top 3 Illinois university by race/ethnicity"
+        subheader="Percent of college students enrolled into a CS/Computing degree at a top 3 Illinois university by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -28,7 +28,7 @@
 
 <DataDive
         header="Illinois CS/Computing Degree Persistence for Top 3"
-        subheader="The proportion of college students that enrolled in a top 3 Illinois university and obtained a CS/Computing degree by race/ethnicity"
+        subheader="Percent of college students that enrolled in a top 3 Illinois university and obtained a CS/Computing degree by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -52,7 +52,7 @@
 
 <DataDive
         header="Illinois CS/Computing Degree Conferral for Top 3"
-        subheader="The proportion of degrees conferred by top 3 Illinois institutions that are CS/Computing degrees by race/ethnicity"
+        subheader="Percent of degrees conferred by top 3 Illinois institutions that are CS/Computing degrees by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>

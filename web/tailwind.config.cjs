@@ -23,26 +23,25 @@ module.exports = {
     dropShadow: {
       'card': '0 4px 4px rgb(0 0 0 / 0.25)'
     },
-    borderColor: {
-      DEFAULT: 'var(--brand-primary-dark-green)'
-    },
     extend: {
+      borderColor: ({theme}) => ({
+        DEFAULT: theme('colors.brand-primary-dark-green')
+      }),
       colors: {
         'black': '#04352d',
-        'white': '#f4f4f4',
-        'dark-gray': '#787A7D',
+        'dark-gray': '#0F2A43',
         'medium-gray': '#B8B6B6',
         'light-gray': '#d9d9d9',
         'really-light-gray': '#e0e5ec',
         'brand-primary-green': '#0db296',
         'brand-primary-dark-green': '#00715e',
-        'brand-primary-dark-green-banner-background': '#00483e',
         'brand-primary-light-green': '#56cbb8',
         'brand-primary-really-light-green': '#dee9e8',
         'blue': '#1d59b8',
         'fail-red': '#981717',
         'warn-orange': '#ff7213',
-        'heads-up-yellow': '#ffa913'
+        'heads-up-yellow': '#ffa913',
+        'background-map': '#2C7261'
       },
       backgroundImage: {
         'chicago': "url('/chicago.svg')",

@@ -22,7 +22,7 @@
     <title>{title}</title>
 </svelte:head>
 
-<div class="font-sans-alternate bg-chicago bg-brand-primary-dark-green-banner-background bg-blend-screen bg-repeat">
+<div class="font-sans-alternate bg-chicago bg-background-map bg-blend-screen bg-repeat">
     <BodyContentContainer>
         <div class="col-span-4">
             <h1 class="text-white">Kindergarten-8th, High School, College, Career</h1>
@@ -35,11 +35,10 @@
     <DataSidebar {lifestage}/>
 
     {#if lifestage}
-        <div class="hidden md:block col-start-2 col-span-3 2xl:w-screen">
+        <div class="hidden md:block col-start-2 col-span-3 2xl:w-screen space-x-5">
             {#each indicators as _indicator}
                 <a
-                        class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
-                        class:border-brand-primary-dark-green={_indicator.route === indicator.route}
+                        class="inline-block leading-9 border-2 rounded-full md:px-3 lg:px-6 uppercase"
                         class:bg-brand-primary-dark-green={_indicator.route === indicator.route}
                         class:text-white={_indicator.route === indicator.route}
                         href={`${base}/${lifestage.route}/${_indicator.route}`}

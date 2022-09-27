@@ -6,7 +6,7 @@
 
 <DataDive
         header="HS SAT Math Advanced"
-        subheader="The proportion of CPS SAT takers advancing math standards by race/ethnicity"
+        subheader="Percent of CPS SAT takers advancing math standards by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>
@@ -30,7 +30,7 @@
 
 <DataDive
         header="CPS AP CS scored 5"
-        subheader="The proportion of CPS AP CS students scoring a 5 by race/ethnicity"
+        subheader="Percent of CPS AP CS students scoring a 5 by race/ethnicity"
 >
     <svelte:fragment slot="story">
         <p>

@@ -8,7 +8,7 @@
 
 <div class="hidden md:grid col-span-1 row-span-2 text-xl auto-rows-min gap-4">
     <Card>
-        <ul class="uppercase font-mono whitespace-nowrap">
+        <ul class="uppercase font-sans-alternate">
             {#each lifestages as _lifestage}
                 {#if lifestage === _lifestage}
                     <li class="font-bold leading-8">{_lifestage.name}</li>
@@ -25,8 +25,8 @@
             {/if}
         </ul>
     </Card>
-    <div class="bg-brand-primary-dark-green-banner-background text-white px-6 py-6">
-        <h1>Life Stages</h1>
+    <div class="bg-black text-white px-6 py-6">
+        <h1 class="text-white">Life Stages</h1>
         <div class="py-4 text-base text-light-gray">
             <p>Magnet school enrollment rate relative to population size in...</p>
         </div>
