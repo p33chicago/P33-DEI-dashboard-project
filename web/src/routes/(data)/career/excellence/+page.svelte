@@ -1,7 +1,7 @@
 <script type="ts">
-    // import Figure from "$lib/figure/Figure.svelte";
+    import Figure from "$lib/figure/Figure.svelte";
     import DataDive from "$lib/DataDive.svelte";
-    // import {career} from "$lib/domain/Lifestage.ts";
+    import {career} from "$lib/domain/Lifestage.ts";
 </script>
 
 <DataDive
@@ -20,8 +20,9 @@
 
     <svelte:fragment slot="takeaways">
         <p>
-            1 out of 250 black workers can land a top-paid tech job in the Chicago Metropolitan area. That rate for Hispanic workers is 1 out of 150.
+            1 out of 250 black workers can land a top-paid tech job in the Chicago Metropolitan area. That rate for
+            Hispanic workers is 1 out of 150.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={career.route} name="techJob_topThree" slot="figure"/>-->
+    <Figure lifestage={career.route} name="techJob_topThree" slot="figure"/>
 </DataDive>

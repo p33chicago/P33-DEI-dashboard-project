@@ -1,7 +1,7 @@
 <script type="ts">
-    // import Figure from "$lib/figure/Figure.svelte";
+    import Figure from "$lib/figure/Figure.svelte";
     import DataDive from "$lib/DataDive.svelte";
-    // import {hs} from "$lib/domain/Lifestage.ts";
+    import {highSchool} from "$lib/domain/Lifestage.ts";
 </script>
 
 <DataDive
@@ -13,17 +13,19 @@
             No more than 2% of Hispanic students and 1% of Black students advance in SAT math tests.
         </p>
         <p>
-            CPS High school students have a proportion of SAT math advanced students significantly lower than the national average across all ethnic groups.
+            CPS High school students have a proportion of SAT math advanced students significantly lower than the
+            national average across all ethnic groups.
         </p>
     </svelte:fragment>
 
     <svelte:fragment slot="takeaways">
         <p>
             Extreme disparity in sat math advance rate.
-            The proportion of White and Asian students who advance SAT math is 12.3 - 34 times higher than that of Hispanic and Black students in CPS.
+            The proportion of White and Asian students who advance SAT math is 12.3 - 34 times higher than that of
+            Hispanic and Black students in CPS.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="sat_exceeds" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="sat_exceeds" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -43,8 +45,9 @@
     <svelte:fragment slot="takeaways">
         <p>
             Extreme disparity in AP CS high scoring rate.
-            The proportion of White and Asian students who score 5 on AP CS is 6 - 17 times higher than that of Hispanic and Black students in CPS.
+            The proportion of White and Asian students who score 5 on AP CS is 6 - 17 times higher than that of Hispanic
+            and Black students in CPS.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="apcs_five" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="apcs_five" slot="figure"/>
 </DataDive>

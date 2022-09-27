@@ -10,18 +10,21 @@
 >
     <svelte:fragment slot="story">
         <p>
-            In CPS 4th grade, White students have the highest math proficiency rate,1.1 times higher than Asians, 1.8 times higher than Hispanics, and 2.8 times higher than black.
+            In CPS 4th grade, White students have the highest math proficiency rate,1.1 times higher than Asians, 1.8
+            times higher than Hispanics, and 2.8 times higher than black.
         </p>
         <p>
-            The proportion of math proficient students in 4th grade is noticeably lower in CPS than the national average across all ethnic groups.
+            The proportion of math proficient students in 4th grade is noticeably lower in CPS than the national average
+            across all ethnic groups.
         </p>
     </svelte:fragment>
     <svelte:fragment slot="takeaways">
         <p>
-            In relation to the national average algebra enrollment rate, White and Asian students are outperforming, while black students are.
+            In relation to the national average algebra enrollment rate, White and Asian students are outperforming,
+            while black students are.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="k4_math_profAndAbove" slot="figure"/>-->
+    <Figure lifestage={k8.route} name="k4_math_profAndAbove" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -30,18 +33,21 @@
 >
     <svelte:fragment slot="story">
         <p>
-            In CPS 8th grade, Asian and White students have the highest math proficiency rate, 1.6 times higher than Hispanics, and 2.6 times higher than black.
+            In CPS 8th grade, Asian and White students have the highest math proficiency rate, 1.6 times higher than
+            Hispanics, and 2.6 times higher than black.
         </p>
         <p>
-            In the 8th grade, in relation to the national average, White and Asians have significantly lower math proficiency rates, while that of Black and Hispanics is slightly higher.
+            In the 8th grade, in relation to the national average, White and Asians have significantly lower math
+            proficiency rates, while that of Black and Hispanics is slightly higher.
         </p>
     </svelte:fragment>
     <svelte:fragment slot="takeaways">
         <p>
-            Using the national average as a benchmark, the math proficiency rate of Black and Hispanic students in CPS  improved from 4th to 8th grades.
+            Using the national average as a benchmark, the math proficiency rate of Black and Hispanic students in CPS
+            improved from 4th to 8th grades.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="math_profAndAbove" slot="figure"/>-->
+    <Figure lifestage={k8.route} name="math_profAndAbove" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -50,7 +56,8 @@
 >
     <svelte:fragment slot="story">
         <p>
-            The algebra passing rate in CPS is greater than 95% across all ethnic groups, significantly higher than the national average.
+            The algebra passing rate in CPS is greater than 95% across all ethnic groups, significantly higher than the
+            national average.
         </p>
         <p>
             Minor inequality detected in this metric.
@@ -61,6 +68,6 @@
             Great performance of CPS algebra class.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="algebra_pass" slot="figure"/>-->
+    <Figure lifestage={k8.route} name="algebra_pass" slot="figure"/>
 </DataDive>
 

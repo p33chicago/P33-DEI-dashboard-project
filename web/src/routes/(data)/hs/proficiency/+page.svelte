@@ -1,7 +1,7 @@
 <script type="ts">
-    // import Figure from "$lib/figure/Figure.svelte";
+    import Figure from "$lib/figure/Figure.svelte";
     import DataDive from "$lib/DataDive.svelte";
-    // import {hs} from "$lib/domain/Lifestage.ts";
+    import {highSchool} from "$lib/domain/Lifestage.ts";
 </script>
 
 <DataDive
@@ -10,22 +10,25 @@
 >
     <svelte:fragment slot="story">
         <p>
-            Over 50% of White and Asian students meet SAT Math benchmark while no more than 20% of Black and Hispanic students meet SAT Math benchmark.
+            Over 50% of White and Asian students meet SAT Math benchmark while no more than 20% of Black and Hispanic
+            students meet SAT Math benchmark.
 
         </p>
         <p>
             Only the White population in CPS high school perform slightly above the national average.
-            Asian, Hispanic, and black students have the SAT math benchmark meeting rate 11% - 30% lower than the national average.
+            Asian, Hispanic, and black students have the SAT math benchmark meeting rate 11% - 30% lower than the
+            national average.
         </p>
     </svelte:fragment>
 
     <svelte:fragment slot="takeaways">
         <p>
             Deep disparity in math proficiency rate.
-            The proportion of White and Asian students who meet sat math benchmark is 2.7 - 5.6 times higher than that of Hispanic and Black students.
+            The proportion of White and Asian students who meet sat math benchmark is 2.7 - 5.6 times higher than that
+            of Hispanic and Black students.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="sat_meetAndExceeds" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="sat_meetAndExceeds" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -45,8 +48,9 @@
     <svelte:fragment slot="takeaways">
         <p>
             Deep disparity in AP CS scoring.
-            The proportion of White and Asian students who scores 3 or higher in AP CS is 1.9 - 4 times higher than that of Hispanic and Black students.
+            The proportion of White and Asian students who scores 3 or higher in AP CS is 1.9 - 4 times higher than that
+            of Hispanic and Black students.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="apcs_aboveThree" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="apcs_aboveThree" slot="figure"/>
 </DataDive>

@@ -1,7 +1,7 @@
 <script type="ts">
-    // import Figure from "$lib/figure/Figure.svelte";
+    import Figure from "$lib/figure/Figure.svelte";
     import DataDive from "$lib/DataDive.svelte";
-    // import {hs} from "$lib/domain/Lifestage.ts";
+    import {highSchool} from "$lib/domain/Lifestage.ts";
 </script>
 
 <DataDive
@@ -20,11 +20,13 @@
     </svelte:fragment>
     <svelte:fragment slot="takeaways">
         <p>
-            CPS has an overall much higher AP CS enrolment rate in comparison with the national average across all ethnic groups.
-            However, the disparity is enormous, White and Asian students have an enrollment rate 3-7 times higher than Black and Hispanic students.
+            CPS has an overall much higher AP CS enrolment rate in comparison with the national average across all
+            ethnic groups.
+            However, the disparity is enormous, White and Asian students have an enrollment rate 3-7 times higher than
+            Black and Hispanic students.
         </p>
     </svelte:fragment>
-<!--    <Figure lifestage={hs.route} name="apcs_enrol" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="apcs_enrol" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -39,13 +41,15 @@
     </svelte:fragment>
     <svelte:fragment slot="takeaways">
         <p>
-            13.25% of Black students enrolled in STEM Magnet elementary schools while only 8.82% enrolled in STEM Magnet high school.
+            13.25% of Black students enrolled in STEM Magnet elementary schools while only 8.82% enrolled in STEM Magnet
+            high school.
         </p>
         <p>
-            7.87% of Hispanic students enrolled in STEM Magnet elementary schools while 19.66% enrolled in STEM Magnet high school.
+            7.87% of Hispanic students enrolled in STEM Magnet elementary schools while 19.66% enrolled in STEM Magnet
+            high school.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="magnet_enrol" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="magnet_enrol" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -60,7 +64,7 @@
             and 1 out of 20 black students expressing the same interest.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="CSInterested" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="CSInterested" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -73,7 +77,8 @@
             3 out of 10 Black and Hispanic students enrolled in advanced math class.
         </p>
         <p>
-            Overall, the proportion of students who enrolled in advanced math classes in CPS is twice the proportion in the national average.
+            Overall, the proportion of students who enrolled in advanced math classes in CPS is twice the proportion in
+            the national average.
         </p>
     </svelte:fragment>
 
@@ -83,5 +88,5 @@
             Superior performances of CPS in related to the national average.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="advMath_enrol" slot="figure"/>-->
+    <Figure lifestage={highSchool.route} name="advMath_enrol" slot="figure"/>
 </DataDive>

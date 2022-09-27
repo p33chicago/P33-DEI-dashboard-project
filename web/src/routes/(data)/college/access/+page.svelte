@@ -1,7 +1,7 @@
 <script type="ts">
-    // import Figure from "$lib/figure/Figure.svelte";
+    import Figure from "$lib/figure/Figure.svelte";
     import DataDive from "$lib/DataDive.svelte";
-    // import {college} from "$lib/domain/Lifestage.ts";
+    import {college} from "$lib/domain/Lifestage.ts";
 </script>
 
 <DataDive
@@ -20,7 +20,7 @@
     <svelte:fragment slot="takeaways">
         <p></p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="cs_enrol" slot="figure"/>-->
+    <Figure lifestage={college.route} name="cs_enrol" slot="figure"/>
 </DataDive>
 
 <DataDive
@@ -34,5 +34,5 @@
     <svelte:fragment slot="takeaways">
         <p></p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="imdEnrol" slot="figure"/>-->
+    <Figure lifestage={college.route} name="imdEnrol" slot="figure"/>
 </DataDive>
