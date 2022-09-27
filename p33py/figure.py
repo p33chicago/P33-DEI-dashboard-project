@@ -10,7 +10,7 @@ def figure(metric):
                  )
     fig.update_traces(
         texttemplate='%{y:.1%}',
-        textangle=0,
+        textangle=90,
     )
     fig.update_yaxes(title='')
     # fig.update_xaxes(range=list([0, 5]))
