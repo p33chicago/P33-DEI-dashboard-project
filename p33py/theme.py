@@ -18,7 +18,7 @@ def set_default_theme():
                 pad=8
             ),
             title=None,
-            colorway=['#04352D', '#00715E', '#56CBB8', '#56CBB8'],
+            colorway=['#04352D', '#00715E', '#56CBB8', '#76EBD8'],
             bargroupgap=0.35,
             xaxis=dict(
                 visible=False,
