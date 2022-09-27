@@ -6,13 +6,12 @@
     export let name: string;
 
     let svg = fs.readFileSync(`static/figures/${lifestage}/${name}.svg`, 'utf-8');
+    svg = svg.replace(/<svg([^>]*)height="[^"]+" /, '<svg$1')
+    svg = svg.replace(/<svg([^>]*)width="[^"]+" /, '<svg$1')
 </script>
 
-<svg>{@html svg}</svg>
-
-<style>
-    svg {
-        width: 100%;
-        aspect-ratio: 1/1;
-    }
-</style>
+<div class="overflow-scroll">
+    <div class="min-w-[360px] min-h-[200px] w-full h-full">
+        {@html svg}
+    </div>
+</div>

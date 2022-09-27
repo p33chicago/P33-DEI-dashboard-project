@@ -7,13 +7,13 @@ def set_default_theme():
         layout=dict(
             autosize=False,
             dragmode=False, # allow page scrolling on mobile
-            # width=400,
-            # height=400,
+            width=360,
+            height=200,
             margin=dict(
                 autoexpand=False,
                 t=0,
                 l=0,
-                r=44,
+                r=34,
                 b=44,
                 pad=8
             ),
