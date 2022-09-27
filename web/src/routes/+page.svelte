@@ -71,7 +71,7 @@
         </div>
     </div>
     <div class="col-span-2 justify-self-center">
-        <img src="/equity-diagram.png" alt="" />
+        <img src={`${base}/equity-diagram.png`} alt="" />
     </div>
     <div>
         <CardText>
