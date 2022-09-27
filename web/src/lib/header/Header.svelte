@@ -35,6 +35,7 @@
         <nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
             <ul class="fullnav:flex" on:click={hide_nav}>
                 <li class:active={pathname_pattern.test($page.url.pathname)}><a
+                        class="h-full w-full"
                         href={`${base}/${default_scorecard_path}`}>Scorecard</a></li>
                 <li class:active={$page.url.pathname === `${base}/methodology`}><a href={`${base}/methodology`}>Methodology</a>
                 </li>

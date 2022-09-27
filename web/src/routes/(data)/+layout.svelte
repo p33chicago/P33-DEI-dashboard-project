@@ -39,6 +39,7 @@
             {#each indicators as _indicator}
                 <a
                         class="inline-block leading-8 bg-white border-2 rounded-full md:px-3 lg:px-6 uppercase"
+                        class:border-brand-primary-dark-green={_indicator.route === indicator.route}
                         class:bg-brand-primary-dark-green={_indicator.route === indicator.route}
                         class:text-white={_indicator.route === indicator.route}
                         href={`${base}/${lifestage.route}/${_indicator.route}`}

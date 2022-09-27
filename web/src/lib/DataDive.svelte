@@ -7,7 +7,6 @@
 
 <div class="py-6">
     <h2>{header}</h2>
-    <p>{subheader}</p>
 </div>
 <div class="grid grid-cols-2 gap-4">
     <div class="col-span-2 sm:col-span-1">
@@ -18,6 +17,7 @@
         <slot name="takeaways"/>
     </div>
     <div class="-order-1 sm:order-none col-span-2 sm:col-span-1">
+        <p>{subheader}</p>
         <slot name="figure"/>
     </div>
 </div>
