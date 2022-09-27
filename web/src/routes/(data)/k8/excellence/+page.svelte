@@ -21,7 +21,7 @@
             The gap/disparity in ethnic groups is significantly enlarged from proficient students to advanced students.
         </p>
     </svelte:fragment>
-<!--    <Figure lifestage={k8.route} name="noInt" slot="figure"/>-->
+<!--    <Figure lifestage={k8.route} name="k4_math_adv" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -41,7 +41,7 @@
             The proportion of Hispanic students who excelled at math has increased by 50% from 4th to 8th grade. This increment in population is 2.8 times greater than the increment of the other three ethnic groups combined.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="noInt" slot="figure"/>-->
+    <!--    <Figure lifestage={k8.route} name="math_adv" slot="figure"/>-->
 </DataDive>
 
 

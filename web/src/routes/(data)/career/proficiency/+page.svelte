@@ -24,5 +24,5 @@
             Hispanic students have to compete with 100 peer graduates for 4 job opportunities in tech companies, Black students have to compete with 100 peer graduates for 2 job opportunities in tech companies.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={career.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={career.route} name="techJob" slot="figure"/>-->
 </DataDive>

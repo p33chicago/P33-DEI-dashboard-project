@@ -20,7 +20,7 @@
     <svelte:fragment slot="takeaways">
         <p></p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="cs_enrol" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -34,5 +34,5 @@
     <svelte:fragment slot="takeaways">
         <p></p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="imdEnrol" slot="figure"/>-->
 </DataDive>

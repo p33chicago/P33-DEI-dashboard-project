@@ -25,7 +25,7 @@
             The proportion of White and Asian students who meet sat math benchmark is 2.7 - 5.6 times higher than that of Hispanic and Black students.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="sat_meetAndExceeds" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -48,5 +48,5 @@
             The proportion of White and Asian students who scores 3 or higher in AP CS is 1.9 - 4 times higher than that of Hispanic and Black students.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="apcs_aboveThree" slot="figure"/>-->
 </DataDive>

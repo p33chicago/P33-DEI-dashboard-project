@@ -23,5 +23,5 @@
             1 out of 250 black workers can land a top-paid tech job in the Chicago Metropolitan area. That rate for Hispanic workers is 1 out of 150.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={career.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={career.route} name="techJob_topThree" slot="figure"/>-->
 </DataDive>

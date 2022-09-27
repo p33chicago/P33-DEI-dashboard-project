@@ -21,7 +21,7 @@
             In relation to the national average algebra enrollment rate, White and Asian students are outperforming, while black students are.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="noInt" slot="figure"/>-->
+    <!--    <Figure lifestage={k8.route} name="k4_math_profAndAbove" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -41,7 +41,7 @@
             Using the national average as a benchmark, the math proficiency rate of Black and Hispanic students in CPS  improved from 4th to 8th grades.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="noInt" slot="figure"/>-->
+    <!--    <Figure lifestage={k8.route} name="math_profAndAbove" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -61,6 +61,6 @@
             Great performance of CPS algebra class.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={k8.route} name="noInt" slot="figure"/>-->
+    <!--    <Figure lifestage={k8.route} name="algebra_pass" slot="figure"/>-->
 </DataDive>
 

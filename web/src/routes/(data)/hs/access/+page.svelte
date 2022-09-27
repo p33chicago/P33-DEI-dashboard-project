@@ -24,7 +24,7 @@
             However, the disparity is enormous, White and Asian students have an enrollment rate 3-7 times higher than Black and Hispanic students.
         </p>
     </svelte:fragment>
-<!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+<!--    <Figure lifestage={hs.route} name="apcs_enrol" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -45,7 +45,7 @@
             7.87% of Hispanic students enrolled in STEM Magnet elementary schools while 19.66% enrolled in STEM Magnet high school.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="magnet_enrol" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -60,7 +60,7 @@
             and 1 out of 20 black students expressing the same interest.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="CSInterested" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -83,5 +83,5 @@
             Superior performances of CPS in related to the national average.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="advMath_enrol" slot="figure"/>-->
 </DataDive>

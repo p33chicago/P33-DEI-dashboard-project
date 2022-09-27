@@ -22,7 +22,7 @@
             Around 1 out of 5 Black and Hispanic students at the universities of Illinois who enrolled in the CS program drop off.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="cs_persist" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -40,5 +40,5 @@
             At the Universities in Illinois, the percentage of Hispanic and Black students who obtained a CS diploma is similar to that of White students but massively lower than Asian students.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="cs_confer" slot="figure"/>-->
 </DataDive>

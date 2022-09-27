@@ -23,7 +23,7 @@
             The proportion of White and Asian students who advance SAT math is 12.3 - 34 times higher than that of Hispanic and Black students in CPS.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="sat_exceeds" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -46,5 +46,5 @@
             The proportion of White and Asian students who score 5 on AP CS is 6 - 17 times higher than that of Hispanic and Black students in CPS.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={hs.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={hs.route} name="apcs_five" slot="figure"/>-->
 </DataDive>

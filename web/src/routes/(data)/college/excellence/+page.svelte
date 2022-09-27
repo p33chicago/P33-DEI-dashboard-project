@@ -23,7 +23,7 @@
     <svelte:fragment slot="takeaways">
         <p></p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="topThree_cs_enrol" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -44,7 +44,7 @@
             At the University of Chicago, Northwestern University, and the UIC, averaging 1 out of 5 Black and Hispanic students who enrolled in the CS program drop off.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="topThree_cs_persist" slot="figure"/>-->
 </DataDive>
 
 <DataDive
@@ -65,5 +65,5 @@
             At the Universities in Illinois, the percentage of Black students who obtained a CS diploma is remarkably lower than that of Hispanic students.
         </p>
     </svelte:fragment>
-    <!--    <Figure lifestage={college.route} name="" slot="figure"/>-->
+    <!--    <Figure lifestage={college.route} name="topThree_cs_confer" slot="figure"/>-->
 </DataDive>
