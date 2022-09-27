@@ -6,6 +6,7 @@ def set_default_theme():
     pio.templates['p33'] = go.layout.Template(
         layout=dict(
             autosize=False,
+            dragmode=False, # allow page scrolling on mobile
             # width=400,
             # height=400,
             margin=dict(

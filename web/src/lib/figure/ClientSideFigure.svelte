@@ -31,6 +31,7 @@
         }
         layout.width = canvas.clientWidth
         layout.height = canvas.clientHeight
+        console.log(layout)
         Plotly.react(canvas, data, layout, config);
     }
 
