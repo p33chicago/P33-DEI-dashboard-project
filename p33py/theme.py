@@ -21,11 +21,13 @@ def set_default_theme():
             bargroupgap=0.35,
             xaxis=dict(
                 visible=False,
+                fixedrange=True
             ),
             yaxis=dict(
                 tickformat=',.0%',
                 title='',
                 side='right',
+                fixedrange=True
             ),
             legend=dict(
                 orientation='h',
