@@ -47,30 +47,31 @@
     </Card>
 </div> -->
 
-<div class="grid grid-cols-4 gap-4 pb-64">
+<div class="grid grid-cols-4 gap-4 pb-64 px-24 pt-8">
     <!-- top part -->
     <div class="col-span-2">
-        <h1>Our Challenge, Our Opportunity</h1>
+        <h1>Our Challenge, <span class="bg-heads-up-yellow p-1">Our Opportunity</span></h1>
         <div>
             <p>
-                I'm telling the truth, Doc, you gotta believe me. Alright, c'mon, I think we're safe. Hey George, buddy, hey, I've been looking all over for you. You remember me, the guy who saved your life the other day. Yeah but George, Lorraine wants to go with you. Give her a break. Yeah, yeah what are you wearing, Dave.
+                Skilled tech jobs are fast-growing, high-paying and resilient to economic change and companies can't fill their roles fast enough.
+                Bringing more Chicagoans into tech roles will accelerate economic growth and can address persistent reace-based income inequality.
             </p>
             <p>
-                Give me a hand, Lorenzo. Ow, dammit, man, I sliced my hand. What? C'mon, c'mon let's go. Um, yeah well I might have sort of ran into my parents. Oh, if Paul calls me tell him I'm working at the boutique late tonight.
+                But today, Black and Latino Chicagoans and women are dramatically underrepresented in these roles.
+                If we stay on this path, tech's growth will worsen race-based inequality. But we can choose another path.
             </p>
             <p>
-                Hey boy, are you alright? Hey George, buddy, hey, I've been looking all over for you. You remember me, the guy who saved your life the other day. Oh. C'mon, open up, let me out of here, Yo. In that case, I'll tell you strait out.
+                This is Chicagoland's first effort to understand the full picture of what it will take to make Chicago the most inclusive tech city in the country.
+                And to understand how we are or aren't supporting Black and Latino Chicagoans at critical moments on the journey from school to great jobs in the digital economy
             </p>
             <p>
-                yes, Joey just loves being in his playpen. he cries whenever we take him out so we just leave him in there all the time. Well Marty, I hope you like meatloaf. What did I just say? I know, and all I could say is I'm sorry. A block passed Maple, that's John F. Kennedy Drive. Doc.
-            </p>
-            <p>
-                Yeah but George, Lorraine wants to go with you. Give her a break. Well, you mean, it makes perfect sense. Oh yes sir. Aw yeah, everything is great. No no no this sucker's electrical, but I need a nuclear reaction to generate the one point twenty-one gigawatts of electricity that I need. 
+                This isn't simply a "company problem" or a "pipeline problem". There is critical work to do from grammer school to the C-suite.
+                We've gathered the data to show the way forward and offer solutions that every organization in the city can help move forward. Let's go make it happen!
             </p>
         </div>
     </div>
-    <div class="col-span-2">
-        IMAGE HERE
+    <div class="col-span-2 justify-self-center">
+        <img src={`${base}/equity-diagram.png`} alt="" />
     </div>
     <div>
         <CardText>
