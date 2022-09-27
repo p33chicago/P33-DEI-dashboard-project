@@ -6,14 +6,14 @@ def set_default_theme():
     pio.templates['p33'] = go.layout.Template(
         layout=dict(
             autosize=False,
-            width=400,
-            height=400,
+            # width=400,
+            # height=400,
             margin=dict(
                 autoexpand=False,
                 t=0,
                 l=24,
                 r=44,
-                b=34,
+                b=44,
                 pad=8
             ),
             title=None,
