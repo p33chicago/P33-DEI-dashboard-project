@@ -23,11 +23,12 @@ def figure(metric):
 
     # Place gray box behind USA
     if len(metric.var_scope.unique()) > 1:
+        ymax = metric.metric_value.max()
         fig.add_shape(type="rect",
                       layer='below',
                       line=dict(width=0),
                       xref='x',
-                      x0=0.5, y0=0, x1=1.5, y1=1,
+                      x0=0.5, y0=0, x1=1.5, y1=ymax,
                       fillcolor="LightGray"
                       )
 
