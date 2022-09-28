@@ -20,7 +20,7 @@ def metric_DEI_FourG_twoScopes(df,metricname,dimension,stage,weight,metricOne,me
 
     # Extract and Process values
     ''' extract numerators '''
-    df_subset = df_clean_fourGroups[(df_clean_fourGroups["metrics_new"] == metricOne) | (df_clean_fourGroups["metrics_new"] == metricTwo) ]
+    df_subset = df_clean_fourGroups.copy()[(df_clean_fourGroups["metrics_new"] == metricOne) | (df_clean_fourGroups["metrics_new"] == metricTwo) ]
     ''' rename the value in subset dataset to subset_popul '''
     df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
     ''' extract denominators '''
@@ -59,7 +59,7 @@ def metric_DEI_FourG_oneScope(df,metricname,dimension,stage,weight,metricOne,pop
                                    ]
 
     ''' extract numerators '''
-    df_subset = df_clean_fourGroups[(df_clean_fourGroups["metrics_new"] == metricOne)]
+    df_subset = df_clean_fourGroups.copy()[(df_clean_fourGroups["metrics_new"] == metricOne)]
     ''' rename the value in subset dataset to subset_popul '''
     df_subset.rename(columns = {'population':'subset_popul'}, inplace = True)
     ''' extract denominators '''
