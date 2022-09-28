@@ -25,7 +25,7 @@
             {/each}
         </ul>
     </Card>
-    <div class="bg-black text-white px-6 py-6">
+    <div class="bg-black text-white px-9 py-6">
         <h1 class="text-white">Life Stages</h1>
         <div class="py-4 text-base text-light-gray">
             <p>Magnet school enrollment rate relative to population size in...</p>
