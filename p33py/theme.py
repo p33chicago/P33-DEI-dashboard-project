@@ -6,27 +6,28 @@ def set_default_theme():
     pio.templates['p33'] = go.layout.Template(
         layout=dict(
             autosize=False,
+            dragmode=False, # allow page scrolling on mobile
             width=360,
-            height=500,
+            height=200,
             margin=dict(
                 autoexpand=False,
                 t=0,
-                l=44,
-                r=24,
+                l=0,
+                r=34,
                 b=44,
                 pad=8
             ),
             title=None,
             colorway=['#04352D', '#00715E', '#56CBB8', '#76EBD8'],
-            # bargroupgap=0.35,
+            bargroupgap=0.35,
             xaxis=dict(
                 visible=False,
-                # fixedrange=True
+                fixedrange=True
             ),
             yaxis=dict(
                 tickformat=',.0%',
-                title='% of total population',
-                # side='right',
+                title='',
+                side='right',
                 fixedrange=True
             ),
             legend=dict(
@@ -39,7 +40,6 @@ def set_default_theme():
     )
     pio.templates['web'] = go.layout.Template(
         layout=dict(
-            dragmode=False,  # allow page scrolling on mobile
             paper_bgcolor='rgba(255,255,255,0)',
             plot_bgcolor='rgba(255,255,255,0)',
         )
