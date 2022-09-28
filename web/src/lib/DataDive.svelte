@@ -1,36 +1,28 @@
 <script>
     import SocialButtons from "./SocialButtons.svelte";
-    export let sectionHeader;
-    export let sectionSubHeader;
-    export let talkingPoint1;
-    export let talkingPoint2;
-    export let takeaway1;
-    export let takeaway2;
+
+    export let header;
+    export let subheader;
 </script>
 
-<div class="py-6">
-    <h2>{sectionHeader}</h2>
-    <p>{sectionSubHeader}</p>
-</div>
-<div class="grid grid-cols-2 gap-4">
-    <div>
-        <h4 class="underline">What does the data tell?</h4>
-        <p>
-            {talkingPoint1}
-        </p>
-        <p>
-            {talkingPoint2}
-        </p>
-
-        <h5 class="pt-4 underline">Takeaways</h5>
-        <p>
-            {takeaway1}
-        </p>
-        <p>
-            {takeaway2}
-        </p>
+<div class="mx-3 grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray">
+    <div class="grid col-span-2 pt-9">
+        <h2>{header}</h2>
     </div>
-    <div class="box-border h-96 w-128 p-4 border-4">GRAPH?</div>
+    <div class="col-span-1">
+        <h4>What does the data tell?</h4>
+        <div class="space-y-6">
+            <slot name="story"/>
+        </div>
+
+        <h4 class="mt-6">Takeaways</h4>
+        <div class="space-y-6">
+            <slot name="takeaways"/>
+        </div>
+    </div>
+    <div class="flex flex-col col-span-1 -order-1 sm:order-none">
+        <slot name="figure"/>
+        <p>{subheader}</p>
+    </div>
+    <SocialButtons/>
 </div>
-<SocialButtons />
-<hr/>

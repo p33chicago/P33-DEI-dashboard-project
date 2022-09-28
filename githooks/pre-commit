@@ -1,6 +1,10 @@
 #!/bin/sh
 
 # Clear notebook outputs
-jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace notebooks/*.ipynb
-
-git add .
+changed=$(git diff --name-only --cached notebooks/*.ipynb)
+if [ -z $changed ]; then
+  exit 0
+fi
+echo "Removing notebook output from $changed"
+echo $changed | xargs jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
+echo $changed | xargs git add

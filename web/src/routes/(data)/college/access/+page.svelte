@@ -1,49 +1,38 @@
-<div class="py-6">
-    <h2>CPS K-8 STEM Magnet School Enrollment</h2>
-    <p>The proportion of CPS K-8 students...</p>
-</div>
-<div class="grid grid-cols-2 gap-4">
-    <div>
-        <h3>What does the data tell?</h3>
-        <p>Undead malus De horrifying poenae caro zombie,
-            implent sit ab Summus Craven Zombie undead, viscera Terror grusome max cerebro.
-            Cerebro mortuum ante? Nigh accedens, corpses infecti monstra walking ferae, A fames tremor.
-            Lumbering nostra viral mortuis Putridi for mauris sicut carne mortui creaturas in malum,
-            fascinati iam darkness burial agite shaun kingdead ferae monstra comedat.
+<script type="ts">
+    import Figure from "$lib/figure/Figure.svelte";
+    import DataDive from "$lib/DataDive.svelte";
+    import {college} from "$lib/domain/Lifestage.ts";
+</script>
+
+<DataDive
+        header="Illinois CS/Computing Degree Enrollment"
+        subheader="Percent of Illinois college students enrolled into a CS/Computing degree by race/ethnicity"
+>
+    <svelte:fragment slot="story">
+        <p>
+            At the Universities in Illinois,
+            Over 67 out of 100 Asian high school graduates chose CS major,
+            the ratio is 15 out of 100 for white graduates,
+            21 out of 100 for Hispanic students, and 13 out of 100 for black graduates.
         </p>
-    </div>
-    <div class="box-border h-96 w-128 p-4 border-4">GRAPH?</div>
-</div>
-<div class="py-6">
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">help fix
-        this</a>
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">download
-        data</a>
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">share
-        this</a>
-</div>
-<hr/>
-<div class="py-6">
-    <h2>8th Grade Enrollment</h2>
-    <p>The proportion of CPS 8th grade students...</p>
-</div>
-<div class="grid grid-cols-2 gap-4 p">
-    <div>
-        <h3>What does the data tell?</h3>
-        <p>Undead malus De horrifying poenae caro zombie,
-            implent sit ab Summus Craven Zombie undead, viscera Terror grusome max cerebro.
-            Cerebro mortuum ante? Nigh accedens, corpses infecti monstra walking ferae, A fames tremor.
-            Lumbering nostra viral mortuis Putridi for mauris sicut carne mortui creaturas in malum,
-            fascinati iam darkness burial agite shaun kingdead ferae monstra comedat.
-        </p>
-    </div>
-    <div class="box-border h-96 w-128 p-4 border-4">GRAPH?</div>
-</div>
-<div class="py-6">
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">help fix
-        this</a>
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">download
-        data</a>
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">share
-        this</a>
-</div>
+    </svelte:fragment>
+
+    <svelte:fragment slot="takeaways">
+        <p></p>
+    </svelte:fragment>
+    <Figure lifestage={college.route} name="cs_enrol" slot="figure"/>
+</DataDive>
+
+<DataDive
+        header="Illinois Immediate College Enrollment Rates"
+        subheader="Percent of Illinois High School graduates that immediately enroll in college by race/ethnicity"
+>
+    <svelte:fragment slot="story">
+        <p></p>
+    </svelte:fragment>
+
+    <svelte:fragment slot="takeaways">
+        <p></p>
+    </svelte:fragment>
+    <Figure lifestage={college.route} name="imdEnrol" slot="figure"/>
+</DataDive>

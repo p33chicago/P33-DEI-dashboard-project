@@ -1,11 +1,5 @@
 <script type="ts">
-    import Lipsum from "../../Lipsum.svelte";
-    import {excellence} from "../../domain/Indicator.ts";
-
-    export let score: string;
+    import {excellence} from "$lib/domain/Indicator.ts";
 </script>
 
-<h1>{score} {excellence.name}</h1>
-<!-- <p>
-    <Lipsum words="10" />
-</p> -->
+<h1 class="uppercase text-brand-primary-dark-green px-3">{excellence.name}</h1>

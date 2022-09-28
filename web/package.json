@@ -2,8 +2,11 @@
 	"name": "web",
 	"version": "0.0.1",
 	"scripts": {
+		"copy-data": "cp -r ../output/* ./static/",
+		"predev": "npm run copy-data",
 		"dev": "ENVIRONMENT=dev vite dev",
-		"build": "cp ../data/figure.json ./static/data/ && vite build",
+		"prebuild": "npm run copy-data",
+		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"test": "playwright test",
@@ -14,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.22.2",
+		"@poppanator/sveltekit-svg": "^1.0.0",
 		"@sveltejs/adapter-auto": "^1.0.0-next.74",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",

@@ -1,8 +1,12 @@
-<div class="py-6">
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">help fix
-        this</a>
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">download
-        data</a>
-    <a class="inline-block leading-8 bg-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">share
-        this</a>
+<script>
+    import ButtonGroup from "$lib/ButtonGroup.svelte";
+    import ButtonGroupItem from "$lib/ButtonGroupItem.svelte";
+</script>
+
+<div class="col-span-2 bg-none md:bg-light-gray/20 px-0 md:px-7 py-4">
+    <ButtonGroup>
+        <ButtonGroupItem primary>help fix this</ButtonGroupItem>
+        <ButtonGroupItem>download data</ButtonGroupItem>
+        <ButtonGroupItem>share this</ButtonGroupItem>
+    </ButtonGroup>
 </div>
