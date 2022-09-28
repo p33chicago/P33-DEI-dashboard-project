@@ -54,11 +54,11 @@
         <div>
             <p>
                 Skilled tech jobs are fast-growing, high-paying and resilient to economic change and companies can't fill their roles fast enough.
-                Bringing more Chicagoans into tech roles will accelerate economic growth and can address persistent reace-based income inequality.
+                Bringing more Chicagoans into tech roles will accelerate economic growth and can address persistent race-based income inequality.
             </p>
             <p>
                 But today, Black and Latino Chicagoans and women are dramatically underrepresented in these roles.
-                If we stay on this path, tech's growth will worsen race-based inequality. But we can choose another path.
+                If we stay on this path, tech's growth will worsen race-based inequity. But we can choose another path.
             </p>
             <p>
                 This is Chicagoland's first effort to understand the full picture of what it will take to make Chicago the most inclusive tech city in the country.

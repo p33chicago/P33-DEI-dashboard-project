@@ -60,7 +60,7 @@
             national average.
         </p>
         <p>
-            Minor inequality detected in this metric.
+            Minor inequity detected in this metric.
         </p>
     </svelte:fragment>
     <svelte:fragment slot="takeaways">
