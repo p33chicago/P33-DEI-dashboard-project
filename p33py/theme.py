@@ -7,21 +7,21 @@ def set_default_theme():
         layout=dict(
             autosize=False,
             dragmode=False, # allow page scrolling on mobile
-            width=360,
+            width=365,
             height=200,
             margin=dict(
                 autoexpand=False,
                 t=0,
                 l=0,
-                r=34,
-                b=44,
+                r=40,
+                b=60,
                 pad=8
             ),
             title=None,
             colorway=['#04352D', '#00715E', '#56CBB8', '#76EBD8'],
             bargroupgap=0.35,
             xaxis=dict(
-                visible=False,
+                # visible=False,
                 fixedrange=True
             ),
             yaxis=dict(
@@ -33,7 +33,7 @@ def set_default_theme():
             legend=dict(
                 orientation='h',
                 title='',
-                y=0,
+                y=-0.2,
                 x=0,
             ),
         )
