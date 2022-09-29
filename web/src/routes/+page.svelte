@@ -100,7 +100,7 @@
     <!-- Takeaways -->
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="47% vs 14%">
-            <img slot="graphic" src="/diverse-roles.svg" class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/diverse-roles.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 Nearly half the Cook County population is Black or Latino, but those groups get only 14% of the
                 high-skilled tech jobs.
@@ -109,7 +109,7 @@
     </div>
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="42% vs 22%">
-            <img slot="graphic" src="/graduation-hat.svg" class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/graduation-hat.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 Illinois college graduates in computing are 22% Black or Latino despite being 42% of all Illinois high
                 school graduates.
@@ -118,7 +118,7 @@
     </div>
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="400% more">
-            <img slot="graphic" src="/homogenous.svg" class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/homogenous.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino 8th graders meet math
                 proficiency standards to close gaps with other groups… And we need to get 5,500 more Black and Latino
@@ -128,7 +128,7 @@
     </div>
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="5,000+">
-            <img slot="graphic" src="/hands-puzzle.svg" class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/hands-puzzle.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to get 5,500
                 more 8th Black and Latino 8th graders to advanced standards, and enroll 5,100 more Black and Latino
@@ -139,7 +139,7 @@
 
     <div class="flex col-span-1 sm:col-span-4 rounded-lg bg-brand-primary-light-green/30">
         <CTASection title="What can you do to help?" href="#" link_text="see opportunities">
-            <img slot="graphic" src="/chicago.svg" class="hidden sm:block w-32 h-48 mix-blend-overlay"/>
+            <img slot="graphic" src={`${base}/chicago.svg`} class="hidden sm:block w-32 h-48 mix-blend-overlay"/>
             <p class="text-xl">Every org can play a role in building a more inclusive TechChicago</p>
         </CTASection>
     </div>
