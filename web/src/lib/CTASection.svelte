@@ -4,7 +4,6 @@
     export let link_text: string;
 </script>
 
-<div class="flex col-span-4 rounded-lg bg-brand-primary-light-green/30">
     <slot name="graphic"/>
     <div class="px-9 py-7">
         <h2 class="text-3xl font-sans-alternate text-black">What can you do to help?</h2>
@@ -14,4 +13,3 @@
             {link_text}
         </a>
     </div>
-</div>
