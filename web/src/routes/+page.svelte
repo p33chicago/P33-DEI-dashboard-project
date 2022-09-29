@@ -1,51 +1,13 @@
 <script>
-    import Figure from '$lib/figure/Figure.svelte';
-    import Card from '$lib/cards/Card.svelte';
-	import { base } from '$app/paths';
-	import CardText from '$lib/cards/CardText.svelte';
+    import {base} from '$app/paths';
+    import CardText from '$lib/cards/CardText.svelte';
+    import CTASection from "$lib/CTASection.svelte";
 </script>
 
 <svelte:head>
     <title>Home</title>
     <meta name="description" content="P33"/>
 </svelte:head>
-
-<!-- <div class="snap-start space-y-4 text-center h-screen">
-    <Card>
-		<h1 class="capitalize"><a href={`${base}/k8/access`}>K-8</a></h1>
-        <p>City of Chicago</p>
-    </Card>
-    <Card>
-        <Figure id="figure"/>
-    </Card>
-</div>
-<div class="snap-start space-y-4 text-center h-screen">
-    <Card>
-		<h1 class="capitalize"><a href={`${base}/hs/access`}>High school</a></h1>
-        <p>City of Chicago</p>
-    </Card>
-    <Card>
-        <Figure id="figure"/>
-    </Card>
-</div>
-<div class="snap-start space-y-4 text-center h-screen">
-    <Card>
-		<h1 class="capitalize"><a href={`${base}/college/access`}>College</a></h1>
-        <p>City of Chicago</p>
-    </Card>
-    <Card>
-        <Figure id="figure"/>
-    </Card>
-</div>
-<div class="snap-start space-y-4 text-center h-screen">
-    <Card>
-		<h1 class="capitalize"><a href={`${base}/career/access`}>Career</a></h1>
-        <p>City of Chicago</p>
-    </Card>
-    <Card>
-        <Figure id="figure"/>
-    </Card>
-</div> -->
 
 <div class="grid grid-cols-4 gap-4 pb-64 px-24 pt-8">
     <!-- top part -->
@@ -129,12 +91,10 @@
         <div>
             <h4>47% vs 14%</h4>
             <p>Black and Latinx population...</p>
-        </div>  
+        </div>
     </div>
-    <div class="col-span-1">icon here</div>
-    <div class="col-span-3">
-        <h5>What can you do to help</h5>
+    <CTASection title="What can you do to help?" href="#" link_text="see opportunities">
+        <img slot="graphic" src="/chicago.svg" class="w-32 h-48 mix-blend-overlay" />
         <p>Every org can play a role in building a more inclusive TechChicago</p>
-        <a class="inline-block leading-8 bg-brand-primary-dark-green text-white border-2 rounded md:px-3 lg:px-4 uppercase" href="#">see opportunites</a>
-    </div>
+    </CTASection>
 </div>
