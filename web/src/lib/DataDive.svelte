@@ -7,11 +7,9 @@
 
 <div class="mx-3 grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray">
     <div class="grid col-span-2 pt-9">
-        <h2 class="mx-2">{header}</h2>
-        <p class="mx-2">{subheader}</p>
-        <slot name="figure"/>
+        <h2>{header}</h2>
     </div>
-    <div class="mx-2 col-span-2">
+    <div class="col-span-1">
         <h4>What does the data tell?</h4>
         <div class="space-y-6">
             <slot name="story"/>
@@ -21,6 +19,10 @@
         <div class="space-y-6">
             <slot name="takeaways"/>
         </div>
+    </div>
+    <div class="flex flex-col col-span-1 -order-1 sm:order-none">
+        <slot name="figure"/>
+        <p>{subheader}</p>
     </div>
     <SocialButtons/>
 </div>

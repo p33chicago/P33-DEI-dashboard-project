@@ -5,39 +5,34 @@ def set_default_theme():
     # print(str(pio.templates['plotly']))
     pio.templates['p33'] = go.layout.Template(
         layout=dict(
-            # autosize=False,
-            width=300,
+            autosize=False,
+            width=365,
             height=200,
             margin=dict(
-                t=0,
+                t=30,
                 l=0,
-                r=20,
-                b=0,
-                pad=0
+                r=40,
+                b=54,
+                pad=8
             ),
             title=None,
             colorway=['#04352D', '#00715E', '#56CBB8', '#76EBD8'],
-            bargroupgap=0.125,
+            bargroupgap=0.35,
             xaxis=dict(
-                visible=False,
+                side='top'
             ),
             yaxis=dict(
-                tickangle=90,
+                tickformat=',.0%',
+                title='',
                 side='right',
-                # visible=True,
-                # tickformat=',.0%',
-                # title='',
-                # tickangle=90,
-                # fixedrange=True,
+                fixedrange=True
             ),
             legend=dict(
-                borderwidth=0,
-                # itemwidth=30,
                 orientation='h',
                 title='',
-                x=-0.0125,
+                x=0,
                 y=0,
-                # yanchor='top'
+                yanchor='top'
             ),
         )
     )
