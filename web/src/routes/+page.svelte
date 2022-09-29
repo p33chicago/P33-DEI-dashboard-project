@@ -140,7 +140,7 @@
     <div class="flex col-span-1 sm:col-span-4 rounded-lg bg-brand-primary-light-green/30">
         <CTASection title="What can you do to help?" href="#" link_text="see opportunities">
             <img slot="graphic" src={`${base}/chicago.svg`} class="hidden sm:block w-32 h-48 mix-blend-overlay"/>
-            <p class="text-xl">Every org can play a role in building a more inclusive TechChicago</p>
+            <p class="text-xl text-mono">Every organization can play a role in building a more inclusive TechChicago</p>
         </CTASection>
     </div>
 </BodyContentContainer>

@@ -6,8 +6,8 @@
 
     <slot name="graphic"/>
     <div class="px-9 py-7">
-        <h2 class="text-3xl font-sans-alternate text-black">What can you do to help?</h2>
-        <p class="font-mono">Every organization can play a role in building a more inclusive TechChicago</p>
+        <h2 class="text-3xl font-sans-alternate text-black">{title}</h2>
+        <slot />
         <a class="inline-block leading-10 bg-brand-primary-dark-green text-white border-2 rounded-full font-sans-alternate mt-3.5 px-11 uppercase"
            {href}>
             {link_text}
