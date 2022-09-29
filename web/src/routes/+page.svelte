@@ -85,8 +85,10 @@
 <div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat">
     <BodyContentContainer>
         <!-- mid part -->
-        <h1 class="text-white text-5xl col-span-1 sm:col-span-4">Scorecard</h1>
-        <div class="text-white col-span-1 sm:col-span-4">pretty stuff here</div>
+        <div class="py-6">
+            <h1 class="text-white text-5xl col-span-1 sm:col-span-4">Scorecard</h1>
+            <div class="text-white col-span-1 sm:col-span-4">pretty stuff here</div>
+        </div>
     </BodyContentContainer>
 </div>
 <BodyContentContainer>
