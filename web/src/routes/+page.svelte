@@ -41,42 +41,55 @@
     <div class="-order-1 sm:order-none col-span-1 sm:col-span-2 justify-self-center">
         <img src={`${base}/equity-diagram.png`} alt=""/>
     </div>
-    <div>
-        <CardText>
-            <h2>Why it matters</h2>
-            <p>
-                The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-            </p>
-        </CardText>
-    </div>
-    <div>
-        <CardText>
-            <h2>Why it matters</h2>
-            <p>
-                The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-            </p>
-        </CardText>
-    </div>
-    <div>
-        <CardText>
-            <h2>Why it matters</h2>
-            <p>
-                The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-            </p>
-        </CardText>
-    </div>
-    <div>
-        <CardText>
-            <h2>Why it matters</h2>
-            <p>
-                The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-            </p>
-        </CardText>
-    </div>
-    <!-- mid part -->
-    <div class="col-span-1 sm:col-span-4 bg-chicago bg-chicago bg-blend-screen">
-        MID SECTION
-    </div>
+</BodyContentContainer>
+<div class="w-full bg-brand-primary-light-green/30">
+    <BodyContentContainer>
+        <div>
+            <CardText>
+                <h2>Why it matters</h2>
+                <p>
+                    The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry
+                    when guys take advantage of them. Uh, you mean nobody's asked you?
+                </p>
+            </CardText>
+        </div>
+        <div>
+            <CardText>
+                <h2>Why it matters</h2>
+                <p>
+                    The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry
+                    when guys take advantage of them. Uh, you mean nobody's asked you?
+                </p>
+            </CardText>
+        </div>
+        <div>
+            <CardText>
+                <h2>Why it matters</h2>
+                <p>
+                    The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry
+                    when guys take advantage of them. Uh, you mean nobody's asked you?
+                </p>
+            </CardText>
+        </div>
+        <div>
+            <CardText>
+                <h2>Why it matters</h2>
+                <p>
+                    The future, it's where you're going? Let's get him. Go. Well, because George, nice girls get angry
+                    when guys take advantage of them. Uh, you mean nobody's asked you?
+                </p>
+            </CardText>
+        </div>
+    </BodyContentContainer>
+</div>
+<div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat">
+    <BodyContentContainer>
+        <!-- mid part -->
+        <h1 class="text-white text-5xl col-span-1 sm:col-span-4">Scorecard</h1>
+        <div class="text-white col-span-1 sm:col-span-4">pretty stuff here</div>
+    </BodyContentContainer>
+</div>
+<BodyContentContainer>
     <!-- bottom part -->
     <h3 class="col-span-1 sm:col-span-4">Black and Latinx Chicagoans, trans, non-binary and women remain
         underrepresented in high-paid
