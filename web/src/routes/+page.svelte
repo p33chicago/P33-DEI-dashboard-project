@@ -2,6 +2,8 @@
     import {base} from '$app/paths';
     import CardText from '$lib/cards/CardText.svelte';
     import CTASection from "$lib/CTASection.svelte";
+    import Takeaway from "$lib/Takeaway.svelte";
+    import BodyContentContainer from "$lib/BodyContentContainer.svelte";
 </script>
 
 <svelte:head>
@@ -9,7 +11,7 @@
     <meta name="description" content="P33"/>
 </svelte:head>
 
-<div class="grid grid-cols-4 gap-4 pb-64 px-24 pt-8">
+<BodyContentContainer>
     <!-- top part -->
     <div class="col-span-2">
         <h1>Our Challenge, <span class="bg-heads-up-yellow p-1">Our Opportunity</span></h1>
@@ -68,33 +70,55 @@
         </CardText>
     </div>
     <!-- mid part -->
-     <div class="col-span-4 bg-chicago bg-brand-primary-dark-green-banner-background bg-blend-screen">
-       MID SECTION
-     </div>
+    <div class="col-span-4 bg-chicago bg-chicago bg-blend-screen">
+        MID SECTION
+    </div>
     <!-- bottom part -->
-    <h3 class="col-span-4">Black and Latinx Chicagoans, trans, non-binary and women remain underrepresented in high-paid technical roles</h3>
-    <div class="col-span-2">
-        <div>
-            <h4>47% vs 14%</h4>
-            <p>Black and Latinx population...</p>
-        </div>
-        <div>
-            <h4>47% vs 14%</h4>
-            <p>Black and Latinx population...</p>
-        </div>     
+    <h3 class="col-span-4">Black and Latinx Chicagoans, trans, non-binary and women remain underrepresented in high-paid
+        technical roles</h3>
+
+    <!-- Takeaways -->
+    <div class="flex col-span-2">
+        <Takeaway heading="47% vs 14%">
+            <img slot="graphic" src="/diverse-roles.svg" class="self-start w-[147px] aspect-square"/>
+            <p>
+                Nearly half the Cook County population is Black or Latino, but those groups get only 14% of the
+                high-skilled tech jobs.
+            </p>
+        </Takeaway>
     </div>
-    <div class="col-span-2">
-        <div>
-            <h4>47% vs 14%</h4>
-            <p>Black and Latinx population...</p>
-        </div>
-        <div>
-            <h4>47% vs 14%</h4>
-            <p>Black and Latinx population...</p>
-        </div>
+    <div class="flex col-span-2">
+        <Takeaway heading="42% vs 22%">
+            <img slot="graphic" src="/graduation-hat.svg" class="self-start w-[147px] aspect-square"/>
+            <p>
+                Illinois college graduates in computing are 22% Black or Latino despite being 42% of all Illinois high
+                school graduates.
+            </p>
+        </Takeaway>
     </div>
+    <div class="flex col-span-2">
+        <Takeaway heading="400% more">
+            <img slot="graphic" src="/homogenous.svg" class="self-start w-[147px] aspect-square"/>
+            <p>
+                We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino 8th graders meet math
+                proficiency standards to close gaps with other groups… And we need to get 5,500 more Black and Latino
+                8th graders to advanced standards to close gaps.
+            </p>
+        </Takeaway>
+    </div>
+    <div class="flex col-span-2">
+        <Takeaway heading="5,000+">
+            <img slot="graphic" src="/hands-puzzle.svg" class="self-start w-[147px] aspect-square"/>
+            <p>
+                Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to get 5,500
+                more 8th Black and Latino 8th graders to advanced standards, and enroll 5,100 more Black and Latino
+                students into AP Computer Science. Right highlights: "advanced" and "AP Computer Science"
+            </p>
+        </Takeaway>
+    </div>
+
     <CTASection title="What can you do to help?" href="#" link_text="see opportunities">
-        <img slot="graphic" src="/chicago.svg" class="w-32 h-48 mix-blend-overlay" />
-        <p>Every org can play a role in building a more inclusive TechChicago</p>
+        <img slot="graphic" src="/chicago.svg" class="w-32 h-48 mix-blend-overlay"/>
+        <p class="text-xl">Every org can play a role in building a more inclusive TechChicago</p>
     </CTASection>
-</div>
+</BodyContentContainer>
