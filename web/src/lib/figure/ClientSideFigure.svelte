@@ -29,8 +29,8 @@
             // Graph hasn't loaded yet
             return;
         }
-        layout.width = canvas.clientWidth
-        layout.height = canvas.clientHeight
+        // layout.width = canvas.clientWidth
+        // layout.height = canvas.clientHeight
         Plotly.react(canvas, data, layout, config);
     }
 
@@ -47,8 +47,9 @@
 
 <style>
     div {
+        /*margin: -9px;*/
         width: 100%;
-        aspect-ratio: 1/1;
+        /*aspect-ratio: 1/1;*/
         overflow: auto;
     }
 </style>
