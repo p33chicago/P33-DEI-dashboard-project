@@ -2,10 +2,11 @@ import plotly.express as px
 
 
 def figure(metric):
-    metric['var_scope'] = metric.var_scope.str\
-        .replace('city_chi', 'Chicago')\
-        .replace('state_il', 'Illinois')\
+    metric['var_scope'] = metric.var_scope.str \
+        .replace('city_chi', 'Chicago') \
+        .replace('state_il', 'Illinois') \
         .replace('usa', 'USA')
+    metric['var_ethnic'] = metric.var_ethnic.str.capitalize()
 
     fig = px.bar(metric,
                  x=metric.var_scope,
@@ -16,6 +17,7 @@ def figure(metric):
     fig.update_traces(
         texttemplate='%{y:.1%}',
         textangle=90,
+        hovertemplate="%{data.name}: %{y:.2%} (%{x})<extra></extra>"
     )
     fig.update_yaxes(title='')
     fig.update_xaxes(title='')

@@ -2,6 +2,7 @@
 	"name": "web",
 	"version": "0.0.1",
 	"scripts": {
+		"precopy-data": "cd .. && python build.py",
 		"copy-data": "cp -r ../output/* ./static/",
 		"predev": "npm run copy-data",
 		"dev": "ENVIRONMENT=dev vite dev",

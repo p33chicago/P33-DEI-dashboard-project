@@ -15,6 +15,7 @@
 <script lang="ts">
     import type {Lifestage} from "$lib/Lifestage.ts";
     import {assets} from '$app/paths';
+    import {dev} from '$app/environment'
 
     export let lifestage: Lifestage['name'];
     export let name: string;
@@ -32,6 +33,9 @@
         layout.width = canvas.clientWidth
         layout.height = canvas.clientHeight
         Plotly.react(canvas, data, layout, config);
+        if (dev) {
+            canvas.on('plotly_hover', console.log)
+        }
     }
 
     const init = async () => {
