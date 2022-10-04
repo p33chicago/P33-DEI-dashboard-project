@@ -24,12 +24,15 @@ module.exports = {
       'card': '0 4px 4px rgb(0 0 0 / 0.25)'
     },
     extend: {
+      fontSize: {
+        'xs': '10px'
+      },
       borderColor: ({theme}) => ({
         DEFAULT: theme('colors.brand-primary-dark-green')
       }),
       colors: {
         'black': '#04352d',
-        'dark-gray': '#0F2A43',
+        'dark-gray': '#787A7D',
         'medium-gray': '#B8B6B6',
         'light-gray': '#d9d9d9',
         'really-light-gray': '#e0e5ec',

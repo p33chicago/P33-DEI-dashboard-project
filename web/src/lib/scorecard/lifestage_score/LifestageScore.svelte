@@ -7,7 +7,7 @@
     let { area, score, indicators} = lifestage
 </script>
 
-<div class="bg-white py-3.5 px-2">
+<div class="bg-white text-black py-3.5 px-2">
     <Header {lifestage} {area} {score}/>
     <div class="bg-light-gray w-[268px] h-[113px]">
         <em class="text-white w-full h-full block leading-[113px] text-center">placeholder</em>
