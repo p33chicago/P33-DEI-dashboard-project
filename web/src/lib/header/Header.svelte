@@ -42,8 +42,8 @@
                         href={`${base}/scorecard`}>Scorecard</a>
                 </li>
                 <!-- mobile subnav -->
-                <li class="pl-4 pt-1 pb-2">
-                    <details class="fullnav:hidden open:bg-white">
+                <li class="fullnav:hidden pl-4 pt-1 pb-2">
+                    <details class="open:bg-white">
                         <summary class="text-brand-primary-dark-green leading-6 select-none">
                             <span class="leading-8">{k8.name}</span>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
@@ -60,8 +60,8 @@
                         </div>
                     </details>
                 </li>
-                <li class="pl-4 pt-1 pb-2">
-                    <details class="fullnav:hidden open:bg-white">
+                <li class="fullnav:hidden pl-4 pt-1 pb-2">
+                    <details class="open:bg-white">
                         <summary class="text-brand-primary-dark-green leading-6 select-none">
                             <span class="leading-8">{highSchool.name}</span>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
@@ -78,8 +78,8 @@
                         </div>
                     </details>
                 </li>
-                <li class="pl-4 pt-1 pb-2">
-                    <details class="fullnav:hidden open:bg-white">
+                <li class="fullnav:hidden pl-4 pt-1 pb-2">
+                    <details class="open:bg-white">
                         <summary class="text-brand-primary-dark-green leading-6 select-none">
                             <span class="leading-8">{college.name}</span>
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
@@ -96,8 +96,8 @@
                         </div>
                     </details>
                 </li>
-                <li class="pl-4 pt-1 pb-2">
-                    <details class="fullnav:hidden open:bg-white">
+                <li class="fullnav:hidden pl-4 pt-1 pb-2">
+                    <details class="open:bg-white">
                         <summary class="text-brand-primary-dark-green leading-6 select-none">
                             <span class="leading-8">{career.name}</span>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
