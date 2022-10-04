@@ -36,10 +36,10 @@
 
         <nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
             <ul class="fullnav:flex">
-                <li class:active={$page.url.pathname === `${base}/scorecard`}>
+                <li class:active={$page.url.pathname === `${base}/index`}>
                     <a
                         class="h-full w-full"
-                        href={`${base}/scorecard`}>Scorecard</a>
+                        href={`${base}/index`}>Index</a>
                 </li>
                 <!-- mobile subnav -->
                 <li class="fullnav:hidden pl-4 pt-1 pb-2">
@@ -113,8 +113,6 @@
                             </ul>
                         </div>
                     </details>
-                </li>
-                <li class:active={$page.url.pathname === `${base}/methodology`}><a href={`${base}/methodology`}>Methodology</a>
                 </li>
                 <li class:active={$page.url.pathname === `${base}/resources`}><a
                         href={`${base}/resources`}>Resources</a></li>

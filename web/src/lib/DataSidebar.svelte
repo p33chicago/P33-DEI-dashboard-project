@@ -10,9 +10,9 @@
     <Card>
         <ul class="uppercase font-sans-alternate mx-3 text-brand-primary-green">
             {#if !lifestage}
-                <li class="font-bold capitalize leading-8">scorecard</li>
+                <li class="font-bold capitalize leading-8">index</li>
             {:else}
-                <li class="capitalize"><a class="text-black" href={`${base}/scorecard`}>scorecard</a></li>
+                <li class="capitalize"><a class="text-black" href={`${base}/index`}>index</a></li>
             {/if}
             {#each lifestages as _lifestage}
                 {#if lifestage === _lifestage}
