@@ -15,7 +15,7 @@ const config = {
     ],
     kit: {
         paths: {
-            base: dev ? '' : '/P33-DEI-dashboard-project'
+            // base: dev ? '' : '/P33-DEI-dashboard-project'
         },
         adapter: adapter()
     },
