@@ -88,9 +88,17 @@
         </div>
     </BodyContentContainer>
 </div>
-<div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat">
+<div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat text-white">
     <BodyContentContainer>
-        <h1 class="text-white text-5xl col-span-1 sm:col-span-4">Scorecard</h1>
+        <h1 class="text-white underline decoration-heads-up-yellow underline-offset-8 text-5xl col-span-1 sm:col-span-4">
+            Scorecard</h1>
+        <p class="font-mono col-span-1 sm:col-span-4 pb-6">The Equity Index score of 0 – 100 measures the gap between how we
+            are
+            serving different racial and ethnic populations on tech career pathways. An Equity Index score of 100 would
+            indicate that we are providing equal access to all groups and serving them equally well. Scores further from
+            100 indicate our “distance from equity,” with Black and Latino populations receiving less access to
+            opportunity and experiencing worse outcomes. Think of any score below 90 as a major concern.
+        </p>
         <Scorecard {scorecard}/>
     </BodyContentContainer>
 </div>

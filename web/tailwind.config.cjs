@@ -41,7 +41,7 @@ module.exports = {
         'fail-red': '#981717',
         'warn-orange': '#ff7213',
         'heads-up-yellow': '#ffa913',
-        'background-map': '#2C7261'
+        'background-map': '#0a8e78'
       },
       backgroundImage: {
         'chicago': "url('/chicago.svg')",
