@@ -1,9 +1,14 @@
-<script>
+<script type="ts">
     import {base} from '$app/paths';
     import CardText from '$lib/cards/CardText.svelte';
     import CTASection from "$lib/CTASection.svelte";
     import Takeaway from "$lib/Takeaway.svelte";
     import BodyContentContainer from "$lib/BodyContentContainer.svelte";
+    import Scorecard from "$lib/scorecard/Scorecard.svelte";
+    import type {Scorecard as ScorecardType} from '$lib/domain/Scorecard.ts'
+
+    export let data: { scorecard: ScorecardType };
+    let {scorecard} = data;
 </script>
 
 <svelte:head>
@@ -13,7 +18,8 @@
 
 <BodyContentContainer>
     <!-- top part -->
-    <h1 class="order-first col-span-1 sm:col-span-4">Our Challenge, <span class="bg-heads-up-yellow p-1">Our Opportunity</span></h1>
+    <h1 class="order-first col-span-1 sm:col-span-4">Our Challenge, <span
+            class="bg-heads-up-yellow p-1">Our Opportunity</span></h1>
     <div class="col-span-1 sm:col-span-2">
         <p>
             Skilled tech jobs are fast-growing, high-paying and resilient to economic change and companies can't
@@ -84,11 +90,8 @@
 </div>
 <div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat">
     <BodyContentContainer>
-        <!-- mid part -->
-        <div class="py-6">
-            <h1 class="text-white text-5xl col-span-1 sm:col-span-4">Scorecard</h1>
-            <div class="text-white col-span-1 sm:col-span-4">pretty stuff here</div>
-        </div>
+        <h1 class="text-white text-5xl col-span-1 sm:col-span-4">Scorecard</h1>
+        <Scorecard {scorecard}/>
     </BodyContentContainer>
 </div>
 <BodyContentContainer>
@@ -100,7 +103,8 @@
     <!-- Takeaways -->
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="47% vs 14%">
-            <img slot="graphic" src={`${base}/diverse-roles.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/diverse-roles.svg`}
+                 class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 Nearly half the Cook County population is Black or Latino, but those groups get only 14% of the
                 high-skilled tech jobs.
@@ -109,7 +113,8 @@
     </div>
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="42% vs 22%">
-            <img slot="graphic" src={`${base}/graduation-hat.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/graduation-hat.svg`}
+                 class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 Illinois college graduates in computing are 22% Black or Latino despite being 42% of all Illinois high
                 school graduates.
@@ -128,7 +133,8 @@
     </div>
     <div class="flex col-span-1 sm:col-span-2">
         <Takeaway heading="5,000+">
-            <img slot="graphic" src={`${base}/hands-puzzle.svg`} class="self-start w-[64px] sm:w-[147px] aspect-square"/>
+            <img slot="graphic" src={`${base}/hands-puzzle.svg`}
+                 class="self-start w-[64px] sm:w-[147px] aspect-square"/>
             <p>
                 Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to get 5,500
                 more 8th Black and Latino 8th graders to advanced standards, and enroll 5,100 more Black and Latino
