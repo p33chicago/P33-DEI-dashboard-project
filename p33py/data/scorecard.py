@@ -1,6 +1,6 @@
 import importlib
 
-from p33py.equity_indices import combiner_CHIAndIL, EI_metric_FourG_geomean, EI_dimensions_FourG_geomean, \
+from p33py.equity_indices import combiner_CHIAndIL, EI_metric_FourG_geomean, EI_indicators_FourG_geomean, \
     EI_stages_FourG_geomean
 from p33py.data.index import index
 
@@ -13,6 +13,5 @@ for module_name in list(index['module']):
 
 metrics_CHI = combiner_CHIAndIL(*all_metrics)
 EI_metric_CHI = EI_metric_FourG_geomean(metrics_CHI)
-EI_dimensions_CHI = EI_dimensions_FourG_geomean(metrics_CHI)
-
-EI_stages_CHI = EI_stages_FourG_geomean(metrics_CHI)
+EI_indicators_CHI = EI_indicators_FourG_geomean(metrics_CHI)
+EI_lifestages_CHI = EI_stages_FourG_geomean(metrics_CHI)

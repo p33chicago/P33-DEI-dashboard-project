@@ -42,17 +42,17 @@ def EI_metric_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
     df_metrics_selected['II_metric_SQRT'] = df_metrics_selected['II_metric'] ** 0.5
     # scaling
     ''' find the most inequal metrics and use its II_SQRT as benchmark'''
-    df_metrics_selected['II_metric_MAX'] = df_metrics_selected['II_metric_SQRT'].max()
+    df_metrics_selected['II_metric_SQRT_MAX'] = df_metrics_selected['II_metric_SQRT'].max()
     ''' Transform II_SQURT to EI, the equality index'''
     df_metrics_selected['EI_metric'] = (
-                100 - ((df_metrics_selected['II_metric_SQRT'] / df_metrics_selected['II_metric_MAX']) * 100))
+                100 - ((df_metrics_selected['II_metric_SQRT'] / df_metrics_selected['II_metric_SQRT_MAX']) * 100))
     ''' Caculate the weighted EI'''
     df_metrics_selected['EI_metric_weighted'] = df_metrics_selected['EI_metric'] * df_metrics_selected['weight']
 
     return df_metrics_selected
 
 
-def EI_dimensions_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
+def EI_indicators_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
     """Returns Equality Index of dimensions using geometric mean when there are 4 ethnic groups"""
 
     # Copy input to avoid updating original dataframe
@@ -80,7 +80,7 @@ def EI_stages_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
     df_metrics_selected = df_metrics_selected.copy()
 
     ''' Caculate the weighted EI for each metrics'''
-    df_dimension_EI = EI_dimensions_FourG_geomean(df_metrics_selected)
+    df_indicators_EI = EI_indicators_FourG_geomean(df_metrics_selected)
 
     ''' define the function that generates weighted EI for each dimensions'''
 
@@ -125,7 +125,7 @@ def EI_stages_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
         return df_dim_EI_weighted
 
     ''' Use the function above to generate a dataframe with weighted EI of dimensions'''
-    df_dimension_EI_weighted = generates_dim_weight(df_dimension_EI)
+    df_dimension_EI_weighted = generates_dim_weight(df_indicators_EI)
 
     ''' caculate the EI of each educational stages'''
     df_stage_EI = df_dimension_EI_weighted.groupby(by=['stage', 'var_scope']).sum('weighted_EI_dim').drop(
@@ -138,6 +138,6 @@ def EI_stages_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
     df_stage_EI.reset_index(inplace=True)
 
     ''' Drop redundant columns '''
-    df_stage_EI = df_stage_EI.loc[:, ['EI_dim_weighted']]
+    df_stage_EI = df_stage_EI.loc[:, ['weighted_EI_stage', 'stage']]
 
     return df_stage_EI
