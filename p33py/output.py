@@ -5,7 +5,8 @@ from typing import Literal
 from plotly import io as pio
 
 from p33py.data.index import index
-from p33py.figure import figure
+from p33py.data.scorecard import EI_dimensions_CHI, EI_stages_CHI
+from p33py.figures import vertical_bars
 from p33py.table import table
 
 _output_dir = '../output'
@@ -39,7 +40,7 @@ def figures(format: Format = 'json'):
     for datum, dir, path in _each_datum('figures', format):
         _mkdirs(dir)
 
-        fig = figure(datum)
+        fig = vertical_bars(datum)
         if format == 'json':
             pio.write_json(fig, path)
         elif format == 'html':
@@ -60,9 +61,19 @@ def tables():
             t.to_json(f)
         print(f'Wrote {path}')
 
+def equity_indices():
+    EI_stages_path = os.path.abspath(f'{_output_dir}/lifestages.json')
+    EI_stages_CHI.to_json(EI_stages_path)
+    print(f'Wrote {EI_stages_path}')
+
+    EI_dimensions_path = os.path.abspath(f'{_output_dir}/indicators.json')
+    EI_dimensions_CHI.to_json(EI_dimensions_path)
+    print(f'Wrote {EI_dimensions_path}')
+
 
 if __name__ == '__main__':
     output_dir('../output')
+    equity_indices()
     figures(format='json')
     figures(format='svg')
     tables()

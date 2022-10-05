@@ -1,7 +1,7 @@
 import plotly.express as px
 
 
-def figure(metric):
+def vertical_bars(metric):
     metric['var_scope'] = metric.var_scope.str \
         .replace('city_chi', 'Chicago') \
         .replace('state_il', 'Illinois') \

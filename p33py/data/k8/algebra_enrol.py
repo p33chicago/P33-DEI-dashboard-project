@@ -1,7 +1,7 @@
 """Ratio of students enrolled in algebra to all students for each race"""
 
 from p33py.df import df
-from p33py.data.metrics import metric_DEI_FourG_twoScopes
+from p33py.metrics import metric_DEI_FourG_twoScopes
 
 
 def calculate():
