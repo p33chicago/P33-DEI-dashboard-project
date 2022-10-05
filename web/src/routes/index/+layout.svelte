@@ -2,6 +2,8 @@
     import DataSidebar from "$lib/DataSidebar.svelte";
     import BodyContentContainer from "$lib/BodyContentContainer.svelte";
     import BannerTitle from "$lib/BannerTitle.svelte";
+    import CardPage from "../../lib/cards/CardPage.svelte";
+    import MathEquation from "../../lib/MathEquation.svelte";
 </script>
 
 <svelte:head>
