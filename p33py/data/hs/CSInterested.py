@@ -1,5 +1,5 @@
 from p33py.df import df
-from p33py.data.metrics import metric_DEI_FourG_oneScope
+from p33py.metrics import metric_DEI_FourG_oneScope
 
 def calculate():
     return metric_DEI_FourG_oneScope(df,
