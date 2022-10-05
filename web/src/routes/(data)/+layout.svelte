@@ -16,7 +16,7 @@
 </svelte:head>
 
 <BannerTitle
-        title="Kindergarten-8th, High School, College, Career"
+        title={lifestage.name}
         subtitle="Equity index scorecard"
 />
 

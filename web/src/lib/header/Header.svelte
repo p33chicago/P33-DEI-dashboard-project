@@ -1,12 +1,12 @@
 <script lang="ts">
     import {page} from '$app/stores';
     import {assets, base} from '$app/paths'
-    import {default_scorecard_path, pathname_pattern} from "$lib/pathnames.js";
-    import {k8, highSchool, college, career} from "$lib/domain/Lifestage.ts"
-    import {access, proficiency, excellence} from "$lib/domain/Indicator.ts"
+    import {lifestages} from "../domain/Lifestage.js";
+    import {indicators} from "../domain/Indicator";
 
     let nav_checkbox;
     const hide_nav = () => nav_checkbox.checked = false;
+    const dont_hide_nav = () => {};
 </script>
 
 <header class="font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10">
@@ -34,86 +34,34 @@
             <div></div>
         </div>
 
-        <nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
-            <ul class="fullnav:flex">
+        <nav class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green">
+            <ul class="fullnav:flex" on:click={hide_nav}>
                 <li class:active={$page.url.pathname === `${base}/index`}>
                     <a
                         class="h-full w-full"
                         href={`${base}/index`}>Index</a>
                 </li>
                 <!-- mobile subnav -->
-                <li class="fullnav:hidden pl-4 pt-1 pb-2">
-                    <details class="open:bg-white">
-                        <summary class="text-brand-primary-dark-green leading-6 select-none">
-                            <span class="leading-8">{k8.name}</span>
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
-                                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-                            </svg>
-                        </summary>
-
-                        <div class="mt-3 text-sm leading-6">
-                            <ul>
-                                <li><a href={`${base}/${k8.route}/${access.route}`} class="hover:text-brand-primary-green">Access</a></li>
-                                <li><a href={`${base}/${k8.route}/${proficiency.route}`} class="hover:text-brand-primary-green">Proficiency</a></li>
-                                <li><a href={`${base}/${k8.route}/${excellence.route}`} class="hover:text-brand-primary-green">Excellence</a></li>
-                            </ul>
-                        </div>
-                    </details>
-                </li>
-                <li class="fullnav:hidden pl-4 pt-1 pb-2">
-                    <details class="open:bg-white">
-                        <summary class="text-brand-primary-dark-green leading-6 select-none">
-                            <span class="leading-8">{highSchool.name}</span>
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
-                                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-                            </svg>
-                        </summary>
-
-                        <div class="mt-3 text-sm leading-6">
-                            <ul>
-                                <li><a href={`${base}/${highSchool.route}/${access.route}`} class="hover:text-brand-primary-green">Access</a></li>
-                                <li><a href={`${base}/${highSchool.route}/${proficiency.route}`} class="hover:text-brand-primary-green">Proficiency</a></li>
-                                <li><a href={`${base}/${highSchool.route}/${excellence.route}`} class="hover:text-brand-primary-green">Excellence</a></li>
-                            </ul>
-                        </div>
-                    </details>
-                </li>
-                <li class="fullnav:hidden pl-4 pt-1 pb-2">
-                    <details class="open:bg-white">
-                        <summary class="text-brand-primary-dark-green leading-6 select-none">
-                            <span class="leading-8">{college.name}</span>
+                {#each lifestages as lifestage}
+                    <li class="fullnav:hidden pl-4 pt-1 pb-2">
+                        <details class="open:bg-white">
+                            <summary class="text-brand-primary-dark-green leading-6 select-none" on:click|capture|stopPropagation={dont_hide_nav}>
+                                <span class="leading-8">{lifestage.name}</span>
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
                                     <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
                                 </svg>
-                        </summary>
+                            </summary>
 
-                        <div class="mt-3 text-sm leading-6">
-                            <ul>
-                                <li><a href={`${base}/${college.route}/${access.route}`} class="hover:text-brand-primary-green">Access</a></li>
-                                <li><a href={`${base}/${college.route}/${proficiency.route}`} class="hover:text-brand-primary-green">Proficiency</a></li>
-                                <li><a href={`${base}/${college.route}/${excellence.route}`} class="hover:text-brand-primary-green">Excellence</a></li>
-                            </ul>
-                        </div>
-                    </details>
-                </li>
-                <li class="fullnav:hidden pl-4 pt-1 pb-2">
-                    <details class="open:bg-white">
-                        <summary class="text-brand-primary-dark-green leading-6 select-none">
-                            <span class="leading-8">{career.name}</span>
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="inline-block w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">-->
-                                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-                            </svg>
-                        </summary>
-
-                        <div class="mt-3 text-sm leading-6">
-                            <ul>
-                                <li><a href={`${base}/${career.route}/${access.route}`} class="hover:text-brand-primary-green">Access</a></li>
-                                <li><a href={`${base}/${career.route}/${proficiency.route}`} class="hover:text-brand-primary-green">Proficiency</a></li>
-                                <li><a href={`${base}/${career.route}/${excellence.route}`} class="hover:text-brand-primary-green">Excellence</a></li>
-                            </ul>
-                        </div>
-                    </details>
-                </li>
+                            <div class="mt-3 text-sm leading-6">
+                                <ul>
+                                    {#each indicators as indicator}
+                                        <li><a href={`${base}/${lifestage.route}/${indicator.route}`} class="hover:text-brand-primary-green">{indicator.name}</a></li>
+                                    {/each}
+                                </ul>
+                            </div>
+                        </details>
+                    </li>
+                {/each}
                 <li class:active={$page.url.pathname === `${base}/resources`}><a
                         href={`${base}/resources`}>Resources</a></li>
                 <li class:active={$page.url.pathname === `${base}/about`}><a href={`${base}/about`}>About Us</a></li>
