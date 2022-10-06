@@ -3,6 +3,8 @@
     export let math;
 
     $: katexString = katex.renderToString(math);
+
+    // Available math symbols here: https://katex.org/docs/supported.html
 </script>
 
 <svelte:head>

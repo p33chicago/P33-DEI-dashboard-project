@@ -30,3 +30,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Updating math equations
+
+We use [KaTex](https://katex.org) to render math equations on the website using the <MathEquation /> component. See katex.org for [a list of available math symbols](https://katex.org/docs/supported.html).
