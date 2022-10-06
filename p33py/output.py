@@ -73,9 +73,9 @@ def equity_indices():
     _makedirs_ignore_exists(destination)
 
     EI_stages_path = f'{destination}/lifestages.json'
-    EI_lifestages_CHI.to_json(EI_stages_path)
+    EI_lifestages_CHI.to_json(EI_stages_path, orient='records')
     print(f'Wrote {EI_stages_path}')
 
     EI_indicators_path = f'{destination}/indicators.json'
-    EI_indicators_CHI.to_json(EI_indicators_path)
+    EI_indicators_CHI.to_json(EI_indicators_path, orient='records')
     print(f'Wrote {EI_indicators_path}')

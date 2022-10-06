@@ -1,7 +1,9 @@
-import type {Load} from "@sveltejs/kit";
-import type {Scorecard} from "$lib/domain/Scorecard.ts";
-import {scorecard} from "$lib/domain/Scorecard.ts";
+import type {PageLoad} from './$types'
+import * as Scorecard from "$lib/domain/Scorecard";
+import {fetch_json} from "../lib/equity_indices_json";
 
-export const load: Load<{ scorecard: Scorecard }> = async () => {
+export const load: PageLoad = async ({fetch}) => {
+    const [ lifestages, indicators ] = await fetch_json(fetch);
+    const scorecard = Scorecard.from_json(lifestages, indicators)
     return {scorecard}
 }
