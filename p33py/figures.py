@@ -41,3 +41,7 @@ def vertical_bars(metric):
         )
 
     return fig
+
+
+def horizontal_bar(metric):
+    return px.bar(metric)
