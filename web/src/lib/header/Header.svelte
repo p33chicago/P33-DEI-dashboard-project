@@ -11,7 +11,7 @@
 
 <header class="font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10">
     <div class="max-w-7xl align-top justify-left md:mx-auto">
-        <div class="px-1 md:px-3 lg:px-8 flex justify-between fullnav:justify-start">
+        <div class="px-1 md:px-3 lg:px-6 flex justify-between fullnav:justify-start">
             <input type="checkbox" id="open-mobile-menu" class="hidden" bind:this={nav_checkbox}/>
             <label for="open-mobile-menu" class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2"
                    aria-controls="mobile-menu" aria-expanded="false">
@@ -78,6 +78,7 @@
 </header>
 
 <style>
+    .logo { margin-right: 40px }
     .logo img {
         filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg);
     }
