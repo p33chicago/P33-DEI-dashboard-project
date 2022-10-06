@@ -1,5 +1,5 @@
 <div class="container">
-    <!--
+	<!--
     <slot name="title" />
     <div>
         <div>
@@ -13,5 +13,5 @@
         <slot name="summary" />
     </div>
     -->
-    <slot />
+	<slot />
 </div>
