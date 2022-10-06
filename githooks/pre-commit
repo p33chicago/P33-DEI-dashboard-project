@@ -1,10 +1,11 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-# Clear notebook outputs
-changed=$(git diff --name-only --cached notebooks/*.ipynb)
-if [ -z $changed ]; then
-  exit 0
-fi
-echo "Removing notebook output from $changed"
-echo $changed | xargs jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
-echo $changed | xargs git add
+# Installation: git config --set core.hooksPath ./githooks
+
+# Run linting, testing, etc. scripts before committing
+
+set -e
+
+for script in ./scripts/pre-commit.*.sh; do
+  eval "$script"
+done

@@ -1,11 +1,15 @@
 import importlib
 
-from p33py.equity_indices import combiner_CHIAndIL, EI_metric_FourG_geomean, EI_indicators_FourG_geomean, \
-    EI_stages_FourG_geomean
+from p33py.equity_indices import (
+    combiner_CHIAndIL,
+    EI_metric_FourG_geomean,
+    EI_indicators_FourG_geomean,
+    EI_stages_FourG_geomean,
+)
 from p33py.data.index import index
 
 all_metrics = []
-for module_name in list(index['module']):
+for module_name in list(index["module"]):
     module = importlib.import_module(module_name)
     all_metrics.append(module.calculate())
 
