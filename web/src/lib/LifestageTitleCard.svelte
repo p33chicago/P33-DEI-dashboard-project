@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Card from './cards/Card.svelte';
 	export let title: string;
-	let subtitle: string = 'Chicago Public Schools';
+	let subtitle = 'Chicago Public Schools';
 </script>
 
 <Card>

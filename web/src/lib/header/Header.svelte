@@ -6,7 +6,9 @@
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);
-	const dont_hide_nav = () => {};
+	const dont_hide_nav = () => {
+		/* do nothing */
+	};
 </script>
 
 <header class="font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10">

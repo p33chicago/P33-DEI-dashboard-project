@@ -6,6 +6,6 @@
 
 set -e
 
-for script in ./scripts/pre-commit.*.sh; do
+for script in ./githooks/pre-commit.*.sh; do
   eval "$script"
 done
