@@ -1,11 +1,4 @@
-# Design guidelines
-
-
-## Colors
-
-![Color palette](./color%20palette.png)
-
-## Accessiblity
+# Accessiblity
 
 Visualizations present a few problems for vision impaired folks:
 

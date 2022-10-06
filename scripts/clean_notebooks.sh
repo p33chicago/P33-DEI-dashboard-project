@@ -2,6 +2,8 @@
 
 # Remove notebook output from files staged for committing
 
+set -e
+
 changed=$(git diff --name-only --cached notebooks/*.ipynb)
 if [ -z $changed ]; then
   exit 0

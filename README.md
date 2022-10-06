@@ -7,40 +7,78 @@ This project helps evaluate the equality that exists among underrepresented comm
 
 > Python data processing ≫ Plotly figure JSON ≫ Web framework ≫ Static HTML, JS, and CSS
 
-## Using the cloud workspace (Gitpod)
+## Installation
+
+There are two ways of getting a development environment:
+
+1. Using the cloud workspace, Gitpod (recommended)
+2. Installing things to your local machine
+
+Advantages to using the cloud workspace:
+
+* Click a link and get a fully installed, running development environment
+* Everyone has the same environment - no "works on my machine" syndrome
+
+### Using the cloud workspace (Gitpod)
 
 To launch the development workspace in your browser, including Jupyter Lab UI, visit: [gitpod](https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project).
 
-## Accessing data science notebooks and website dev server
+To learn more about accessing data science notebooks and the website dev server, see [Using Gitpod](./docs/using%20gitpod.md).
 
-See [Using Gitpod](./docs/using%20gitpod.md).
+### Developing locally
 
-## Developing locally
-
-Rough list of commands:
+Install git, Python, and nodejs, then run:
 
 ```shell
-pip install -r requirements
-cd web && npm install
+# Install git hooks, so safety measures run before pushing changes
 git config --local core.hooksPath githooks
+
+# Install
+eval scripts/install.sh
+
+# Start dev server
+eval scripts/start_dev.sh
 ```
-
-## Design guidelines
-
-See [Design guidelines](./docs/design%20guidelines.md).
 
 ## Folder structure
 
-* data/ - all data files go here (XSLT, CSV, etc.)
-* web/ - website
-* docs/ - files for humans alone (no 💻🤖 allowed); technical documentation, slide decks, design guidelines, mockups, etc.
-* notebooks/ - data science notebooks for experimentation and visualization work; none of the code here is used in the pipeline or makes it way to the site; however, it does import things from the python module, p33 (see next folder below).
-* p33py/ - Python [package](https://docs.python.org/3/tutorial/modules.html#packages) for all of our novel code; import via `import p33py`
+**NOTE:** If a file/folder isn't listed below, it's for some specific development tool; you can find more info by googling the filename. e.g. [.gitpod.yml](https://google.com/search?q=.gitpod.yml).
 
-## Autoreload
+In order of importance:
 
-When working with a Jupyter notebook that imports an external Python module, the notebook does not incorporate changes made to external modules. You can:
+**/README.md
+: Separate documentation exists in various folders.
 
-* Use [%autoreload magic](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html) (see [caveats](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html#caveats))
-* Restart the notebook
-* Use Python's [importlib.reload function](https://docs.python.org/3/library/importlib.html#importlib.reload)
+web/
+: Website source code. Has its own [README](web/README.md).
+
+p33py/
+: Python [package](https://docs.python.org/3/tutorial/modules.html#packages) for all of our novel code; import via `import p33py`
+
+data/
+: all data files go here (XSLT, CSV, etc.)
+
+docs/
+: files for humans alone (no 💻🤖 allowed); technical documentation, slide decks, design guidelines, mockups, etc.
+
+scripts/
+: Useful shell scripts
+
+.github/
+: Files for our CI/CD pipeline (Github Actions)
+
+build.py
+: Entrypoint for all our code that processes data.
+
+.githooks/
+: Files that should should run at certain times when running version control. See [githooks/INSTALLATION.md](githooks/INSTALLATION.md) for instructions. See [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) for background.
+
+notebooks/
+: data science notebooks for experimentation and visualization work; none of the code here is used in the pipeline or makes it way to the site; however, it does import things from the python module, p33 (see above).
+
+output/
+: Where build output is placed. Safe to delete, because it's recreated with every build.
+
+## Accessibility
+
+We want to make our website usable to as many people as we can. Our visualizations present unique challenges. See [docs/accessibility.md](docs/accessibility.md) for details.
