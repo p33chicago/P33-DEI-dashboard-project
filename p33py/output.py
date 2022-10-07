@@ -8,7 +8,7 @@ from plotly import io as pio
 
 from p33py.data.index import index
 from p33py.data.scorecard import EI_indicators_CHI, EI_lifestages_CHI
-from p33py.figures import vertical_bars
+from p33py.figures import vertical_bars, horizontal_bar
 
 _output_dir = abspath("../output")
 
@@ -56,7 +56,18 @@ def figures():
         pio.write_image(fig, svg_path)
         print(f"Wrote {svg_path}")
 
-    # TODO add EI figures
+    for lifestage_name in EI_lifestages_CHI["stage"]:
+        lifestage = EI_lifestages_CHI[
+            EI_lifestages_CHI["stage"] == lifestage_name
+        ].copy()
+        lifestage["area"] = "Chicago"
+        lifestage_fig = horizontal_bar(lifestage)
+        lifestage_fig.write_image(
+            format="svg", file=f"{_output_dir}/figures/ei_{lifestage_name}.svg"
+        )
+        pio.write_json(
+            lifestage_fig, file=f"{_output_dir}/figures/ei_{lifestage_name}.json"
+        )
 
 
 def scorecard():

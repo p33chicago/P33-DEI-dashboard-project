@@ -15,15 +15,17 @@ def vertical_bars(metric):
         y=metric.metric_value,
         color=metric.var_ethnic,
         barmode="group",
+        width=365,
+        height=200,
     )
     fig.update_traces(
         texttemplate="%{y:.1%}",
         textangle=90,
         hovertemplate="%{data.name}: %{y:.2%} (%{x})<extra></extra>",
     )
-    fig.update_yaxes(title="")
-    fig.update_xaxes(title="")
-    fig.update_layout(legend_title="")
+    fig.update_yaxes(title="", tickformat=",.0%", side="right", fixedrange=True)
+    fig.update_xaxes(title="", side="top")
+    fig.update_layout(legend_title="", margin=dict(t=30, l=0, r=40, b=54, pad=8))
 
     # Place gray box behind USA
     if len(metric.var_scope.unique()) > 1:
@@ -44,4 +46,21 @@ def vertical_bars(metric):
 
 
 def horizontal_bar(metric):
-    return px.bar(metric)
+    fig = px.bar(
+        metric,
+        x="weighted_EI_stage",
+        y="area",
+        orientation="h",
+        range_x=[0, 100],
+        width=268,
+        height=113,
+    )
+    fig.update_yaxes(title="", side="left")
+    fig.update_xaxes(title="", side="bottom", tickvals=list(range(0, 101, 25)))
+    fig.update_layout(legend_title="", margin=dict(t=0, l=80, r=20, b=30, pad=8))
+    fig.update_traces(
+        texttemplate="%{x:.3}",
+        textangle=0,
+        hovertemplate="%{x:.3}<extra></extra>",
+    )
+    return fig
