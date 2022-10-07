@@ -1,6 +1,5 @@
 <script type="ts">
 	import { base } from '$app/paths';
-	import CardText from '$lib/cards/CardText.svelte';
 	import CTASection from '$lib/CTASection.svelte';
 	import Takeaway from '$lib/Takeaway.svelte';
 	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
@@ -16,75 +15,73 @@
 	<meta name="description" content="P33" />
 </svelte:head>
 
-<BodyContentContainer>
-	<!-- top part -->
-	<h1 class="order-first col-span-1 sm:col-span-4">
-		Our Challenge, <span class="bg-heads-up-yellow p-1">Our Opportunity</span>
-	</h1>
-	<div class="col-span-1 sm:col-span-2">
-		<p>
-			Skilled tech jobs are fast-growing, high-paying and resilient to economic change and companies
-			can't fill their roles fast enough. Bringing more Chicagoans into tech roles will accelerate
-			economic growth and can address persistent race-based income inequality.
-		</p>
-		<p>
-			But today, Black and Latino Chicagoans and women are dramatically underrepresented in these
-			roles. If we stay on this path, tech's growth will worsen race-based inequity. But we can
-			choose another path.
-		</p>
-		<p>
-			This is Chicagoland's first effort to understand the full picture of what it will take to make
-			Chicago the most inclusive tech city in the country. And to understand how we are or aren't
-			supporting Black and Latino Chicagoans at critical moments on the journey from school to great
-			jobs in the digital economy
-		</p>
-		<p>
-			This isn't simply a "company problem" or a "pipeline problem". There is critical work to do
-			from grammer school to the C-suite. We've gathered the data to show the way forward and offer
-			solutions that every organization in the city can help move forward. Let's go make it happen!
-		</p>
+<!-- HERO -->
+<div>
+	<div
+		class="order-first col-span-1 sm:col-span-4 h-[500px] bg-brand-primary-light-green pt-44 text-center text-2xl"
+	>
+		<h1>HERO IMAGE WILL GO HERE :)</h1>
 	</div>
-	<div class="-order-1 sm:order-none col-span-1 sm:col-span-2 justify-self-center">
-		<img src={`${base}/equity-diagram.png`} alt="" />
-	</div>
-</BodyContentContainer>
-<div class="w-full bg-brand-primary-light-green/30">
+</div>
+
+<div class="w-full bg-white">
 	<BodyContentContainer>
-		<div>
-			<CardText>
-				<h2>Why it matters</h2>
-				<p>
-					The future, it's where you're going? Let's get him. Go. Well, because George, nice girls
-					get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-				</p>
-			</CardText>
+		<!-- top part -->
+		<div class="col-span-1 sm:col-span-4 sans-alternate">
+			<p
+				class="font-sans-alternate text-black text-2xl leading-9 px-4 border-l-4 border-heads-up-yellow ml-9 mt-4"
+			>
+				Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago
+				can help by addressing lack of equity within their Black and Latin communities. This is our
+				effort in how best to support Chicago’s underrepresented communities through different life
+				stages. We have gathered data from grade school to college and beyond, as well as offer
+				solutions in making Chicago one of the most inclusive cities in the country.
+				<span class="bg-heads-up-yellow p-1">Now, let’s make it happen!</span>
+			</p>
 		</div>
-		<div>
-			<CardText>
-				<h2>Why it matters</h2>
-				<p>
-					The future, it's where you're going? Let's get him. Go. Well, because George, nice girls
-					get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-				</p>
-			</CardText>
+	</BodyContentContainer>
+</div>
+<div class="w-full py-4 bg-white">
+	<BodyContentContainer>
+		<div class="ml-12 py-2">
+			<div class="flex">
+				<img src={`${base}/why-tech-matters.svg`} class="object-scale-down h-8 w-8" />
+				<h2 class="font-sans-alternate text-2xl pl-2">Why Tech Matters</h2>
+			</div>
+			<p class="font-sans text-black pt-4">
+				We must build an inclusive tech that will bring opportunities and grow Chicago’s economy in
+				the next 30 years.
+			</p>
 		</div>
-		<div>
-			<CardText>
-				<h2>Why it matters</h2>
-				<p>
-					The future, it's where you're going? Let's get him. Go. Well, because George, nice girls
-					get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-				</p>
-			</CardText>
+		<div class="ml-12 py-2">
+			<div class="flex">
+				<img src={`${base}/why-built.svg`} class="object-scale-down h-8 w-8" />
+				<h2 class="font-sans-alternate text-2xl pl-2">Why We Built This</h2>
+			</div>
+			<p class="font-sans text-black pt-4">
+				A shared source of truth for policymakers, businesses, educators and others that provide
+				transparency of investments into Chicago’s tech talent.
+			</p>
 		</div>
-		<div>
-			<CardText>
-				<h2>Why it matters</h2>
-				<p>
-					The future, it's where you're going? Let's get him. Go. Well, because George, nice girls
-					get angry when guys take advantage of them. Uh, you mean nobody's asked you?
-				</p>
-			</CardText>
+		<div class="ml-12 py-2">
+			<div class="flex">
+				<img src={`${base}/what-data.svg`} class="object-scale-down h-8 w-8" />
+				<h2 class="font-sans-alternate text-2xl pl-2">What the Data Shows</h2>
+			</div>
+			<p class="font-sans text-black pt-4">
+				Few black and Latin students lacking math and science in grade school, limited technology
+				access in high school and low college enrollment obtain tech career opportunities.
+			</p>
+		</div>
+		<div class="ml-12 py-2">
+			<div class="flex">
+				<img src={`${base}/what-success.svg`} class="object-scale-down h-8 w-8" />
+				<h2 class="font-sans-alternate text-2xl pl-2">What is Success</h2>
+			</div>
+			<p class="font-sans text-black pt-4">
+				We believe the process of gathering data is an essential part of working towards greater
+				diversity and inclusion in Chicago’s tech economy.
+			</p>
 		</div>
 	</BodyContentContainer>
 </div>
