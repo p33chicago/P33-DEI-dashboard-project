@@ -1,5 +1,8 @@
 name: Build
 on: [push]
+permissions:
+  pages: write      # to deploy to Pages
+  id-token: write   # to verify the deployment originates from an appropriate source
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,8 +28,11 @@ jobs:
       - name: Install web dependencies
         run: npm install
         working-directory: web
+      - name: Setup Pages
+        id: setup-pages
+        uses: actions/configure-pages@v2
       - name: Build website
-        run: npm run build
+        run: BASE_PATH="${{ steps.setup-pages.outputs.base_path }}" npm run build
         working-directory: web
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -34,16 +40,11 @@ jobs:
           path: web/build/
   deploy:
     needs: build
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-    - name: Setup Pages
-      uses: actions/configure-pages@v2
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
