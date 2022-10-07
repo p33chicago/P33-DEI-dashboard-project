@@ -54,10 +54,12 @@ module.exports = {
 				'fail-red': '#981717',
 				'warn-orange': '#ff7213',
 				'heads-up-yellow': '#ffa913',
-				'background-map': '#0a8e78'
+				'background-map': '#0a8e78',
+				green: '#179862'
 			},
 			backgroundImage: {
-				chicago: "url('/chicago.svg')"
+				chicago: "url('/chicago.svg')",
+				topography: "url('/topography.svg')"
 			}
 		}
 	},
