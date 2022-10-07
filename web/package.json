@@ -2,10 +2,11 @@
 	"scripts": {
 		"copy-data": "mkdir -p ../output/ && cp -r ../output/* ./static/",
 		"predev": "npm run copy-data",
-		"dev": "ENVIRONMENT=dev vite dev",
+		"dev": "vite dev",
 		"prebuild": "npm run copy-data",
 		"build": "vite build",
 		"preview": "vite preview",
+		"pretest": "npm run copy-data",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
