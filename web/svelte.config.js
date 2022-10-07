@@ -3,7 +3,7 @@ import preprocess from 'svelte-preprocess';
 
 const { BASE_PATH = '' } = process.env;
 
-console.log(`BASE_PATH: ${BASE_PATH} (${typeof BASE_PATH})`)
+console.log(`BASE_PATH: ${BASE_PATH} (${typeof BASE_PATH})`);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
