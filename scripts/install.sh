@@ -5,4 +5,8 @@
 set -e
 
 pip install -r requirements.txt
-(cd web && npm install)
+(
+  cd web &&
+    npm install &&
+    npx playwright install
+)
