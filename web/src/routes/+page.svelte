@@ -29,7 +29,7 @@
 		<!-- top part -->
 		<div class="col-span-1 sm:col-span-4 sans-alternate">
 			<p
-				class="font-sans-alternate text-black text-2xl leading-9 px-4 border-l-4 border-heads-up-yellow ml-9 mt-4"
+				class="font-sans-alternate text-black text-lg lg:text-2xl leading-9 px-4 border-l-4 border-heads-up-yellow ml-9 mt-4"
 			>
 				Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago
 				can help by addressing lack of equity within their Black and Latin communities. This is our
