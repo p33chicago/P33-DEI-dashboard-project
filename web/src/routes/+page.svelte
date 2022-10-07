@@ -45,7 +45,7 @@
 	<BodyContentContainer>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img src={`${base}/why-tech-matters.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" src={`${base}/why-tech-matters.svg`} class="object-scale-down h-8 w-8" />
 				<h2 class="font-sans-alternate text-2xl pl-2">Why Tech Matters</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -55,7 +55,7 @@
 		</div>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img src={`${base}/why-built.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" src={`${base}/why-built.svg`} class="object-scale-down h-8 w-8" />
 				<h2 class="font-sans-alternate text-2xl pl-2">Why We Built This</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -65,7 +65,7 @@
 		</div>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img src={`${base}/what-data.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" src={`${base}/what-data.svg`} class="object-scale-down h-8 w-8" />
 				<h2 class="font-sans-alternate text-2xl pl-2">What the Data Shows</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -75,7 +75,7 @@
 		</div>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img src={`${base}/what-success.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" src={`${base}/what-success.svg`} class="object-scale-down h-8 w-8" />
 				<h2 class="font-sans-alternate text-2xl pl-2">What is Success</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
