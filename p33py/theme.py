@@ -7,7 +7,6 @@ def set_default_theme():
         layout=dict(
             autosize=False,
             title=None,
-            colorway=["#04352D", "#00715E", "#56CBB8", "#76EBD8"],
             bargroupgap=0.35,
             legend=dict(orientation="h", title="", x=0, y=0, yanchor="top"),
         )

@@ -17,6 +17,7 @@ def vertical_bars(metric):
         barmode="group",
         width=365,
         height=200,
+        color_discrete_sequence=["#04352D", "#00715E", "#56CBB8", "#76EBD8"],
     )
     fig.update_traces(
         texttemplate="%{y:.1%}",
@@ -54,13 +55,15 @@ def horizontal_bar(metric):
         range_x=[0, 100],
         width=268,
         height=113,
+        color_discrete_sequence=["#00715e"],
     )
     fig.update_yaxes(title="", side="left")
     fig.update_xaxes(title="", side="bottom", tickvals=list(range(0, 101, 25)))
-    fig.update_layout(legend_title="", margin=dict(t=0, l=80, r=20, b=30, pad=8))
+    fig.update_layout(
+        legend_title="",
+        margin=dict(t=0, l=57, r=12, b=30, pad=8),
+    )
     fig.update_traces(
-        texttemplate="%{x:.3}",
-        textangle=0,
         hovertemplate="%{x:.3}<extra></extra>",
     )
     return fig
