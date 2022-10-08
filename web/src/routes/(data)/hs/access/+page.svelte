@@ -22,7 +22,7 @@
 			enrollment rate 3-7 times higher than Black and Hispanic students.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={highSchool.route} name="apcs_enrol" slot="figure" />
+	<Figure file={`${highSchool.route}/apcs_enrol`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -45,7 +45,7 @@
 			STEM Magnet high school.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={highSchool.route} name="magnet_enrol" slot="figure" />
+	<Figure file={`${highSchool.route}/magnet_enrol`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -59,7 +59,7 @@
 			same interest.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={highSchool.route} name="CSInterested" slot="figure" />
+	<Figure file={`${highSchool.route}/CSInterested`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -83,5 +83,5 @@
 			in related to the national average.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={highSchool.route} name="advMath_enrol" slot="figure" />
+	<Figure file={`${highSchool.route}/advMath_enrol`} slot="figure" />
 </DataDive>

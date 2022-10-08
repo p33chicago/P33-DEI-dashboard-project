@@ -23,7 +23,7 @@
 	<svelte:fragment slot="takeaways">
 		<p />
 	</svelte:fragment>
-	<Figure lifestage={college.route} name="topThree_cs_enrol" slot="figure" />
+	<Figure file={`${college.route}/topThree_cs_enrol`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -49,7 +49,7 @@
 			and Hispanic students who enrolled in the CS program drop off.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={college.route} name="topThree_cs_persist" slot="figure" />
+	<Figure file={`${college.route}/topThree_cs_persist`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -74,5 +74,5 @@
 			remarkably lower than that of Hispanic students.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={college.route} name="topThree_cs_confer" slot="figure" />
+	<Figure file={`${college.route}/topThree_cs_confer`} slot="figure" />
 </DataDive>

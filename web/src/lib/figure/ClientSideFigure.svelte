@@ -13,12 +13,10 @@
 </script>
 
 <script lang="ts">
-	import type { Lifestage } from '$lib/Lifestage.ts';
 	import { assets } from '$app/paths';
 	import { dev } from '$app/environment';
 
-	export let lifestage: Lifestage['name'];
-	export let name: string;
+	export let file: string;
 
 	let canvas;
 	let data;
@@ -40,7 +38,7 @@
 
 	const init = async () => {
 		Plotly = await load();
-		({ data, layout } = await (await fetch(`${assets}/figures/${lifestage}/${name}.json`)).json());
+		({ data, layout } = await (await fetch(`${assets}/figures/${file}.json`)).json());
 		render();
 	};
 	init();

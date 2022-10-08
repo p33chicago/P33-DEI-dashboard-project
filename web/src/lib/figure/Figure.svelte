@@ -1,15 +1,13 @@
 <script lang="ts">
-	import type { Lifestage } from '$lib/Lifestage.ts';
 	import { browser } from '$app/environment';
 	import ClientSideFigure from '$lib/figure/ClientSideFigure.svelte';
 	import ServerSideFigure from '$lib/figure/ServerSideFigure.svelte';
 
-	export let lifestage: Lifestage['name'];
-	export let name: string;
+	export let file: string;
 </script>
 
 {#if browser}
-	<ClientSideFigure {lifestage} {name} />
+	<ClientSideFigure {file} />
 {:else}
-	<ServerSideFigure {lifestage} {name} />
+	<ServerSideFigure {file} />
 {/if}

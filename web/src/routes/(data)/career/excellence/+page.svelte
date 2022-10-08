@@ -23,5 +23,5 @@
 			rate for Hispanic workers is 1 out of 150.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={career.route} name="techJob_topThree" slot="figure" />
+	<Figure file={`${career.route}/techJob_topThree`} slot="figure" />
 </DataDive>

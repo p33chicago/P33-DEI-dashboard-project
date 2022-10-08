@@ -24,7 +24,7 @@
 			outperforming, while black students are.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={k8.route} name="k4_math_profAndAbove" slot="figure" />
+	<Figure file={`${k8.route}/k4_math_profAndAbove`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -47,7 +47,7 @@
 			students in CPS improved from 4th to 8th grades.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={k8.route} name="math_profAndAbove" slot="figure" />
+	<Figure file={`${k8.route}/math_profAndAbove`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -64,5 +64,5 @@
 	<svelte:fragment slot="takeaways">
 		<p>Great performance of CPS algebra class.</p>
 	</svelte:fragment>
-	<Figure lifestage={k8.route} name="algebra_pass" slot="figure" />
+	<Figure file={`${k8.route}/algebra_pass`} slot="figure" />
 </DataDive>

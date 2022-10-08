@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: web/src/routes/(data)/k8/proficiency/+page.svelte
+  checksum: 8f12871c96ecd46f8be6f4d6636ec5e40a05953256c6a8c3ae67d90e69c61981
+version: "1.0"

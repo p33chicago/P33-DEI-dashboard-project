@@ -19,7 +19,7 @@
 	<svelte:fragment slot="takeaways">
 		<p />
 	</svelte:fragment>
-	<Figure lifestage={college.route} name="cs_enrol" slot="figure" />
+	<Figure file={`${college.route}/cs_enrol`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -33,5 +33,5 @@
 	<svelte:fragment slot="takeaways">
 		<p />
 	</svelte:fragment>
-	<Figure lifestage={college.route} name="imdEnrol" slot="figure" />
+	<Figure file={`${college.route}/imdEnrol`} slot="figure" />
 </DataDive>

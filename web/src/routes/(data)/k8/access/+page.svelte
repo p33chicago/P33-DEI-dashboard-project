@@ -30,7 +30,7 @@
 			2.7 times higher than the national average
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={k8.route} name="noInt" slot="figure" />
+	<Figure file={`${k8.route}/noInt`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -50,7 +50,7 @@
 			students.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={k8.route} name="magnet_enrol" slot="figure" />
+	<Figure file={`${k8.route}/magnet_enrol`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -74,5 +74,5 @@
 			outperforming, while black students are.
 		</p>
 	</svelte:fragment>
-	<Figure lifestage={k8.route} name="algebra_enrol" slot="figure" />
+	<Figure file={`${k8.route}/algebra_enrol`} slot="figure" />
 </DataDive>
