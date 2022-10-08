@@ -53,4 +53,6 @@ test.fixme('equity indices', async ({ page }) => {
 	const excellence = page.locator('data-test-id=scorecard.indicator-score-excellence');
 	await expect(excellence).toContainText(n_floats(4));
 });
-test('lifestage figures', async () => {});
+test('lifestage figures', async () => {
+	// linter
+});
