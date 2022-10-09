@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
 
+// TODO run this test in pre-commit
+
 const float_regex = /[\d.]+/;
 const n_floats = (n: number) => [...Array(n)].map(() => float_regex);
 
