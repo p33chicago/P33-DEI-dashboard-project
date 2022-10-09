@@ -1,22 +1,3 @@
-// import { test as base } from '@playwright/test';
-// import { readFile } from 'fs/promises';
-// import { scorecard_from_ei_json } from './p33py_adapter.js';
-
-// fixtures
-// const test = base.extend<{
-// 	json: {
-// 		lifestages: Record<string, any>;
-// 		indicators: Record<string, any>;
-// 	};
-// }>({
-// 	json: async ({}, use) => {
-// 		await use({
-// 			lifestages: JSON.parse(await readFile(`static/equity_indices/lifestages.json`, 'utf-8')),
-// 			indicators: JSON.parse(await readFile(`static/equity_indices/indicators.json`, 'utf-8'))
-// 		});
-// 	}
-// });
-
 import { expect, test } from '@playwright/test';
 
 const float_regex = /[\d.]+/;
@@ -53,6 +34,12 @@ test.fixme('equity indices', async ({ page }) => {
 	const excellence = page.locator('data-test-id=scorecard.indicator-score-excellence');
 	await expect(excellence).toContainText(n_floats(4));
 });
-test('lifestage figures', async () => {
-	// linter
+test('lifestage figures', async ({ page }) => {
+	await page.goto('/');
+	await Promise.all([
+		expect(page.locator('[data-test-id="scorecard.figure-k8"] svg:first-child')).toBeVisible(),
+		expect(page.locator('[data-test-id="scorecard.figure-hs"] svg:first-child')).toBeVisible(),
+		expect(page.locator('[data-test-id="scorecard.figure-college"] svg:first-child')).toBeVisible(),
+		expect(page.locator('[data-test-id="scorecard.figure-career"] svg:first-child')).toBeVisible()
+	]);
 });
