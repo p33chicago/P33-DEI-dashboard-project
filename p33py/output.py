@@ -46,6 +46,14 @@ def output_dir(directory):
 Format = Literal["json", "html", "svg", "png", "jpg"]
 
 
+def _lifestage_for_web(p33py_lifestage):
+    if p33py_lifestage == "col":
+        return "college"
+    if p33py_lifestage == "emp":
+        return "career"
+    return p33py_lifestage
+
+
 def figures():
     """Writes all figures as JSON and SVGs"""
     for datum, directory, json_path, svg_path in _each_datum("figures"):
@@ -62,12 +70,18 @@ def figures():
         ].copy()
         lifestage["area"] = "Chicago"
         lifestage_fig = horizontal_bar(lifestage)
-        lifestage_fig.write_image(
-            format="svg", file=f"{_output_dir}/figures/ei_{lifestage_name}.svg"
+
+        image_path = (
+            f"{_output_dir}/figures/ei_{_lifestage_for_web(lifestage_name)}.svg"
         )
-        pio.write_json(
-            lifestage_fig, file=f"{_output_dir}/figures/ei_{lifestage_name}.json"
+        lifestage_fig.write_image(format="svg", file=image_path)
+        print(f"Wrote {image_path}")
+
+        json_path = (
+            f"{_output_dir}/figures/ei_{_lifestage_for_web(lifestage_name)}.json"
         )
+        pio.write_json(lifestage_fig, file=json_path)
+        print(f"Wrote {json_path}")
 
 
 def scorecard():
@@ -76,9 +90,11 @@ def scorecard():
     _makedirs_ignore_exists(destination)
 
     EI_stages_path = f"{destination}/lifestages.json"
+    EI_lifestages_CHI["stage"] = EI_lifestages_CHI["stage"].map(_lifestage_for_web)
     EI_lifestages_CHI.to_json(EI_stages_path, orient="records")
     print(f"Wrote {EI_stages_path}")
 
     EI_indicators_path = f"{destination}/indicators.json"
+    EI_indicators_CHI["stage"] = EI_indicators_CHI["stage"].map(_lifestage_for_web)
     EI_indicators_CHI.to_json(EI_indicators_path, orient="records")
     print(f"Wrote {EI_indicators_path}")

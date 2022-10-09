@@ -24,6 +24,8 @@ const excellence: Indicator = {
 
 const indicators = [access, proficiency, excellence];
 
+const from_route: Record<IndicatorRoute, Indicator> = { access, proficiency, excellence };
+
 export type { Indicator };
 
-export { indicators, access as default_indicator, access, proficiency, excellence };
+export { indicators, access as default_indicator, access, proficiency, excellence, from_route };
