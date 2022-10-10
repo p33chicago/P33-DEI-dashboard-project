@@ -22,8 +22,8 @@
 	<div class="grow">
 		<h1 class="text-2xl text-black">{lifestage.name}</h1>
 		<h2
-			data-test-id="scorecard.lifestage-area-{lifestage.route}"
 			class="text-sm uppercase font-sans-alternate text-dark-gray"
+			data-test-id="scorecard.lifestage-area-{lifestage.route}"
 		>
 			{area}
 		</h2>
@@ -32,7 +32,8 @@
 		<div class="text-right relative">
 			<span
 				data-test-id="scorecard.lifestage-score-{lifestage.route}"
-				class="block text-5xl text-brand-primary-dark-green">{score.toPrecision(3)}</span
+				class="font-sans-alternate block text-5xl text-brand-primary-dark-green"
+				>{score.toPrecision(3)}</span
 			>
 			<span class="block absolute right-0 overflow-hidden bg-medium-gray h-[1px] w-10">/</span>
 			<span class="block text-dark-gray">100</span>

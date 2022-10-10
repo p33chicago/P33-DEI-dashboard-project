@@ -2,11 +2,39 @@
 <html class="h-full" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link href="%sveltekit.assets%/favicon.png" rel="icon" />
 		<meta content="width=device-width" name="viewport" />
+		<style>
+			/* fjalla-one-regular - latin */
+			@font-face {
+				font-family: 'Fjalla One';
+				font-style: normal;
+				font-weight: 400;
+				src: local(''), url('/fonts/fjalla-one-v13-latin-regular.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/fjalla-one-v13-latin-regular.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* roboto-regular - latin */
+			@font-face {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 400;
+				src: local(''), url('/fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/roboto-v30-latin-regular.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* roboto-mono-regular - latin */
+			@font-face {
+				font-family: 'Roboto Mono';
+				font-style: normal;
+				font-weight: 400;
+				src: local(''), url('/fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/roboto-mono-v22-latin-regular.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+		</style>
 		%sveltekit.head%
 	</head>
 	<body class="text-black bg-white text-dark-gray m-0">
-		<div class="min-h-full">%sveltekit.body%</div>
+		%sveltekit.body%
 	</body>
 </html>
