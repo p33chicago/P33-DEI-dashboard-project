@@ -2,10 +2,10 @@
 	import { page } from '$app/stores';
 	import { assets, base } from '$app/paths';
 	import { lifestages } from '../domain/Lifestage.js';
-	import { indicators } from '../domain/Indicator';
-	import Caret from './icons/Caret.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
 	import Cross from './icons/Cross.svelte';
+	import LifestageSubnav from '$lib/header/LifestageSubnav.svelte';
+	import * as Scorecard from '$lib/domain/Scorecard';
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);
@@ -44,34 +44,12 @@
 				class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green"
 			>
 				<ul class="fullnav:flex" on:click={hide_nav}>
-					<li class:active={$page.url.pathname === `${base}/index`}>
-						<a class="h-full w-full" href={`${base}/index`}>Index</a>
+					<li class:active={$page.url.pathname === `${base}/${Scorecard.route}`}>
+						<a class="h-full w-full" href={`${base}/${Scorecard.route}`}>{Scorecard.name}</a>
 					</li>
-					<!-- mobile subnav -->
 					{#each lifestages as lifestage}
 						<li class="fullnav:hidden pl-4 pt-1 pb-2">
-							<details class="open:bg-white">
-								<summary
-									class="text-brand-primary-dark-green leading-6 select-none"
-									on:click|capture|stopPropagation={dont_hide_nav}
-								>
-									<span class="leading-8">{lifestage.name}</span>
-									<Caret />
-								</summary>
-
-								<div class="mt-3 text-sm leading-6">
-									<ul>
-										{#each indicators as indicator}
-											<li>
-												<a
-													href={`${base}/${lifestage.route}/${indicator.route}`}
-													class="hover:text-brand-primary-green">{indicator.name}</a
-												>
-											</li>
-										{/each}
-									</ul>
-								</div>
-							</details>
+							<LifestageSubnav {lifestage} />
 						</li>
 					{/each}
 					<li class:active={$page.url.pathname === `${base}/resources`}>
@@ -101,11 +79,11 @@
 		filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg);
 	}
 
-	:checked ~ .toggle-mobile-menu .hamburger {
+	:checked ~ .toggle-mobile-menu :global(.hamburger) {
 		display: none;
 	}
 
-	:checked ~ .toggle-mobile-menu .cross {
+	:checked ~ .toggle-mobile-menu :global(.cross) {
 		display: flex;
 	}
 

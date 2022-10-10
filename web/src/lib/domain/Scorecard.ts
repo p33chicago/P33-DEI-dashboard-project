@@ -15,6 +15,9 @@ interface LifestageScore extends Lifestage {
 
 type Scorecard = LifestageScore[];
 
+const name = 'Scorecard';
+const route = 'scorecard';
+
 export type { Scorecard, LifestageScore };
 
-export { from_json };
+export { from_json, name, route };
