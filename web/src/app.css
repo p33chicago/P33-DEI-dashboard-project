@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	color: theme('colors.dark-gray');
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-	background-color: theme('colors.brand-primary-really-light-green');
-}
-
 @layer base {
 	h1,
 	h2,
