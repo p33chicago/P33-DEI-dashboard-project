@@ -6,6 +6,7 @@
 	import Scorecard from '$lib/scorecard/Scorecard.svelte';
 	import type { Scorecard as ScorecardType } from '$lib/domain/Scorecard.ts';
 	import Definitions from '$lib/scorecard/definitions/Definitions.svelte';
+	import TextHighlight from '$lib/TextHighlight.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;
@@ -28,23 +29,23 @@
 <div class="w-full bg-white">
 	<BodyContentContainer>
 		<!-- top part -->
-		<div class="col-span-1 sm:col-span-4 sans-alternate">
-			<p
-				class="font-sans-alternate text-black text-lg lg:text-2xl leading-9 px-4 border-l-4 border-heads-up-yellow ml-9 mt-4"
-			>
-				Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago
-				can help by addressing lack of equity within their Black and Latin communities. This is our
-				effort in how best to support Chicago’s underrepresented communities through different life
-				stages. We have gathered data from grade school to college and beyond, as well as offer
-				solutions in making Chicago one of the most inclusive cities in the country.
-				<span class="bg-heads-up-yellow p-1">Now, let’s make it happen!</span>
-			</p>
-		</div>
+		<p
+			class="col-span-1 sm:col-span-4 sans-alternate font-sans-alternate text-black text-lg lg:text-2xl leading-9 py-0 relative"
+		>
+			<span class="absolute top-1 bottom-1 -left-4 bg-heads-up-yellow w-2" />
+			Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago can help
+			by addressing lack of equity within their Black and Latin communities. This is our effort in how
+			best to support Chicago’s underrepresented communities through different life stages. We have gathered
+			data from grade school to college and beyond, as well as offer solutions in making Chicago one
+			of the most inclusive cities in the country.
+			<!--				<span class="bg-heads-up-yellow p-1">Now, let’s make it happen!</span>-->
+			<TextHighlight>Now, let’s make it happen!</TextHighlight>
+		</p>
 	</BodyContentContainer>
 </div>
 <div class="w-full py-4 bg-white">
 	<BodyContentContainer>
-		<div class="ml-12 py-2">
+		<div class="py-2">
 			<div class="flex">
 				<img alt="" class="object-scale-down h-8 w-8" src={`${base}/why-tech-matters.svg`} />
 				<h2 class="font-sans-alternate text-2xl pl-2">Why Tech Matters</h2>
@@ -125,8 +126,9 @@
 				src={`${base}/diverse-roles.svg`}
 			/>
 			<p>
-				Nearly half the Cook County population is Black or Latino, but those groups get only 14% of
-				the high-skilled tech jobs.
+				Nearly half the Cook County population is <TextHighlight left="0.5" top="0.3"
+					>Black or Latino</TextHighlight
+				>, but those groups get only 14% of the high-skilled tech jobs.
 			</p>
 		</Takeaway>
 	</div>
@@ -138,8 +140,8 @@
 				src={`${base}/graduation-hat.svg`}
 			/>
 			<p>
-				Illinois college graduates in computing are 22% Black or Latino despite being 42% of all
-				Illinois high school graduates.
+				<TextHighlight left="0" top="0.1">Illinois college graduates</TextHighlight> in computing are
+				22% Black or Latino despite being 42% of all Illinois high school graduates.
 			</p>
 		</Takeaway>
 	</div>
@@ -151,9 +153,10 @@
 				src={`${base}/homogenous.svg`}
 			/>
 			<p>
-				We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino 8th graders
-				meet math proficiency standards to close gaps with other groups… And we need to get 5,500
-				more Black and Latino 8th graders to advanced standards to close gaps.
+				We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino
+				<TextHighlight>8th graders meet math proficiency</TextHighlight> standards to close gaps with
+				other groups… And we need to get 5,500 more Black and Latino 8th graders to advanced standards
+				to close gaps.
 			</p>
 		</Takeaway>
 	</div>
@@ -166,9 +169,10 @@
 			/>
 			<p>
 				Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to
-				get 5,500 more 8th Black and Latino 8th graders to advanced standards, and enroll 5,100 more
-				Black and Latino students into AP Computer Science. Right highlights: "advanced" and "AP
-				Computer Science"
+				get 5,500 more 8th Black and Latino 8th graders to
+				<TextHighlight left="0.4" top="0.25">advanced</TextHighlight> standards, and enroll 5,100 more
+				Black and Latino students into AP <TextHighlight top="0.1">Computer Science</TextHighlight>.
+				Right highlights: "advanced" and "AP Computer Science"
 			</p>
 		</Takeaway>
 	</div>
