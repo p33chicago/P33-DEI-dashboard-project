@@ -21,8 +21,12 @@
 		</div>
 	</div>
 	<div class="flex flex-col col-span-1 -order-1 sm:order-none">
-		<slot name="figure" />
-		<p>{subheader}</p>
+		<div class="aspect-square min-h-[200px]">
+			<slot name="figure" />
+		</div>
+		<div class="grow">
+			<p>{subheader}</p>
+		</div>
 	</div>
 	<div class="col-span-1 sm:col-span-2 bg-none md:bg-light-gray/20 px-0 md:px-7 py-4">
 		<SocialButtons />

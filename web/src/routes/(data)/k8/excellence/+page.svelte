@@ -25,7 +25,7 @@
 			advanced students.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${k8.route}/k4_math_adv`} slot="figure" />
+	<Figure file={`metrics/${k8.route}/k4_math_adv`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -50,5 +50,5 @@
 			ethnic groups combined.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${k8.route}/math_adv`} slot="figure" />
+	<Figure file={`metrics/${k8.route}/math_adv`} slot="figure" />
 </DataDive>

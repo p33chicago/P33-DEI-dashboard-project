@@ -25,7 +25,7 @@
 			the CS program drop off.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${college.route}/cs_persist`} slot="figure" />
+	<Figure file={`metrics/${college.route}/cs_persist`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -45,5 +45,5 @@
 			CS diploma is similar to that of White students but massively lower than Asian students.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${college.route}/cs_confer`} slot="figure" />
+	<Figure file={`metrics/${college.route}/cs_confer`} slot="figure" />
 </DataDive>

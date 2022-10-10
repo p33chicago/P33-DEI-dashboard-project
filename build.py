@@ -1,6 +1,6 @@
 from p33py.output import (
     output_dir,
-    figures,
+    metrics,
     scorecard,
     make_clean_output_directory,
 )
@@ -11,10 +11,10 @@ print("Removing ./output/ and recreating")
 make_clean_output_directory()
 print()
 
-print("Writing EI scorecard JSON")
+print("Writing scorecard")
 scorecard()
 print()
 
-print("Writing figure SVGs and JSON")
-figures()
+print("Writing metric figures")
+metrics()
 print()

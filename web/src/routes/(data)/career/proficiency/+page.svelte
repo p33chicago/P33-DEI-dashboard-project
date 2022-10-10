@@ -28,5 +28,5 @@
 			tech companies.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${career.route}/techJob`} slot="figure" />
+	<Figure file={`metrics/${career.route}/techJob`} slot="figure" />
 </DataDive>

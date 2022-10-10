@@ -4,10 +4,10 @@
 
 	export let lifestage: Scorecard[number];
 	let { route } = lifestage;
-	let file = route && `ei_${route}`; // TODO avoid having to translate here, by storing the figure filename in scorecard
+	let file = route && `scorecard/figure_${route}`; // TODO avoid having to translate here, by storing the figure filename in scorecard
 </script>
 
-<div class="py-4 w-full min-h-[113px] aspect-[268/113]" data-test-id="scorecard.figure-{route}">
+<div class="py-4 w-full min-h-[100px] aspect-[2.371]" data-test-id="scorecard.figure-{route}">
 	{#if file}
 		<BaseFigure {file} />
 	{/if}

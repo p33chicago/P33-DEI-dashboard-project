@@ -26,7 +26,7 @@
 			sat math benchmark is 2.7 - 5.6 times higher than that of Hispanic and Black students.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${highSchool.route}/sat_meetAndExceeds`} slot="figure" />
+	<Figure file={`metrics/${highSchool.route}/sat_meetAndExceeds`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -50,5 +50,5 @@
 			higher in AP CS is 1.9 - 4 times higher than that of Hispanic and Black students.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${highSchool.route}/apcs_aboveThree`} slot="figure" />
+	<Figure file={`metrics/${highSchool.route}/apcs_aboveThree`} slot="figure" />
 </DataDive>

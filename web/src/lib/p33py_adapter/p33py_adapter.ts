@@ -17,7 +17,7 @@ const matches_lifestage =
 		return p33_lifestage_or_indicator.stage === lifestage.route;
 	};
 
-const scorecard_from_ei_json = (
+const from_json = (
 	lifestages_json: P33Py.Lifestage[],
 	indicators_json: P33Py.Indicator[]
 ): Scorecard =>
@@ -28,4 +28,4 @@ const scorecard_from_ei_json = (
 		indicators: indicators_json.filter(matches_lifestage(lifestage)).map(indicator_from_json)
 	}));
 
-export { scorecard_from_ei_json };
+export { from_json };

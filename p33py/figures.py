@@ -61,7 +61,7 @@ def horizontal_bar(metric):
     fig.update_xaxes(title="", side="bottom", tickvals=list(range(0, 101, 25)))
     fig.update_layout(
         legend_title="",
-        margin=dict(t=0, l=57, r=12, b=30, pad=8),
+        margin=dict(t=0, l=57, r=12, b=37, pad=8),
     )
     fig.update_traces(
         hovertemplate="%{x:.3}<extra></extra>",

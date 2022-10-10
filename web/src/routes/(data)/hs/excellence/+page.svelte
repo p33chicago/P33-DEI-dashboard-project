@@ -22,7 +22,7 @@
 			advance SAT math is 12.3 - 34 times higher than that of Hispanic and Black students in CPS.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${highSchool.route}/sat_exceeds`} slot="figure" />
+	<Figure file={`metrics/${highSchool.route}/sat_exceeds`} slot="figure" />
 </DataDive>
 
 <DataDive
@@ -44,5 +44,5 @@
 			score 5 on AP CS is 6 - 17 times higher than that of Hispanic and Black students in CPS.
 		</p>
 	</svelte:fragment>
-	<Figure file={`${highSchool.route}/apcs_five`} slot="figure" />
+	<Figure file={`metrics/${highSchool.route}/apcs_five`} slot="figure" />
 </DataDive>

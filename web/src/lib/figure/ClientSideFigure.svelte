@@ -38,7 +38,7 @@
 
 	const init = async () => {
 		Plotly = await load();
-		({ data, layout } = await (await fetch(`${assets}/figures/${file}.json`)).json());
+		({ data, layout } = await (await fetch(`${assets}/${file}.json`)).json());
 		render();
 	};
 	init();

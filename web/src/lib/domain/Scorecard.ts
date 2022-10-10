@@ -1,7 +1,7 @@
 import type { Lifestage } from './Lifestage';
 import type { GeographicArea } from './GeographicArea';
 import type { Indicator } from './Indicator';
-import { scorecard_from_ei_json } from '../p33py_adapter/p33py_adapter';
+import { from_json } from '../p33py_adapter/p33py_adapter';
 
 interface ScorecardIndicator extends Indicator {
 	score?: number;
@@ -17,4 +17,4 @@ type Scorecard = LifestageScore[];
 
 export type { Scorecard, LifestageScore };
 
-export { scorecard_from_ei_json };
+export { from_json };
