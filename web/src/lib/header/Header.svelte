@@ -3,6 +3,9 @@
 	import { assets, base } from '$app/paths';
 	import { lifestages } from '../domain/Lifestage.js';
 	import { indicators } from '../domain/Indicator';
+	import Caret from './icons/Caret.svelte';
+	import Hamburger from './icons/Hamburger.svelte';
+	import Cross from './icons/Cross.svelte';
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);
@@ -16,44 +19,20 @@
 >
 	<div class="max-w-7xl align-top justify-left md:mx-auto">
 		<div class="px-1 md:px-3 lg:px-6 flex justify-between fullnav:justify-start">
-			<input type="checkbox" id="open-mobile-menu" class="hidden" bind:this={nav_checkbox} />
+			<input bind:this={nav_checkbox} class="hidden" id="open-mobile-menu" type="checkbox" />
 			<label
-				for="open-mobile-menu"
-				class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2"
 				aria-controls="mobile-menu"
 				aria-expanded="false"
+				class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2"
+				for="open-mobile-menu"
 			>
 				<span class="sr-only">Open main menu</span>
-				<svg
-					class="hamburger block h-6 w-6"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-					/>
-				</svg>
-				<svg
-					class="cross hidden h-6 w-6"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					aria-hidden="true"
-				>
-					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-				</svg>
+				<Hamburger />
+				<Cross />
 			</label>
 			<div class="logo flex p-2" on:click={hide_nav}>
-				<a href={`${base}/`} class="">
-					<img alt="" src={`${assets}/p33-logo.png`} class="h-8 w-8" />
+				<a class="" href={`${base}/`}>
+					<img alt="" class="h-8 w-8" src={`${assets}/p33-logo.png`} />
 				</a>
 			</div>
 
@@ -77,20 +56,7 @@
 									on:click|capture|stopPropagation={dont_hide_nav}
 								>
 									<span class="leading-8">{lifestage.name}</span>
-									<svg
-										aria-hidden="true"
-										focusable="false"
-										data-prefix="fas"
-										class="inline-block w-3 h-3"
-										role="img"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 448 512"
-										>-->
-										<path
-											fill="currentColor"
-											d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-										/>
-									</svg>
+									<Caret />
 								</summary>
 
 								<div class="mt-3 text-sm leading-6">
@@ -130,6 +96,7 @@
 	.logo {
 		margin-right: 40px;
 	}
+
 	.logo img {
 		filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg);
 	}
