@@ -5,6 +5,7 @@
 	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
 	import Scorecard from '$lib/scorecard/Scorecard.svelte';
 	import type { Scorecard as ScorecardType } from '$lib/domain/Scorecard.ts';
+	import Definitions from '$lib/scorecard/definitions/Definitions.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;
@@ -12,7 +13,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="P33" />
+	<meta content="P33" name="description" />
 </svelte:head>
 
 <!-- HERO -->
@@ -45,7 +46,7 @@
 	<BodyContentContainer>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img alt="" src={`${base}/why-tech-matters.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" class="object-scale-down h-8 w-8" src={`${base}/why-tech-matters.svg`} />
 				<h2 class="font-sans-alternate text-2xl pl-2">Why Tech Matters</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -55,7 +56,7 @@
 		</div>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img alt="" src={`${base}/why-built.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" class="object-scale-down h-8 w-8" src={`${base}/why-built.svg`} />
 				<h2 class="font-sans-alternate text-2xl pl-2">Why We Built This</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -65,7 +66,7 @@
 		</div>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img alt="" src={`${base}/what-data.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" class="object-scale-down h-8 w-8" src={`${base}/what-data.svg`} />
 				<h2 class="font-sans-alternate text-2xl pl-2">What the Data Shows</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -75,7 +76,7 @@
 		</div>
 		<div class="ml-12 py-2">
 			<div class="flex">
-				<img alt="" src={`${base}/what-success.svg`} class="object-scale-down h-8 w-8" />
+				<img alt="" class="object-scale-down h-8 w-8" src={`${base}/what-success.svg`} />
 				<h2 class="font-sans-alternate text-2xl pl-2">What is Success</h2>
 			</div>
 			<p class="font-sans text-black pt-4">
@@ -85,7 +86,7 @@
 		</div>
 	</BodyContentContainer>
 </div>
-<div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat text-white">
+<div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat text-white py-4">
 	<BodyContentContainer>
 		<h1
 			class="text-white underline decoration-heads-up-yellow underline-offset-8 text-5xl col-span-1 sm:col-span-4"
@@ -101,22 +102,27 @@
 			concern.
 		</p>
 		<Scorecard {scorecard} />
+		<div class="sm:col-span-4 bg-black/60 px-8 py-4 bg-blend-multiply">
+			<Definitions />
+		</div>
 	</BodyContentContainer>
 </div>
 <BodyContentContainer>
 	<!-- bottom part -->
-	<h3 class="col-span-1 sm:col-span-4">
-		Black and Latinx Chicagoans, trans, non-binary and women remain underrepresented in high-paid
-		technical roles
+	<h3
+		class="col-span-1 sm:col-span-4 text-black text-4xl leading-relaxed font-sans-alternate mx-8 my-4"
+	>
+		Black and Latino Chicagoans are dramatically underrepresented in high-paid tech roles after
+		receiving fewer quality learning opportunities in school and college
 	</h3>
 
 	<!-- Takeaways -->
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="47% vs 14%">
 			<img
+				class="self-start w-[64px] sm:w-[147px] aspect-square mt-2.5"
 				slot="graphic"
 				src={`${base}/diverse-roles.svg`}
-				class="self-start w-[64px] sm:w-[147px] aspect-square"
 			/>
 			<p>
 				Nearly half the Cook County population is Black or Latino, but those groups get only 14% of
@@ -127,9 +133,9 @@
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="42% vs 22%">
 			<img
+				class="self-start w-[64px] sm:w-[147px] aspect-square"
 				slot="graphic"
 				src={`${base}/graduation-hat.svg`}
-				class="self-start w-[64px] sm:w-[147px] aspect-square"
 			/>
 			<p>
 				Illinois college graduates in computing are 22% Black or Latino despite being 42% of all
@@ -140,9 +146,9 @@
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="400% more">
 			<img
+				class="self-start w-[64px] sm:w-[147px] aspect-square"
 				slot="graphic"
 				src={`${base}/homogenous.svg`}
-				class="self-start w-[64px] sm:w-[147px] aspect-square"
 			/>
 			<p>
 				We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino 8th graders
@@ -154,9 +160,9 @@
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="5,000+">
 			<img
+				class="self-start w-[64px] sm:w-[147px] aspect-square"
 				slot="graphic"
 				src={`${base}/hands-puzzle.svg`}
-				class="self-start w-[64px] sm:w-[147px] aspect-square"
 			/>
 			<p>
 				Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to
@@ -168,11 +174,11 @@
 	</div>
 
 	<div class="flex col-span-1 sm:col-span-4 rounded-lg bg-brand-primary-light-green/30">
-		<CTASection title="What can you do to help?" href="#" link_text="see opportunities">
+		<CTASection href="#" link_text="see opportunities" title="What can you do to help?">
 			<img
+				class="hidden sm:block w-32 h-48 mix-blend-overlay"
 				slot="graphic"
 				src={`${base}/chicago.svg`}
-				class="hidden sm:block w-32 h-48 mix-blend-overlay"
 			/>
 			<p class="text-xl text-mono">
 				Every organization can play a role in building a more inclusive TechChicago
