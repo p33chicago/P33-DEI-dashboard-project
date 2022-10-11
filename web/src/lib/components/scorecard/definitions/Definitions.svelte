@@ -1,5 +1,5 @@
 <script type="ts">
-	import { access, indicators, proficiency } from '../../../domain/Indicator';
+	import { access, indicators, proficiency } from '$lib/domain/Indicator';
 	import Definition from './Definition.svelte';
 </script>
 

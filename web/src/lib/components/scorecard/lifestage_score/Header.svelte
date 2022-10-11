@@ -1,5 +1,5 @@
 <script type="ts">
-	import type { Lifestage } from '../../../domain/Lifestage';
+	import type { Lifestage } from '$lib/domain/Lifestage';
 	import { assets } from '$app/paths';
 
 	export let lifestage: Lifestage;

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { assets, base } from '$app/paths';
-	import { lifestages } from '../../domain/Lifestage';
+	import { lifestages } from '$lib/domain/Lifestage';
 	import Hamburger from './icons/Hamburger.svelte';
 	import Cross from './icons/Cross.svelte';
 	import LifestageSubnav from './LifestageSubnav.svelte';
-	import * as Scorecard from '../../domain/Scorecard';
+	import * as Scorecard from '$lib/domain/Scorecard';
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);

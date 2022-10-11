@@ -1,6 +1,6 @@
 <script type="ts">
-	import type { Indicator } from '../../../domain/Indicator';
-	import { access, excellence, proficiency } from '../../../domain/Indicator';
+	import type { Indicator } from '$lib/domain/Indicator';
+	import { access, excellence, proficiency } from '$lib/domain/Indicator';
 
 	export let indicator: Indicator;
 </script>

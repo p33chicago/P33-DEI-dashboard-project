@@ -1,7 +1,7 @@
 <script type="ts">
 	import Header from './Header.svelte';
 	import Indicators from './Indicators.svelte';
-	import type { Scorecard } from '../../../domain/Scorecard';
+	import type { Scorecard } from '$lib/domain/Scorecard';
 	import Figure from './Figure.svelte';
 
 	export let lifestage: Scorecard[number];

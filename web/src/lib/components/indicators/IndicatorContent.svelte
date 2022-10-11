@@ -1,7 +1,7 @@
 <script type="ts">
-	import type { Indicator } from '../../domain/Indicator.ts';
-	import { access, indicators, proficiency } from '../../domain/Indicator.ts';
-	import IndicatorCard from '../cards/IndicatorCard.svelte';
+	import type { Indicator } from '$lib/domain/Indicator.ts';
+	import { access, indicators, proficiency } from '$lib/domain/Indicator.ts';
+	import IndicatorCard from '$lib/components/cards/IndicatorCard.svelte';
 	import AccessSnippet from './snippets/AccessSnippet.svelte';
 	import ProficiencySnippet from './snippets/ProficiencySnippet.svelte';
 	import ExcellenceSnippet from './snippets/ExcellenceSnippet.svelte';
