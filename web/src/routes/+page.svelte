@@ -16,7 +16,7 @@
 
 <svelte:head>
 	<title>Tech Equity Index</title>
-	<meta content="Help promote equity in tech." name="description" />
+	<meta content="Chicago's collaborative effort to build the most inclusive and equitable tech city in the country." name="description" />
 </svelte:head>
 
 <!-- HERO -->
