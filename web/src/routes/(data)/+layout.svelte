@@ -4,19 +4,14 @@
 	import IndicatorContent from '$lib/components/indicators/IndicatorContent.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
-	import { career } from '$lib/domain/Lifestage';
 
 	export let data;
-
-	$: title = `Tech Equity Index: ${indicator.name} in ${
-		lifestage === career ? 'Workplace' : lifestage.name
-	}`;
 	$: lifestage = data.lifestage;
 	$: indicator = data.indicator;
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{lifestage.name}: {indicator.name}</title>
 </svelte:head>
 
 <BannerTitle subtitle="Equity index scorecard" title={lifestage.name} />
