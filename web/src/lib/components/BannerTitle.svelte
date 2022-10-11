@@ -10,7 +10,9 @@
 	<BodyContentContainer>
 		<div class="font-sans-alternate col-span-4 py-8 sm:py-12">
 			<h1 class="text-white">{title}</h1>
-			<h2 class="text-heads-up-yellow">{subtitle}</h2>
+			{#if subtitle}
+				<h2 class="text-heads-up-yellow">{subtitle}</h2>
+			{/if}
 		</div>
 	</BodyContentContainer>
 </MapBackground>

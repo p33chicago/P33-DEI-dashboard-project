@@ -1,52 +1,27 @@
 <script>
-	import CardPage from '$lib/components/cards/CardPage.svelte';
+	import { browser } from '$app/environment';
+	import BannerTitle from '$lib/components/BannerTitle.svelte';
+	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
 </script>
 
-<CardPage>
-	<h1>Contact Us</h1>
-	<div>
-		<p class="px-1 py-6">
-			We'd love to chat. Let us know what's on your mind and we'll get back to you asap. Or just
-			provide a way to contact you and we'll keep you in the loop.
-		</p>
+<svelte:head>
+	<script charset="utf-8" src="//js.hsforms.net/forms/embed/v2.js" type="text/javascript"></script>
+</svelte:head>
+
+<BannerTitle title="Contact Us" />
+<BodyContentContainer>
+	<div class="col-span-1 sm:col-span-4 py-8">
+		{#if browser}
+			<script>
+				if (typeof globalThis.hbspt === 'undefined') {
+					console.error('Hubspot failed to load');
+				}
+				globalThis.hbspt.forms.create({
+					region: 'na1',
+					portalId: '14531327',
+					formId: '4f9e2886-8d50-48f9-b770-30624927fb4b'
+				});
+			</script>
+		{/if}
 	</div>
-	<div class="w-full">
-		<form class="bg-white px-1 pt-6 pb-10 mb-4">
-			<div class="mb-4">
-				<label class="block text-gray-700 text-sm font-bold mb-2" for="name"> Name </label>
-				<input
-					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-					id="name"
-					placeholder="Name"
-					type="text"
-				/>
-			</div>
-			<div class="mb-4">
-				<label class="block text-gray-700 text-sm font-bold mb-2" for="email"> Email </label>
-				<input
-					class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-					id="email"
-					placeholder="j.walters@glkh.com"
-					type="text"
-				/>
-			</div>
-			<div class="mb-6">
-				<label class="block text-gray-700 text-sm font-bold mb-2" for="message"> Message </label>
-				<textarea
-					class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-					id="message"
-					placeholder="What's on your mind?"
-					type="text"
-				/>
-			</div>
-			<div class="flex items-center justify-between">
-				<button
-					class="bg-brand-primary-dark-green text-white py-2 px-4 rounded uppercase"
-					type="button"
-				>
-					Let us know
-				</button>
-			</div>
-		</form>
-	</div>
-</CardPage>
+</BodyContentContainer>
