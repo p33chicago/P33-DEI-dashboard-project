@@ -49,8 +49,8 @@
 							<LifestageSubnav {lifestage} />
 						</li>
 					{/each}
-					<li class:active={$page.url.pathname === `${base}/resources`}>
-						<a href={`${base}/resources`}>Resources</a>
+					<li class:active={$page.url.pathname === `${base}/solutions`}>
+						<a href={`${base}/solutions`}>Solutions</a>
 					</li>
 					<li class:active={$page.url.pathname === `${base}/about`}>
 						<a href={`${base}/about`}>About Us</a>
