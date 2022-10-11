@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>About</title>
-	<meta content="Help promote equity in tech." name="description" />
+	<meta content="A dozen Chicago organizations are collaborating to build a more equitable Chicago technology economy." name="description" />
 </svelte:head>
 
 <CardPage>
