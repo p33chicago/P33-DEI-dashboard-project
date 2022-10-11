@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<title>Scorecard</title>
-	<meta content="Help promote equity in tech." name="description" />
+	<meta content="Combining numerous data sources to assess how well schools, colleges and companies support underrepresented populations on tech career pathways in Chicago." name="description" />
 </svelte:head>
 
 <Card>
