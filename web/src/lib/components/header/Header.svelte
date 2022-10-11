@@ -9,9 +9,6 @@
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);
-	const dont_hide_nav = () => {
-		/* do nothing */
-	};
 </script>
 
 <header
