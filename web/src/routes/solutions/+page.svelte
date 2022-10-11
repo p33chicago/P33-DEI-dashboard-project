@@ -9,7 +9,7 @@
 
 <svelte:head>
 	<title>Solutions</title>
-	<meta content="Help promote equity in tech." name="description" />
+	<meta content="Recommendations for how to improve diversity, equity and inclusion in Chicago's tech economy." name="description" />
 </svelte:head>
 
 <BannerTitle subtitle="" title="Solutions" />
