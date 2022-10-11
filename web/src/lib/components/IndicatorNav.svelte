@@ -8,7 +8,7 @@
 	export let indicator: Indicator;
 </script>
 
-<div class="hidden md:block col-start-2 col-span-3 2xl:w-screen space-x-5">
+<div class="hidden md:block col-start-2 col-span-3 2xl:w-screen space-x-5 py-10">
 	{#each indicators as _indicator}
 		<a
 			class="inline-block leading-9 border-2 rounded-full md:px-3 lg:px-6 uppercase"
