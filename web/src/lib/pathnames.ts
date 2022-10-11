@@ -1,7 +1,7 @@
-import type { Indicator } from '$lib/domain/Indicator.ts';
-import { default_indicator, indicators } from '$lib/domain/Indicator.ts';
-import type { Lifestage } from '$lib/domain/Lifestage.ts';
-import { default_lifestage, lifestages } from '$lib/domain/Lifestage.ts';
+import type { Indicator } from '$lib/domain/Indicator';
+import { default_indicator, indicators } from '$lib/domain/Indicator';
+import type { Lifestage } from '$lib/domain/Lifestage';
+import { default_lifestage, lifestages } from '$lib/domain/Lifestage';
 
 interface Data {
 	lifestage?: Lifestage;

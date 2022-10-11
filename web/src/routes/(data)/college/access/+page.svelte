@@ -1,7 +1,7 @@
 <script type="ts">
 	import Figure from '$lib/components/figure/Figure.svelte';
 	import DataDive from '$lib/components/DataDive.svelte';
-	import { college } from '$lib/domain/Lifestage.ts';
+	import { college } from '$lib/domain/Lifestage';
 </script>
 
 <DataDive

@@ -1,7 +1,7 @@
 <script type="ts">
-	import type { Lifestage } from '$lib/domain/Lifestage.ts';
-	import type { Indicator } from '$lib/domain/Indicator.ts';
-	import { indicators } from '$lib/domain/Indicator.ts';
+	import type { Lifestage } from '$lib/domain/Lifestage';
+	import type { Indicator } from '$lib/domain/Indicator';
+	import { indicators } from '$lib/domain/Indicator';
 	import { base } from '$app/paths';
 
 	export let lifestage: Lifestage;

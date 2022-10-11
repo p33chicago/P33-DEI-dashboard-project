@@ -1,7 +1,7 @@
 <script>
 	import Card from './cards/Card.svelte';
 	import { base } from '$app/paths';
-	import { lifestages } from '$lib/domain/Lifestage.ts';
+	import { lifestages } from '$lib/domain/Lifestage';
 
 	export let lifestage;
 </script>
