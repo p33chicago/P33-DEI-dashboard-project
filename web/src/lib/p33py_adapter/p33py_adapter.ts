@@ -1,9 +1,9 @@
-import type { Indicator } from '$lib/domain/Indicator.ts';
-import { from_route } from '$lib/domain/Indicator.ts';
-import type { Lifestage } from '$lib/domain/Lifestage.ts';
-import { lifestages } from '$lib/domain/Lifestage.ts';
-import type { Scorecard } from '$lib/domain/Scorecard.ts';
-import type * as P33Py from './types.ts';
+import type { Indicator } from '$lib/domain/Indicator';
+import { from_route } from '$lib/domain/Indicator';
+import type { Lifestage } from '$lib/domain/Lifestage';
+import { lifestages } from '$lib/domain/Lifestage';
+import type { Scorecard } from '$lib/domain/Scorecard';
+import type * as P33Py from './types';
 
 // Maps p33py output to our domain models (things in $lib/domain)
 

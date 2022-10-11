@@ -1,5 +1,5 @@
 import { assets } from '$app/paths';
-import type { Indicator, Lifestage } from './types.ts';
+import type { Indicator, Lifestage } from './types';
 
 type Fetch = (url: string) => ReturnType<typeof fetch>;
 const fetch_json = async (fetch: Fetch): Promise<[Lifestage[], Indicator[]]> =>
