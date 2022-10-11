@@ -1,6 +1,6 @@
 <script type="ts">
 	import Figure from '$lib/components/figure/Figure.svelte';
-	import DataDive from '../../../../lib/components/DataDive.svelte';
+	import DataDive from '$lib/components/DataDive.svelte';
 	import { k8 } from '$lib/domain/Lifestage.ts';
 </script>
 

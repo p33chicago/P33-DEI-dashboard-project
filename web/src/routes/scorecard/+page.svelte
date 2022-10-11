@@ -1,6 +1,6 @@
 <script type="ts">
-	import Card from '../../lib/components/cards/Card.svelte';
-	import MathEquation from '../../lib/components/MathEquation.svelte';
+	import Card from '$lib/components/cards/Card.svelte';
+	import MathEquation from '$lib/components/MathEquation.svelte';
 </script>
 
 <Card>
