@@ -8,6 +8,7 @@
 	import Definitions from '$lib/scorecard/definitions/Definitions.svelte';
 	import TextHighlight from '$lib/TextHighlight.svelte';
 	import Callout from '$lib/Callout.svelte';
+	import MapBackground from '$lib/MapBackground.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;
@@ -86,9 +87,9 @@
 		</div>
 	</BodyContentContainer>
 </div>
-<div class="w-full bg-chicago bg-background-map bg-blend-screen bg-repeat text-white py-4">
+<MapBackground>
 	<BodyContentContainer>
-		<div class="col-span-1 sm:col-span-4">
+		<div class="col-span-1 sm:col-span-4 text-white pt-4">
 			<h1
 				class="text-white underline decoration-heads-up-yellow underline-offset-8 text-5xl leading-relaxed"
 			>
@@ -104,11 +105,11 @@
 			</p>
 		</div>
 		<Scorecard {scorecard} />
-		<div class="sm:col-span-4 bg-black/60 px-8 py-4 bg-blend-multiply my-6">
+		<div class="text-white sm:col-span-4 bg-black/60 px-8 py-4 bg-blend-multiply my-6 pb-4">
 			<Definitions />
 		</div>
 	</BodyContentContainer>
-</div>
+</MapBackground>
 <BodyContentContainer>
 	<!-- bottom part -->
 	<h3

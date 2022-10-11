@@ -1,15 +1,16 @@
 <script type="ts">
 	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
+	import MapBackground from '$lib/MapBackground.svelte';
 
 	export let title: string;
 	export let subtitle: string;
 </script>
 
-<div class="font-sans-alternate bg-chicago bg-background-map bg-blend-screen bg-repeat">
+<MapBackground>
 	<BodyContentContainer>
-		<div class="col-span-4 py-8 sm:py-12">
+		<div class="font-sans-alternate col-span-4 py-8 sm:py-12">
 			<h1 class="text-white">{title}</h1>
 			<h2 class="text-heads-up-yellow">{subtitle}</h2>
 		</div>
 	</BodyContentContainer>
-</div>
+</MapBackground>
