@@ -43,7 +43,7 @@
 		list-style: none;
 	}
 
-	[open] > summary > svg {
+	[open] > summary > :global(svg) {
 		transform: rotate(180deg);
 	}
 </style>

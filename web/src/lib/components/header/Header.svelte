@@ -92,14 +92,6 @@
 		padding: 0.25rem 1rem;
 	}
 
-	summary {
-		list-style: none;
-	}
-
-	details[open] > summary > svg {
-		transform: rotate(180deg);
-	}
-
 	@media screen(lg) {
 		.active {
 			border-bottom: 2px solid theme('colors.brand-primary-dark-green');
