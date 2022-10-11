@@ -29,7 +29,11 @@
 </BodyContentContainer>
 
 <style>
-	.contact-form :global(fieldset:not([hidden])) + :global(fieldset:not([hidden])) {
+	.contact-form :global(fieldset) {
+		max-width: theme('maxWidth.2xl');
+	}
+	.contact-form :global(fieldset):not([hidden]) + :global(fieldset):not([hidden]),
+	.contact-form :global(fieldset):not([hidden]) + :global(.hs-submit):not([hidden]) {
 		margin-top: theme('margin.8');
 	}
 
@@ -42,14 +46,28 @@
 		color: theme('colors.fail-red');
 	}
 
-	.contact-form :global(input:not([type='button']):not([type='submit'])),
+	.contact-form :global(input):not([type='button'], [type='submit']),
+	.contact-form :global(select),
 	.contact-form :global(textarea) {
 		background-color: theme('backgroundColor.really-light-gray');
-		border-radius: 0px;
+		border-radius: 0;
 		border-bottom: 2px solid theme('colors.brand-primary-dark-green');
 		line-height: theme('lineHeight.loose');
 		padding-left: theme('padding.4');
 		padding-right: theme('padding.4');
+	}
+	.contact-form
+		:global(input):not([type='button'], [type='submit'], [type='radio'], [type='checkbox']),
+	.contact-form :global(select),
+	.contact-form :global(textarea) {
+		width: 100% !important;
+	}
+
+	.contact-form :global(select) {
+		height: 2rem;
+	}
+	.contact-form :global(textarea) {
+		resize: vertical;
 	}
 	.contact-form :global(input[type='button']),
 	.contact-form :global(input[type='submit']) {
