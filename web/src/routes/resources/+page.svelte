@@ -1,8 +1,15 @@
 <script>
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
-	import { base } from '$app/paths';
+	import SpaceshipIcon from '$lib/components/icons/SpaceshipIcon.svelte';
+	import CertificateIcon from '$lib/components/icons/CertificateIcon.svelte';
+	import MortarboardCapIcon from '$lib/components/icons/MortarboardCapIcon.svelte';
+	import HandshakeIcon from '$lib/components/icons/HandshakeIcon.svelte';
 </script>
+
+<svelte:head>
+	<title>Solutions</title>
+</svelte:head>
 
 <BannerTitle subtitle="" title="Solutions" />
 <div class="bg-white">
@@ -20,14 +27,15 @@
 			<div
 				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
 			>
-				<p>strategy/ overview</p>
-				<hr class="mx-10 border-2 border-heads-up-yellow" />
+				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">strategy</p>
 			</div>
 			<!--K8 -->
 			<div class="k8 border-b-2 border-light-gray">
 				<div class="flex text-black font-sans-alternate p-4">
-					<img alt="" src={`${base}/spaceship.svg`} />
-					<p class="uppercase px-2">k-8</p>
+					<p class="text-xl uppercase">
+						<SpaceshipIcon class="align-baseline inline mr-2.5" />
+						k-8
+					</p>
 				</div>
 				<p class="px-4">
 					<span class="text-brand-primary-green">Start early.</span> Quality math instruction and out-of-school
@@ -37,8 +45,10 @@
 			<!--Highschool -->
 			<div class="highschool border-b-2 border-light-gray">
 				<div class="flex text-black font-sans-alternate p-4">
-					<img alt="" src={`${base}/certificate.svg`} />
-					<p class="uppercase px-2">high school</p>
+					<p class="text-xl uppercase">
+						<CertificateIcon class="align-baseline inline mr-2.5" />
+						high school
+					</p>
 				</div>
 				<p class="px-4">
 					<span class="text-brand-primary-green">Aim high.</span> Expand access to advanced STEM programs
@@ -48,8 +58,10 @@
 			<!--College -->
 			<div class="college border-b-2 border-light-gray">
 				<div class="flex text-black font-sans-alternate p-4">
-					<img alt="" src={`${base}/grad-hat.svg`} />
-					<p class="uppercase px-2">college</p>
+					<p class="text-xl uppercase">
+						<MortarboardCapIcon class="align-baseline inline mr-2.5" />
+						college
+					</p>
 				</div>
 				<p class="px-4">
 					<span class="text-brand-primary-green">Focus on education and employment.</span> Target support
@@ -60,8 +72,10 @@
 			<!--Employment -->
 			<div class="employment border-b-2 border-light-gray border-t-2">
 				<div class="flex text-black font-sans-alternate p-4">
-					<img alt="" src={`${base}/handshake.svg`} />
-					<p class="uppercase px-2">employment</p>
+					<p class="text-xl uppercase">
+						<HandshakeIcon class="align-baseline inline mr-2.5" />
+						employment
+					</p>
 				</div>
 				<p class="px-4">
 					<span class="text-brand-primary-green">Open the aperture.</span> Hire tech talent from a wider
@@ -74,8 +88,9 @@
 			<div
 				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
 			>
-				<p>specific recommendations</p>
-				<hr class="mx-10 border-2 border-heads-up-yellow" />
+				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">
+					recommendations
+				</p>
 			</div>
 			<!--K8 -->
 			<div class="border-b-2 border-light-gray">
@@ -136,8 +151,9 @@
 			<div
 				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
 			>
-				<p>select organization to support</p>
-				<hr class="mx-10 border-2 border-heads-up-yellow" />
+				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">
+					organization
+				</p>
 			</div>
 			<!--K8 -->
 			<div class="border-b-2 border-light-gray">

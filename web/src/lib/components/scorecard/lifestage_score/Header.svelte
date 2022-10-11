@@ -1,6 +1,9 @@
 <script type="ts">
 	import type { Lifestage } from '$lib/domain/Lifestage';
-	import { assets } from '$app/paths';
+	import SpaceshipIcon from '$lib/components/icons/SpaceshipIcon.svelte';
+	import CertificateIcon from '$lib/components/icons/CertificateIcon.svelte';
+	import MortarboardcapIcon from '$lib/components/icons/MortarboardCapIcon.svelte';
+	import HandshakeIcon from '$lib/components/icons/HandshakeIcon.svelte';
 
 	export let lifestage: Lifestage;
 	export let area: string;
@@ -10,13 +13,13 @@
 <div class="flex items-start gap-2">
 	<div class="pt-1 h-[22px]">
 		{#if lifestage.name === 'K-8'}
-			<img src={`${assets}/spaceship.svg`} />
+			<SpaceshipIcon />
 		{:else if lifestage.name === 'High School'}
-			<img src={`${assets}/certificate.svg`} />
+			<CertificateIcon />
 		{:else if lifestage.name === 'College'}
-			<img src={`${assets}/mortarboard-cap.svg`} />
+			<MortarboardcapIcon />
 		{:else}
-			<img src={`${assets}/handshake.svg`} />
+			<HandshakeIcon />
 		{/if}
 	</div>
 	<div class="grow">
