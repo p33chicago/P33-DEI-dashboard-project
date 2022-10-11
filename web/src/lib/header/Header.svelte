@@ -58,9 +58,6 @@
 					<li class:active={$page.url.pathname === `${base}/about`}>
 						<a href={`${base}/about`}>About Us</a>
 					</li>
-					<li class:active={$page.url.pathname === `${base}/partners`}>
-						<a href={`${base}/partners`}>Our Partners</a>
-					</li>
 					<li class:active={$page.url.pathname === `${base}/contact`}>
 						<a href={`${base}/contact`}>Contact Us</a>
 					</li>
