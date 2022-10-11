@@ -2,6 +2,11 @@
 	import CardPage from '$lib/components/cards/CardPage.svelte';
 </script>
 
+<svelte:head>
+	<title>Tech Equity Index: About</title>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <CardPage>
 	<h1>About Us</h1>
 	<div>

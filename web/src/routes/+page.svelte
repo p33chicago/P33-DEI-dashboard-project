@@ -15,8 +15,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta content="P33" name="description" />
+	<title>Tech Equity Index</title>
+	<meta content="Help promote equity in tech." name="description" />
 </svelte:head>
 
 <!-- HERO -->

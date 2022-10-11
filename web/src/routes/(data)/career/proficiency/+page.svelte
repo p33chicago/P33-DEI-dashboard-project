@@ -4,6 +4,10 @@
 	import { career } from '$lib/domain/Lifestage';
 </script>
 
+<svelte:head>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <DataDive
 	header="Chicago MSA tech employee demographics"
 	subheader="Proportion of Chicago MSA degree holders working in a top 11 tech occupation"

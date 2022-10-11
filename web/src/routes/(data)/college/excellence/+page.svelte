@@ -4,6 +4,10 @@
 	import { college } from '$lib/domain/Lifestage';
 </script>
 
+<svelte:head>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <DataDive
 	header="Illinois CS/Computing Degree Enrollment for Top 3"
 	subheader="Percent of college students enrolled into a CS/Computing degree at a top 3 Illinois university by race/ethnicity"

@@ -8,7 +8,8 @@
 </script>
 
 <svelte:head>
-	<title>Solutions</title>
+	<title>Tech Equity Index: Solutions</title>
+	<meta content="Help promote equity in tech." name="description" />
 </svelte:head>
 
 <BannerTitle subtitle="" title="Solutions" />

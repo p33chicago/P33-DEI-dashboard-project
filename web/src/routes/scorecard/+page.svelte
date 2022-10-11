@@ -3,6 +3,11 @@
 	import MathEquation from '$lib/components/MathEquation.svelte';
 </script>
 
+<svelte:head>
+	<title>Tech Equity Index: Scorecard</title>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <Card>
 	<div class="block p-4 lg:p-10 bg-white">
 		<h1 class="pb-2">Methodology</h1>

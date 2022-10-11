@@ -4,6 +4,10 @@
 	import { highSchool } from '$lib/domain/Lifestage';
 </script>
 
+<svelte:head>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <DataDive
 	header="HS SAT Math Advanced"
 	subheader="Percent of CPS SAT takers advancing math standards by race/ethnicity"

@@ -4,6 +4,10 @@
 	import { highSchool } from '$lib/domain/Lifestage';
 </script>
 
+<svelte:head>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <DataDive header="AP CS Enrollment" subheader="Percent of CPS HS students enrolled in AP CS">
 	<svelte:fragment slot="story">
 		<p>

@@ -4,6 +4,10 @@
 	import { k8 } from '$lib/domain/Lifestage';
 </script>
 
+<svelte:head>
+	<meta content="Help promote equity in tech." name="description" />
+</svelte:head>
+
 <DataDive
 	header="Lack of Household Internet Access"
 	subheader="Percent of young residents lacking household internet access by race/ethnicity"
