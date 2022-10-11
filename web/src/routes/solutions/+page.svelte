@@ -16,7 +16,7 @@
 	<BodyContentContainer>
 		<div class="col-span-4">
 			<p>
-				Pariatur tacos messenger bag squid post-ironic ut quis you probably haven't heard of them.
+				SOLUTIONS! Pariatur tacos messenger bag squid post-ironic ut quis you probably haven't heard of them.
 				Vinyl laboris umami plaid vaporware elit 90's gatekeep yes plz hoodie letterpress trust fund
 				proident. Enim cillum migas brunch. Schlitz ramps ethical neutra.
 			</p>
