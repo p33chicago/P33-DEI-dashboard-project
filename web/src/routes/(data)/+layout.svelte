@@ -1,9 +1,9 @@
 <script type="ts">
-	import DataSidebar from '$lib/DataSidebar.svelte';
-	import IndicatorNav from '$lib/IndicatorNav.svelte';
-	import IndicatorContent from '$lib/indicators/IndicatorContent.svelte';
-	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
-	import BannerTitle from '$lib/BannerTitle.svelte';
+	import DataSidebar from '../../lib/components/DataSidebar.svelte';
+	import IndicatorNav from '../../lib/components/IndicatorNav.svelte';
+	import IndicatorContent from '$lib/components/indicators/IndicatorContent.svelte';
+	import BodyContentContainer from '../../lib/components/BodyContentContainer.svelte';
+	import BannerTitle from '../../lib/components/BannerTitle.svelte';
 
 	export let data;
 
@@ -15,12 +15,12 @@
 	<title>{lifestage.name}: {indicator.name}</title>
 </svelte:head>
 
-<BannerTitle title={lifestage.name} subtitle="Equity index scorecard" />
+<BannerTitle subtitle="Equity index scorecard" title={lifestage.name} />
 
 <BodyContentContainer>
 	<DataSidebar {lifestage} />
 
-	<IndicatorNav {lifestage} {indicator} />
+	<IndicatorNav {indicator} {lifestage} />
 
 	<div class="grid auto-rows-min row-span-2 col-span-4 md:col-span-3 gap-y-4">
 		<IndicatorContent active_indicator={indicator}>

@@ -1,5 +1,5 @@
 <script>
-	import CardPage from '$lib/cards/CardPage.svelte';
+	import CardPage from '$lib/components/cards/CardPage.svelte';
 </script>
 
 <CardPage>

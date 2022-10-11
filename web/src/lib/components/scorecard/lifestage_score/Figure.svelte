@@ -1,6 +1,6 @@
 <script type="ts">
-	import type { Scorecard } from '$lib/domain/Scorecard';
-	import BaseFigure from '$lib/figure/Figure.svelte';
+	import type { Scorecard } from '../../../domain/Scorecard';
+	import BaseFigure from '../../figure/Figure.svelte';
 
 	export let lifestage: Scorecard[number];
 	let { route } = lifestage;

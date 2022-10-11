@@ -1,6 +1,6 @@
 <script type="ts">
-	import Figure from '$lib/figure/Figure.svelte';
-	import DataDive from '$lib/DataDive.svelte';
+	import Figure from '$lib/components/figure/Figure.svelte';
+	import DataDive from '../../../../lib/components/DataDive.svelte';
 	import { highSchool } from '$lib/domain/Lifestage.ts';
 </script>
 

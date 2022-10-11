@@ -1,7 +1,7 @@
 <script type="ts">
-	import DataSidebar from '$lib/DataSidebar.svelte';
-	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
-	import BannerTitle from '$lib/BannerTitle.svelte';
+	import DataSidebar from '../../lib/components/DataSidebar.svelte';
+	import BodyContentContainer from '../../lib/components/BodyContentContainer.svelte';
+	import BannerTitle from '../../lib/components/BannerTitle.svelte';
 </script>
 
 <svelte:head>

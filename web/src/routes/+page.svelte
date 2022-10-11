@@ -1,14 +1,14 @@
 <script type="ts">
 	import { base } from '$app/paths';
-	import CTASection from '$lib/CTASection.svelte';
-	import Takeaway from '$lib/Takeaway.svelte';
-	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
-	import Scorecard from '$lib/scorecard/Scorecard.svelte';
+	import CTASection from '../lib/components/CTASection.svelte';
+	import Takeaway from '../lib/components/Takeaway.svelte';
+	import BodyContentContainer from '../lib/components/BodyContentContainer.svelte';
+	import Scorecard from '$lib/components/scorecard/Scorecard.svelte';
 	import type { Scorecard as ScorecardType } from '$lib/domain/Scorecard.ts';
-	import Definitions from '$lib/scorecard/definitions/Definitions.svelte';
-	import TextHighlight from '$lib/TextHighlight.svelte';
-	import Callout from '$lib/Callout.svelte';
-	import MapBackground from '$lib/MapBackground.svelte';
+	import Definitions from '$lib/components/scorecard/definitions/Definitions.svelte';
+	import TextHighlight from '../lib/components/TextHighlight.svelte';
+	import Callout from '../lib/components/Callout.svelte';
+	import MapBackground from '../lib/components/MapBackground.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;

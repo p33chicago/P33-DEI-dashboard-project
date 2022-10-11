@@ -1,6 +1,6 @@
 <script type="ts">
-	import type { Scorecard } from '$lib/domain/Scorecard';
-	import { indicators as domain_indicators } from '$lib/domain/Indicator.ts';
+	import type { Scorecard } from '../../../domain/Scorecard';
+	import { indicators as domain_indicators } from '../../../domain/Indicator.ts';
 
 	export let indicators: Scorecard[number]['indicators'];
 

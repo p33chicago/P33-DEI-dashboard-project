@@ -1,6 +1,6 @@
 <script>
-	import ButtonGroup from '$lib/ButtonGroup.svelte';
-	import ButtonGroupItem from '$lib/ButtonGroupItem.svelte';
+	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
+	import ButtonGroupItem from '$lib/components/ButtonGroupItem.svelte';
 </script>
 
 <ButtonGroup>

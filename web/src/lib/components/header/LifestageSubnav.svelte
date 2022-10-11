@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { indicators } from '$lib/domain/Indicator';
+	import { indicators } from '../../domain/Indicator';
 	import Caret from './icons/Caret.svelte';
-	import type { Lifestage } from '$lib/domain/Lifestage';
+	import type { Lifestage } from '../../domain/Lifestage';
 
 	export let lifestage: Lifestage;
 

@@ -1,10 +1,10 @@
 <script>
-	import BannerTitle from '../../lib/BannerTitle.svelte';
-	import BodyContentContainer from '../../lib/BodyContentContainer.svelte';
+	import BannerTitle from '$lib/components/BannerTitle.svelte';
+	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
 	import { base } from '$app/paths';
 </script>
 
-<BannerTitle title="Solutions" subtitle="" />
+<BannerTitle subtitle="" title="Solutions" />
 <div class="bg-white">
 	<BodyContentContainer>
 		<div class="col-span-4">

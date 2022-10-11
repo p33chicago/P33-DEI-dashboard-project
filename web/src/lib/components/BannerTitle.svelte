@@ -1,6 +1,6 @@
 <script type="ts">
-	import BodyContentContainer from '$lib/BodyContentContainer.svelte';
-	import MapBackground from '$lib/MapBackground.svelte';
+	import BodyContentContainer from './BodyContentContainer.svelte';
+	import MapBackground from './MapBackground.svelte';
 
 	export let title: string;
 	export let subtitle: string;

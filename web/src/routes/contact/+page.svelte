@@ -1,5 +1,5 @@
 <script>
-	import CardPage from '$lib/cards/CardPage.svelte';
+	import CardPage from '$lib/components/cards/CardPage.svelte';
 </script>
 
 <CardPage>
@@ -17,8 +17,8 @@
 				<input
 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 					id="name"
-					type="text"
 					placeholder="Name"
+					type="text"
 				/>
 			</div>
 			<div class="mb-4">
@@ -26,8 +26,8 @@
 				<input
 					class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
 					id="email"
-					type="text"
 					placeholder="j.walters@glkh.com"
+					type="text"
 				/>
 			</div>
 			<div class="mb-6">
@@ -35,8 +35,8 @@
 				<textarea
 					class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
 					id="message"
-					type="text"
 					placeholder="What's on your mind?"
+					type="text"
 				/>
 			</div>
 			<div class="flex items-center justify-between">

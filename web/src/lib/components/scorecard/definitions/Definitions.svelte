@@ -1,6 +1,6 @@
 <script type="ts">
-	import { access, indicators, proficiency } from '$lib/domain/Indicator';
-	import Definition from '$lib/scorecard/definitions/Definition.svelte';
+	import { access, indicators, proficiency } from '../../../domain/Indicator';
+	import Definition from './Definition.svelte';
 </script>
 
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-y-8">
