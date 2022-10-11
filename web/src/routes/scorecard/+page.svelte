@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Tech Equity Index: Scorecard</title>
+	<title>Scorecard</title>
 	<meta content="Help promote equity in tech." name="description" />
 </svelte:head>
 

@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<script charset="utf-8" src="//js.hsforms.net/forms/embed/v2.js" type="text/javascript"></script>
-	<title>Tech Equity Index: Contact Us</title>
+	<title>Contact Us</title>
 	<meta content="Help promote equity in tech." name="description" />
 </svelte:head>
 

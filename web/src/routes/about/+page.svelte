@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Tech Equity Index: About</title>
+	<title>About</title>
 	<meta content="Help promote equity in tech." name="description" />
 </svelte:head>
 
