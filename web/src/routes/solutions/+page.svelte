@@ -20,9 +20,7 @@
 	<BodyContentContainer>
 		<div class="col-span-4">
 			<p>
-				SOLUTIONS! Pariatur tacos messenger bag squid post-ironic ut quis you probably haven't heard
-				of them. Vinyl laboris umami plaid vaporware elit 90's gatekeep yes plz hoodie letterpress
-				trust fund proident. Enim cillum migas brunch. Schlitz ramps ethical neutra.
+				The TechChicago Equity Index only matters if it changes the behavior, investments, policies and practices that can expand tech career opportunity. We propose several initial priorities for Chicago and Illinois, and we welcome partners to join us in advancing this agenda or recommend other ideas for how to make progress building an inclusive future for Chicago.
 			</p>
 		</div>
 		<hr class="col-span-4 border-1 border-light-gray py-4" />
