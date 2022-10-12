@@ -138,7 +138,7 @@
 		</Takeaway>
 	</div>
 	<div class="flex col-span-1 sm:col-span-2">
-		<Takeaway heading="400% more">
+		<Takeaway heading="9,000+">
 			<img height="147" slot="graphic" src={`${base}/homogenous.svg`} width="147" />
 			<p>
 				We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino
@@ -154,9 +154,8 @@
 			<p>
 				Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to
 				get 5,500 more 8th Black and Latino 8th graders to
-				<TextHighlight left="0.4" top="0.25">advanced</TextHighlight> standards, and enroll 5,100 more
+				<TextHighlight left="0.4" top="0.25">advanced</TextHighlight> math standards, and enroll 5,100 more
 				Black and Latino students into AP <TextHighlight top="0.1">Computer Science</TextHighlight>.
-				Right highlights: "advanced" and "AP Computer Science"
 			</p>
 		</Takeaway>
 	</div>
