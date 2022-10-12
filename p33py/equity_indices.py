@@ -25,6 +25,31 @@ def combiner_CHIAndIL(*df_metric: list[DataFrame]) -> DataFrame:
 
     return df_metrics_CHI_wide
 
+####### added on Oct. 12
+def combiner_US (*df_metric: list[DataFrame]) -> DataFrame:
+    """Returns individual metrics int a dataframe with metrics from distinct geographic scope"""
+
+    df_metrics_combined = pd.concat(df_metric)
+
+    # select data from chicago/IL
+    df_metrics_USA = df_metrics_combined[(df_metrics_combined["var_scope"] == "usa")]
+    # drop populations, keep only proportions (metric values)
+    df_metrics_USA_slim = df_metrics_USA.drop(
+        ["metrics_new", "subset_popul", "population"], axis=1
+    )
+    # transfer dataframe structure from long to wide for later manipualation
+    df_metrics_USA_wide = pd.pivot(
+        df_metrics_USA_slim,
+        index=["metric_name", "var_scope", "weight", "dimension", "stage"],
+        columns="var_ethnic",
+        values="metric_value",
+    )
+    # transform index to vairables for later process
+    df_metrics_USA_wide.reset_index(inplace=True)
+
+    return df_metrics_USA_wide
+
+####### added on Oct. 12
 
 def EI_metric_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
     """Returns Equality index (EI) of each metric using geometric mean when there are 4 ethnic groups"""

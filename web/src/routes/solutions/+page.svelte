@@ -20,9 +20,7 @@
 	<BodyContentContainer>
 		<div class="col-span-4">
 			<p>
-				SOLUTIONS! Pariatur tacos messenger bag squid post-ironic ut quis you probably haven't heard
-				of them. Vinyl laboris umami plaid vaporware elit 90's gatekeep yes plz hoodie letterpress
-				trust fund proident. Enim cillum migas brunch. Schlitz ramps ethical neutra.
+				The TechChicago Equity Index only matters if it changes the behavior, investments, policies and practices that can expand tech career opportunity. We propose several initial priorities for Chicago and Illinois, and we welcome partners to join us in advancing this agenda or recommend other ideas for how to make progress building an inclusive future for Chicago.
 			</p>
 		</div>
 		<hr class="col-span-4 border-1 border-light-gray py-4" />
@@ -138,14 +136,12 @@
 			<!--Employment -->
 			<div class="border-b-2 border-light-gray">
 				<ul class="p-4">
-					<li class="pb-4">1. Improve algebra and calculus education across the district.</li>
+					<li class="pb-4">1. Hire more entry-level talent from diverse sources, including new college partners and "non-traditional" sources like apprenticeships and bootcamps.</li>
 					<li class="pb-4">
-						2. Enroll more Black and Latin students in AP Computer Science and other advanced
-						programs by investing in teacher PD and certification.
+						2. Ensure diverse candidate slates and diverse interview panels.
 					</li>
 					<li class="pb-4">
-						3. Fund and partner with nonprofits and companies to bring enrichment opportunities to
-						high school students.
+						3. Build inclusive cultures to ensure post-hire success.
 					</li>
 				</ul>
 			</div>
