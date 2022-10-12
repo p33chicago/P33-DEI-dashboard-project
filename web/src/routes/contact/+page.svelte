@@ -7,7 +7,10 @@
 <svelte:head>
 	<script charset="utf-8" src="//js.hsforms.net/forms/embed/v2.js" type="text/javascript"></script>
 	<title>Contact Us</title>
-	<meta content="How to get involved or learn more about building an inclusive and equitable tech economy in Chicago." name="description" />
+	<meta
+		content="How to get involved or learn more about building an inclusive and equitable tech economy in Chicago."
+		name="description"
+	/>
 </svelte:head>
 
 <BannerTitle title="Contact Us" />
