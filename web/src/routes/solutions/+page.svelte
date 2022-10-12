@@ -138,14 +138,12 @@
 			<!--Employment -->
 			<div class="border-b-2 border-light-gray">
 				<ul class="p-4">
-					<li class="pb-4">1. Improve algebra and calculus education across the district.</li>
+					<li class="pb-4">1. Hire more entry-level talent from diverse sources, including new college partners and "non-traditional" sources like apprenticeships and bootcamps.</li>
 					<li class="pb-4">
-						2. Enroll more Black and Latin students in AP Computer Science and other advanced
-						programs by investing in teacher PD and certification.
+						2. Ensure diverse candidate slates and diverse interview panels.
 					</li>
 					<li class="pb-4">
-						3. Fund and partner with nonprofits and companies to bring enrichment opportunities to
-						high school students.
+						3. Build inclusive cultures to ensure post-hire success.
 					</li>
 				</ul>
 			</div>
