@@ -25,8 +25,9 @@ def combiner_CHIAndIL(*df_metric: list[DataFrame]) -> DataFrame:
 
     return df_metrics_CHI_wide
 
+
 ####### added on Oct. 12
-def combiner_US (*df_metric: list[DataFrame]) -> DataFrame:
+def combiner_US(*df_metric: list[DataFrame]) -> DataFrame:
     """Returns individual metrics int a dataframe with metrics from distinct geographic scope"""
 
     df_metrics_combined = pd.concat(df_metric)
@@ -49,7 +50,9 @@ def combiner_US (*df_metric: list[DataFrame]) -> DataFrame:
 
     return df_metrics_USA_wide
 
+
 ####### added on Oct. 12
+
 
 def EI_metric_FourG_geomean(df_metrics_selected: DataFrame) -> DataFrame:
     """Returns Equality index (EI) of each metric using geometric mean when there are 4 ethnic groups"""
