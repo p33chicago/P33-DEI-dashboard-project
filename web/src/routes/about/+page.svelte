@@ -3,9 +3,9 @@
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
 	import Heading from '$lib/components/Heading.svelte';
 	import BlockQuote from '$lib/components/BlockQuote.svelte';
-	import P33Logo from '$lib/components/P33Logo.svelte';
 	import { assets } from '$app/paths';
-	import PartnerLogo from '$lib/components/PartnerLogo.svelte';
+	import PartnerLogo from './PartnerLogo.svelte';
+	import ParagraphWithImage from '$lib/components/ParagraphWithImage.svelte';
 </script>
 
 <svelte:head>
@@ -56,8 +56,15 @@
 			about the challenges that lie ahead and working together to solve them.
 		</p>
 		<div class="my-6">
-			<P33Logo class="float-none sm:float-left mt-2" />
-			<p class="sm:ml-[120px]">
+			<ParagraphWithImage>
+				<img
+					alt="P33 Chicago"
+					class="mx-auto sm:ml-2 sm:mr-4"
+					height="109"
+					slot="image"
+					src="{assets}/P33.svg"
+					width="109"
+				/>
 				<a href="https://p33chicago.com" target="_blank">P33</a> leads and coordinates this effort
 				on behalf of the partnership and the region. P33 is a business-led nonprofit founded in 2019
 				to make Chicago a tier-one tech city and foster inclusive economic growth. The organization
@@ -66,7 +73,7 @@
 				founders through initiatives such as
 				<a href="https://techrise.co/" target="_blank">TechRise</a>, a weekly pitch competition that
 				distributes non-dilutive capital to Black and Latino founders and women.
-			</p>
+			</ParagraphWithImage>
 		</div>
 		<div
 			class="my-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 sm:gap-y-12 justify-items-center "
@@ -125,6 +132,49 @@
 				src="{assets}/partner_logos/UCSR_PrimaryLogo_FullColor_RGB.png"
 				width="309"
 			/>
+		</div>
+		<div class="col-span-1 sm:col-span-4 bg-light-gray/20 py-4 mt-24 mb-12">
+			<h2
+				class="mx-7 text-center text-3xl font-sans-alternate text-black border-brand-primary-really-light-green border-b-[1px] py-4"
+			>
+				Other Partners
+			</h2>
+
+			<div class="mx-7 py-8">
+				<ParagraphWithImage>
+					<img
+						alt="ThoughtWorks"
+						class="my-8 sm:mr-[36px]"
+						height="42"
+						slot="image"
+						src="{assets}/ThoughtWorks.svg"
+						width="260"
+					/>
+					Thoughtworks a leading global technology consultancy that enables enterprises and technology
+					disruptors across the globe to thrive as modern digital businesses. We leverage our vast experience
+					to improve our clients’ ability to respond to change; utilize data assets; create adaptable
+					technology platforms; and rapidly design, deliver and evolve exceptional digital products and
+					experiences at scale.
+				</ParagraphWithImage>
+			</div>
+
+			<div class="mx-7 py-8">
+				<ParagraphWithImage>
+					<img
+						alt="TechChicago"
+						class="my-8 sm:mr-[40px]"
+						height="42"
+						slot="image"
+						src="{assets}/TechChicago.svg"
+						width="260"
+					/>
+					TechChicago is a regional collaboration dedicated to redefining our great city as a global
+					center of innovation. We are a city born of reinvention. A city that’s fueling tech innovation
+					to move the world forward. A city that’s a champion of diversity. A city that’s cosmopolitan,
+					yet down to earth. A city with a significantly lower cost of living and higher quality of life.
+					A city that’s making a difference. We believe it’s time to look toward Chicago.
+				</ParagraphWithImage>
+			</div>
 		</div>
 	</div>
 </BodyContentContainer>
