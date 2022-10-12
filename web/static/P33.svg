@@ -1,9 +1,7 @@
 <svg
-	class={$$restProps.class || ''}
+	{...$$restProps}
 	fill="none"
-	height="109"
 	viewBox="0 0 109 109"
-	width="109"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 >
