@@ -1,5 +1,6 @@
 <script type="ts">
 	import { access } from '$lib/domain/Indicator';
+	import Heading from '$lib/components/Heading.svelte';
 </script>
 
-<h1 class="uppercase text-brand-primary-dark-green px-3">{access.name}</h1>
+<Heading>{access.name}</Heading>

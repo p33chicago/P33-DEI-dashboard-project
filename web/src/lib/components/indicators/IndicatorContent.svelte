@@ -12,19 +12,15 @@
 {#each indicators as indicator}
 	{#if active_indicator.name === indicator.name}
 		<IndicatorCard>
-			<div class="pb-3 border-b-[1px] border-light-gray">
-				{#if indicator === access}
-					<AccessSnippet />
-				{:else if indicator === proficiency}
-					<ProficiencySnippet />
-				{:else}
-					<ExcellenceSnippet />
-				{/if}
-			</div>
+			{#if indicator === access}
+				<AccessSnippet />
+			{:else if indicator === proficiency}
+				<ProficiencySnippet />
+			{:else}
+				<ExcellenceSnippet />
+			{/if}
 
-			<div class="divide-solid">
-				<slot />
-			</div>
+			<slot />
 		</IndicatorCard>
 	{:else}
 		<a href={indicator.route} class="md:hidden">

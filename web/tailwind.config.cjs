@@ -35,7 +35,9 @@ module.exports = {
 		},
 		extend: {
 			fontSize: {
-				xs: '10px'
+				xs: '10px',
+				'4xl': ['2.25rem', '1.5'],
+				'5xl': ['3rem', '1.25']
 			},
 			borderColor: ({ theme }) => ({
 				DEFAULT: theme('colors.brand-primary-dark-green')

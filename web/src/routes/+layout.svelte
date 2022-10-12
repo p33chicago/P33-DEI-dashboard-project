@@ -8,7 +8,7 @@
 	export const prerender = true;
 </script>
 
-<div class="font-sans min-h-full flex flex-col">
+<div class="font-sans min-h-full flex flex-col text-black">
 	<Header />
 	<MainContent>
 		<slot />

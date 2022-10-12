@@ -5,7 +5,7 @@
 	export let subheader;
 </script>
 
-<div class="mx-3 grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray">
 	<div class="col-span-1 sm:col-span-2 pt-9 -order-2 sm:order-none">
 		<h2>{header}</h2>
 	</div>

@@ -9,6 +9,7 @@
 	import TextHighlight from '$lib/components/TextHighlight.svelte';
 	import Callout from '$lib/components/Callout.svelte';
 	import MapBackground from '$lib/components/MapBackground.svelte';
+	import BlockQuote from '$lib/components/BlockQuote.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;
@@ -34,18 +35,16 @@
 <div class="w-full bg-white py-6">
 	<BodyContentContainer>
 		<!-- top part -->
-		<p
-			class="col-span-1 sm:col-span-4 sans-alternate font-sans-alternate text-black text-lg lg:text-2xl leading-9 py-0 relative"
-		>
-			<span class="absolute top-1 bottom-1 -left-4 bg-heads-up-yellow w-2" />
-			Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago can help
-			by addressing lack of equity within their Black and Latin communities. This is our effort in how
-			best to support Chicago’s underrepresented communities through different life stages. We have gathered
-			data from grade school to college and beyond, as well as offer solutions in making Chicago one
-			of the most inclusive cities in the country.
-			<!--				<span class="bg-heads-up-yellow p-1">Now, let’s make it happen!</span>-->
-			<TextHighlight>Now, let’s make it happen!</TextHighlight>
-		</p>
+		<BlockQuote>
+			<p class="text-lg lg:text-2xl">
+				Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago
+				can help by addressing lack of equity within their Black and Latin communities. This is our
+				effort in how best to support Chicago’s underrepresented communities through different life
+				stages. We have gathered data from grade school to college and beyond, as well as offer
+				solutions in making Chicago one of the most inclusive cities in the country.
+				<TextHighlight>Now, let’s make it happen!</TextHighlight>
+			</p>
+		</BlockQuote>
 	</BodyContentContainer>
 </div>
 <div class="w-full py-4 bg-white">
