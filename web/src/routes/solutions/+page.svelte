@@ -20,7 +20,10 @@
 	<BodyContentContainer>
 		<div class="col-span-4">
 			<p>
-				The TechChicago Equity Index only matters if it changes the behavior, investments, policies and practices that can expand tech career opportunity. We propose several initial priorities for Chicago and Illinois, and we welcome partners to join us in advancing this agenda or recommend other ideas for how to make progress building an inclusive future for Chicago.
+				The TechChicago Equity Index only matters if it changes the behavior, investments, policies
+				and practices that can expand tech career opportunity. We propose several initial priorities
+				for Chicago and Illinois, and we welcome partners to join us in advancing this agenda or
+				recommend other ideas for how to make progress building an inclusive future for Chicago.
 			</p>
 		</div>
 		<hr class="col-span-4 border-1 border-light-gray py-4" />
@@ -136,13 +139,12 @@
 			<!--Employment -->
 			<div class="border-b-2 border-light-gray">
 				<ul class="p-4">
-					<li class="pb-4">1. Hire more entry-level talent from diverse sources, including new college partners and "non-traditional" sources like apprenticeships and bootcamps.</li>
 					<li class="pb-4">
-						2. Ensure diverse candidate slates and diverse interview panels.
+						1. Hire more entry-level talent from diverse sources, including new college partners and
+						"non-traditional" sources like apprenticeships and bootcamps.
 					</li>
-					<li class="pb-4">
-						3. Build inclusive cultures to ensure post-hire success.
-					</li>
+					<li class="pb-4">2. Ensure diverse candidate slates and diverse interview panels.</li>
+					<li class="pb-4">3. Build inclusive cultures to ensure post-hire success.</li>
 				</ul>
 			</div>
 		</div>
