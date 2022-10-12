@@ -15,7 +15,7 @@
 <header
 	class="z-10 md:static bg-white font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10"
 >
-	<div class="max-w-7xl align-top justify-left md:mx-auto">
+	<div class="align-top justify-left">
 		<div class="px-1 md:px-3 lg:px-6 flex justify-between fullnav:justify-start">
 			<label
 				aria-controls="mobile-menu"
