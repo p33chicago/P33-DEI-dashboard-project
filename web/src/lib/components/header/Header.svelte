@@ -11,16 +11,16 @@
 	const hide_nav = () => (nav_checkbox.checked = false);
 </script>
 
+<input bind:this={nav_checkbox} class="hidden" id="open-mobile-menu" type="checkbox" />
 <header
-	class="bg-white font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10"
+	class="z-10 md:static bg-white font-mono w-full items-center fullnav:border-b border-brand-primary-green z-10"
 >
 	<div class="max-w-7xl align-top justify-left md:mx-auto">
 		<div class="px-1 md:px-3 lg:px-6 flex justify-between fullnav:justify-start">
-			<input bind:this={nav_checkbox} class="hidden" id="open-mobile-menu" type="checkbox" />
 			<label
 				aria-controls="mobile-menu"
 				aria-expanded="false"
-				class="flex fullnav:hidden toggle-mobile-menu items-center justify-center p-2"
+				class="toggle-mobile-menu flex fullnav:hidden items-center justify-center p-2"
 				for="open-mobile-menu"
 			>
 				<span class="sr-only">Open main menu</span>
@@ -70,15 +70,36 @@
 		filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg);
 	}
 
-	:checked ~ .toggle-mobile-menu :global(.hamburger) {
+	:checked ~ header {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		overflow: scroll;
+	}
+	@media screen(md) {
+		:checked ~ header {
+			position: static;
+			top: auto;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			z-index: auto;
+			overflow: auto;
+		}
+	}
+
+	:checked ~ header :global(.hamburger) {
 		display: none;
 	}
 
-	:checked ~ .toggle-mobile-menu :global(.cross) {
+	:checked ~ header :global(.cross) {
 		display: flex;
 	}
 
-	:checked ~ nav {
+	:checked ~ header nav {
 		display: block;
 	}
 
