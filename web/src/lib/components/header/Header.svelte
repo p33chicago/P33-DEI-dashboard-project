@@ -29,11 +29,12 @@
 			</label>
 			<div class="logo flex p-2" on:click={hide_nav}>
 				<a class="" href={`${base}/`}>
-					<img alt="" class="h-8 w-8" src={`${assets}/p33-logo.png`} />
+					<img alt="" class="h-8 w-8 sm:mr-10" src={`${assets}/p33-logo.png`} />
 				</a>
 			</div>
 
 			<div class="flex fullnav:hidden h-10 w-10">
+				<!-- placeholder to keep logo centered -->
 				<div />
 			</div>
 
@@ -65,10 +66,6 @@
 </header>
 
 <style>
-	.logo {
-		margin-right: 40px;
-	}
-
 	.logo img {
 		filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg);
 	}
