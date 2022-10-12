@@ -57,22 +57,19 @@
 					slot="image"
 					src={`${base}/why-tech-matters.svg`}
 				/>
-				We must build an inclusive tech that will bring opportunities and grow Chicago’s economy in the
-				next 30 years.
+				Tech jobs off the best combination of high wages and growing demand. And tech talent is critical to Chicago's economic vitality over the next 30 years.
 			</Callout>
 		</div>
 		<div>
 			<Callout heading="Why We Built This">
 				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/why-built.svg`} />
-				A shared source of truth for policymakers, businesses, educators and others that provide transparency
-				of investments into Chicago’s tech talent.
+				We need a shared source of truth about the leakages in the tech talent pipeline and how policymakers, businesses and educators can most effectively contribute to improvement.
 			</Callout>
 		</div>
 		<div>
 			<Callout heading="What the Data Shows">
 				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/what-data.svg`} />
-				Few black and Latin students lacking math and science in grade school, limited technology access
-				in high school and low college enrollment obtain tech career opportunities.
+				We fail Black and Latino Chicagoans at every stage from elementary school to career, providing weak math and science foundations, few opportunities for enrichment and acceleration, inequitable college access, and closed doors at our companies.
 			</Callout>
 		</div>
 		<div>
@@ -83,8 +80,7 @@
 					slot="image"
 					src={`${base}/what-success.svg`}
 				/>
-				We believe the process of gathering data is an essential part of working towards greater diversity
-				and inclusion in Chicago’s tech economy.
+				The ultimate goal is for Chicagoland's tech workforce to reflect the racial, ethnic and gender demographics of the region. For now, we celebrate the collective effort to confront the inequities the data reveals.
 			</Callout>
 		</div>
 	</BodyContentContainer>
