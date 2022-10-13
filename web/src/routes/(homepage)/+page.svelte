@@ -31,11 +31,16 @@
 	<BodyContentContainer>
 		<!-- top part -->
 		<BlockQuote class="col-span-4 text-lg lg:text-2xl -mt-[1.9rem]">
-			Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago can
-			help by addressing lack of equity within their Black and Latin communities. This is our effort
-			in how best to support Chicago’s underrepresented communities through different life stages.
-			We have gathered data from grade school to college and beyond, as well as offer solutions in
-			making Chicago one of the most inclusive cities in the country.
+			Skilled tech jobs are fast-growing and high-paying. They lift individuals and grow our
+			economy. But companies struggle to fill these roles while Black and Latino Chicagoand and
+			women have largely been kept on the sidelines. Chicago has an opportunity: <TextHighlight
+				>Reduce race-based inequality and accelerate economic growth</TextHighlight
+			> by diversifying the tech workforce.
+		</BlockQuote>
+		<BlockQuote class="col-span-4 text-lg lg:text-2xl -mt-[1.9rem]">
+			This is Chicagoland's first effort to understand the full picture of what it will take to make
+			Chicago the most inclusive tech city in the country. This isn't just a company issue or a
+			pipeline problem: there is critical work to do from grammar school to the C-suite.
 			<TextHighlight>Now, let’s make it happen!</TextHighlight>
 		</BlockQuote>
 	</BodyContentContainer>
