@@ -167,7 +167,7 @@
 	</div>
 
 	<div class="flex col-span-1 sm:col-span-4 rounded-lg bg-brand-primary-light-green/30 my-10">
-		<CTASection href="#" link_text="see opportunities" title="What can you do to help?">
+		<CTASection href="{base}/contact" link_text="Contact Us" title="What can you do to help?">
 			<img class="hidden sm:block w-32 h-48" slot="graphic" src={`${base}/illinois.svg`} />
 			<p class="text-mono">
 				Every organization can play a role in building a more inclusive TechChicago
