@@ -57,7 +57,7 @@
 					alt=""
 					class="object-scale-down h-8 w-8"
 					slot="image"
-					src={`${base}/why-tech-matters.svg`}
+					src={`${base}/why-tech-matter-200.svg`}
 				/>
 				Tech jobs off the best combination of high wages and growing demand. And tech talent is critical
 				to Chicago's economic vitality over the next 30 years.
@@ -65,14 +65,14 @@
 		</div>
 		<div>
 			<Callout heading="Why We Built This">
-				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/why-built.svg`} />
+				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/why-built-200.svg`} />
 				We need a shared source of truth about the leakages in the tech talent pipeline and how policymakers,
 				businesses and educators can most effectively contribute to improvement.
 			</Callout>
 		</div>
 		<div>
 			<Callout heading="What the Data Shows">
-				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/what-data.svg`} />
+				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/what-data-200.svg`} />
 				We fail Black and Latino Chicagoans at every stage from elementary school to career, providing
 				weak math and science foundations, few opportunities for enrichment and acceleration, inequitable
 				college access, and closed doors at our companies.
@@ -84,7 +84,7 @@
 					alt=""
 					class="object-scale-down h-8 w-8"
 					slot="image"
-					src={`${base}/what-success.svg`}
+					src={`${base}/what-sucess-200.svg`}
 				/>
 				The ultimate goal is for Chicagoland's tech workforce to reflect the racial, ethnic and gender
 				demographics of the region. For now, we celebrate the collective effort to confront the inequities
