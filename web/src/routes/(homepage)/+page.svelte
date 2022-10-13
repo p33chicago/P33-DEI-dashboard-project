@@ -1,15 +1,15 @@
 <script type="ts">
 	import { assets, base } from '$app/paths';
-	import CTASection from '$lib/components/CTASection.svelte';
-	import Takeaway from '$lib/components/Takeaway.svelte';
-	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
-	import Scorecard from '$lib/components/scorecard/Scorecard.svelte';
-	import type { Scorecard as ScorecardType } from '$lib/domain/Scorecard';
-	import Definitions from '$lib/components/scorecard/definitions/Definitions.svelte';
-	import TextHighlight from '$lib/components/TextHighlight.svelte';
-	import Callout from '$lib/components/Callout.svelte';
-	import MapBackground from '$lib/components/MapBackground.svelte';
-	import BlockQuote from '$lib/components/BlockQuote.svelte';
+	import CTASection from '../../lib/components/CTASection.svelte';
+	import Takeaway from '../../lib/components/Takeaway.svelte';
+	import BodyContentContainer from '../../lib/components/BodyContentContainer.svelte';
+	import Scorecard from '../../lib/components/scorecard/Scorecard.svelte';
+	import type { Scorecard as ScorecardType } from '../../lib/domain/Scorecard.js';
+	import Definitions from '../../lib/components/scorecard/definitions/Definitions.svelte';
+	import TextHighlight from '../../lib/components/TextHighlight.svelte';
+	import Callout from '../../lib/components/Callout.svelte';
+	import MapBackground from '../../lib/components/MapBackground.svelte';
+	import BlockQuote from '../../lib/components/BlockQuote.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;
@@ -35,15 +35,13 @@
 <div class="w-full bg-white py-6">
 	<BodyContentContainer>
 		<!-- top part -->
-		<BlockQuote>
-			<p class="text-lg lg:text-2xl">
-				Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago
-				can help by addressing lack of equity within their Black and Latin communities. This is our
-				effort in how best to support Chicago’s underrepresented communities through different life
-				stages. We have gathered data from grade school to college and beyond, as well as offer
-				solutions in making Chicago one of the most inclusive cities in the country.
-				<TextHighlight>Now, let’s make it happen!</TextHighlight>
-			</p>
+		<BlockQuote class="col-span-4 text-lg lg:text-2xl">
+			Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago can
+			help by addressing lack of equity within their Black and Latin communities. This is our effort
+			in how best to support Chicago’s underrepresented communities through different life stages.
+			We have gathered data from grade school to college and beyond, as well as offer solutions in
+			making Chicago one of the most inclusive cities in the country.
+			<TextHighlight>Now, let’s make it happen!</TextHighlight>
 		</BlockQuote>
 	</BodyContentContainer>
 </div>
