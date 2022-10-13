@@ -2,36 +2,44 @@
 	import { browser } from '$app/environment';
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
+
+	const load_hubspot = () => {
+		const script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.addEventListener('load', load_form);
+		script.src = 'https://js.hsforms.net/forms/embed/v2.js';
+		document.head.appendChild(script);
+	};
+	const load_form = () => {
+		window.hbspt.forms.create({
+			target: '.contact-form',
+			region: 'na1',
+			portalId: '14531327',
+			formId: '4f9e2886-8d50-48f9-b770-30624927fb4b'
+		});
+	};
+
+	if (browser) {
+		load_hubspot();
+	}
 </script>
 
 <svelte:head>
-	<script charset="utf-8" src="//js.hsforms.net/forms/embed/v2.js" type="text/javascript"></script>
 	<title>Contact Us</title>
 	<meta
 		content="How to get involved or learn more about building an inclusive and equitable tech economy in Chicago."
 		name="description"
 	/>
+	<link href="https://js.hsforms.net" rel="preconnect" />
+	<link href="https://js.hsforms.net/forms/embed/v2.js" rel="prefetch" />
 </svelte:head>
 
 <BannerTitle title="Contact Us" />
 <BodyContentContainer>
 	<div class="contact-form text-black col-span-1 sm:col-span-4 py-8">
-		<div class="bg-really-light-gray h-[400px] w-full max-w-[calc(42rem-8px)]" id="skeleton">
+		<div class="bg-really-light-gray h-[600px] w-full max-w-[calc(42rem-8px)]" id="skeleton">
 			<!-- loading placeholder -->
 		</div>
-
-		{#if browser}
-			<script>
-				window.hbspt.forms.create({
-					region: 'na1',
-					portalId: '14531327',
-					formId: '4f9e2886-8d50-48f9-b770-30624927fb4b',
-					onFormReady: (...args) => {
-						document.querySelector('#skeleton').hidden = true;
-					}
-				});
-			</script>
-		{/if}
 	</div>
 </BodyContentContainer>
 
