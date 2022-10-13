@@ -39,7 +39,7 @@
 			</div>
 
 			<nav
-				class="hidden fullnav:flex w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green"
+				class="hidden fullnav:flex z-50 w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green h-screen fullnav:h-auto"
 			>
 				<ul class="fullnav:flex" on:click={hide_nav}>
 					<li class:active={$page.url.pathname === `${base}/${Scorecard.route}`}>
