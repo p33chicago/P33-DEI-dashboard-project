@@ -1,10 +1,10 @@
 <script>
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
-	import SpaceshipIcon from '$lib/components/icons/SpaceshipIcon.svelte';
-	import CertificateIcon from '$lib/components/icons/CertificateIcon.svelte';
-	import MortarboardCapIcon from '$lib/components/icons/MortarboardCapIcon.svelte';
-	import HandshakeIcon from '$lib/components/icons/HandshakeIcon.svelte';
+	import K8Heading from './headings/K8Heading.svelte';
+	import HSHeading from './headings/HSHeading.svelte';
+	import CollegeHeading from './headings/CollegeHeading.svelte';
+	import EmploymentHeading from './headings/EmploymentHeading.svelte';
 </script>
 
 <svelte:head>
@@ -28,7 +28,7 @@
 		</div>
 		<hr class="col-span-4 border-1 border-light-gray py-4" />
 		<!-- first row -->
-		<div class="col-span-4 grid grid-cols-5 gap-2">
+		<div class="col-span-4 grid grid-cols-1 lg:grid-cols-5 gap-2">
 			<div
 				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
 			>
@@ -36,12 +36,7 @@
 			</div>
 			<!--K8 -->
 			<div class="k8 border-b-2 border-light-gray">
-				<div class="flex text-black font-sans-alternate p-4">
-					<p class="text-xl uppercase">
-						<SpaceshipIcon class="align-baseline inline mr-2.5" />
-						k-8
-					</p>
-				</div>
+				<K8Heading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Start early.</span> Quality math instruction and out-of-school
 					enrichment opportunities will build the foundation for later success.
@@ -49,12 +44,7 @@
 			</div>
 			<!--Highschool -->
 			<div class="highschool border-b-2 border-light-gray">
-				<div class="flex text-black font-sans-alternate p-4">
-					<p class="text-xl uppercase">
-						<CertificateIcon class="align-baseline inline mr-2.5" />
-						high school
-					</p>
-				</div>
+				<HSHeading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Aim high.</span> Expand access to advanced STEM programs
 					in high school, and complement with out-of-school enrichment opportunities.
@@ -62,12 +52,7 @@
 			</div>
 			<!--College -->
 			<div class="college border-b-2 border-light-gray">
-				<div class="flex text-black font-sans-alternate p-4">
-					<p class="text-xl uppercase">
-						<MortarboardCapIcon class="align-baseline inline mr-2.5" />
-						college
-					</p>
-				</div>
+				<CollegeHeading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Focus on education and employment.</span> Target support
 					for underrepresented students to complete STEM degrees, and partner with companies for work-based
@@ -76,12 +61,7 @@
 			</div>
 			<!--Employment -->
 			<div class="employment border-b-2 border-light-gray border-t-2">
-				<div class="flex text-black font-sans-alternate p-4">
-					<p class="text-xl uppercase">
-						<HandshakeIcon class="align-baseline inline mr-2.5" />
-						employment
-					</p>
-				</div>
+				<EmploymentHeading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Open the aperture.</span> Hire tech talent from a wider
 					group of colleges and training providers—and increase the number of hires from those places.
@@ -89,7 +69,7 @@
 			</div>
 		</div>
 		<!-- second row -->
-		<div class="col-span-4 grid grid-cols-5 gap-2">
+		<div class="col-span-4 grid grid-cols-1 lg:grid-cols-5 gap-2">
 			<div
 				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
 			>
@@ -99,6 +79,7 @@
 			</div>
 			<!--K8 -->
 			<div class="border-b-2 border-light-gray">
+				<K8Heading />
 				<ul class="p-4">
 					<li class="pb-4">
 						1. Improve school access to quality math and science through funding and policy reform.
@@ -112,6 +93,7 @@
 			</div>
 			<!--Highschool -->
 			<div class="border-b-2 border-light-gray">
+				<HSHeading />
 				<ul class="p-4">
 					<li class="pb-4">1. Improve Algebra and Calculus education across the district.</li>
 					<li class="pb-4">
@@ -126,6 +108,7 @@
 			</div>
 			<!--College -->
 			<div class="border-b-2 border-light-gray">
+				<CollegeHeading />
 				<ul class="p-4">
 					<li class="pb-4">
 						1. Implement student success programs and cash support to ensure low-income students
@@ -138,6 +121,7 @@
 			</div>
 			<!--Employment -->
 			<div class="border-b-2 border-light-gray">
+				<EmploymentHeading />
 				<ul class="p-4">
 					<li class="pb-4">
 						1. Hire more entry-level talent from diverse sources, including new college partners and
@@ -149,16 +133,17 @@
 			</div>
 		</div>
 		<!-- third row -->
-		<div class="col-span-4 grid grid-cols-5 gap-2">
+		<div class="col-span-4 grid grid-cols-1 lg:grid-cols-5 gap-2">
 			<div
 				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
 			>
 				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">
-					organization
+					organizations
 				</p>
 			</div>
 			<!--K8 -->
 			<div class="border-b-2 border-light-gray">
+				<K8Heading />
 				<ul class="p-4">
 					<li>- PLACEHOLDER</li>
 					<li>- PLACEHOLDER</li>
@@ -167,6 +152,7 @@
 			</div>
 			<!--Highschool -->
 			<div class="border-b-2 border-light-gray">
+				<HSHeading />
 				<ul class="p-4">
 					<li>- Project Exploration</li>
 					<li>- ISTC</li>
@@ -178,6 +164,7 @@
 			</div>
 			<!--College -->
 			<div class="border-b-2 border-light-gray">
+				<CollegeHeading />
 				<ul class="p-4">
 					<li>Programs:</li>
 					<li>- Parker-Dewey</li>
@@ -194,6 +181,7 @@
 			</div>
 			<!--Employment -->
 			<div class="border-b-2 border-light-gray">
+				<EmploymentHeading />
 				<ul class="p-4">
 					<li>To hire non-grad talent:</li>
 					<li>- Nonprofits: I.C.Stars, Per Scholas, National Able</li>
