@@ -10,6 +10,7 @@
 	import Callout from '../../lib/components/Callout.svelte';
 	import MapBackground from '../../lib/components/MapBackground.svelte';
 	import BlockQuote from '../../lib/components/BlockQuote.svelte';
+	import Hero from './Hero.svelte';
 
 	export let data: { scorecard: ScorecardType };
 	let { scorecard } = data;
@@ -24,18 +25,12 @@
 </svelte:head>
 
 <!-- HERO -->
-<div>
-	<div
-		class="order-first col-span-1 sm:col-span-4 h-[500px] bg-brand-primary-light-green pt-44 text-center text-2xl"
-	>
-		<h1>HERO IMAGE WILL GO HERE :)</h1>
-	</div>
-</div>
+<Hero />
 
 <div class="w-full bg-white py-6">
 	<BodyContentContainer>
 		<!-- top part -->
-		<BlockQuote class="col-span-4 text-lg lg:text-2xl">
+		<BlockQuote class="col-span-4 text-lg lg:text-2xl -mt-[1.9rem]">
 			Skilled tech jobs are fast-growing, companies can’t fill their roles fast enough. Chicago can
 			help by addressing lack of equity within their Black and Latin communities. This is our effort
 			in how best to support Chicago’s underrepresented communities through different life stages.

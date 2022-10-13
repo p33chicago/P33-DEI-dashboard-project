@@ -60,6 +60,7 @@ module.exports = {
 				green: '#179862'
 			},
 			backgroundImage: {
+				hero: "url('Hero.webp')",
 				chicago: "url('/chicago.svg')",
 				topography: "url('/topography.svg')"
 			}

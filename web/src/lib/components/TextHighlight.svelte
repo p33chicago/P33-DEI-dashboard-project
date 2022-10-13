@@ -4,15 +4,16 @@
 	export let left: number = max_offset_x / 5;
 	export let top: number = max_offset_y / 3;
 	// All dimensions in `rem`
-	const offset_top = Math.min(top, max_offset_y);
-	const offset_bottom = max_offset_y - offset_top;
-	const offset_left = Math.min(left, max_offset_x);
-	const offset_right = max_offset_x - offset_left;
+	export let offset_top = Math.min(top, max_offset_y);
+	export let offset_bottom = max_offset_y - offset_top;
+	export let offset_left = Math.min(left, max_offset_x);
+	export let offset_right = max_offset_x - offset_left;
 	const rem = (dimension) => `${dimension}rem`;
 </script>
 
 <span
-	class="inline-block bg-heads-up-yellow border-heads-up-yellow border-opacity-50"
+	class="{$$props.class ||
+		''} inline-block bg-heads-up-yellow border-heads-up-yellow border-opacity-50"
 	style:border-bottom-width={rem(offset_bottom)}
 	style:border-left-width={rem(offset_left)}
 	style:border-right-width={rem(offset_right)}
