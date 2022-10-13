@@ -1,6 +1,6 @@
 <script type="ts">
-	const max_offset_x = 0.5;
-	const max_offset_y = 0.5;
+	export let max_offset_x = 0.5;
+	export let max_offset_y = 0.5;
 	export let left: number = max_offset_x / 5;
 	export let top: number = max_offset_y / 3;
 	// All dimensions in `rem`
