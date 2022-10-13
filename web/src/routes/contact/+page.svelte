@@ -37,6 +37,11 @@
 <BannerTitle title="Contact Us" />
 <BodyContentContainer>
 	<div class="contact-form text-black col-span-1 sm:col-span-4 py-8">
+		<noscript>
+			Enable JavaScript to use our contact form. Alternatively, you can email us at <a
+				href="mailto:info@p33chicago.com">info@p33chicago.com</a
+			>
+		</noscript>
 		<div class="bg-really-light-gray h-[600px] w-full max-w-[calc(42rem-8px)]" id="skeleton">
 			<!-- loading placeholder -->
 		</div>
