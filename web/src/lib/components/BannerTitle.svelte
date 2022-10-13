@@ -3,7 +3,7 @@
 	import MapBackground from './MapBackground.svelte';
 
 	export let title: string;
-	export let subtitle: string;
+	export let subtitle: string | undefined = undefined;
 </script>
 
 <MapBackground>
