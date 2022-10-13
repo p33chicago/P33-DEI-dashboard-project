@@ -12,8 +12,7 @@
 </script>
 
 <span
-	class="{$$props.class ||
-		''} inline-block bg-heads-up-yellow border-heads-up-yellow border-opacity-50"
+	class="{$$props.class || ''} bg-heads-up-yellow border-heads-up-yellow border-opacity-50"
 	style:border-bottom-width={rem(offset_bottom)}
 	style:border-left-width={rem(offset_left)}
 	style:border-right-width={rem(offset_right)}
