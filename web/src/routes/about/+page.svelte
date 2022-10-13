@@ -62,7 +62,7 @@
 					class="mx-auto sm:ml-2 sm:mr-4"
 					height="109"
 					slot="image"
-					src="{assets}/P33.svg"
+					src="{assets}/P33logo.jpg"
 					width="109"
 				/>
 				<a href="https://p33chicago.com" target="_blank">P33</a> leads and coordinates this effort
