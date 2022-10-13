@@ -76,7 +76,7 @@
 	:global(.partnership)::before {
 		display: none !important;
 	}
-	@media screen(xl) {
+	@media screen(sm) {
 		:global(.partnership)::before {
 			display: inline-block !important;
 		}

@@ -1,4 +1,4 @@
-<script>
+<script type="ts">
 	import { browser } from '$app/environment';
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
@@ -16,15 +16,19 @@
 <BannerTitle title="Contact Us" />
 <BodyContentContainer>
 	<div class="contact-form text-black col-span-1 sm:col-span-4 py-8">
+		<div class="bg-really-light-gray h-[400px] w-full max-w-[calc(42rem-8px)]" id="skeleton">
+			<!-- loading placeholder -->
+		</div>
+
 		{#if browser}
 			<script>
-				if (typeof globalThis.hbspt === 'undefined') {
-					console.error('Hubspot failed to load');
-				}
-				globalThis.hbspt.forms.create({
+				window.hbspt.forms.create({
 					region: 'na1',
 					portalId: '14531327',
-					formId: '4f9e2886-8d50-48f9-b770-30624927fb4b'
+					formId: '4f9e2886-8d50-48f9-b770-30624927fb4b',
+					onFormReady: (...args) => {
+						document.querySelector('#skeleton').hidden = true;
+					}
 				});
 			</script>
 		{/if}
@@ -32,6 +36,19 @@
 </BodyContentContainer>
 
 <style>
+	#skeleton {
+		animation: skeleton-loading 1s linear infinite alternate;
+	}
+
+	@keyframes skeleton-loading {
+		0% {
+			background-color: theme('colors.white');
+		}
+		100% {
+			background-color: theme('colors.light-gray');
+		}
+	}
+
 	.contact-form :global(fieldset) {
 		max-width: theme('maxWidth.2xl');
 	}

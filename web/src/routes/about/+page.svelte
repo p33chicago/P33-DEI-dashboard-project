@@ -147,7 +147,7 @@
 						class="my-8 sm:mr-[36px]"
 						height="42"
 						slot="image"
-						src="{assets}/ThoughtWorks.svg"
+						src="{assets}/thoughtworks.svg"
 						width="260"
 					/>
 					Thoughtworks a leading global technology consultancy that enables enterprises and technology

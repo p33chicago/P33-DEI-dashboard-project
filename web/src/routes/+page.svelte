@@ -1,5 +1,5 @@
 <script type="ts">
-	import { base } from '$app/paths';
+	import { assets, base } from '$app/paths';
 	import CTASection from '$lib/components/CTASection.svelte';
 	import Takeaway from '$lib/components/Takeaway.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
@@ -177,3 +177,14 @@
 		</CTASection>
 	</div>
 </BodyContentContainer>
+
+<div class="bg-light-gray/20 py-6 text-center space-y-2 border border-dark-gray/20">
+	<p class="font-sans-alternate text-2xl">Our Contributing Partner</p>
+	<img
+		alt="Thoughtworks"
+		class="inline-block"
+		height="48"
+		src="{assets}/thoughtworks.svg"
+		width="302"
+	/>
+</div>
