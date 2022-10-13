@@ -4,7 +4,7 @@
 </script>
 
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 gap-y-8">
-	<p class="sm:col-span-3 pt-0">
+	<p class="sm:col-span-3 pt-4 md:pt-2 sm:pt-0">
 		We believe Access, Proficiency and Excellence are key components of the overall Equity goal.
 		Each component’s Equity score is based on 1 – 4 underlying metrics and uses the same methodology
 		as the overall Equity Index score.

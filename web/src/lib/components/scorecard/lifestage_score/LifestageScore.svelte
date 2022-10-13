@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="col-span-4 md:col-span-2 lg:col-span-1 md:my-1 lg:my-0 flex flex-col flex-initial bg-white text-black p-5"
+	class="col-span-1 md:col-span-2 lg:col-span-1 md:my-1 lg:my-0 flex flex-col flex-initial bg-white text-black p-5"
 >
 	<div class="grow">
 		<Header {area} {lifestage} {score} />
