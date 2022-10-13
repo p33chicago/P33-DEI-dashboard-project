@@ -4,7 +4,7 @@
 
 <a
 	class="{$$props.class ||
-		''} inline-block leading-10 bg-brand-primary-dark-green text-white border-2 rounded-full font-sans-alternate px-8 sm:px-11 uppercase"
+		''} inline-block text-center leading-tight bg-brand-primary-dark-green text-sm sm:text-base text-white border-2 rounded-full font-sans-alternate py-2 sm:py-3 px-7 sm:px-16 uppercase w-fit"
 	{href}
 >
 	<slot />
