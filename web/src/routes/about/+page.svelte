@@ -22,7 +22,7 @@
 		<Heading>Our Vision</Heading>
 		<div class="my-6">
 			<BlockQuote>
-				<p class="text-2xl lg:text-5xl">
+				<p class="text-2xl lg:text-5xl py-0">
 					Chicago will be the country’s most inclusive tech city, with a tech workforce that
 					reflects the racial, ethnic and gender makeup of the Chicagoland region.
 				</p>
