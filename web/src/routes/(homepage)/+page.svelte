@@ -33,14 +33,13 @@
 		<p>
 			Skilled tech jobs are fast-growing and high-paying. They lift individuals and grow our
 			economy. But companies struggle to fill these roles while Black and Latino Chicagoand and
-			women have largely been kept on the sidelines. Chicago has an opportunity: <TextHighlight
-				>Reduce race-based inequality and accelerate economic growth</TextHighlight
-			> by diversifying the tech workforce.
-		</p>
-		<p>
-			This is Chicagoland's first effort to understand the full picture of what it will take to make
-			Chicago the most inclusive tech city in the country. This isn't just a company issue or a
-			pipeline problem: there is critical work to do from grammar school to the C-suite.
+			women have largely been kept on the sidelines. Chicago has an opportunity: <TextHighlight>
+				Reduce race-based inequality and accelerate economic growth</TextHighlight
+			> by diversifying the tech workforce. This is Chicagoland's first effort to understand the full
+			picture of what it will take to make Chicago the most inclusive tech city in the country. This
+			isn't just a company issue or a pipeline problem: there is critical work to do from grammar school
+			to the C-suite.
+			<br />
 			<TextHighlight>Now, let’s make it happen!</TextHighlight>
 		</p>
 	</BlockQuote>
