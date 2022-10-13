@@ -26,7 +26,7 @@
 				for Chicago and Illinois, and we welcome partners to join us in advancing this agenda or
 				recommend other ideas for how to make progress building an inclusive future for Chicago.
 			</p>
-			<hr class="hidden sm:block border-1 border-light-gray my-8" />
+			<!--<hr class="hidden sm:block border-1 border-light-gray my-8" />-->
 		</div>
 		<div
 			class="container col-span-full grid grid-cols-1 lg:grid-cols-[137px,repeat(4,minmax(0,1fr))] gap-x-2 pb-10"
