@@ -1,8 +1,8 @@
 <script type="ts">
 	import Header from './Header.svelte';
-	import Indicators from './Indicators.svelte';
 	import type { Scorecard } from '$lib/domain/Scorecard';
 	import Figure from './Figure.svelte';
+	import IndicatorList from '$lib/components/scorecard/lifestage_score/IndicatorList.svelte';
 
 	export let lifestage: Scorecard[number];
 	let { area, score, indicators } = lifestage;
@@ -16,6 +16,6 @@
 	</div>
 	<Figure {lifestage} />
 	<div class="flex flex-col gap-y-5">
-		<Indicators {indicators} />
+		<IndicatorList {indicators} />
 	</div>
 </div>
