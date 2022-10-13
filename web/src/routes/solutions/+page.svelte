@@ -1,10 +1,11 @@
 <script>
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
-	import K8Heading from './headings/K8Heading.svelte';
-	import HSHeading from './headings/HSHeading.svelte';
-	import CollegeHeading from './headings/CollegeHeading.svelte';
-	import EmploymentHeading from './headings/EmploymentHeading.svelte';
+	import K8Heading from './titles/K8Heading.svelte';
+	import HSHeading from './titles/HSHeading.svelte';
+	import CollegeHeading from './titles/CollegeHeading.svelte';
+	import EmploymentHeading from './titles/EmploymentHeading.svelte';
+	import SectionHeader from './SectionHeader.svelte';
 </script>
 
 <svelte:head>
@@ -18,24 +19,23 @@
 <BannerTitle subtitle="" title="Solutions" />
 <div class="bg-white">
 	<BodyContentContainer>
-		<div class="col-span-4">
+		<div class="col-span-full">
 			<p>
 				The TechChicago Equity Index only matters if it changes the behavior, investments, policies
 				and practices that can expand tech career opportunity. We propose several initial priorities
 				for Chicago and Illinois, and we welcome partners to join us in advancing this agenda or
 				recommend other ideas for how to make progress building an inclusive future for Chicago.
 			</p>
+			<hr class="hidden sm:block border-1 border-light-gray my-8" />
 		</div>
-		<hr class="col-span-4 border-1 border-light-gray py-4" />
-		<!-- first row -->
-		<div class="col-span-4 grid grid-cols-1 lg:grid-cols-5 gap-2">
-			<div
-				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
-			>
-				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">strategy</p>
-			</div>
+		<div
+			class="container col-span-full grid grid-cols-1 lg:grid-cols-[137px,repeat(4,minmax(0,1fr))] gap-x-2 pb-10"
+		>
+			<!-- first row -->
+			<SectionHeader>strategy</SectionHeader>
+
 			<!--K8 -->
-			<div class="k8 border-b-2 border-light-gray">
+			<div class="k8 sm:border-b border-light-gray py-4">
 				<K8Heading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Start early.</span> Quality math instruction and out-of-school
@@ -43,7 +43,7 @@
 				</p>
 			</div>
 			<!--Highschool -->
-			<div class="highschool border-b-2 border-light-gray">
+			<div class="highschool sm:border-b border-light-gray py-4">
 				<HSHeading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Aim high.</span> Expand access to advanced STEM programs
@@ -51,7 +51,7 @@
 				</p>
 			</div>
 			<!--College -->
-			<div class="college border-b-2 border-light-gray">
+			<div class="college sm:border-b border-light-gray py-4">
 				<CollegeHeading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Focus on education and employment.</span> Target support
@@ -60,27 +60,21 @@
 				</p>
 			</div>
 			<!--Employment -->
-			<div class="employment border-b-2 border-light-gray border-t-2">
+			<div class="employment sm:border-b border-light-gray py-4">
 				<EmploymentHeading always_visible />
 				<p class="px-4">
 					<span class="text-brand-primary-green">Open the aperture.</span> Hire tech talent from a wider
 					group of colleges and training providers—and increase the number of hires from those places.
 				</p>
 			</div>
-		</div>
-		<!-- second row -->
-		<div class="col-span-4 grid grid-cols-1 lg:grid-cols-5 gap-2">
-			<div
-				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
-			>
-				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">
-					recommendations
-				</p>
-			</div>
+
+			<!-- second row -->
+			<SectionHeader>recommendations</SectionHeader>
+
 			<!--K8 -->
-			<div class="border-b-2 border-light-gray">
+			<div class="k8 sm:border-b border-light-gray py-4">
 				<K8Heading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li class="pb-4">
 						1. Improve school access to quality math and science through funding and policy reform.
 					</li>
@@ -92,9 +86,9 @@
 				</ul>
 			</div>
 			<!--Highschool -->
-			<div class="border-b-2 border-light-gray">
+			<div class="highschool sm:border-b border-light-gray py-4">
 				<HSHeading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li class="pb-4">1. Improve Algebra and Calculus education across the district.</li>
 					<li class="pb-4">
 						2. Enroll more Black and Latin students in AP computer science and other advanced
@@ -107,9 +101,9 @@
 				</ul>
 			</div>
 			<!--College -->
-			<div class="border-b-2 border-light-gray">
+			<div class="college sm:border-b border-light-gray py-4">
 				<CollegeHeading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li class="pb-4">
 						1. Implement student success programs and cash support to ensure low-income students
 						complete STEM degrees.
@@ -120,9 +114,9 @@
 				</ul>
 			</div>
 			<!--Employment -->
-			<div class="border-b-2 border-light-gray">
+			<div class="employment sm:border-b border-light-gray py-4">
 				<EmploymentHeading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li class="pb-4">
 						1. Hire more entry-level talent from diverse sources, including new college partners and
 						"non-traditional" sources like apprenticeships and bootcamps.
@@ -131,29 +125,23 @@
 					<li class="pb-4">3. Build inclusive cultures to ensure post-hire success.</li>
 				</ul>
 			</div>
-		</div>
-		<!-- third row -->
-		<div class="col-span-4 grid grid-cols-1 lg:grid-cols-5 gap-2">
-			<div
-				class="bg-brand-primary-really-light-green bg-topography border-b-4 border-brand-primary-green drop-shadow-md uppercase text-center text-black font-sans-alternate"
-			>
-				<p class="underline decoration-heads-up-yellow decoration-4 underline-offset-8">
-					organizations
-				</p>
-			</div>
+
+			<!-- third row -->
+			<SectionHeader class="lg:mb-0">organizations</SectionHeader>
+
 			<!--K8 -->
-			<div class="border-b-2 border-light-gray">
+			<div class="k8 sm:border-b border-light-gray py-4">
 				<K8Heading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li>- PLACEHOLDER</li>
 					<li>- PLACEHOLDER</li>
 					<li>- PLACEHOLDER</li>
 				</ul>
 			</div>
 			<!--Highschool -->
-			<div class="border-b-2 border-light-gray">
+			<div class="highschool sm:border-b border-light-gray py-4">
 				<HSHeading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li>- Project Exploration</li>
 					<li>- ISTC</li>
 					<li>- CodeNation</li>
@@ -163,9 +151,9 @@
 				</ul>
 			</div>
 			<!--College -->
-			<div class="border-b-2 border-light-gray">
+			<div class="college sm:border-b border-light-gray py-4">
 				<CollegeHeading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li>Programs:</li>
 					<li>- Parker-Dewey</li>
 					<li>- P33 Strong Start</li>
@@ -180,9 +168,9 @@
 				</ul>
 			</div>
 			<!--Employment -->
-			<div class="border-b-2 border-light-gray">
+			<div class="employment sm:border-b border-light-gray py-4">
 				<EmploymentHeading />
-				<ul class="p-4">
+				<ul class="px-4">
 					<li>To hire non-grad talent:</li>
 					<li>- Nonprofits: I.C.Stars, Per Scholas, National Able</li>
 					<li>- Bootcamps/Etc: Bitwise, General Assembly, Tech Elevator</li>
@@ -198,6 +186,27 @@
 </div>
 
 <style>
+	.container > div {
+		border-left: 1px solid theme('colors.light-gray');
+		border-right: 1px solid theme('colors.light-gray');
+	}
+
+	:global(.section-header) {
+		margin-bottom: theme('margin.2');
+	}
+	:global(.section-header) ~ :global(.section-header) {
+		margin-top: theme('margin.6');
+	}
+	@media screen(lg) {
+		:global(.section-header) {
+			margin-bottom: theme('margin.1');
+		}
+
+		:global(.section-header) ~ :global(.section-header) {
+			margin-top: theme('margin.1');
+		}
+	}
+
 	.k8 {
 		border-top: 10px solid theme('colors.warn-orange');
 	}
@@ -209,5 +218,15 @@
 	}
 	.employment {
 		border-top: 10px solid theme('colors.green');
+		border-bottom-width: 1px;
+	}
+	@media screen(sm) {
+		.k8 ~ .k8,
+		.highschool ~ .highschool,
+		.college ~ .college,
+		.employment ~ .employment {
+			border-top-width: 1px;
+			border-top-color: theme('colors.light-gray');
+		}
 	}
 </style>
