@@ -43,10 +43,3 @@
 
 <svelte:window on:resize={render} />
 <div bind:this={canvas} class="w-full h-full" />
-
-<style>
-	div {
-		width: 100%;
-		overflow: auto;
-	}
-</style>
