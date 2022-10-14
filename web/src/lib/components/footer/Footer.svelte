@@ -2,7 +2,7 @@
 	import { assets, base } from '$app/paths';
 	import HorizontalNav from '$lib/components/horizontal_nav/HorizontalNav.svelte';
 	import HorizontalNavItem from '$lib/components/horizontal_nav/HorizontalNavItem.svelte';
-	import { default_scorecard_path } from '$lib/pathnames.js';
+	import { default_scorecard_path } from '$lib/pathnames';
 
 	const year = new Date().getFullYear();
 </script>

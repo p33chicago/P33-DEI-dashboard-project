@@ -154,7 +154,7 @@
 	</div>
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="9,000+">
-			<img height="147" slot="graphic" src={`${base}/homogenous.svg`} width="147" />
+			<img height="147" slot="graphic" src={`${base}/falling.svg`} width="147" />
 			<p>
 				We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino
 				<TextHighlight>8th graders meet math proficiency</TextHighlight> standards to close gaps with
