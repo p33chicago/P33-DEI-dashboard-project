@@ -1,9 +1,10 @@
 <script type="ts">
 	export let active: boolean;
+	export let href: string;
 </script>
 
 {#if active}
-	<a {...$$restProps}>
+	<a {href} {...$$restProps}>
 		<slot />
 	</a>
 {:else}

@@ -72,10 +72,6 @@
 </header>
 
 <style>
-	.logo img {
-		filter: invert() brightness(85%) sepia(20%) hue-rotate(120deg);
-	}
-
 	:checked ~ header {
 		position: fixed;
 		top: 0;

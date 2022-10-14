@@ -14,7 +14,6 @@
 
 <script lang="ts">
 	import { assets } from '$app/paths';
-	import { dev } from '$app/environment';
 
 	export let file: string;
 
