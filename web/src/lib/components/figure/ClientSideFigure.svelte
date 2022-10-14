@@ -31,9 +31,6 @@
 		layout.width = canvas.clientWidth;
 		layout.height = canvas.clientHeight;
 		Plotly.react(canvas, data, layout, config);
-		if (dev) {
-			canvas.on('plotly_hover', console.log);
-		}
 	};
 
 	const init = async () => {
