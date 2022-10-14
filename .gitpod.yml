@@ -10,6 +10,8 @@ ports:
     port: 5173
     visibility: public
 tasks:
+  - name: Set a Python version
+    init: pyenv local 3.8.13
   - name: Add project root to PYTHONPATH
     init: gp env PYTHONPATH=$GITPOD_REPO_ROOT
   - name: Enable git hooks
