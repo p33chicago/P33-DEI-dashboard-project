@@ -25,11 +25,9 @@
 				<IndicatorNav {indicator} {lifestage} />
 			</div>
 
-			<div class="">
-				<IndicatorContent active_indicator={indicator}>
-					<slot />
-				</IndicatorContent>
-			</div>
+			<IndicatorContent active_indicator={indicator}>
+				<slot />
+			</IndicatorContent>
 		</div>
 	</div>
 </div>
