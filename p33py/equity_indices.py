@@ -1,8 +1,10 @@
+from typing import List
+
 import pandas as pd
 from pandas import DataFrame
 
 
-def combiner_CHIAndIL(*df_metric: list[DataFrame]) -> DataFrame:
+def combiner_CHIAndIL(*df_metric: List[DataFrame]) -> DataFrame:
     """Returns individual metrics int a dataframe with metrics from distinct geographic scope"""
 
     df_metrics_combined = pd.concat(df_metric)
@@ -27,7 +29,7 @@ def combiner_CHIAndIL(*df_metric: list[DataFrame]) -> DataFrame:
 
 
 ####### added on Oct. 12
-def combiner_US(*df_metric: list[DataFrame]) -> DataFrame:
+def combiner_US(*df_metric: List[DataFrame]) -> DataFrame:
     """Returns individual metrics int a dataframe with metrics from distinct geographic scope"""
 
     df_metrics_combined = pd.concat(df_metric)

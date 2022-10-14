@@ -74,7 +74,6 @@ def scorecard():
     EI_stages_path = f"{scorecard_path}/lifestages.json"
     EI_lifestages_CHI["stage"] = EI_lifestages_CHI["stage"].map(_lifestage_for_web)
     EI_lifestages_CHI.to_json(EI_stages_path, orient="records")
-    print(EI_lifestages_CHI)
     print(f"Wrote {EI_stages_path}")
 
     # Lifestage EI figures
