@@ -1,9 +1,10 @@
-<script>
+<script type="ts">
 	import { base } from '$app/paths';
+	import type { Lifestage } from '$lib/domain/Lifestage';
 	import { lifestages } from '$lib/domain/Lifestage';
 	import ConditionalLink from '$lib/components/ConditionalLink.svelte';
 
-	export let lifestage;
+	export let lifestage: Lifestage | undefined = undefined;
 </script>
 
 <ul class="subnav uppercase font-sans-alternate text-brand-primary-green">
