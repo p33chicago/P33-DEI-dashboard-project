@@ -41,6 +41,7 @@
 							class="inline-block h-[24px] pb-[3px]"
 							height="24"
 							src="{assets}/thoughtworks-light.svg"
+							width="140"
 						/>
 					</a>
 				</HorizontalNavItem>
