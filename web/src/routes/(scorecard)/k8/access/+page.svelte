@@ -41,7 +41,7 @@
 	header="CPS K-8 STEM Magnet School Enrollment "
 	subheader="Percent of CPS K-8 students enrolled in a STEM magnet school by race/ethnicity"
 >
-	<svelte:fragment slot="summary">
+	<svelte:fragment slot="story">
 		<p>
 			Asians and Black students have the highest STEM Magnet school enrollment rate relative to
 			their population size in K-8. 1.8 times higher than Hispanics, and 2.8 times higher than white
@@ -61,7 +61,7 @@
 	header="8th grade algebra 1 enrollment"
 	subheader="Percent of CPS 8th graders enrolled into algebra 1 by race/ethnicity"
 >
-	<svelte:fragment slot="summary">
+	<svelte:fragment slot="story">
 		<p>
 			The algebra enrollment rate of Asians and white students is significantly higher than that of
 			Hispanic and Black students. 2.4 times higher than Hispanics, and 4.4 times higher than black.
