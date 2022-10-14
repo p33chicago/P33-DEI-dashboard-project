@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { assets, base } from '$app/paths';
+	import { base } from '$app/paths';
 	import { lifestages } from '$lib/domain/Lifestage';
 	import Hamburger from '$lib/components/icons/Hamburger.svelte';
 	import Cross from '$lib/components/icons/Cross.svelte';
 	import LifestageSubnav from './LifestageSubnav.svelte';
 	import * as Scorecard from '$lib/domain/Scorecard';
 	import { default_scorecard_path, pathname_pattern } from '$lib/pathnames';
+	import Logo from '$lib/components/Logo.svelte';
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);
@@ -30,9 +31,9 @@
 				<Hamburger />
 				<Cross />
 			</label>
-			<div class="logo flex p-2" on:click={hide_nav}>
-				<a class="" href={`${base}/`}>
-					<img alt="" class="h-8 w-8 sm:mr-10" src={`${assets}/p33-logo.png`} />
+			<div class="logo flex" on:click={hide_nav}>
+				<a href={`${base}/`}>
+					<Logo alt="Tech Equity Index" class="h-[36px] sm:mt-[3px] sm:ml-[2px] sm:mr-[50px]" />
 				</a>
 			</div>
 
@@ -42,7 +43,7 @@
 			</div>
 
 			<nav
-				class="hidden fullnav:flex z-50 w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green h-screen fullnav:h-auto"
+				class="hidden fullnav:flex z-50 w-full fullnav:w-auto absolute fullnav:static top-[39px] left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green h-screen fullnav:h-auto"
 			>
 				<ul class="fullnav:flex" on:click={hide_nav}>
 					<li class:active={viewing_scorecard}>
@@ -53,6 +54,9 @@
 							<LifestageSubnav {lifestage} />
 						</li>
 					{/each}
+					<li class="fullnav:hidden" class:active={$page.url.pathname === `${base}/methodology`}>
+						<a href={`${base}/methodology`}>Methodology</a>
+					</li>
 					<li class:active={$page.url.pathname === `${base}/solutions`}>
 						<a href={`${base}/solutions`}>Solutions</a>
 					</li>
