@@ -11,23 +11,31 @@ ports:
     visibility: public
 tasks:
   - init: |
+
+      # Ensure p33py can be imported
+      gp env PYTHONPATH=$GITPOD_REPO_ROOT
+
       # Install dependencies
       pip3 install -r requirements.txt
 
       # Build scorecard and visualizations
       python3 build.py
 
-      # Ensure p33py can be imported
-      gp env PYTHONPATH=$GITPOD_REPO_ROOT
-
-      # Enable git hooks
-      git config core.hooksPath githooks/
-
       # Install web dependencies
       cd $GITPOD_REPO_ROOT/web
       npm install
 
+      # Allow webserver to start
+      gp sync-done installation
+
+      # Enable git hooks
+      git config core.hooksPath githooks/
+
   - command: |
+
+      # Wait for installation to complete
+      gp sync-await installation
+
       # Launch webserver
       cd $GITPOD_REPO_ROOT/web
       npm run dev
