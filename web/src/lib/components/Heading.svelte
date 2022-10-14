@@ -3,8 +3,9 @@
 </script>
 
 <h2
-	class="heading text-3xl font-sans-alternate capitalize text-brand-primary-dark-green border-light-gray mb-2"
+	class="heading text-3xl font-sans-alternate capitalize text-brand-primary-dark-green border-light-gray"
 	class:border-b-[1px]={!nohr}
+	class:mb-2={!nohr}
 >
 	<slot />
 </h2>

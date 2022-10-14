@@ -15,7 +15,7 @@
 		class="md:hidden"
 	>
 		<Card>
-			<Heading>{indicator.name}</Heading>
+			<Heading nohr={active_indicator.name !== indicator.name}>{indicator.name}</Heading>
 			{#if active_indicator.name === indicator.name}
 				<slot />
 			{/if}
