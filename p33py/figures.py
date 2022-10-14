@@ -50,12 +50,13 @@ def horizontal_bar(metric):
     fig = px.bar(
         metric,
         x="weighted_EI_stage",
-        y="area",
+        y="var_scope",
+        color="var_scope",
         orientation="h",
         range_x=[0, 100],
         width=268,
         height=113,
-        color_discrete_sequence=["#00715e"],
+        color_discrete_sequence=["#00715e","blue"],
     )
     fig.update_yaxes(title="", side="left")
     fig.update_xaxes(title="", side="bottom", tickvals=list(range(0, 101, 25)))
@@ -65,5 +66,6 @@ def horizontal_bar(metric):
     )
     fig.update_traces(
         hovertemplate="%{x:.3}<extra></extra>",
+        showlegend=False
     )
     return fig
