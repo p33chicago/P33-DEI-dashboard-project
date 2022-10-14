@@ -4,8 +4,8 @@
 </script>
 
 <HeadingWrapper {...$$restProps}>
-	<p class="text-xl uppercase">
+	<h3 class="text-black text-xl uppercase">
 		<MortarboardCapIcon class="align-baseline inline mr-2.5" />
 		college
-	</p>
+	</h3>
 </HeadingWrapper>

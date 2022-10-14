@@ -4,8 +4,8 @@
 </script>
 
 <HeadingWrapper {...$$restProps}>
-	<p class="text-xl uppercase">
+	<h3 class="text-black text-xl uppercase">
 		<CertificateIcon class="align-baseline inline mr-2.5" />
 		high school
-	</p>
+	</h3>
 </HeadingWrapper>

@@ -4,8 +4,8 @@
 </script>
 
 <HeadingWrapper {...$$restProps}>
-	<p class="text-xl uppercase">
+	<h3 class="text-black text-xl uppercase">
 		<SpaceshipIcon class="align-baseline inline mr-2.5" />
 		k-8
-	</p>
+	</h3>
 </HeadingWrapper>

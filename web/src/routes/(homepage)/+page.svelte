@@ -125,12 +125,12 @@
 </MapBackground>
 <BodyContentContainer>
 	<!-- bottom part -->
-	<h3
+	<p
 		class="col-span-1 sm:col-span-4 text-black text-2xl sm:text-4xl leading-relaxed font-sans-alternate sm:mx-8 py-10"
 	>
 		Black and Latino Chicagoans are dramatically underrepresented in high-paid tech roles after
 		receiving fewer quality learning opportunities in school and college
-	</h3>
+	</p>
 
 	<!-- Takeaways -->
 	<div class="flex col-span-1 sm:col-span-2 py-4">

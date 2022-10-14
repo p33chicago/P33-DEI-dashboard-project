@@ -23,13 +23,13 @@
 		{/if}
 	</div>
 	<div class="grow">
-		<h1 class="text-2xl text-black">{lifestage.name}</h1>
-		<h2
+		<h2 class="font-sans-alternate text-2xl text-black">{lifestage.name}</h2>
+		<span
 			class="text-sm uppercase font-sans-alternate text-dark-gray"
 			data-test-id="scorecard.lifestage-area-{lifestage.route}"
 		>
 			{area}
-		</h2>
+		</span>
 	</div>
 	{#if typeof score === 'number'}
 		<div class="text-right relative">

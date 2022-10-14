@@ -8,7 +8,7 @@
 
 <slot name="graphic" />
 <div class="px-9 py-7">
-	<h2 class="text-3xl font-sans-alternate text-black">{title}</h2>
+	<h1 class="text-3xl font-sans-alternate text-black">{title}</h1>
 	<slot />
 	<Button class="min-w-full sm:min-w-fit mt-3.5" {href}>{link_text}</Button>
 </div>

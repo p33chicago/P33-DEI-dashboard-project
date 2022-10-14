@@ -5,7 +5,7 @@
 
 <div class="data-dive grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray pb-9">
 	<div class="col-span-1 sm:col-span-2 pt-9 -order-2 sm:order-none">
-		<h2>{header}</h2>
+		<h3>{header}</h3>
 	</div>
 	<div class="col-span-1">
 		<h4>What does the data tell?</h4>

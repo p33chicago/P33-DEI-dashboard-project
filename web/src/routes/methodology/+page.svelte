@@ -56,7 +56,7 @@
 		each framework score in each life stage.
 	</p>
 	<div class="bg-really-light-gray mt-10">
-		<h2 class="uppercase p-4 text-center font-sans-alternate">index calculation</h2>
+		<h2 class="uppercase p-4 text-center font-sans-alternate">Index calculation</h2>
 		<p class="p-4 text-center font-sans-alternate">
 			<MathEquation math={`Index~of~disparity = \\frac{\\sum{[|r_i - R|]}}{R * N}`} />
 		</p>
