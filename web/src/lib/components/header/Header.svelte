@@ -2,8 +2,8 @@
 	import { page } from '$app/stores';
 	import { assets, base } from '$app/paths';
 	import { lifestages } from '$lib/domain/Lifestage';
-	import Hamburger from './icons/Hamburger.svelte';
-	import Cross from './icons/Cross.svelte';
+	import Hamburger from '$lib/components/icons/Hamburger.svelte';
+	import Cross from '$lib/components/icons/Cross.svelte';
 	import LifestageSubnav from './LifestageSubnav.svelte';
 	import * as Scorecard from '$lib/domain/Scorecard';
 
