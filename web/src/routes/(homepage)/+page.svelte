@@ -60,14 +60,24 @@
 		</div>
 		<div>
 			<Callout heading="Why We Built This">
-				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/why-built-200.svg`} />
+				<img
+					alt=""
+					class="object-scale-down h-8 w-8"
+					slot="image"
+					src={`${base}/why-built-200.svg`}
+				/>
 				We need a shared source of truth about the leakages in the tech talent pipeline and how policymakers,
 				businesses and educators can most effectively contribute to improvement.
 			</Callout>
 		</div>
 		<div>
 			<Callout heading="What the Data Shows">
-				<img alt="" class="object-scale-down h-8 w-8" slot="image" src={`${base}/what-data-200.svg`} />
+				<img
+					alt=""
+					class="object-scale-down h-8 w-8"
+					slot="image"
+					src={`${base}/what-data-200.svg`}
+				/>
 				We fail Black and Latino Chicagoans at every stage from elementary school to career, providing
 				weak math and science foundations, few opportunities for enrichment and acceleration, inequitable
 				college access, and closed doors at our companies.
