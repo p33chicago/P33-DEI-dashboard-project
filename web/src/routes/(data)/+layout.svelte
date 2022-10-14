@@ -1,7 +1,7 @@
 <script type="ts">
 	import DataSidebar from '$lib/components/DataSidebar.svelte';
 	import IndicatorNav from '$lib/components/IndicatorNav.svelte';
-	import IndicatorContent from '$lib/components/indicators/IndicatorContent.svelte';
+	import IndicatorContent from '$lib/components/IndicatorContent.svelte';
 	import BodyContentContainer from '$lib/components/BodyContentContainer.svelte';
 	import BannerTitle from '$lib/components/BannerTitle.svelte';
 
