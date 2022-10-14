@@ -1,4 +1,3 @@
-image: jupyter/r-notebook:latest
 vscode:
   extensions:
     - ms-python.python
@@ -7,38 +6,18 @@ vscode:
     - ms-toolsai.jupyter-keymap
     - ms-toolsai.jupyter-renderers
 ports:
-  - name: Jupyter Lab
-    description: see output for token
-    port: 8888
-    visibility: public
   - name: SvelteKit dev server
     port: 5173
     visibility: public
 tasks:
-  - name: add project root to PYTHONPATH
+  - name: Add project root to PYTHONPATH
     init: gp env PYTHONPATH=$GITPOD_REPO_ROOT
-  - name: enable git hooks
+  - name: Enable git hooks
     init: git config core.hooksPath githooks/
-  - name: set groups
-    init: |
-      sudo usermod -a -G gitpod jovyan
-      sudo usermod -a -G users gitpod
-  - name: install Python dependencies
-    init: pip install -r requirements.txt
-  - name: setup Jupyter
-    init: |
-      sudo chown -R gitpod:gitpod /opt/conda/share
-      jupyter labextension install jupyterlab-plotly
-  - name: launch jupyter lab
-    command: jupyter lab --ServerApp.custom_display_url=$(gp url 8888)
-  - name: open jupyter lab
-    command: |
-      gp ports await 8888
-      lab_url=$(gp url 8888)/?token=$(jupyter lab list | tail -n 1 | grep -Po '(?<=token=)([a-z0-9]+)')
-      echo "Opening $lab_url"
-      echo "Check your browser for blocked popups!"
-      gp open $GITPOD_REPO_ROOT/docs/gitpod.md
-      gp preview --external "$lab_url"
+  - name: Install Python dependencies
+    command: pip install -r requirements.txt
+  - name: Build scorecard and visualizations
+    command: python build.py
   - name: start web dev server
     command: |
       cd $GITPOD_REPO_ROOT/web
@@ -48,12 +27,3 @@ tasks:
     command: |
       gp ports await 5173
       gp preview $(gp url 5173)
-  - name: change ownership of R
-    command: |
-      # Do this after launching Jupyter Lab, so dev doesn't have to wait
-      # Caveat: installing R packages might not work if the developer is fast
-
-      R_PATH=/opt/conda/lib/R
-      echo "Changing ownership of $R_PATH - this might take a while"
-      sudo chown -R gitpod $R_PATH
-      echo "Done"
