@@ -11,8 +11,6 @@
 </svelte:head>
 
 <div class="block p-4 lg:p-10 bg-white">
-	<h1 class="pb-2">Methodology</h1>
-	<hr class="border-1 border-light-gray" />
 	<p class="bg-really-light-gray my-8 pl-6 pr-2 py-4 font-mono">
 		The Equity Index scores are based on more than 20 individual metrics secured primarily from
 		government and other official sources, using the latest available data for each metric. We
@@ -59,18 +57,18 @@
 	</p>
 	<div class="bg-really-light-gray mt-10">
 		<h2 class="uppercase p-4 text-center font-sans-alternate">index calculation</h2>
-		<p class="py-2 text-center font-sans-alternate">
+		<p class="p-4 text-center font-sans-alternate">
 			<MathEquation math={`Index~of~disparity = \\frac{\\sum{[|r_i - R|]}}{R * N}`} />
 		</p>
-		<p class="py-2 text-center font-sans-alternate">
+		<p class="p-4 text-center font-sans-alternate">
 			<MathEquation math={`Geometric Mean = \\sqrt[N]{x_1 * x_2 * ... * x_N}`} />
 		</p>
-		<p class="py-6 text-center font-sans-alternate">
+		<p class="p-4 text-center font-sans-alternate">
 			<MathEquation
 				math={`Scaling Equation = 100 - \\frac{Index~of~Disparity_i - Min(Index~of~Disparity)}{Max(Index~of~Disparity)}`}
 			/>
 		</p>
-		<hr class="border-1 border-light-gray mx-4" />
+		<hr class="border-1 border-light-gray mx-4 mt-4" />
 		<div class="p-6">
 			<p>
 				<span class="text-brand-primary-green">Proficiency:</span> How well are we preparing Black and
