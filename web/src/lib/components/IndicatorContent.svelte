@@ -28,8 +28,8 @@
 						<slot />
 					</div>
 				{/if}
-			</details></Card
-		>
+			</details>
+		</Card>
 	</ConditionalLink>
 {/each}
 
