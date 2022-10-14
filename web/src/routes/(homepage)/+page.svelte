@@ -117,7 +117,7 @@
 		</div>
 		<Scorecard {scorecard} />
 		<div
-			class="text-white col-span-1 sm:col-span-4 bg-black/60 px-8 py-4 bg-blend-multiply lg:mt-6 mb-6 pb-4"
+			class="text-white col-span-1 sm:col-span-4 bg-black/60 px-8 py-4 bg-blend-multiply lg:mt-6 mb-6 pb-4 rounded-lg"
 		>
 			<Definitions />
 		</div>
