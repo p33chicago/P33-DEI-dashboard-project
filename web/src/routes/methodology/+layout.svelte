@@ -8,10 +8,7 @@
 	<title>Scorecard</title>
 </svelte:head>
 
-<BannerTitle
-	subtitle="Equity index scorecard"
-	title="Kindergarten-8th, High School, College, Career"
-/>
+<BannerTitle title="Methodology" />
 
 <BodyContentContainer>
 	<DataSidebar />

@@ -12,7 +12,7 @@ const default_scorecard_path = `${default_lifestage.route}/${default_indicator.r
 
 const lifestage_pattern = lifestages.map(({ route }: Lifestage) => route).join('|');
 const indicator_pattern = indicators.map(({ route }: Indicator) => route).join('|');
-const pathname_pattern = new RegExp(`(${lifestage_pattern})(/(${indicator_pattern}))?`);
+const pathname_pattern = new RegExp(`(${lifestage_pattern})(/(${indicator_pattern}))?$`);
 
 const data_from_pathname = (pathname: string): Data => {
 	const matches = pathname_pattern.exec(pathname);

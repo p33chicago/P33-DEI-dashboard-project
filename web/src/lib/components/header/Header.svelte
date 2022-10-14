@@ -6,9 +6,12 @@
 	import Cross from '$lib/components/icons/Cross.svelte';
 	import LifestageSubnav from './LifestageSubnav.svelte';
 	import * as Scorecard from '$lib/domain/Scorecard';
+	import { default_scorecard_path, pathname_pattern } from '$lib/pathnames';
 
 	let nav_checkbox;
 	const hide_nav = () => (nav_checkbox.checked = false);
+	$: viewing_scorecard =
+		pathname_pattern.exec($page.url.pathname) || $page.url.pathname === `${base}/methodology`;
 </script>
 
 <input bind:this={nav_checkbox} class="hidden" id="open-mobile-menu" type="checkbox" />
@@ -42,8 +45,8 @@
 				class="hidden fullnav:flex z-50 w-full fullnav:w-auto absolute fullnav:static top-12 left-0 right-0 bottom-0 bg-white fullnav:bg-transparent p-4 fullnav:p-0 leading-10 border-t fullnav:border-0 border-brand-primary-green h-screen fullnav:h-auto"
 			>
 				<ul class="fullnav:flex" on:click={hide_nav}>
-					<li class:active={$page.url.pathname === `${base}/${Scorecard.route}`}>
-						<a class="h-full w-full" href={`${base}/${Scorecard.route}`}>{Scorecard.name}</a>
+					<li class:active={viewing_scorecard}>
+						<a class="h-full w-full" href="{base}/{default_scorecard_path}">{Scorecard.name}</a>
 					</li>
 					{#each lifestages as lifestage}
 						<li class="fullnav:hidden pl-4 pt-1 pb-2">
