@@ -29,6 +29,7 @@ tasks:
 
   - command: |
       # Launch webserver
+      cd $GITPOD_REPO_ROOT/web
       npm run dev
 
       # Open port, so we can preview
