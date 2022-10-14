@@ -35,12 +35,14 @@
 				</HorizontalNavItem>
 				<HorizontalNavItem class="partnership">
 					In partnership with
-					<img
-						alt="Thoughtworks"
-						class="inline-block h-[24px] pb-[3px]"
-						height="24"
-						src="{assets}/thoughtworks-light.svg"
-					/>
+					<a href="https://www.thoughtworks.com/" target="_black">
+						<img
+							alt="Thoughtworks"
+							class="inline-block h-[24px] pb-[3px]"
+							height="24"
+							src="{assets}/thoughtworks-light.svg"
+						/>
+					</a>
 				</HorizontalNavItem>
 			</HorizontalNav>
 		</p>

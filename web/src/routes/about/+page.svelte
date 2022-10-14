@@ -56,13 +56,13 @@
 			about the challenges that lie ahead and working together to solve them.
 		</p>
 		<div class="my-6">
-			<ParagraphWithImage>
+			<ParagraphWithImage image_href="https://p33chicago.com">
 				<img
 					alt="P33 Chicago"
 					class="mx-auto sm:ml-2 sm:mr-4"
 					height="109"
 					slot="image"
-					src="{assets}/P33logo.jpg"
+					src="{assets}/P33.webp"
 					width="109"
 				/>
 				<a href="https://p33chicago.com" target="_blank">P33</a> leads and coordinates this effort
@@ -81,54 +81,63 @@
 			<PartnerLogo
 				alt="GET Cities"
 				height="78"
+				href="https://www.getcities.org/"
 				src="{assets}/partner_logos/GETlogo_Cities_vertical@1000px (6).png"
 				width="120"
 			/>
 			<PartnerLogo
 				alt="Chicago United"
 				height="85"
+				href="https://www.chicago-united.org/"
 				src="{assets}/partner_logos/CU Logo +Tagline - Copy.jpg"
 				width="215"
 			/>
 			<PartnerLogo
 				alt="Partnership for College Completion"
 				height="77"
+				href="https://partnershipfcc.org/"
 				src="{assets}/partner_logos/2022 PCC Logo-transparent.png"
 				width="289"
 			/>
 			<PartnerLogo
 				alt="Education Systems Center"
 				height="78"
+				href="https://edsystemsniu.org/"
 				src="{assets}/partner_logos/EdSystems 10 Year - Horizontal.svg"
 				width="248"
 			/>
 			<PartnerLogo
 				alt="Illinois Science & Technology Coalition"
 				height="114"
+				href="https://www.istcoalition.org/"
 				src="{assets}/partner_logos/ISTCLogo-H1.png"
 				width="226"
 			/>
 			<PartnerLogo
 				alt="Latinas in Tech"
 				height="125"
+				href="https://latinasintech.org/"
 				src="{assets}/partner_logos/LatinasInTech_Logo_500 1.png"
 				width="125"
 			/>
 			<PartnerLogo
 				alt="Digital Youth Network"
 				height="110"
+				href="http://digitalyouthnetwork.org/"
 				src="{assets}/partner_logos/DYN_Logo.png"
 				width="205"
 			/>
 			<PartnerLogo
 				alt="Illinois Workforce and Education Research Collaborative"
 				height="105"
+				href="https://dpi.uillinois.edu/"
 				src="{assets}/partner_logos/IWERC - white background.png"
 				width="156"
 			/>
 			<PartnerLogo
 				alt="UChicago Consortium on School Research"
 				height="36"
+				href="https://consortium.uchicago.edu/"
 				src="{assets}/partner_logos/UCSR_PrimaryLogo_FullColor_RGB.png"
 				width="309"
 			/>
@@ -141,7 +150,7 @@
 			</h2>
 
 			<div class="mx-7 py-8">
-				<ParagraphWithImage>
+				<ParagraphWithImage image_href="https://www.thoughtworks.com/">
 					<img
 						alt="ThoughtWorks"
 						class="my-8 sm:mr-[36px]"
@@ -159,7 +168,7 @@
 			</div>
 
 			<div class="mx-7 py-8">
-				<ParagraphWithImage>
+				<ParagraphWithImage image_href="https://gotechchicago.com/">
 					<img
 						alt="TechChicago"
 						class="my-8 sm:mr-[40px]"

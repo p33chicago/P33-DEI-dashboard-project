@@ -189,11 +189,13 @@
 
 <div class="bg-light-gray/20 py-6 text-center space-y-2 border border-dark-gray/20">
 	<p class="font-sans-alternate text-2xl">Our Contributing Partner</p>
-	<img
-		alt="Thoughtworks"
-		class="inline-block"
-		height="48"
-		src="{assets}/thoughtworks.svg"
-		width="302"
-	/>
+	<a href="https://www.thoughtworks.com/" target="_blank">
+		<img
+			alt="Thoughtworks"
+			class="inline-block"
+			height="48"
+			src="{assets}/thoughtworks.svg"
+			width="302"
+		/>
+	</a>
 </div>
