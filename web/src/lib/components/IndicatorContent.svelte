@@ -37,4 +37,12 @@
 	details[open] .caret {
 		transform: rotate(180deg);
 	}
+
+	/** Prevent the active indicator from closing for non-mobile */
+	@media screen(sm) {
+		details summary {
+			pointer-events: none; /* prevents click events */
+			user-select: none; /* prevents text selection */
+		}
+	}
 </style>
