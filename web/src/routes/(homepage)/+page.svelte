@@ -135,7 +135,7 @@
 	<!-- Takeaways -->
 	<div class="flex col-span-1 sm:col-span-2 py-4">
 		<Takeaway heading="47% vs 14%">
-			<img height="147" slot="graphic" src={`${base}/diverse-roles.svg`} width="147" />
+			<img alt="" height="147" slot="graphic" src={`${base}/diverse-roles.svg`} width="147" />
 			<p>
 				Nearly half the Cook County population is <TextHighlight left="0.5" top="0.3"
 					>Black or Latino</TextHighlight
@@ -145,7 +145,7 @@
 	</div>
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="42% vs 22%">
-			<img height="147" slot="graphic" src={`${base}/graduation-hat.svg`} width="147" />
+			<img alt="" height="147" slot="graphic" src={`${base}/graduation-hat.svg`} width="147" />
 			<p>
 				<TextHighlight left="0" top="0.1">Illinois college graduates</TextHighlight> in computing are
 				22% Black or Latino despite being 42% of all Illinois high school graduates.
@@ -154,7 +154,7 @@
 	</div>
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="9,000+">
-			<img height="147" slot="graphic" src={`${base}/falling.svg`} width="147" />
+			<img alt="" height="147" slot="graphic" src={`${base}/falling.svg`} width="147" />
 			<p>
 				We’re failing kids early. Chicago needs to ensure 9,100 more Black and Latino
 				<TextHighlight>8th graders meet math proficiency</TextHighlight> standards to close gaps with
@@ -165,7 +165,7 @@
 	</div>
 	<div class="flex col-span-1 sm:col-span-2">
 		<Takeaway heading="5,000+">
-			<img height="147" slot="graphic" src={`${base}/hands-puzzle.svg`} width="147" />
+			<img alt="" height="147" slot="graphic" src={`${base}/hands-puzzle.svg`} width="147" />
 			<p>
 				Access to accelerated opportunities is inequitable: In order to close gaps, Chicago needs to
 				get 5,500 more 8th Black and Latino 8th graders to
@@ -179,7 +179,7 @@
 
 	<div class="flex col-span-1 sm:col-span-4 rounded-lg bg-brand-primary-light-green/30 my-10">
 		<CTASection href="{base}/contact" link_text="Contact Us" title="What can you do to help?">
-			<img class="hidden sm:block w-32 h-48" slot="graphic" src={`${base}/illinois.svg`} />
+			<img alt="" class="hidden sm:block w-32 h-48" slot="graphic" src={`${base}/illinois.svg`} />
 			<p class="text-mono">
 				Every organization can play a role in building a more inclusive TechChicago
 			</p>
