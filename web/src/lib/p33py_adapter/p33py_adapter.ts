@@ -23,7 +23,7 @@ const from_json = (
 ): Scorecard =>
 	lifestages.map((lifestage: Lifestage) => ({
 		...lifestage,
-		area: 'Chicago Public Schools', // TODO update p33py to export "var_scope" for area
+		// TODO update p33py to export "var_scope" for area
 		score: lifestages_json.find(matches_lifestage(lifestage))?.weighted_EI_stage,
 		indicators: indicators_json.filter(matches_lifestage(lifestage)).map(indicator_from_json)
 	}));

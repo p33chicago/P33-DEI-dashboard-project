@@ -4,8 +4,8 @@ import type { Lifestage } from '$lib/domain/Lifestage';
 import { default_lifestage, lifestages } from '$lib/domain/Lifestage';
 
 interface Data {
-	lifestage?: Lifestage;
-	indicator?: Indicator;
+	lifestage: Lifestage | null;
+	indicator?: Indicator | null;
 }
 
 const default_scorecard_path = `${default_lifestage.route}/${default_indicator.route}`;
@@ -23,6 +23,9 @@ const data_from_pathname = (pathname: string): Data => {
 	const indicator_path = matches[3];
 	const lifestage = lifestages.find(({ route }: Lifestage) => route === lifestage_path);
 	const indicator = indicators.find(({ route }: Indicator) => route === indicator_path);
+	if (!lifestage) {
+		throw Error('Could not determine lifestage');
+	}
 	return { lifestage, indicator };
 };
 
