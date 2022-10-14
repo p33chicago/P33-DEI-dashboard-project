@@ -10,16 +10,14 @@ ports:
     port: 5173
     visibility: public
 tasks:
-  - name: Set a Python version
-    init: pyenv local 3.8.13
+  - name: Install Python dependencies
+    init: pip3 install -r requirements.txt
   - name: Add project root to PYTHONPATH
     init: gp env PYTHONPATH=$GITPOD_REPO_ROOT
   - name: Enable git hooks
     init: git config core.hooksPath githooks/
-  - name: Install Python dependencies
-    init: pip install -r requirements.txt
   - name: Build scorecard and visualizations
-    command: python build.py
+    command: python3 build.py
   - name: start web dev server
     command: |
       cd $GITPOD_REPO_ROOT/web
