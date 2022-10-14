@@ -10,6 +10,7 @@
 				font-family: 'Fjalla One';
 				font-style: normal;
 				font-weight: 400;
+				font-display: swap;
 				src: local(''),
 					url('%sveltekit.assets%/fonts/fjalla-one-v13-latin-regular.woff2') format('woff2'),
 					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/fjalla-one-v13-latin-regular.woff')
@@ -20,6 +21,7 @@
 				font-family: 'Roboto';
 				font-style: normal;
 				font-weight: 400;
+				font-display: swap;
 				src: local(''),
 					url('%sveltekit.assets%/fonts/roboto-v30-latin-regular.woff2') format('woff2'),
 					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/roboto-v30-latin-regular.woff')
@@ -30,6 +32,7 @@
 				font-family: 'Roboto Mono';
 				font-style: normal;
 				font-weight: 400;
+				font-display: swap;
 				src: local(''),
 					url('%sveltekit.assets%/fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'),
 					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/roboto-mono-v22-latin-regular.woff')
@@ -37,6 +40,13 @@
 			}
 		</style>
 		%sveltekit.head%
+		<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+		<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+		<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+		<link href="/site.webmanifest" rel="manifest" />
+		<link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon" />
+		<meta content="#b91d47" name="msapplication-TileColor" />
+		<meta content="#ffffff" name="theme-color" />
 	</head>
 	<body class="min-h-screen font-sans flex flex-col text-black bg-white m-0">
 		<!-- Google tag (gtag.js) -->

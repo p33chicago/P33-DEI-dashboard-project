@@ -1,11 +1,9 @@
 <script>
-	import SocialButtons from './SocialButtons.svelte';
-
 	export let header;
 	export let subheader;
 </script>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray">
+<div class="data-dive grid grid-cols-1 sm:grid-cols-2 gap-4 border-b-[1px] border-light-gray pb-9">
 	<div class="col-span-1 sm:col-span-2 pt-9 -order-2 sm:order-none">
 		<h2>{header}</h2>
 	</div>
@@ -27,8 +25,5 @@
 		<div class="grow">
 			<p>{subheader}</p>
 		</div>
-	</div>
-	<div class="col-span-1 sm:col-span-2 bg-none md:bg-light-gray/20 px-0 md:px-7 py-4">
-		<SocialButtons />
 	</div>
 </div>

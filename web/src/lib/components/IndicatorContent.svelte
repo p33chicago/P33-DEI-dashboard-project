@@ -45,4 +45,10 @@
 			user-select: none; /* prevents text selection */
 		}
 	}
+
+	/** avoid horizontal rule on last <DataDive /> */
+	/** TODO fix / remove this hack */
+	:global(.data-dive) ~ :global(.data-dive):last-child {
+		border-bottom-width: 0;
+	}
 </style>
