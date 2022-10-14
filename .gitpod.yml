@@ -40,6 +40,8 @@ tasks:
       cd $GITPOD_REPO_ROOT/web
       npm run dev
 
+  - command: |
+
       # Open port, so we can preview
       gp ports await 5173
 
