@@ -15,7 +15,7 @@ tasks:
   - name: Enable git hooks
     init: git config core.hooksPath githooks/
   - name: Install Python dependencies
-    command: pip install -r requirements.txt
+    init: pip install -r requirements.txt
   - name: Build scorecard and visualizations
     command: python build.py
   - name: start web dev server
