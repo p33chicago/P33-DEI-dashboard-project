@@ -4,6 +4,7 @@
 	import Card from './cards/Card.svelte';
 	import Heading from './Heading.svelte';
 	import ConditionalLink from './ConditionalLink.svelte';
+	import Caret from '$lib/components/icons/Caret.svelte';
 
 	export let active_indicator: Indicator;
 </script>
@@ -15,7 +16,12 @@
 		class="md:hidden"
 	>
 		<Card>
-			<Heading nohr={active_indicator.name !== indicator.name}>{indicator.name}</Heading>
+			<Heading nohr={active_indicator.name !== indicator.name} class="flex">
+				<span class="grow"> {indicator.name}</span>
+				<span class="self-center" class:rotate-180={active_indicator.name === indicator.name}>
+					<Caret />
+				</span>
+			</Heading>
 			{#if active_indicator.name === indicator.name}
 				<slot />
 			{/if}
