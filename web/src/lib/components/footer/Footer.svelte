@@ -2,11 +2,12 @@
 	import { assets, base } from '$app/paths';
 	import HorizontalNav from '$lib/components/horizontal_nav/HorizontalNav.svelte';
 	import HorizontalNavItem from '$lib/components/horizontal_nav/HorizontalNavItem.svelte';
+	import { default_scorecard_path } from '$lib/pathnames.js';
 
 	const year = new Date().getFullYear();
 </script>
 
-<div class="flex grow" />
+<!--<div class="flex grow" />-->
 <div class="w-full bg-black">
 	<footer
 		class="text-sm sm:text-base px-4 xl:px-12 flex flex-col xl:flex-row text-white py-9 gap-x-10 gap-y-8 text-center xl:text-left font-sans-alternate uppercase"
@@ -14,7 +15,7 @@
 		<p class="grow justify-center xl:justify-self-start">
 			<HorizontalNav class="nav">
 				<HorizontalNavItem href={base}>Home</HorizontalNavItem>
-				<HorizontalNavItem href="{base}/scorecard">Scorecard</HorizontalNavItem>
+				<HorizontalNavItem href="{base}/{default_scorecard_path}">Scorecard</HorizontalNavItem>
 				<HorizontalNavItem href="{base}/solutions">Solutions</HorizontalNavItem>
 				<HorizontalNavItem href="{base}/about">About</HorizontalNavItem>
 				<HorizontalNavItem href="{base}/contact">Contact</HorizontalNavItem>
