@@ -23,7 +23,6 @@
 		<div class="max-w-7xl mx-auto px-1 md:px-3 lg:px-6 flex justify-between fullnav:justify-start">
 			<label
 				aria-controls="mobile-menu"
-				aria-expanded="false"
 				class="toggle-mobile-menu flex fullnav:hidden items-center justify-center p-2"
 				for="open-mobile-menu"
 			>

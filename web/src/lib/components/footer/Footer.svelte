@@ -49,10 +49,16 @@
 		</p>
 		<div class="xl:justify-self-end xl:self-center space-x-4">
 			<a alt="linkedin" href="https://www.linkedin.com/company/p33-chicago/" target="_blank">
-				<img class="inline-block" height="24" src="{assets}/linkedin.svg" width="24" />
+				<img
+					alt="LinkedIn"
+					class="inline-block"
+					height="24"
+					src="{assets}/linkedin.svg"
+					width="24"
+				/>
 			</a>
 			<a alt="twitter" href="https://twitter.com/P33Chicago" target="_blank">
-				<img class="inline-block" height="24" src="{assets}/twitter.svg" width="24" />
+				<img alt="Twitter" class="inline-block" height="24" src="{assets}/twitter.svg" width="24" />
 			</a>
 		</div>
 	</footer>
