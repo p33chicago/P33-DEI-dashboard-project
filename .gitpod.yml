@@ -22,16 +22,10 @@ tasks:
       # Install dependencies
       PIP=pip3 ./scripts/install.sh
 
-      # Allow webserver to start
-      gp sync-done installation
-
       # Show readme
       code docs/gitpod.md
 
   - command: |
-
-      # Wait for installation to complete
-      gp sync-await installation
 
       # Launch webserver
       PYTHON=python3 WEB="$GITPOD_REPO_ROOT/web" ./scripts/start_dev.sh
