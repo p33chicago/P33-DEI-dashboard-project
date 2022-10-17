@@ -19,6 +19,8 @@ This repository consists of two sub repositories:
 * [p33py](./p33py/): Python package for processing data to generate visualizations and JSON
 * [web](./web/): website which takes visualizations and JSON as input and outputs the website as static HTML.
 
+See [p33py/README.md](./p33py/README.md) and [web/README.md](./web/README.md) for details.
+
 
 ## Getting started
 
@@ -73,7 +75,7 @@ Follow these steps to test changes in a development environment:
 See [docs](./docs/) for additional documentation, including:
 
 * [Glossary](./docs/glossary.md)
-* [Tech overview](./docs/tech overview.md)
+* [Tech overview](./docs/tech-overview.md)
 * [Accessibility](./docs/accessibility.md)
 
 
