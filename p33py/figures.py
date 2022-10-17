@@ -54,7 +54,7 @@ def horizontal_bar(metric):
         orientation="h",
         range_x=[0, 100],
         width=268,
-        height=113,
+        height=100,
         color_discrete_sequence=["#00715e"],
     )
     fig.update_yaxes(title="", side="left")

@@ -25,6 +25,9 @@ tasks:
       # Allow webserver to start
       gp sync-done installation
 
+      # Show readme
+      code docs/gitpod.md
+
   - command: |
 
       # Wait for installation to complete

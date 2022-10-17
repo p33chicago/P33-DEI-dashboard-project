@@ -7,7 +7,7 @@
 
 	export let lifestage: Lifestage;
 	export let area: string;
-	export let score: number;
+	export let score: number | undefined;
 </script>
 
 <div class="flex items-start gap-2">

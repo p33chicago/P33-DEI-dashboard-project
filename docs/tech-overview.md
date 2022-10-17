@@ -1,4 +1,4 @@
-# Architecture
+# Tech overview
 
 This program consists of a Python codebase and a JavaScript codebase:
 
@@ -23,7 +23,7 @@ See [p33py/README.md](../p33py/README.md) and [web/README.md](../web/README.md) 
 * [Cloudflare] edge CDN, security
 * Commit hooks for linting: [pre-commit], [Black], [Prettier], and [eslint]
 
-See [requirements.txt](../requirements.txt), [package.json](../web/package.json) for details, [githooks/](../githooks/), and [.github/workflows](../.github/workflows/).
+See [requirements.txt](../requirements.txt), [package.json](../web/package.json) for details, [.gitpod.yml](../.gitpod.yml), [githooks/](../githooks/), and [.github/workflows](../.github/workflows/).
 
 
 ## Pipeline

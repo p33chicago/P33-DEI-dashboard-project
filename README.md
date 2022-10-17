@@ -9,47 +9,30 @@ A website to analyze the equality - or lack thereof - that exists among underrep
 Features of the website:
 
 * 📱🖥 Cross-platform: mobile-first, responsive design
-* 🏎⚡️ Fast: no large JavaScript files to download, served from edge CDN, statically rendering for server, inlined assets, client-side rendering after initial page view
+* 🏎⚡️ Fast: served from edge CDN, statically rendering for server, inlined assets, client-side rendering after initial page view, only one large-ish JavaScript file, Plotly.js. ([audit])
 * 🔍🧏 Accessible: can be used without JavaScript, keyboard navigation, high-contrast
-* 👩‍💻 Developer-friendly: [click here to open editor in browser], [technical documentation](./docs/architecture.md), intuitive design system (Tailwind), [commit hooks](./githooks/INSTALLATION.md), web component and accessibility tools enabled out-of-the-box.
+* 👩‍💻 Developer-friendly: [click here to open editor in browser], [technical documentation](./docs/tech-overview.md), intuitive design system (Tailwind), [commit hooks](./githooks/INSTALLATION.md), web component and accessibility tools enabled out-of-the-box.
 
 
-This repository consists of two projects:
+This repository consists of two sub repositories:
 
 * [p33py](./p33py/): Python package for processing data to generate visualizations and JSON
 * [web](./web/): website which takes visualizations and JSON as input and outputs the website as static HTML.
 
-Technologies used:
-
-* [Plotly for Python] and [Plotly.js]
-* [Jupyter] for working with visualizations
-* [SvelteKit] web framework
-* [TailwindCSS] CSS framework
-* [Svelte inspector] to find sourcecode for DOM elements
-* [Tota11y] to check accessibility
-* [Playwright] browser functional testing
-* [Gitpod] cloud IDE
-* [Github Pages] hosting
-* [Github Actions] pipeline
-* [Cloudflare] edge CDN, security
-* Commit hooks for linting: [pre-commit], [Black], [Prettier], and [eslint]
-
 
 ## Getting started
-
-See [Architecture](./docs/architecture.md) for more info.
 
 There are two ways of getting a development environment:
 
 1. Using the cloud-based development workspace, Gitpod (recommended)
 2. Installing things to your local machine (for advanced users)
 
-See the sections below for more info.
+See the sections below for more info on development environemnts, and [Tech overview](./docs/tech-overview.md) for an overview of the project.
 
 
 ## Cloud-based development environment (Gitpod)
 
-To launch the development workspace in your browser, visit the project's Github page and click the "Contribute with Gitpod" badge.
+To launch the development workspace in your browser, visit the project's Github page and click the "Contribute with Gitpod" badge at the top of this README.md file.
 
 > Tip: browser keyboard shortcuts can interfere with VSCode's shortcuts. To avoid this, launch the workspace as its own application window. In Chrome, [create a shortcut] via Menu > More Tools > Create Shortcut ...
 
@@ -67,11 +50,20 @@ Regardless, here are some important points:
 * Use [install.sh](./scripts/install.sh) and [start_dev.sh](./scripts/start_dev.sh) :)
 
 
+## Previewing changes to scorecard and metrics
+
+Follow these steps to test changes in a development environment:
+
+* Make your changes in [p33py](./p33py/) or [data](./data/)
+* Run [`./scripts/rebuild.sh`](./scripts/rebuild.sh)
+
+
 ## Notable folders
 
 * [p33py](./p33py/) - Python codebase
 * [web](./web/) - web codebase
 * [notebooks](./notebooks/) - Jupyter notebooks
+* [data](./data/) - raw data used as input to Python code
 * [.github](./.github/) - pipeline
 * [githooks](./githooks/) - commit hooks
 
@@ -80,10 +72,12 @@ Regardless, here are some important points:
 
 See [docs](./docs/) for additional documentation, including:
 
-* [Architecture](./docs/architecture.md)
+* [Glossary](./docs/glossary.md)
+* [Tech overview](./docs/tech overview.md)
 * [Accessibility](./docs/accessibility.md)
 
 
+[audit]: https://web.dev/measure/?url=https%3A%2F%2Ftechequityindex.com
 [click here to open editor in browser]: https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project
 [Plotly for Python]: https://plotly.com/python/
 [Plotly.js]: https://plotly.com/javascript/
