@@ -24,8 +24,7 @@ tasks:
 
       # Show readme
       code docs/gitpod.md
-
-  - command: |
+    command: |
 
       # Launch webserver
       PYTHON=python3 WEB="$GITPOD_REPO_ROOT/web" ./scripts/start_dev.sh
