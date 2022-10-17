@@ -5,6 +5,7 @@ vscode:
     - svelte.svelte-vscode
     - ms-toolsai.jupyter-keymap
     - ms-toolsai.jupyter-renderers
+    - bierner.markdown-mermaid
 ports:
   - name: SvelteKit dev server
     port: 5173
@@ -12,24 +13,17 @@ ports:
 tasks:
   - init: |
 
+      # Enable git hooks
+      git config core.hooksPath githooks/
+
       # Ensure p33py can be imported
       gp env PYTHONPATH=$GITPOD_REPO_ROOT
 
       # Install dependencies
-      pip3 install -r requirements.txt
-
-      # Build scorecard and visualizations
-      python3 build.py
-
-      # Install web dependencies
-      cd $GITPOD_REPO_ROOT/web
-      npm install
+      PIP=pip3 ./scripts/install.sh
 
       # Allow webserver to start
       gp sync-done installation
-
-      # Enable git hooks
-      git config core.hooksPath githooks/
 
   - command: |
 
@@ -37,8 +31,7 @@ tasks:
       gp sync-await installation
 
       # Launch webserver
-      cd $GITPOD_REPO_ROOT/web
-      npm run dev
+      PYTHON=python3 WEB="$GITPOD_REPO_ROOT/web" ./scripts/start_dev.sh
 
   - command: |
 

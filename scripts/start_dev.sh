@@ -4,5 +4,8 @@
 
 set -e
 
-python build.py
-(cd web && npm run dev)
+PYTHON="${PYTHON:-$(which python)}"
+WEB="${WEB:-web}"
+
+$PYTHON build.py
+(cd $WEB && npm run dev)

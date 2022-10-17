@@ -4,7 +4,9 @@
 
 set -e
 
-pip install -r requirements.txt
+PIP="${PIP:-$(which pip)}"
+
+$PIP install -r requirements.txt
 (
   cd web &&
     npm install &&
