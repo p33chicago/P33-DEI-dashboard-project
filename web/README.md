@@ -1,10 +1,10 @@
-# P33 PEI dashboard website
+# Tech Equity Index website
 
 This project uses [SvelteKit](https://kit.svelte.dev/) and [tailwindcss](https://tailwindcss.com/).
 
 ## Pre-requisites
 
-Gitpod comes pre-installed with everything you need. If you're developing locally, follow ["Developing locally" in ../README.md](../README.md#Developing locally).
+Gitpod comes pre-installed with everything you need. If you're developing locally, see [Local development environment](../README.md#Local development environment).
 
 ## Developing
 

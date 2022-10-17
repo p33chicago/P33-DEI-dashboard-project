@@ -1,84 +1,106 @@
-[![Open in Gitpod](https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project)
+[![open in Gitpod](https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project)
 [![Build](https://github.com/p33chicago/P33-DEI-dashboard-project/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/p33chicago/P33-DEI-dashboard-project/actions/workflows/build-and-deploy.yml)
 
-# P33 Chicago equity dashboard
 
-This project helps evaluate the equality that exists among underrepresented communities in the tech sector. This is implemented by generating visualizations and compiling these visualizations into a website:
+# Tech Equity Index
 
-> Python data processing ≫ Plotly figure JSON ≫ Web framework ≫ Static HTML, JS, and CSS
+A website to analyze the equality - or lack thereof - that exists among underrepresented communities in the tech sector.
 
-## Installation
+Features of the website:
+
+* 📱🖥 Cross-platform: mobile-first, responsive design
+* 🏎⚡️ Fast: no large JavaScript files to download, served from edge CDN, statically rendering for server, inlined assets, client-side rendering after initial page view
+* 🔍🧏 Accessible: can be used without JavaScript, keyboard navigation, high-contrast
+* 👩‍💻 Developer-friendly: [click here to open editor in browser], [technical documentation](./docs/architecture.md), intuitive design system (Tailwind), [commit hooks](./githooks/INSTALLATION.md), web component and accessibility tools enabled out-of-the-box.
+
+
+This repository consists of two projects:
+
+* [p33py](./p33py/): Python package for processing data to generate visualizations and JSON
+* [web](./web/): website which takes visualizations and JSON as input and outputs the website as static HTML.
+
+Technologies used:
+
+* [Plotly for Python] and [Plotly.js]
+* [Jupyter] for working with visualizations
+* [SvelteKit] web framework
+* [TailwindCSS] CSS framework
+* [Svelte inspector] to find sourcecode for DOM elements
+* [Tota11y] to check accessibility
+* [Playwright] browser functional testing
+* [Gitpod] cloud IDE
+* [Github Pages] hosting
+* [Github Actions] pipeline
+* [Cloudflare] edge CDN, security
+* Commit hooks for linting: [pre-commit], [Black], [Prettier], and [eslint]
+
+
+## Getting started
+
+See [Architecture](./docs/architecture.md) for more info.
 
 There are two ways of getting a development environment:
 
-1. Using the cloud workspace, Gitpod (recommended)
-2. Installing things to your local machine
+1. Using the cloud-based development workspace, Gitpod (recommended)
+2. Installing things to your local machine (for advanced users)
 
-Advantages to using the cloud workspace:
+See the sections below for more info.
 
-* Click a link and get a fully installed, running development environment
-* Everyone has the same environment - no "works on my machine" syndrome
 
-### Using the cloud workspace (Gitpod)
+## Cloud-based development environment (Gitpod)
 
-To launch the development workspace in your browser, including Jupyter Lab UI, visit: [gitpod](https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project).
+To launch the development workspace in your browser, visit the project's Github page and click the "Contribute with Gitpod" badge.
 
-To learn more about accessing data science notebooks and the website dev server, see [Using Gitpod](./docs/using%20gitpod.md).
+> Tip: browser keyboard shortcuts can interfere with VSCode's shortcuts. To avoid this, launch the workspace as its own application window. In Chrome, [create a shortcut] via Menu > More Tools > Create Shortcut ...
 
-### Developing locally
 
-Install git, Python, and nodejs, then run:
+## Local development environment
 
-```shell
-# Install git hooks, so safety measures run before pushing changes
-git config --local core.hooksPath githooks
+⚠️ CAUTION ⚠️:️ If you use this approach, please be sure you have the proper safetynets - install the [githooks](./githooks/)!.
 
-# Install
-eval scripts/install.sh
+It's not practical to document everything needed for local development. As an alternative, you can clone the git repo, then look at .gitpod.yml to see what Gitpod does to create a workspace. See [Gitpod's documentation] for details.
 
-# Start dev server
-eval scripts/start_dev.sh
-```
+Regardless, here are some important points:
 
-## Folder structure
+* Install githooks
+* If a pre-commit hook fails, understand why (there's a reason)
+* Use [install.sh](./scripts/install.sh) and [start_dev.sh](./scripts/start_dev.sh) :)
 
-**NOTE:** If a file/folder isn't listed below, it's for some specific development tool; you can find more info by googling the filename. e.g. [.gitpod.yml](https://google.com/search?q=.gitpod.yml).
 
-In order of importance:
+## Notable folders
 
-**/README.md
-: Separate documentation exists in various folders.
+* [p33py](./p33py/) - Python codebase
+* [web](./web/) - web codebase
+* [notebooks](./notebooks/) - Jupyter notebooks
+* [.github](./.github/) - pipeline
+* [githooks](./githooks/) - commit hooks
 
-web/
-: Website source code. Has its own [README](web/README.md).
 
-p33py/
-: Python [package](https://docs.python.org/3/tutorial/modules.html#packages) for all of our novel code; import via `import p33py`
+## Additional documentation
 
-data/
-: all data files go here (XSLT, CSV, etc.)
+See [docs](./docs/) for additional documentation, including:
 
-docs/
-: files for humans alone (no 💻🤖 allowed); technical documentation, slide decks, design guidelines, mockups, etc.
+* [Architecture](./docs/architecture.md)
+* [Accessibility](./docs/accessibility.md)
 
-scripts/
-: Useful shell scripts
 
-.github/
-: Files for our CI/CD pipeline (Github Actions)
-
-build.py
-: Entrypoint for all our code that processes data.
-
-.githooks/
-: Files that should should run at certain times when running version control. See [githooks/INSTALLATION.md](githooks/INSTALLATION.md) for instructions. See [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) for background.
-
-notebooks/
-: data science notebooks for experimentation and visualization work; none of the code here is used in the pipeline or makes it way to the site; however, it does import things from the python module, p33 (see above).
-
-output/
-: Where build output is placed. Safe to delete, because it's recreated with every build.
-
-## Accessibility
-
-We want to make our website usable to as many people as we can. Our visualizations present unique challenges. See [docs/accessibility.md](docs/accessibility.md) for details.
+[click here to open editor in browser]: https://gitpod.io/#https://github.com/p33chicago/P33-DEI-dashboard-project
+[Plotly for Python]: https://plotly.com/python/
+[Plotly.js]: https://plotly.com/javascript/
+[Jupyter]: https://jupyter.org/
+[SvelteKit]: https://kit.svelte.dev/
+[TailwindCSS]: https://tailwindcss.com/
+[Svelte inspector]: https://joyofcode.xyz/svelte-inspector
+[Tota11y]: https://khan.github.io/tota11y/
+[Playwright]: https://playwright.dev/
+[Gitpod]: https://gitpod.io/
+[Github Pages]: https://pages.github.com/
+[Github Actions]: https://github.com/features/actions
+[Cloudflare]: https://www.cloudflare.com/
+[pre-commit]: https://pre-commit.com/
+[Black]: https://github.com/psf/black
+[Prettier]: https://prettier.io/
+[eslint]: https://eslint.org/
+[Plotly JSON]: https://plotly.com/chart-studio-help/json-chart-schema/
+[create a shortcut]: https://support.google.com/chrome_webstore/answer/3060053
+[Gitpod's documentation]: https://www.gitpod.io/docs/introduction/learn-gitpod/gitpod-yaml
