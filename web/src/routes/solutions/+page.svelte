@@ -159,7 +159,6 @@
 					<li>- P33 Strong Start</li>
 					<li>- Braven</li>
 					<li>- Breakthrough Tech</li>
-					<li> </li>
 					<li>Advocacy:</li>
 					<li>- Young Invincibles</li>
 					<li>- AnitaB</li>
@@ -174,7 +173,6 @@
 				<ul class="px-4">
 					<li>To Source Talent:</li>
 					<li>- Discovery Partners Institute, Bitwise, Revature, General Assembly, Tech Elevator, i.c.stars, Per Scholas </li>
-					<li> </li>
 					<li>To build more inclusive tech cultures:</li>
 					<li>- Latinas in Tech, HACE, AnitaB, BWISE, Chicago
 						United, GET Cities
