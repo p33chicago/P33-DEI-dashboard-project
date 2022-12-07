@@ -133,15 +133,15 @@
 			<div class="k8 sm:border-b border-light-gray py-4">
 				<K8Heading />
 				<ul class="px-4">
-					<li>- PLACEHOLDER</li>
-					<li>- PLACEHOLDER</li>
-					<li>- PLACEHOLDER</li>
+					<li>[To be completed]</li>
 				</ul>
 			</div>
 			<!--Highschool -->
 			<div class="highschool sm:border-b border-light-gray py-4">
 				<HSHeading />
 				<ul class="px-4">
+					<li>[DRAFT, to be completed]</li>
+					<li> </li>
 					<li>- Project Exploration</li>
 					<li>- ISTC</li>
 					<li>- CodeNation</li>
@@ -159,24 +159,24 @@
 					<li>- P33 Strong Start</li>
 					<li>- Braven</li>
 					<li>- Breakthrough Tech</li>
-					<li>- Advocacy:</li>
+					<li> </li>
+					<li>Advocacy:</li>
 					<li>- Young Invincibles</li>
 					<li>- AnitaB</li>
 					<li>- Advance Illinois</li>
 					<li>- Women Employed</li>
-					<li>- PCC</li>
+					<li>- Partnership for College Completion</li>
 				</ul>
 			</div>
 			<!--Employment -->
 			<div class="employment sm:border-b border-light-gray py-4">
 				<EmploymentHeading />
 				<ul class="px-4">
-					<li>To hire non-grad talent:</li>
-					<li>- Nonprofits: I.C.Stars, Per Scholas, National Able</li>
-					<li>- Bootcamps/Etc: Bitwise, General Assembly, Tech Elevator</li>
-					<li>- DPI</li>
-					<li>
-						To build more inclusive tech cultures: Latinas in Tech, HACE, AnitaB, BWISE, Chicago
+					<li>To Source Talent:</li>
+					<li>- Discovery Partners Institute, Bitwise, Revature, General Assembly, Tech Elevator, i.c.stars, Per Scholas </li>
+					<li> </li>
+					<li>To build more inclusive tech cultures:</li>
+					<li>- Latinas in Tech, HACE, AnitaB, BWISE, Chicago
 						United, GET Cities
 					</li>
 				</ul>
