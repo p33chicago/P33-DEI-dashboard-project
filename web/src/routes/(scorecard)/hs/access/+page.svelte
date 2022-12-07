@@ -8,22 +8,19 @@
 	<meta content="Help promote equity in tech." name="description" />
 </svelte:head>
 
-<DataDive header="AP CS Enrollment" subheader="Percent of CPS HS students enrolled in AP CS">
+<DataDive header="AP Computer Science Enrollment" subheader="Percent of CPS HS students enrolled in AP Computer Science">
 	<svelte:fragment slot="story">
 		<p>
-			Asian students have the highest AP CS enrollment rate of 8%. 1.2 times higher than White, 4
-			times higher than Hispanics, and 7 times higher than black.
+			Asian students have the highest AP CS enrollment rate at 8%, 1.2 times higher than White students, 4
+			times higher than Hispanic students, and 7 times higher than Black students.
 		</p>
 		<p>
-			AP CS enrollment rate of students in CPS is significantly higher than the national average.
-			The proportion of White students enroll to AP CS is 6 times higher than the national average.
+			The AP CS enrollment rate for CPS students is significantly higher than the national average across all racial and ethnic groups.
 		</p>
 	</svelte:fragment>
 	<svelte:fragment slot="takeaways">
 		<p>
-			CPS has an overall much higher AP CS enrolment rate in comparison with the national average
-			across all ethnic groups. However, the disparity is enormous, White and Asian students have an
-			enrollment rate 3-7 times higher than Black and Hispanic students.
+			CPS compares well to national districts in its AP CS enrollment, but has enormous disparities to address.
 		</p>
 	</svelte:fragment>
 	<Figure file={`metrics/${highSchool.route}/apcs_enrol`} slot="figure" />
